@@ -1,0 +1,19 @@
+@use 'tokens/base/border';
+@use 'tokens/base/color-brand';
+@use 'tokens/base/radius';
+
+$selector: 'c-button' !default;
+
+$background-color: color-brand.$brand-primary !default;
+$border-radius: radius.$large !default;
+$background-color--hover: color-brand.$brand-secondary !default;
+
+.#{$selector} {
+  background-color: $background-color;
+  border-radius: $border-radius;
+  border-width: 0;
+
+  &:hover {
+    background-color: $background-color--hover;
+  }
+}

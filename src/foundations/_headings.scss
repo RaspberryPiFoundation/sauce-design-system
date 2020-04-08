@@ -1,0 +1,25 @@
+@use 'mixins/headings';
+
+h1 {
+  @include headings.heading-1;
+}
+
+h2 {
+  @include headings.heading-2;
+}
+
+h3 {
+  @include headings.heading-3;
+}
+
+h4 {
+  @include headings.heading-4;
+}
+
+h5 {
+  @include headings.heading-5;
+}
+
+h6 {
+  @include headings.heading-6;
+}

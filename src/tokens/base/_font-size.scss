@@ -1,0 +1,17 @@
+/**
+* @tokens Base / Font Size
+* @presenter FontSize
+*/
+$font-size-base: (
+  null: 1.6rem,
+  md: 2rem,
+);
+
+$font-size-scale: (
+  'caption': 0.8,
+  'base': 1,
+  'sub-heading': 1.2,
+  'heading': 1.5,
+  'display': 2,
+  'display-large': 2.5,
+);

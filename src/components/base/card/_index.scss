@@ -1,0 +1,14 @@
+@use 'tokens/base/border';
+@use 'tokens/base/color';
+@use 'tokens/base/radius';
+
+$border-color: color.$brand-primary !default;
+$border-width: border.$width-heavy !default;
+$border-radius: radius.$large !default;
+
+.card {
+  border-color: $border-color;
+  border-radius: $border-radius;
+  border-style: solid;
+  border-width: $border-width;
+}
