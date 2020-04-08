@@ -24,6 +24,6 @@
     "node": false
   },
   "rules": {
-    "react/no-unknown-property": false,
+    "react/no-unknown-property": 0,
   }
 }
