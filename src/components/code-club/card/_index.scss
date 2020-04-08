@@ -1,5 +1,0 @@
-@use 'tokens/base/radius';
-
-@use 'components/base/card' with (
-  $border-radius: radius.$small
-);
