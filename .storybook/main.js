@@ -1,23 +1,23 @@
-const path = require('path')
-const sass = require('sass')
+const sassWebpackConfig = require('../webpack.config.js')
 
 module.exports = {
   addons: [
-    'storybook-addon-playroom',
-    'storybook-design-token',
-    '@storybook/addon-a11y',
+    // Features
+    '@storybook/addon-links',
+    // Upper panel tabs
     {
       name: '@storybook/addon-docs',
       options: {
         configureJSX: true,
       },
     },
-    '@storybook/addon-backgrounds',
-    '@storybook/addon-links',
-    // '@storybook/addon-storyshots',
-    // '@storybook/addon-storysource',
+    'storybook-addon-playroom',
     '@storybook/addon-viewport',
+    '@storybook/addon-backgrounds',
+    // Lower panel tabs
     '@whitespace/storybook-addon-html',
+    '@storybook/addon-a11y',
+    'storybook-design-token',
   ],
   stories: [
     '../docs/*.stories.mdx',
@@ -26,29 +26,7 @@ module.exports = {
   ],
 
   webpackFinal: async (config) => {
-    config.module.rules.push({
-      test: /\.scss$/,
-      use: [
-        'style-loader',
-        'css-loader',
-        {
-          loader: 'sass-loader',
-          options: {
-            implementation: sass,
-            sassOptions: {
-              includePaths: [
-                'src',
-                'node_modules/normalize-scss/sass',
-                'node_modules/modularscale-sass/stylesheets',
-              ],
-              outputStyle: 'compressed',
-            },
-            sourceMap: true,
-          },
-        },
-      ],
-      include: path.resolve(__dirname, '../'),
-    })
+    config.module.rules.push(sassWebpackConfig)
 
     // Return the altered config
     return config
