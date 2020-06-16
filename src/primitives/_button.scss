@@ -1,0 +1,27 @@
+@use 'mixins/devices';
+@use 'tokens/color-greyscale';
+@use 'tokens/font-weight';
+@debug 'primitives/button';
+
+@mixin primitive {
+  background-color: color-greyscale.$grey-light;
+  color: color-greyscale.$black;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: font-weight.$medium;
+  padding: 1rem 0;
+  width: 100%;
+
+  &:hover {
+    background-color: color-greyscale.$grey-lightest;
+    transform: scale(1.05);
+  }
+
+  @include devices.respond-to('phone') {
+    padding: 1rem 4rem;
+    width: auto;
+  }
+
+  @content;
+}

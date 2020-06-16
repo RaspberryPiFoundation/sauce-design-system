@@ -1,8 +1,0 @@
-@use 'tokens/base/radius';
-@use 'tokens/code-club/color-brand';
-
-@use 'components/base/button' with (
-  $selector: 'c-cp-button',
-  $background-color: color-brand.$brand-secondary,
-  $border-radius: radius.$small
-);

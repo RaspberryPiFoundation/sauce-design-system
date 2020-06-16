@@ -32,9 +32,15 @@ const scssTokenFiles = scssReq
   .keys()
   .map((filename) => ({ filename, content: scssReq(filename).default }))
 
+const cssReq = require.context('!!raw-loader!../src/tokens', true, /.\.scss$/)
+const cssTokenFiles = cssReq
+  .keys()
+  .map((filename) => ({ filename, content: cssReq(filename).default }))
+
 addParameters({
   designToken: {
     files: {
+      css: cssTokenFiles,
       scss: scssTokenFiles,
     },
   },
