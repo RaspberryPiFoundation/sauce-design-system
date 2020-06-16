@@ -1,6 +1,7 @@
 {
-  "name": "sauce-design-system",
-  "description": "Sauce is The Raspberry Pi Foundation’s Digital Design System",
+  "private": true,
+  "name": "@rpf/sauce",
+  "description": "The Raspberry Pi Foundation’s Digital Design System",
   "license": "MIT",
   "author": "The Raspberry Pi Foundation (https://www.raspberrypi.org)",
   "contributors": [
@@ -10,6 +11,7 @@
   "repository": "github:RaspberryPiFoundation/sauce-design-system",
   "bugs": "https://github.com/RaspberryPiFoundation/sauce-design-system/issues",
   "version": "1.0.0-alpha.0",
+  "main": "lib/index.js",
   "files": [
     "src"
   ],
