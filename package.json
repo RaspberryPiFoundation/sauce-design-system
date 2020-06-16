@@ -11,7 +11,6 @@
   "repository": "github:RaspberryPiFoundation/sauce-design-system",
   "bugs": "https://github.com/RaspberryPiFoundation/sauce-design-system/issues",
   "version": "1.0.0-alpha.0",
-  "main": "./index.js",
   "files": [
     "src"
   ],
@@ -86,5 +85,8 @@
   "keywords": [],
   "engines": {
     "node": "12.18.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
