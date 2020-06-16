@@ -11,7 +11,7 @@
   "repository": "github:RaspberryPiFoundation/sauce-design-system",
   "bugs": "https://github.com/RaspberryPiFoundation/sauce-design-system/issues",
   "version": "1.0.0-alpha.0",
-  "main": "lib/index.js",
+  "main": "./index.js",
   "files": [
     "src"
   ],
