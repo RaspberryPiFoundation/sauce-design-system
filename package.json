@@ -1,10 +1,16 @@
 {
+  "private": true,
   "name": "@rpf/sauce",
   "description": "Sauce is The Raspberry Pi Foundation’s Digital Design System",
   "license": "MIT",
   "author": "The Raspberry Pi Foundation (https://www.raspberrypi.org)",
-  "version": "1.0.0pre",
-  "main": "lib/index.js",
+  "contributors": [
+    "Jonic Linley (https://www.100yen.co.uk/)"
+  ],
+  "homepage": "https://sauce.raspberrypi.org",
+  "repository": "github:RaspberryPiFoundation/sauce-design-system",
+  "bugs": "https://github.com/RaspberryPiFoundation/sauce-design-system/issues",
+  "version": "1.0.0-alpha.0",
   "files": [
     "src"
   ],
@@ -52,6 +58,7 @@
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
     "css-loader": "^3.6.0",
+    "dotenv": "^8.2.0",
     "eslint": "^7.2.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-jest": "^23.13.2",
@@ -75,7 +82,8 @@
     "style-dictionary": "^2.10.0",
     "style-loader": "^1.2.1"
   },
-  "dependencies": {
-    "dotenv": "^8.2.0"
+  "keywords": [],
+  "engines": {
+    "node": "12.18.0"
   }
 }
