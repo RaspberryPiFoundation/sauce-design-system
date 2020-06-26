@@ -1,0 +1,45 @@
+@use 'sass:map';
+@use 'mixins/device';
+@use 'tokens/font-size';
+
+@mixin output($key) {
+  @if map.has-key(font-size.$scale, $key) == false {
+    @error "Invalid font-size: #{$key}";
+  }
+
+  $multiplier: map.get(font-size.$scale, $key);
+  font-size: calc(1rem + #{$multiplier});
+
+  // @each $breakpoint, $value in font-size.$base-sizes {
+  //   @include device.mq($breakpoint) {
+  //   }
+  // }
+}
+
+@mixin rollerskate {
+  @include output('rollerskate');
+}
+
+@mixin skateboard {
+  @include output('skateboard');
+}
+
+@mixin scooter {
+  @include output('scooter');
+}
+
+@mixin bike {
+  @include output('bike');
+}
+
+@mixin moped {
+  @include output('moped');
+}
+
+@mixin car {
+  @include output('car');
+}
+
+@mixin van {
+  @include output('van');
+}

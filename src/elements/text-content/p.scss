@@ -1,0 +1,5 @@
+@use 'primitives/type/p';
+
+p {
+  @include p.primitive;
+}

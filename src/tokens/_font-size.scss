@@ -2,9 +2,26 @@
 * @tokens Base / Font Size
 * @presenter FontSize
 */
-$font-size-caption: 16px;
-$font-size-base: 20px;
-$font-size-sub-heading: 24px;
-$font-size-heading: 30px;
-$font-size-display: 40px;
-$font-size-display-large: 50px;
+$base-sizes: (
+  0px: 1.6rem,
+  800px: 2rem,
+  1200px: 2.4rem,
+);
+
+$rollerskate: 0.8rem;
+$skateboard: 1rem;
+$scooter: 1.2rem;
+$bike: 1.5rem;
+$moped: 2rem;
+$car: 2.5rem;
+$van: 3.5rem;
+
+$scale: (
+  rollerskate: $rollerskate,
+  skateboard: $skateboard,
+  scooter: $scooter,
+  bike: $bike,
+  moped: $moped,
+  car: $car,
+  van: $van,
+);

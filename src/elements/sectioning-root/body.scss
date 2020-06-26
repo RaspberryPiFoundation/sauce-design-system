@@ -1,0 +1,26 @@
+@use 'tokens/font-family';
+@use 'tokens/font-weight';
+@use 'tokens/color-greyscale';
+@use 'tokens/line-height';
+@use 'mixins/device';
+@use 'mixins/font-size';
+
+body {
+  @include font-size.skateboard;
+
+  background-color: color-greyscale.$white;
+  color: color-greyscale.$off-black;
+  font-display: swap;
+  font-family: font-family.$sans-serif;
+  font-weight: font-weight.$regular;
+  line-height: line-height.$regular;
+  max-width: 100vw;
+  min-height: 100vh;
+  min-width: 100vw;
+  padding: env(safe-area-inset-top, 2rem) env(safe-area-inset-right, 2rem)
+    env(safe-area-inset-bottom, 2rem) env(safe-area-inset-left, 2rem);
+  position: relative;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+  width: 100vw;
+}

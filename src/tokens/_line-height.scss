@@ -2,5 +2,7 @@
 * @tokens Base / Line Height
 * @presenter LineHeight
 */
-$base: 1.5;
-$heading: 1.2;
+$loose: 1.6 !default;
+$regular: 1.4 !default;
+$cozy: 1.2 !default;
+$tight: 1.1 !default;

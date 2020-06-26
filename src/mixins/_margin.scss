@@ -1,0 +1,29 @@
+@use 'mixins/spacing';
+
+@mixin all($key) {
+  @include spacing.output('margin', $key);
+}
+
+@mixin h($key) {
+  @include spacing.h('margin', $key);
+}
+
+@mixin v($key) {
+  @include spacing.v('margin', $key);
+}
+
+@mixin t($key) {
+  @include spacing.t('margin', $key);
+}
+
+@mixin r($key) {
+  @include spacing.r('margin', $key);
+}
+
+@mixin b($key) {
+  @include spacing.b('margin', $key);
+}
+
+@mixin l($key) {
+  @include spacing.l('margin', $key);
+}

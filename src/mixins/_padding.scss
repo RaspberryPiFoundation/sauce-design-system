@@ -1,0 +1,29 @@
+@use 'mixins/spacing';
+
+@mixin all($key) {
+  @include spacing.output('padding', $key);
+}
+
+@mixin h($key) {
+  @include spacing.h('padding', $key);
+}
+
+@mixin v($key) {
+  @include spacing.v('padding', $key);
+}
+
+@mixin t($key) {
+  @include spacing.t('padding', $key);
+}
+
+@mixin r($key) {
+  @include spacing.r('padding', $key);
+}
+
+@mixin b($key) {
+  @include spacing.b('padding', $key);
+}
+
+@mixin l($key) {
+  @include spacing.l('padding', $key);
+}

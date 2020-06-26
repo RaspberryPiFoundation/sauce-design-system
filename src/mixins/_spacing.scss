@@ -1,0 +1,53 @@
+@use 'sass:map';
+@use 'sass:string';
+@use 'mixins/device';
+@use 'tokens/spacing';
+
+@mixin output($property, $key) {
+  @if (
+    string.index($property, 'margin') ==
+      0 and
+      string.index($property, 'padding') ==
+      0
+  ) {
+    @error "Invalid property: #{$property}";
+  }
+
+  @if map.has-key(spacing.$scale, $key) == false {
+    @error "Invalid spacing: #{$key}";
+  }
+
+  $multiplier: map.get(spacing.$scale, $key);
+
+  @each $breakpoint, $value in spacing.$base-sizes {
+    @include device.mq($breakpoint) {
+      #{$property}: $value * $multiplier;
+    }
+  }
+}
+
+@mixin h($property, $key) {
+  @include output('#{$property}-left', $key);
+  @include output('#{$property}-right', $key);
+}
+
+@mixin v($property, $key) {
+  @include output('#{$property}-bottom', $key);
+  @include output('#{$property}-top', $key);
+}
+
+@mixin t($key) {
+  @include output('#{$property}-top', $key);
+}
+
+@mixin r($key) {
+  @include output('#{$property}-right', $key);
+}
+
+@mixin b($key) {
+  @include output('#{$property}-bottom', $key);
+}
+
+@mixin l($key) {
+  @include output('#{$property}-left', $key);
+}

@@ -1,0 +1,5 @@
+@use 'primitives/type/base';
+
+ol {
+  @include base.primitive;
+}

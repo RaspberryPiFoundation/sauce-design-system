@@ -1,0 +1,5 @@
+@use 'mixins/font-size';
+
+@mixin primitive {
+  @include font-size.skateboard;
+}

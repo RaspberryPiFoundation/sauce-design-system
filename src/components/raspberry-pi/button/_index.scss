@@ -1,0 +1,7 @@
+@use 'tokens/raspberry-pi/color-brand';
+@use 'primitives/button';
+
+.sc-rp-button,
+.sc-rp-button:visited {
+  @include button.primitive;
+}

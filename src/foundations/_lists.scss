@@ -1,8 +1,0 @@
-@use 'mixins/typography';
-@use 'mixins/spacing';
-
-ul {
-  li {
-    @include typography.base;
-  }
-}

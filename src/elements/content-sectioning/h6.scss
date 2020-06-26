@@ -1,0 +1,5 @@
+@use 'primitives/type/h6';
+
+h6 {
+  @include h6.primitive;
+}

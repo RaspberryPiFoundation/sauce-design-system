@@ -1,0 +1,5 @@
+@use 'primitives/type/h2';
+
+h2 {
+  @include h2.primitive;
+}

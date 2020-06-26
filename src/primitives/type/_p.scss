@@ -1,0 +1,9 @@
+@use 'mixins/font-size';
+@use 'base';
+
+@mixin primitive {
+  @include base.primitive;
+
+  margin-bottom: 1.6rem;
+  max-width: 50ch;
+}

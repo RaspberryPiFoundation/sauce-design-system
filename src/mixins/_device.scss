@@ -1,0 +1,51 @@
+@use "sass:list";
+@use "sass:math";
+@use "sass:map";
+@use 'tokens/breakpoint';
+
+@mixin high-dpi {
+  @media (min-resolution: 2dpi) {
+    @content;
+  }
+}
+
+@mixin mq($metric, $value: null) {
+  @if $value == null {
+    $value: $metric;
+    $metric: min-width;
+  }
+
+  @if math.unit($value) != 'px' {
+    @error 'Breakpoints specified in px!';
+  }
+
+  @media only screen and ($metric: $value) {
+    @content;
+  }
+}
+
+@mixin respond-to($device) {
+  @if list.index(breakpoint.$devices, $device) == null {
+    @warn "Invalid device: #{$device}";
+  }
+
+  $metric: min-width;
+  $value: breakpoint.$laptop !default;
+
+  @if $device == 'phone-portrait' {
+    $metric: max-width;
+    $value: breakpoint.$phone-portrait !default;
+  } @else if $device == 'phone-landscape' {
+    $value: breakpoint.$phone-landscape;
+  } @else if $device == 'tablet-portrait' {
+    $value: breakpoint.$tablet-portrait;
+  } @else if $device == 'tablet-landscape' {
+    $value: breakpoint.$tablet-landscape;
+  } @else if $device == 'laptop' {
+    $value: breakpoint.$laptop;
+  }
+
+  @include mq($metric, $value) {
+    @content;
+  }
+}

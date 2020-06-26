@@ -1,25 +1,47 @@
-@use 'mixins/devices';
+@use 'mixins/device';
+@use 'mixins/font-size';
+@use 'mixins/padding';
 @use 'tokens/color-greyscale';
+@use 'tokens/color-palette';
 @use 'tokens/font-weight';
-@debug 'primitives/button';
+@use 'tokens/transition-duration';
+@use 'tokens/transition-timing';
+
+$background-color: color-greyscale.$grey-light !default;
+$background-color--hover: color-greyscale.$grey-dark !default;
+$color: color-greyscale.$black !default;
+$font-weight: font-weight.$medium !default;
+$transition-duration: transition-duration.$short !default;
+$transition-property: background-color transform !default;
+$transition-timing-function: transition-timing.$eased !default;
 
 @mixin primitive {
-  background-color: color-greyscale.$grey-light;
-  color: color-greyscale.$black;
-  cursor: pointer;
+  @include font-size.skateboard;
+  @include padding.v('ant');
+
+  background-color: color-palette.$navy;
+  border-width: 0;
+  color: color-greyscale.$white;
   display: inline-block;
-  font-size: 1rem;
-  font-weight: font-weight.$medium;
-  padding: 1rem 0;
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 0;
+  max-width: 50ch;
+  text-align: center;
+  text-decoration: none;
+  transition-duration: $transition-duration;
+  transition-property: $transition-property;
+  transition-timing-function: $transition-timing-function;
   width: 100%;
 
   &:hover {
-    background-color: color-greyscale.$grey-lightest;
+    background-color: $background-color--hover;
     transform: scale(1.05);
   }
 
-  @include devices.respond-to('phone') {
-    padding: 1rem 4rem;
+  @include device.respond-to('phone-landscape') {
+    @include padding.h('dog');
+
     width: auto;
   }
 

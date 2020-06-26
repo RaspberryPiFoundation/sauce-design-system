@@ -1,7 +1,16 @@
 /**
 * @tokens Base / Breakpoint
 */
-$phone: 576px !default;
-$tablet: 768px !default;
-$laptop: 992px !default;
-$desktop: 1200px !default;
+$phone-portrait: 0 !default;
+$phone-landscape: 600px !default;
+$tablet-portrait: 800px !default;
+$tablet-landscape: 1000px !default;
+$laptop: 1200px !default;
+
+$devices: (
+  'phone-portrait',
+  'phone-landscape',
+  'tablet-portrait',
+  'tablet-landscape',
+  'laptop'
+);
