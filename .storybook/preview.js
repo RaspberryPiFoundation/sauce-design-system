@@ -1,3 +1,5 @@
+import '!style-loader!css-loader!sass-loader!../src/sauce-design-system.scss'
+
 import { addDecorator } from '@storybook/react'
 import { addParameters } from '@storybook/react'
 import { withA11y } from '@storybook/addon-a11y'
@@ -32,15 +34,9 @@ const scssTokenFiles = scssReq
   .keys()
   .map((filename) => ({ filename, content: scssReq(filename).default }))
 
-const cssReq = require.context('!!raw-loader!../src/tokens', true, /.\.scss$/)
-const cssTokenFiles = cssReq
-  .keys()
-  .map((filename) => ({ filename, content: cssReq(filename).default }))
-
 addParameters({
   designToken: {
     files: {
-      css: cssTokenFiles,
       scss: scssTokenFiles,
     },
   },
