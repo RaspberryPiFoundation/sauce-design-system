@@ -1,5 +1,7 @@
-@use 'primitives/type/base';
+@use 'src/primitives/type';
+@use 'src/mixins/margin';
 
 ul {
-  @include base.primitive;
+  @include margin.b('bee');
+  @include type.primitive;
 }

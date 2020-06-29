@@ -4,6 +4,7 @@ module.exports = {
   addons: [
     // Features
     '@storybook/addon-links',
+
     // Upper panel tabs
     {
       name: '@storybook/addon-docs',
@@ -14,6 +15,7 @@ module.exports = {
     'storybook-addon-playroom',
     '@storybook/addon-viewport',
     '@storybook/addon-backgrounds',
+
     // Lower panel tabs
     '@whitespace/storybook-addon-html',
     '@storybook/addon-a11y',

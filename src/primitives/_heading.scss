@@ -1,0 +1,10 @@
+@use 'src/mixins/margin';
+@use 'src/mixins/font-size';
+@use 'src/tokens/font-weight';
+
+@mixin primitive {
+  @include font-size.scooter;
+  @include margin.b('chaffinch');
+
+  font-weight: font-weight.$bold;
+}

@@ -9,10 +9,6 @@ const sassWebpackConfig = {
       loader: 'sass-loader',
       options: {
         implementation: sass,
-        sassOptions: {
-          includePaths: ['src'],
-          outputStyle: 'compressed',
-        },
       },
     },
   ],

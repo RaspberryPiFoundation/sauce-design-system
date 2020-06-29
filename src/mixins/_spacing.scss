@@ -1,7 +1,7 @@
 @use 'sass:map';
 @use 'sass:string';
-@use 'mixins/device';
-@use 'tokens/spacing';
+@use 'src/mixins/device';
+@use 'src/tokens/spacing';
 
 @mixin output($property, $key) {
   @if (
@@ -36,18 +36,18 @@
   @include output('#{$property}-top', $key);
 }
 
-@mixin t($key) {
+@mixin t($property, $key) {
   @include output('#{$property}-top', $key);
 }
 
-@mixin r($key) {
+@mixin r($property, $key) {
   @include output('#{$property}-right', $key);
 }
 
-@mixin b($key) {
+@mixin b($property, $key) {
   @include output('#{$property}-bottom', $key);
 }
 
-@mixin l($key) {
+@mixin l($property, $key) {
   @include output('#{$property}-left', $key);
 }

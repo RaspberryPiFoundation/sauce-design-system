@@ -1,5 +1,9 @@
-@use 'primitives/type/p';
+@use 'src/mixins/margin';
+@use 'src/primitives/type';
 
 p {
-  @include p.primitive;
+  @include margin.b('bee');
+  @include type.primitive;
+
+  max-width: 50ch;
 }

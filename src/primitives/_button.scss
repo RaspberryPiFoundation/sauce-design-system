@@ -1,48 +1,23 @@
-@use 'mixins/device';
-@use 'mixins/font-size';
-@use 'mixins/padding';
-@use 'tokens/color-greyscale';
-@use 'tokens/color-palette';
-@use 'tokens/font-weight';
-@use 'tokens/transition-duration';
-@use 'tokens/transition-timing';
-
-$background-color: color-greyscale.$grey-light !default;
-$background-color--hover: color-greyscale.$grey-dark !default;
-$color: color-greyscale.$black !default;
-$font-weight: font-weight.$medium !default;
-$transition-duration: transition-duration.$short !default;
-$transition-property: background-color transform !default;
-$transition-timing-function: transition-timing.$eased !default;
+@use 'src/mixins/device';
+@use 'src/mixins/font-size';
+@use 'src/mixins/padding';
+@use 'src/tokens/font-family';
+@use 'src/tokens/font-weight';
+@use 'src/tokens/line-height';
 
 @mixin primitive {
   @include font-size.skateboard;
   @include padding.v('ant');
 
-  background-color: color-palette.$navy;
-  border-width: 0;
-  color: color-greyscale.$white;
   display: inline-block;
-  font-weight: 500;
-  line-height: 1.4;
-  margin: 0;
-  max-width: 50ch;
+  font-family: font-family.$sans-serif;
+  font-weight: font-weight.$regular;
+  line-height: line-height.$regular;
   text-align: center;
   text-decoration: none;
-  transition-duration: $transition-duration;
-  transition-property: $transition-property;
-  transition-timing-function: $transition-timing-function;
-  width: 100%;
-
-  &:hover {
-    background-color: $background-color--hover;
-    transform: scale(1.05);
-  }
 
   @include device.respond-to('phone-landscape') {
     @include padding.h('dog');
-
-    width: auto;
   }
 
   @content;

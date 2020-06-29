@@ -1,4 +1,4 @@
-import '!style-loader!css-loader!sass-loader!../src/sauce-design-system.scss'
+import '!style-loader!css-loader!sass-loader!./preview.scss'
 
 import { addDecorator } from '@storybook/react'
 import { addParameters } from '@storybook/react'

@@ -1,5 +1,5 @@
-@use 'primitives/type/h3';
+@use 'src/primitives/heading';
 
 h3 {
-  @include h3.primitive;
+  @include heading.primitive;
 }

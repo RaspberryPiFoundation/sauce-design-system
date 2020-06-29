@@ -1,4 +1,4 @@
-@use 'tokens/color-greyscale';
+@use 'src/tokens/color-greyscale';
 
 html {
   background-color: color-greyscale.$white;

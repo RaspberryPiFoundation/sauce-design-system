@@ -1,6 +1,6 @@
 @use 'sass:map';
-@use 'mixins/device';
-@use 'tokens/font-size';
+@use 'src/mixins/device';
+@use 'src/tokens/font-size';
 
 @mixin output($key) {
   @if map.has-key(font-size.$scale, $key) == false {

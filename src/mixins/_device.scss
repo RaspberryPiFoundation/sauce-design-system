@@ -1,10 +1,10 @@
 @use "sass:list";
 @use "sass:math";
 @use "sass:map";
-@use 'tokens/breakpoint';
+@use 'src/tokens/breakpoint';
 
 @mixin high-dpi {
-  @media (min-resolution: 2dpi) {
+  @include mq('min-resolution', 2dpi) {
     @content;
   }
 }
@@ -15,11 +15,13 @@
     $metric: min-width;
   }
 
-  @if math.unit($value) != 'px' {
-    @error 'Breakpoints specified in px!';
-  }
-
   @media only screen and ($metric: $value) {
+    @content;
+  }
+}
+
+@mixin reduced-motion {
+  @include mq('prefers-reduced-motion', reduce) {
     @content;
   }
 }

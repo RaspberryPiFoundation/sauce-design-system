@@ -1,5 +1,7 @@
-@use 'primitives/type/base';
+@use 'src/mixins/margin';
+@use 'src/primitives/type';
 
 ol {
-  @include base.primitive;
+  @include margin.b('bee');
+  @include type.primitive;
 }

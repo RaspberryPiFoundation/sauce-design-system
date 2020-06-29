@@ -1,9 +1,9 @@
-@use 'tokens/font-family';
-@use 'tokens/font-weight';
-@use 'tokens/color-greyscale';
-@use 'tokens/line-height';
-@use 'mixins/device';
-@use 'mixins/font-size';
+@use 'src/tokens/font-family';
+@use 'src/tokens/font-weight';
+@use 'src/tokens/color-greyscale';
+@use 'src/tokens/line-height';
+@use 'src/mixins/device';
+@use 'src/mixins/font-size';
 
 body {
   @include font-size.skateboard;
