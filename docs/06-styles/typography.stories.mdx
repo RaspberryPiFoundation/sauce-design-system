@@ -6,16 +6,36 @@ import { Meta } from '@storybook/addon-docs/blocks'
 
 ## Fonts
 
-Include this in your application `<head>`
+Include this in your application `<head>`. The following example includes expanded whitespace so you can see what it is, but feel free to minify it in your application.
 
 ```html
 <link
-  rel="preconnect stylesheet"
-  href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700|Space+Mono"
-  media="all"
-  type="text/css"
+  crossorigin
+  href="https://fonts.gstatic.com"
+  rel="preconnect"
 />
+<link
+  as="style"
+  href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700|Space+Mono&display=swap"
+  rel="preload"
+/>
+<link
+  href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700|Space+Mono&display=swap"
+  media="print"
+  onload="this.media='all'"
+  rel="stylesheet"
+/>
+<noscript>
+    <link
+      href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700|Space+Mono&display=swap"
+      rel="stylesheet"
+    />
+</noscript>
 ```
+
+This HTML fragment makes use of Resource hinting to provide the fastest download of the typefaces we use. It looks counter-intuitive to include more HTML to achieve this aim, but it helps the browser correctly prioritise and handle the request.
+
+For a deep-dive explanation of what's happening, read Harry Roberts' guide here: https://csswizardry.com/2020/05/the-fastest-google-fonts/
 
 ## Font Family
 
@@ -57,7 +77,7 @@ Name           | 0–800px | 800–1200px | 1200–∞ | Scale
 
 Name       | Value
 -----------|------
-`$light`   | 100
+`$light`   | 300
 `$regular` | 400
 `$medium`  | 500
 `$bold`    | 700
