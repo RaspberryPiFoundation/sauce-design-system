@@ -1,13 +1,17 @@
+import './_index.scss';
 import { Meta, Story } from '@storybook/addon-docs/blocks';
-import config from './index.stories.js';
-import * as stories from './index.stories.js';
 
-<Meta title={config.title} />
+<Meta title="Components|Raspberry Pi/Button" />
 
 # Button
+<Story name="vanilla">
+  <button class="sc-rp-button">Hello, World</button>
+</Story>
 
-I can define a story with the function imported from CSF:
+## As Link
 
-<Story name="Vanilla">{stories.vanilla}</Story>
+I can put anything in here?
 
-<Story name="Link">{stories.link}</Story>
+<Story name="link">
+  <a class="sc-rp-button" href="#">Whatevs</a>
+</Story>

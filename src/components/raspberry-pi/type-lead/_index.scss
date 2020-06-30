@@ -1,0 +1,11 @@
+@use 'src/primitives/type';
+@use 'src/mixins/font-size';
+@use 'src/mixins/margin';
+
+.sc-rp-type-lead {
+  @include font-size.scooter;
+  @include margin.b('chaffinch');
+  @include type.primitive;
+
+  max-width: 40ch;
+}

@@ -17,8 +17,8 @@ body {
   max-width: 100vw;
   min-height: 100vh;
   min-width: 100vw;
-  padding: env(safe-area-inset-top, 2rem) env(safe-area-inset-right, 2rem)
-    env(safe-area-inset-bottom, 2rem) env(safe-area-inset-left, 2rem);
+  padding: env(safe-area-inset-top) env(safe-area-inset-right)
+    env(safe-area-inset-bottom) env(safe-area-inset-left);
   position: relative;
   text-rendering: optimizeLegibility;
   text-size-adjust: 100%;

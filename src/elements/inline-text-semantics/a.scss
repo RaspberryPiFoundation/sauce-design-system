@@ -1,2 +1,5 @@
+@use 'src/primitives/link';
+
 a {
+  @include link.primitive;
 }

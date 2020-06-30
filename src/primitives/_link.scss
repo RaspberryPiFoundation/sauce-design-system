@@ -7,8 +7,4 @@
   @include margin.b('chaffinch');
 
   font-weight: font-weight.$bold;
-
-  &:last-child {
-    @include margin.b('none');
-  }
 }

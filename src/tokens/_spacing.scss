@@ -1,5 +1,5 @@
 /**
-* @tokens Base / Spacing
+* @tokens Spacing
 * @presenter Spacing
 */
 $base-sizes: (
@@ -8,6 +8,7 @@ $base-sizes: (
   1200px: 2.4rem,
 );
 
+$none: 0;
 $ant: 0.5;
 $bee: 1;
 $chaffinch: 1.5;
@@ -19,6 +20,7 @@ $hippo: 4;
 $iguanadon: 5;
 
 $scale: (
+  none: $none,
   ant: $ant,
   bee: $bee,
   chaffinch: $chaffinch,
