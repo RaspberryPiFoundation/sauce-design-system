@@ -1,0 +1,10 @@
+@use 'src/tokens/raspberry-pi/color-brand';
+@use 'src/mixins/margin';
+
+.sc-rp-break {
+  @include margin.v('eagle');
+
+  background-color: color-brand.$primary;
+  border-width: 0;
+  height: 2px;
+}

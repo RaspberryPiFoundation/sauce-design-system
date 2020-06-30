@@ -1,0 +1,24 @@
+import './_index.scss'
+import { Meta, Story } from '@storybook/addon-docs/blocks'
+
+<Meta title='Components|Raspberry Pi/Break' />
+
+# Break
+
+Creates a thematic break in a piece of content. Not much else to say. Here's what it looks like:
+
+<Story name="Default">
+  <hr class="sc-rp-break" />
+</Story>
+
+That's about it. Make sure you're using the `hr` element correctly. For guidance, here's how it's defined in the [HTML Living Standard](https://html.spec.whatwg.org/).
+
+<blockquote>
+  The hr element represents a paragraph-level thematic break, e.g. a scene change in a story, or a transition to another topic within a section of a reference book.
+</blockquote>
+
+It is **not** intended to be used as a page break, or to denote sections of a page. It's very rare that we would need this. It's possible that you want a purely decorative line-break, without any semantics attached. It's possible to achieve this look with an element that contains no semantic meaning by switching the `hr` for a `div`, as seen in this example.
+
+<Story name="Non-Semantic">
+  <div class="sc-rp-break"></div>
+</Story>
