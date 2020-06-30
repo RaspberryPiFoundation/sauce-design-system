@@ -3,3 +3,88 @@ import { Meta } from '@storybook/addon-docs/blocks'
 <Meta title="Styles | Typography" />
 
 # Typography
+
+## Fonts
+
+Include this in your application `<head>`
+
+```html
+<link
+  rel="preconnect stylesheet"
+  href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700|Space+Mono"
+  media="all"
+  type="text/css"
+/>
+```
+
+## Font Family
+
+Name          | Value
+--------------|-----------------------------------------------------
+`$serif`      | 'Rubik', serif;
+`$sans-serif` | 'Rubik', sans-serif;
+`$monospace`  | 'Space Mono', 'Lucida Console', 'Monaco', monospace;
+
+```scss
+@use 'src/tokens/font-family';
+
+.some-selector {
+  font-family: font-family.$monospace;
+}
+```
+
+## Typographic Scale
+
+Name           | 0–800px | 800–1200px | 1200–∞ | Scale
+---------------|---------|------------|--------|-----------
+`$rollerskate` | 12.8    | 16         | 19.2   | &times;0.8
+`$skateboard`  | 16      | 20         | 24     | &times;1
+`$scooter`     | 19.2    | 24         | 28.8   | &times;1.2
+`$bike`        | 24      | 30         | 36     | &times;1.5
+`$moped`       | 32      | 40         | 48     | &times;2
+`$car`         | 40      | 50         | 60     | &times;2.5
+`$van`         | 56      | 70         | 84     | &times;3.5
+
+```scss
+@use 'src/mixins/type-scale';
+
+.some-selector {
+  @include type-scale('bike');
+}
+```
+
+## Font Weight
+
+Name       | Value
+-----------|------
+`$light`   | 100
+`$regular` | 400
+`$medium`  | 500
+`$bold`    | 700
+
+```scss
+@use 'src/tokens/font-weight';
+
+.some-selector {
+  font-weight: font-weight.$light;
+}
+```
+
+## Line Heights
+
+Name       | Value
+-----------|------
+`$loose`   | 1.6
+`$regular` | 1.4
+`$cosy`    | 1.2
+`$tight`   | 1.1
+
+Use like this:
+
+```scss
+@use 'src/tokens/line-height';
+
+.some-selector {
+  line-height: line-height.$cosy;
+}
+```

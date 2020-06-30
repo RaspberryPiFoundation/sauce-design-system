@@ -23,7 +23,7 @@ addDecorator(
     prettier: {
       tabWidth: 2,
       useTabs: false,
-      htmlWhitespaceSensitivity: 'strict',
+      htmlWhitespaceSensitivity: 'ignore',
     },
   })
 )

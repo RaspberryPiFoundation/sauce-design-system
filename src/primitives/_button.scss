@@ -1,12 +1,12 @@
 @use 'src/mixins/device';
-@use 'src/mixins/font-size';
+@use 'src/mixins/type-scale';
 @use 'src/mixins/padding';
 @use 'src/tokens/font-family';
 @use 'src/tokens/font-weight';
 @use 'src/tokens/line-height';
 
 @mixin primitive {
-  @include font-size.skateboard;
+  @include type-scale.skateboard;
   @include padding.v('ant');
 
   display: inline-block;

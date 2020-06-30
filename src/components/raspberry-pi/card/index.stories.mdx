@@ -1,0 +1,41 @@
+import './_index.scss';
+import { Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Components|Raspberry Pi/Card" />
+
+# Card
+
+<Story name="Vanilla">
+  <div class="sc-rp-card">
+    <div class="sc-rp-card__summary">
+      <h3 class="sc-rp-card__heading">
+        <a class="sc-rp-card__link" href="#">Learn with Scratch</a>
+      </h3>
+      <p class="sc-rp-card__excerpt">
+        Learn how to use Scratch to create musical instruments,
+        animations, games and other interactive apps.
+      </p>
+    </div>
+    <img
+      alt="Don't forget the alt attribute!"
+      class="sc-rp-card__image"
+      height="400"
+      src="https://via.placeholder.com/800x400.png"
+      width="800"
+    />
+  </div>
+</Story>
+
+Do not use a card if it's not intended to link to another page.
+
+Do not include any kind of "read more" or "click here" link or button in the excerpt. There should only be one link, and it should be in the heading. Ensure the heading describes the content at the link's location.
+
+When a screenreader encounters this element it will have a much easier time understanding where this link leads to, since it will be announced with the content of the heading, and not some arbitary "click here" text or—worse yet—the entire contents of the card.
+
+It's vital for accessibility purposes that the image go last in the markup. You should also include an alt attribute.
+
+If at all possible be sure to include the real width and height attributes of the image.
+
+CSS is responsible for ensuring the size doesn't escape the confines of the card, but providing width and height helps compatible browsers calculate an aspect ration allowing them to create a correctly sized placeholder for the image to load into, which reduces repaint when the image arrives over the network.
+
+Remember, it's the `width` and `height` of the image *file*. It's **not** the size at which you wish the image to be *displayed*.

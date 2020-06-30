@@ -1,4 +1,4 @@
-@use 'src/mixins/spacing';
+@use 'lib/spacing';
 
 @mixin all($key) {
   @include spacing.output('margin', $key);

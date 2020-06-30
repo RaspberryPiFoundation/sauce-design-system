@@ -1,0 +1,6 @@
+@use 'src/tokens/font-weight';
+
+var {
+  font-style: italic;
+  font-weight: font-weight.$bold;
+}

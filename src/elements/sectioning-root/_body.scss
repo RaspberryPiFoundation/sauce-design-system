@@ -1,0 +1,26 @@
+@use 'src/tokens/font-family';
+@use 'src/tokens/font-weight';
+@use 'src/tokens/color-greyscale';
+@use 'src/tokens/line-height';
+@use 'src/mixins/device';
+@use 'src/mixins/type-scale';
+
+body {
+  @include type-scale.skateboard;
+
+  background-color: color-greyscale.$white;
+  color: color-greyscale.$off-black;
+  font-display: swap;
+  font-family: font-family.$sans-serif;
+  font-weight: font-weight.$regular;
+  line-height: line-height.$regular;
+  max-width: 100vw;
+  min-height: 100vh;
+  min-width: 100vw;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right)
+    env(safe-area-inset-bottom) env(safe-area-inset-left);
+  position: relative;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+  width: 100vw;
+}

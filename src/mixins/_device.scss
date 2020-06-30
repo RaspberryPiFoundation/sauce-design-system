@@ -26,6 +26,12 @@
   }
 }
 
+@mixin min-width($value) {
+  @include mq('min-width', $value) {
+    @content;
+  }
+}
+
 @mixin respond-to($device) {
   @if list.index(breakpoint.$devices, $device) == null {
     @warn "Invalid device: #{$device}";

@@ -1,0 +1,13 @@
+@use 'src/mixins/margin';
+@use 'src/primitives/heading';
+@use 'src/mixins/type-scale';
+@use 'src/tokens/line-height';
+
+.sc-rp-type-primary-heading {
+  @include heading.primitive;
+  @include type-scale.car;
+  @include margin.b('ant');
+
+  line-height: line-height.$cosy;
+  max-width: 100%;
+}

@@ -1,5 +1,5 @@
-@use 'src/mixins/font-size';
+@use 'src/mixins/type-scale';
 
 @mixin primitive {
-  @include font-size.skateboard;
+  @include type-scale.skateboard;
 }

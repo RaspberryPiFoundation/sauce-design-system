@@ -1,0 +1,12 @@
+@use 'sass:map';
+@use 'src/tokens/font-size';
+
+@mixin output($key) {
+  @if map.has-key(font-size.$scale, $key) == false {
+    @error "Invalid font-size: #{$key}";
+  }
+
+  $multiplier: map.get(font-size.$scale, $key);
+
+  font-size: calc(1rem + #{$multiplier});
+}

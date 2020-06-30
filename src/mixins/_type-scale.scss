@@ -1,0 +1,29 @@
+@use 'lib/type-scale';
+
+@mixin rollerskate {
+  @include type-scale.output('rollerskate');
+}
+
+@mixin skateboard {
+  @include type-scale.output('skateboard');
+}
+
+@mixin scooter {
+  @include type-scale.output('scooter');
+}
+
+@mixin bike {
+  @include type-scale.output('bike');
+}
+
+@mixin moped {
+  @include type-scale.output('moped');
+}
+
+@mixin car {
+  @include type-scale.output('car');
+}
+
+@mixin van {
+  @include type-scale.output('van');
+}

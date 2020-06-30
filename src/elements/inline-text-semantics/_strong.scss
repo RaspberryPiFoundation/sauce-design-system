@@ -1,0 +1,5 @@
+@use 'src/tokens/font-weight';
+
+strong {
+  font-weight: font-weight.$bold;
+}
