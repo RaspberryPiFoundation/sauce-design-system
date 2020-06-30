@@ -1,0 +1,27 @@
+@use 'src/tokens/raspberry-pi/color-brand';
+@use 'src/tokens/raspberry-pi/color-palette';
+@use 'src/tokens/font-weight';
+@use 'src/tokens/transition-timing';
+@use 'src/tokens/transition-duration';
+
+.sc-rp-link {
+  color: color-palette.$navy;
+  font-weight: font-weight.$regular;
+  text-decoration: underline;
+  text-decoration-skip-ink: auto;
+  transition-duration: transition-duration.$short;
+  transition-property: color;
+  transition-timing-function: transition-timing.$eased;
+
+  &:hover {
+    color: color-brand.$primary;
+  }
+
+  &:visited {
+    color: color-palette.$violet;
+
+    &:hover {
+      color: color-brand.$primary;
+    }
+  }
+}
