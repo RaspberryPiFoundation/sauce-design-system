@@ -4,23 +4,25 @@ import { Meta } from '@storybook/addon-docs/blocks'
 
 # Spacing
 
+Sauce doesn't really have a firm concept of "breakpoints", but in this case it's necessary to handle the scaling of the spacing values with somewhat arbitrary breakpoints.
+
+Name         | 0–800px | 800–1200 | 1200–∞  | Scale
+-------------|---------|----------|---------|-----------
+`$ant`       | 0.8rem  | 1.0rem   | 1.2rem  | &times;0.5
+`$bee`       | 1.6rem  | 2.0rem   | 2.4rem  | &times;1
+`$chaffinch` | 2.4rem  | 3.0rem   | 3.6rem  | &times;1.5
+`$dog`       | 3.2rem  | 4.0rem   | 4.8rem  | &times;2
+`$eagle`     | 4.0rem  | 5.0rem   | 6.0rem  | &times;2.5
+`$flamingo`  | 4.8rem  | 6.0rem   | 7.2rem  | &times;3
+`$grizzly`   | 5.6rem  | 7.0rem   | 8.4rem  | &times;3.5
+`$hippo`     | 6.4rem  | 8.0rem   | 9.6rem  | &times;4
+`$iguanadon` | 7.2rem  | 10.0rem  | 12.0rem | &times;5
+
 Use the `padding` and `margin` modules to apply spacing to your elements.
 
-Try to avoid using bare `padding` and `margin` rules, so that when the time comes it will be easier to update designs to use [Logical Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts), which is a more modern way of achieving these results in a multi-lingual web with modern layout tools such as Flexbox and Grid.
+Where possible don't use bare `padding` and `margin` rules, so that when the time comes it will be easier to update designs to use [Logical Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts), which is a more modern way of achieving these results in a multilingual Web with modern layout tools such as Flexbox and Grid.
 
-## Scale
-
-Name         | 0–800px | 800–1200 | 1200–∞ | Scale
--------------|---------|----------|--------|-----------
-`$ant`       | 8       | 10       | 12     | &times;0.5
-`$bee`       | 16      | 20       | 24     | &times;1
-`$chaffinch` | 24      | 30       | 36     | &times;1.5
-`$dog`       | 32      | 40       | 48     | &times;2
-`$eagle`     | 40      | 50       | 60     | &times;2.5
-`$flamingo`  | 48      | 60       | 72     | &times;3
-`$grizzly`   | 56      | 70       | 84     | &times;3.5
-`$hippo`     | 64      | 80       | 96     | &times;4
-`$iguanadon` | 72      | 100      | 120    | &times;5
+If you find yourself using regular margin and padding rules with arbitrary values, that's a sign that you should work with a designer to figure out the spacing in the design and your implementation.
 
 ## Margin
 
@@ -30,22 +32,16 @@ Name         | 0–800px | 800–1200 | 1200–∞ | Scale
 .some-selector {
   // All four sides
   @include margin.all('ant');
-
   // Vertical axis
   @include margin.v('bee');
-
   // Horizontal axis
   @include margin.h('chaffinch');
-
   // Top
   @include margin.t('dog');
-
   // Right
   @include margin.r('eagle');
-
   // Bottom
   @include margin.b('flamingo');
-
   // Left
   @include margin.l('grizzly');
 }
@@ -59,23 +55,34 @@ Name         | 0–800px | 800–1200 | 1200–∞ | Scale
 .some-selector {
   // All four sides
   @include padding.all('ant');
-
   // Vertical axis
   @include padding.v('bee');
-
   // Horizontal axis
   @include padding.h('chaffinch');
-
   // Top
   @include padding.t('dog');
-
   // Right
   @include padding.r('eagle');
-
   // Bottom
   @include padding.b('flamingo');
-
   // Left
   @include padding.l('grizzly');
+}
+```
+
+## Variable Spacing
+
+In some cases you may need to employ different spacing sizes across different breakpoints. For example you may wish to use the `$chaffinch` size at the smallest screen size, and `$grizzly` from thereon upwards.
+
+In order to achieve this, all of the mixins referenced on this page optionally take a [Sass list](https://sass-lang.com/documentation/modules/list) as an argument, with the names of the spacing units you need:
+
+```scss
+@use 'src/mixins/margin';
+@use 'src/mixins/padding';
+
+.some-selector {
+  @include margin.h([ 'bee', 'bee', 'hippo' ]);
+  @include padding.h([ 'chaffinch', 'grizzly' ]);
+  @include padding.v([ 'ant', 'iguanadon', 'dog' ]);
 }
 ```
