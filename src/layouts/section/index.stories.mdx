@@ -4,3 +4,18 @@ import { Meta, Story } from '@storybook/addon-docs/blocks';
 <Meta title="Layouts|Section" />
 
 # Section
+
+The Section should be used to separate vertical sections of content. You would most commonly use this with the HTML `section` element, but a `div` or other semantically appropriate element will work too.
+
+It has padding-bottom, and that's it. Good use of Sections will ensure that a page has consistency in its rhythm as the user scrolls down.
+
+You should not add any additional `class`es or styles to a Section.
+
+<Story name="Vanilla">
+  <section class="sl-section">
+    <div style={{backgroundColor: 'rgba(255, 0, 0, 0.1)', padding: '0.5rem 2rem'}}>
+      <p>This is a container</p>
+      <p>There's a dummy `div` in here with a background color that allows you to see where the container actually is. You're welcome.</p>
+    </div>
+  </section>
+</Story>

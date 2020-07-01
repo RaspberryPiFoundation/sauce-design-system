@@ -1,29 +1,29 @@
 @use 'lib/spacing';
 
-@mixin all($key) {
-  @include spacing.output('margin', $key);
+@mixin all($sizes) {
+  @include spacing.output('margin', $sizes);
 }
 
-@mixin h($key) {
-  @include spacing.h('margin', $key);
+@mixin h($sizes) {
+  @include spacing.h('margin', $sizes);
 }
 
-@mixin v($key) {
-  @include spacing.v('margin', $key);
+@mixin v($sizes) {
+  @include spacing.v('margin', $sizes);
 }
 
-@mixin t($key) {
-  @include spacing.t('margin', $key);
+@mixin t($sizes) {
+  @include spacing.t('margin', $sizes);
 }
 
-@mixin r($key) {
-  @include spacing.r('margin', $key);
+@mixin r($sizes) {
+  @include spacing.r('margin', $sizes);
 }
 
-@mixin b($key) {
-  @include spacing.b('margin', $key);
+@mixin b($sizes) {
+  @include spacing.b('margin', $sizes);
 }
 
-@mixin l($key) {
-  @include spacing.l('margin', $key);
+@mixin l($sizes) {
+  @include spacing.l('margin', $sizes);
 }

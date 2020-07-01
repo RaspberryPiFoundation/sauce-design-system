@@ -1,6 +1,65 @@
 import './_index.scss';
+import '../../components/raspberry-pi/type/_index.scss';
+import '../../components/raspberry-pi/button/_index.scss';
 import { Meta, Story } from '@storybook/addon-docs/blocks';
+import christina from './images/christina-example.jpg'
+import coolestProjects from './images/coolest-projects-example.jpg'
 
 <Meta title="Layouts|Block" />
 
 # Block
+
+<Story name="Vanilla">
+  <div class="c-sl-block" style={{backgroundColor: 'rgb(240, 248, 255)'}}>
+    <div class="c-sl-block__content">
+      <h2 class="sc-rp-type-secondary-heading">
+        Digital Making at Home
+      </h2>
+      <p>
+        Every week, we’re offering new code-along videos, led by our team,
+        to inspire and engage young people. Join us as we walk you through
+        fun, creative projects.
+      </p>
+      <a class="sc-rp-button" href="#">
+        Learn to code with us!
+      </a>
+    </div>
+    <div class="c-sl-block__image">
+      <img
+        alt=""
+        height="800"
+        src={christina}
+        width="1600"
+      />
+    </div>
+  </div>
+</Story>
+
+<Story name="Content Reversed">
+  <div class="c-sl-block c-sl-block--reversed" style={{backgroundColor: 'rgb(255, 243, 236)'}}>
+    <div class="c-sl-block__content">
+      <h2 class="sc-rp-type-secondary-heading">
+        Coolest Projects
+      </h2>
+      <p>
+        Our annual showcasing event, online this year, is something
+        fun for young people to enjoy over a longer period. It gives
+        them the opportunity to share their creative ideas and be
+        inspired by others. All projects are welcome, from beginner
+        to advanced.
+      </p>
+      <a class="sc-rp-button" href="#">
+        View Coolest Projects
+      </a>
+    </div>
+    <div class="c-sl-block__image">
+      <img
+        alt=""
+        height="800"
+        src={coolestProjects}
+        width="1600"
+      />
+    </div>
+  </div>
+</Story>
+

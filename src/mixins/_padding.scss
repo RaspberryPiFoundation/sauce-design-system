@@ -1,29 +1,29 @@
 @use 'lib/spacing';
 
-@mixin all($key) {
-  @include spacing.output('padding', $key);
+@mixin all($sizes) {
+  @include spacing.output('padding', $sizes);
 }
 
-@mixin h($key) {
-  @include spacing.h('padding', $key);
+@mixin h($sizes) {
+  @include spacing.h('padding', $sizes);
 }
 
-@mixin v($key) {
-  @include spacing.v('padding', $key);
+@mixin v($sizes) {
+  @include spacing.v('padding', $sizes);
 }
 
-@mixin t($key) {
-  @include spacing.t('padding', $key);
+@mixin t($sizes) {
+  @include spacing.t('padding', $sizes);
 }
 
-@mixin r($key) {
-  @include spacing.r('padding', $key);
+@mixin r($sizes) {
+  @include spacing.r('padding', $sizes);
 }
 
-@mixin b($key) {
-  @include spacing.b('padding', $key);
+@mixin b($sizes) {
+  @include spacing.b('padding', $sizes);
 }
 
-@mixin l($key) {
-  @include spacing.l('padding', $key);
+@mixin l($sizes) {
+  @include spacing.l('padding', $sizes);
 }

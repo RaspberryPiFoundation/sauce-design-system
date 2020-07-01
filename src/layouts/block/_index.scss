@@ -1,5 +1,15 @@
+@use 'src/mixins/device';
 @use 'src/mixins/padding';
 
-.sl-block {
-  @include padding.all('chaffinch');
+.c-sl-block {
+}
+
+.c-sl-block--reverse {
+}
+
+.c-sl-block__content {
+  @include padding.h([ 'chaffinch', 'grizzly' ]);
+}
+
+.c-sl-block__image {
 }

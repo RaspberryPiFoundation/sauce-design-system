@@ -1,5 +1,9 @@
 @use 'lib/type-scale';
 
+@mixin variable($sizes) {
+  @include type-scale.output($sizes);
+}
+
 @mixin rollerskate {
   @include type-scale.output('rollerskate');
 }
