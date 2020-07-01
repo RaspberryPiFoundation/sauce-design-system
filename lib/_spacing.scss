@@ -1,53 +1,69 @@
+@use 'sass:list';
 @use 'sass:map';
-@use 'sass:string';
-@use 'src/mixins/device';
-@use 'src/tokens/spacing';
+@use 'lib/responsive-values';
 
-@mixin output($property, $key) {
-  @if (
-    string.index($property, 'margin') ==
-      0 and
-      string.index($property, 'padding') ==
-      0
-  ) {
-    @error "Invalid property: #{$property}";
-  }
+$base-sizes: (
+  null: 1.6rem,
+  800px: 2rem,
+  1200px: 2.4rem,
+);
 
-  @if map.has-key(spacing.$scale, $key) == false {
-    @error "Invalid spacing: #{$key}";
-  }
+$scale: (
+  none: 0,
+  ant: 0.5,
+  bee: 1,
+  chaffinch: 1.5,
+  dog: 2,
+  eagle: 2.5,
+  flamingo: 3,
+  grizzly: 3.5,
+  hippo: 4,
+  iguanadon: 5,
+);
 
-  $multiplier: map.get(spacing.$scale, $key);
+$valid-properties: (
+  'margin',
+  'margin-bottom',
+  'margin-left',
+  'margin-right',
+  'margin-top',
+  'padding',
+  'padding-bottom',
+  'padding-left',
+  'padding-right',
+  'padding-top'
+);
 
-  @each $breakpoint, $value in spacing.$base-sizes {
-    @include device.mq($breakpoint) {
-      #{$property}: $value * $multiplier;
-    }
-  }
+@mixin output($property, $sizes) {
+  @include responsive-values.check-property($property, $valid-properties);
+  @include responsive-values.output(
+    $property,
+    responsive-values.map($base-sizes, $scale, $sizes)
+  );
 }
 
-@mixin h($property, $key) {
-  @include output('#{$property}-left', $key);
-  @include output('#{$property}-right', $key);
+@mixin h($property, $sizes) {
+  @include output('#{$property}-left', $sizes);
+  @include output('#{$property}-right', $sizes);
 }
 
-@mixin v($property, $key) {
-  @include output('#{$property}-bottom', $key);
-  @include output('#{$property}-top', $key);
+@mixin v($property, $sizes) {
+  @include output('#{$property}-bottom', $sizes);
+  @include output('#{$property}-top', $sizes);
 }
 
-@mixin t($property, $key) {
-  @include output('#{$property}-top', $key);
+@mixin t($property, $sizes) {
+  @include output('#{$property}-top', $sizes);
 }
 
-@mixin r($property, $key) {
-  @include output('#{$property}-right', $key);
+@mixin r($property, $sizes) {
+  @include output('#{$property}-right', $sizes);
 }
 
-@mixin b($property, $key) {
-  @include output('#{$property}-bottom', $key);
+@mixin b($property, $sizes) {
+  @include output('#{$property}-bottom', $sizes);
 }
 
-@mixin l($property, $key) {
-  @include output('#{$property}-left', $key);
+@mixin l($property, $sizes) {
+  @include output('#{$property}-left', $sizes);
 }

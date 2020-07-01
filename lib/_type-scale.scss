@@ -1,12 +1,25 @@
 @use 'sass:map';
-@use 'src/tokens/font-size';
+@use 'lib/responsive-values';
 
-@mixin output($key) {
-  @if map.has-key(font-size.$scale, $key) == false {
-    @error "Invalid font-size: #{$key}";
-  }
+$base-sizes: (
+  null: 1.6rem,
+  800px: 2rem,
+  1200px: 2.4rem,
+);
 
-  $multiplier: map.get(font-size.$scale, $key);
+$scale: (
+  rollerskate: 0.8,
+  skateboard: 1,
+  scooter: 1.2,
+  bike: 1.5,
+  moped: 2,
+  car: 2.5,
+  van: 3.5,
+);
 
-  font-size: calc(1rem + #{$multiplier});
+@mixin output($sizes) {
+  @include responsive-values.output(
+    'font-size',
+    responsive-values.map($base-sizes, $scale, $sizes)
+  );
 }

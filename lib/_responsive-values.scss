@@ -1,0 +1,50 @@
+@use 'sass:list';
+@use 'sass:map';
+@use 'sass:meta';
+@use 'src/mixins/device';
+
+@function map($base-sizes, $scale, $sizes) {
+  @if (meta.type-of($sizes) == 'string') {
+    $sizes: [$sizes];
+  }
+
+  $index: 1;
+  $multiplier: 1;
+  $output: ();
+
+  @each $breakpoint, $base-size in $base-sizes {
+    @if ($index <= list.length($sizes)) {
+      $multiplier-key: list.nth($sizes, $index);
+      $multiplier: map.get($scale, $multiplier-key);
+    }
+
+    $output: map.merge(
+      $output,
+      (
+        $breakpoint: $base-size * $multiplier,
+      )
+    );
+
+    $index: $index + 1;
+  }
+
+  @return $output;
+}
+
+@mixin check-property($property, $valid-properties) {
+  @if (list.index($valid-properties, $property) == null) {
+    @error "Invalid property: #{$property}";
+  }
+}
+
+@mixin output($property, $values) {
+  @each $breakpoint, $value in $values {
+    @if ($breakpoint == null) {
+      #{$property}: $value;
+    } @else {
+      @include device.mq($breakpoint) {
+        #{$property}: $value;
+      }
+    }
+  }
+}
