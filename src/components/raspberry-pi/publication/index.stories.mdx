@@ -13,7 +13,7 @@ This is not intended as a drop-in solution for styling content when you are dire
   <div class="sc-rp-publication">
     <h1>This is a h1 element</h1>
     <p>And now a paragraph. Oh look it's <a href="#">a link</a>, how about that.</p>
-    <p>Here's a list of Talking Heads album, for some reason:</p>
+    <p>Here's a list of Talking Heads albums, for some reason:</p>
     <ul>
       <li>Talking Heads: 77 (1977)</li>
       <li>More Songs About Buildings and Food (1978)</li>
@@ -73,20 +73,24 @@ This is not intended as a drop-in solution for styling content when you are dire
         lyrics.map((line) => console.log(line))
       </code>
     </pre>
-    <p>Ha. I lied to you. That <em>about</em> Talking Heads after all.</p>
+    <p>Ha. I lied to you. That <em>was</em> about Talking Heads after all.</p>
     <h2>You are a fool to have trusted me.</h2>
     <p>Hey, the heading size was supposed to be a h6, but I used a h2 instead. It's a bit like when David Byrne returns to the stage in his iconic "big suit" for the closing numbers of the Stop Making Sense show. If you haven't see Stop Making Sense, you really should watch it:</p>
     <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/4xL7Ilh1DFI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <h6>h6: Same as it ever was</h6>
     <ul>
       <li>Same as it ever was</li>
-      <li>Same as it ever was</li>
-      <li>Same as it ever was</li>
-      <li>Same as it ever was</li>
-      <li>Once in a lifetime</li>
+      <li>Same as it ever was
+        <ol>
+          <li>Same as it ever was</li>
+          <li>Same as it ever was</li>
+          <li>Once in a lifetime</li>
+        </ol>
+      </li>
       <li>Let the water hold me down</li>
       <li>Letting the days go by</li>
       <li>Water flowing underground</li>
     </ul>
+    <p><em>Note to other maintainers</em>: should you ever need to add further examples to this page, try to keep the content on-topic, yeah?</p>
   </div>
 </Story>

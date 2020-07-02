@@ -42,7 +42,7 @@
     @if ($breakpoint == null) {
       #{$property}: $value;
     } @else {
-      @include device.mq($breakpoint) {
+      @include device.min-width($breakpoint) {
         #{$property}: $value;
       }
     }
