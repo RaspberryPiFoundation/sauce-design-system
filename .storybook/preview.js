@@ -1,10 +1,18 @@
 import '!style-loader!css-loader!sass-loader!./preview.scss'
 
+import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 import { addDecorator } from '@storybook/react'
 import { addParameters } from '@storybook/react'
 import { withA11y } from '@storybook/addon-a11y'
 import { withHTML } from '@whitespace/storybook-addon-html/react'
 import { withPlayroom } from 'storybook-addon-playroom'
+
+// Viewport testing
+addParameters({
+  viewport: {
+    viewports: INITIAL_VIEWPORTS,
+  },
+})
 
 // Playroom
 addDecorator(withPlayroom)
