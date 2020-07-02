@@ -16,7 +16,7 @@
   text-align: center;
   text-decoration: none;
 
-  @include device.min-width(60rem) {
+  @include device.min-width(550px) {
     @include padding.h('dog');
   }
 

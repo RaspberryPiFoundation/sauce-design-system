@@ -24,7 +24,7 @@
     transform: scale(1.05);
   }
 
-  @include device.min-width(60rem) {
+  @include device.min-width(550px) {
     width: auto;
   }
 }

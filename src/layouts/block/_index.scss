@@ -1,15 +1,51 @@
 @use 'src/mixins/device';
 @use 'src/mixins/padding';
 
-.c-sl-block {
+.sc-sl-block {
+  display: flex;
+  flex-direction: column;
+
+  @include device.min-width(760px) {
+    flex-direction: row;
+  }
 }
 
-.c-sl-block--reverse {
+.sc-sl-block--reversed {
+  flex-direction: column-reverse;
+
+  @include device.min-width(760px) {
+    flex-direction: row-reverse;
+  }
 }
 
-.c-sl-block__content {
-  @include padding.h([ 'chaffinch', 'grizzly' ]);
+.sc-sl-block__content {
+  @include padding.h([ 'bee', 'grizzly' ]);
+  @include padding.v('chaffinch');
+
+  @include device.min-width(760px) {
+    background: red;
+    width: 60%;
+  }
+
+  @include device.min-width(1000px) {
+    width: 70%;
+  }
 }
 
-.c-sl-block__image {
+.sc-sl-block__figure {
+  @include device.min-width(760px) {
+  }
+}
+
+.sc-sl-block__image {
+  display: block;
+  height: auto;
+  object-fit: cover;
+  transform: translateX(-18.75%);
+  width: 160%;
+
+  @include device.min-width(760px) {
+    transform: none;
+    width: 100%;
+  }
 }
