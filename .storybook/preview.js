@@ -1,4 +1,4 @@
-import '!style-loader!css-loader!sass-loader!./preview.scss'
+import '!style-loader!css-loader!sass-loader!postcss-loader!./preview.scss'
 
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 import { addDecorator } from '@storybook/react'

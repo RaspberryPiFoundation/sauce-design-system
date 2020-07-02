@@ -11,6 +11,7 @@ const sassWebpackConfig = {
         implementation: sass,
       },
     },
+    'postcss-loader',
   ],
 }
 

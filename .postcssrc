@@ -1,0 +1,10 @@
+{
+  "parser": "postcss-scss",
+  "plugins": {
+    "postcss-preset-env": {
+      "autoprefixer": {
+        "grid": true
+      }
+    }
+  }
+}
