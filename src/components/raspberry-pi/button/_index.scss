@@ -24,7 +24,7 @@
     transform: scale(1.05);
   }
 
-  @include device.respond-to('phone-landscape') {
+  @include device.min-width(60rem) {
     width: auto;
   }
 }
