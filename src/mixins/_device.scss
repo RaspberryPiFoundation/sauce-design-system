@@ -1,6 +1,6 @@
 @use "sass:list";
-@use "sass:math";
 @use "sass:map";
+@use "sass:math";
 @use 'src/tokens/breakpoint';
 
 @mixin high-dpi {
@@ -22,6 +22,10 @@
 }
 
 @mixin min-width($value) {
+  @if (math.unit($value) != 'rem') {
+    @warn "Please specify min-width value with a rem unit";
+  }
+
   @include mq('min-width', $value) {
     @content;
   }
