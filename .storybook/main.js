@@ -19,6 +19,7 @@ module.exports = {
     // Lower panel tabs
     '@whitespace/storybook-addon-html',
     '@storybook/addon-a11y',
+    'storybook-mobile',
     'storybook-design-token',
   ],
   stories: [
