@@ -2,8 +2,12 @@ import './_index.scss';
 import '../../components/raspberry-pi/type/_index.scss';
 import '../../components/raspberry-pi/button/_index.scss';
 import { Meta, Story } from '@storybook/addon-docs/blocks';
-import christina from './images/christina-example.jpg'
-import coolestProjects from './images/coolest-projects-example.jpg'
+import christinaSm from './images/christina-sm.jpg'
+import christinaMd from './images/christina-md.jpg'
+import christinaLg from './images/christina-lg.jpg'
+import coolestProjectsSm from './images/coolest-projects-sm.jpg'
+import coolestProjectsMd from './images/coolest-projects-md.jpg'
+import coolestProjectsLg from './images/coolest-projects-lg.jpg'
 
 <Meta title="Layouts|Image Block?" />
 
@@ -15,9 +19,15 @@ The image's aspect ratio must be `2:1`. The image must also have a "quiet area" 
 
 For example, an image with a size of 1,600 pixels would would have 300 pixels quiet area, 1,000 pixels for the image's focus area, and another 300 pixels quiet area.
 
-The purpose of the quiet area is to allow the image to adapt to different screen sizes, without losing the focus of the image.
+The purpose of the quiet area is to allow the image to adapt to different screen sizes, without losing the focus of the image, similar to the concept of "[Overscan](https://en.wikipedia.org/wiki/Overscan)" on old CRT TVs.
 
 Quiet areas can contain graphical elements (or nothing at all).
+
+Avoid images going "full-bleed" on the `x` axis. Full bleed on one of the edges of the `y` axis is fine, but never both. Vertical image aligment is accomplished with modifier classes.
+
+Use the `<picture>` element to deliver the correct image for the correct screen size. There are no set breakpoints for swapping the image for higher/lower resolution versions. Test your image and see what works, and edit your markup accordingly. Different image sizes should maintain the same aspect ratio and quiet areas, but they don't have to be the same image as the other image sizes. Your fallback `img` should show a 'mid-point' option, as we can't make any reasonable assumption about screen size, device capability, network bandwidth, etc. It may be seen by IE11, or an old Android device. Picking a mid-resolution image is the safest way to make sure everyone gets a roughtly equivalent experience.
+
+Another important point, is that you must specify the true width and height of the image in the HTML. If you are unable to do so due to CMS restrictions it's not the end of the world, but providing these sizes allows CSS to proportionally set aside space for the image, reducing the need for [browser reflow](https://developers.google.com/speed/docs/insights/browser-reflow). In future we will be able to use the [CSS `aspect-ratio` property](https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio) to help out too.
 
 In the following examples you can see the quiet area on the images illustrated with a transparent red box.
 
@@ -39,13 +49,18 @@ In the following examples you can see the quiet area on the images illustrated w
       </a>
     </div>
     <div class="sc-sl-block__figure">
-      <img
-        alt=""
-        class="sc-sl-block__image"
-        height="800"
-        src={christina}
-        width="1600"
-      />
+      <picture>
+        <source media="(min-width: 600px)"  srcSet={christinaSm} />
+        <source media="(min-width: 1000px)" srcSet={christinaMd} />
+        <source media="(min-width: 1300px)" srcSet={christinaLg} />
+        <img
+          alt="Christina Foust, from Raspberry Pi Foundation North America"
+          class="sc-sl-block__image"
+          height="800"
+          src={christinaSm}
+          width="1600"
+        />
+      </picture>
     </div>
   </div>
 </Story>
@@ -70,13 +85,18 @@ In the following examples you can see the quiet area on the images illustrated w
       </a>
     </div>
     <div class="sc-sl-block__figure">
-      <img
-        alt=""
-        class="sc-sl-block__image"
-        height="800"
-        src={coolestProjects}
-        width="1600"
-      />
+      <picture>
+        <source media="(min-width: 600px)"  srcSet={coolestProjectsSm} />
+        <source media="(min-width: 1000px)" srcSet={coolestProjectsMd} />
+        <source media="(min-width: 1300px)" srcSet={coolestProjectsLg} />
+        <img
+          alt="A Makers shows her creation at Coolest Project International 2019"
+          class="sc-sl-block__image"
+          height="800"
+          src={coolestProjectsSm}
+          width="1600"
+        />
+      </picture>
     </div>
   </div>
 </Story>
