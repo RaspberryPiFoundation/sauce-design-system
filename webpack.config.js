@@ -1,4 +1,5 @@
 const sass = require('sass')
+const postcssPresetEnv = require('postcss-preset-env')
 
 const sassWebpackConfig = {
   test: /\.scss$/,
@@ -9,9 +10,19 @@ const sassWebpackConfig = {
       loader: 'sass-loader',
       options: {
         implementation: sass,
+        sassOptions: {
+          outputStyle: 'compressed',
+        },
+        sourceMap: true,
       },
     },
-    'postcss-loader',
+    {
+      loader: 'postcss-loader',
+      options: {
+        ident: 'postcss',
+        plugins: () => [postcssPresetEnv()],
+      },
+    },
   ],
 }
 
