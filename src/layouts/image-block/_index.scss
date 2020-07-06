@@ -13,7 +13,7 @@
 
     @supports (display: grid) {
       display: grid;
-      grid-template-columns: 2fr 1fr 2fr;
+      grid-template-columns: 5fr 3fr 5fr;
       grid-template-rows: 1fr;
     }
   }
@@ -83,12 +83,12 @@
   width: 160%;
 
   @include device.min-width(760px) {
-    transform: scale(1.05) translateX(18%);
+    transform: translateX(19%);
     transform-origin: right;
     width: 100%;
 
     :is(.sc-sl-block--reversed) & {
-      transform: scale(1.05) translateX(-18%);
+      transform: translateX(-19%);
       transform-origin: left;
     }
   }
