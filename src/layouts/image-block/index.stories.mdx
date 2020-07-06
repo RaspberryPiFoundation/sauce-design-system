@@ -5,12 +5,26 @@ import { Meta, Story } from '@storybook/addon-docs/blocks';
 import christina from './images/christina-example.jpg'
 import coolestProjects from './images/coolest-projects-example.jpg'
 
-<Meta title="Layouts|Block" />
+<Meta title="Layouts|Image Block?" />
 
-# Block
+# Image Block?
+
+An image block has some content and an image. The important thing here is the image, which must meet a certain set of requirements.
+
+The image's aspect ratio must be `2:1`. The image must also have a "quiet area" on either side of the horizontal axis. Propotionally this is a ratio of `3:10:3`.
+
+For example, an image with a size of 1,600 pixels would would have 300 pixels quiet area, 1,000 pixels for the image's focus area, and another 300 pixels quiet area.
+
+The purpose of the quiet area is to allow the image to adapt to different screen sizes, without losing the focus of the image.
+
+Quiet areas can contain graphical elements (or nothing at all).
+
+In the following examples you can see the quiet area on the images illustrated with a transparent red box.
+
+### Image aligned to bottom of layout
 
 <Story name="Vanilla">
-  <div class="sc-sl-block" style={{backgroundColor: 'rgb(240, 248, 255)'}}>
+  <div class="sc-sl-block sc-sl-block--image-bottom" style={{backgroundColor: 'rgb(240, 248, 255)'}}>
     <div class="sc-sl-block__content">
       <h2 class="sc-rp-type-secondary-heading">
         Digital Making at Home
@@ -35,6 +49,8 @@ import coolestProjects from './images/coolest-projects-example.jpg'
     </div>
   </div>
 </Story>
+
+### Image and content reversed
 
 <Story name="Content Reversed">
   <div class="sc-sl-block sc-sl-block--reversed" style={{backgroundColor: 'rgb(255, 243, 236)'}}>
