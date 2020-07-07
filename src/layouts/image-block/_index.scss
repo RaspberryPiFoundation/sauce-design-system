@@ -79,7 +79,7 @@
   display: block;
   height: auto;
   object-fit: cover;
-  transform: translateX(18.75);
+  transform: translateX(-18.75%);
   width: 160%;
 
   :is(.sc-sl-block--debug) & {
@@ -109,8 +109,8 @@
     }
 
     &::before {
-      transform: rotateY(180deg);
       left: 0;
+      transform: rotateY(180deg);
     }
   }
 
