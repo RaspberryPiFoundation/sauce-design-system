@@ -1,0 +1,13 @@
+@use 'lib/spacing';
+
+@mixin column-gap($sizes) {
+  @include spacing.output('grid-column-gap', $sizes);
+}
+
+@mixin gap($sizes) {
+  @include spacing.output('grid-gap', $sizes);
+}
+
+@mixin row-gap($sizes) {
+  @include spacing.output('grid-row-gap', $sizes);
+}

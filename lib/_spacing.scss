@@ -22,6 +22,10 @@ $scale: (
 );
 
 $valid-properties: (
+  'gap',
+  'grid-column-gap',
+  'grid-gap',
+  'grid-row-gap',
   'margin',
   'margin-bottom',
   'margin-left',
