@@ -1,5 +1,5 @@
-@use 'src/mixins/padding';
+@use 'src/mixins/margin';
 
 .sl-section {
-  @include padding.b('chaffinch');
+  @include margin.b('eagle');
 }

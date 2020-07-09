@@ -1,9 +1,14 @@
 @use 'src/mixins/margin';
 @use 'src/mixins/type-scale';
 @use 'src/tokens/font-weight';
+@use 'src/tokens/transition-timing';
+@use 'src/tokens/transition-duration';
 
 @mixin primitive {
-  @include type-scale.scooter;
-
-  font-weight: font-weight.$bold;
+  font-weight: font-weight.$regular;
+  text-decoration: underline;
+  text-decoration-skip-ink: auto;
+  transition-duration: transition-duration.$short;
+  transition-property: color;
+  transition-timing-function: transition-timing.$eased;
 }

@@ -8,8 +8,4 @@
 
   font-weight: font-weight.$bold;
   margin-top: 0;
-
-  &:last-child {
-    @include margin.b('none');
-  }
 }

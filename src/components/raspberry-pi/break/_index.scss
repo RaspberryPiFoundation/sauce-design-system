@@ -3,7 +3,7 @@
 @use 'src/mixins/margin';
 
 .sc-rp-break {
-  @include margin.v('eagle');
+  @include margin.b('eagle');
 
   background-color: color-brand.$primary;
   border-width: 0;

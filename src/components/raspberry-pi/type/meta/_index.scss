@@ -1,0 +1,10 @@
+@use 'src/primitives/type';
+@use 'src/mixins/type-scale';
+
+.sc-rp-type-meta {
+  @include type.primitive;
+  @include type-scale.rollerskate;
+
+  margin: 0;
+  max-width: 60ch;
+}
