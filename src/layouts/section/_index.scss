@@ -1,5 +1,7 @@
-@use 'src/mixins/margin';
+@use 'src/primitives/container';
+@use 'src/primitives/section';
 
 .sl-section {
-  @include margin.b('eagle');
+  @include container.primitive;
+  @include section.primitive;
 }

@@ -1,5 +1,7 @@
 @use 'src/mixins/device';
 @use 'src/mixins/padding';
+@use 'src/primitives/container';
+@use 'src/primitives/section';
 
 @mixin unsafe-debug {
   @warn 'PLEASE REMOVE ALL DEBUG INCLUDES BEFORE DEPLOYING TO PRODUCTION';
@@ -28,10 +30,13 @@
 }
 
 .sc-sl-block {
+  @include container.primitive;
+  @include section.primitive;
+  @include padding.h('none');
+
   align-items: center;
   display: flex;
   flex-direction: column;
-  max-width: 130rem;
   overflow: hidden;
 
   @include device.min-width(760px) {
@@ -55,13 +60,13 @@
 
 .sc-sl-block__content {
   @include padding.l([ 'bee', 'grizzly' ]);
-  @include padding.r([ 'bee', 'none' ]);
+  @include padding.r([ 'bee', 'ant' ]);
   @include padding.v('dog');
 
   width: 100%;
 
   @include reverse {
-    @include padding.l([ 'bee', 'none' ]);
+    @include padding.l([ 'bee', 'ant' ]);
     @include padding.r([ 'bee', 'grizzly' ]);
   }
 
