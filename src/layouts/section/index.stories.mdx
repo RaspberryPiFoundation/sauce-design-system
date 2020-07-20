@@ -1,5 +1,5 @@
-import './_index.scss';
-import { Meta, Story } from '@storybook/addon-docs/blocks';
+import './_index.scss'
+import { Meta, Story } from '@storybook/addon-docs/blocks'
 
 <Meta title="Layouts|Section" />
 
@@ -12,11 +12,25 @@ It has padding-bottom, and that's it. Good use of Sections will ensure that a pa
 You should not add any additional `class`es or styles to a Section.
 
 <Story name="Vanilla">
-  <section class="sl-section" style={{backgroundColor: 'rgba(255, 0, 0, 0.1)'}}>
-    <div style={{backgroundColor: 'rgba(255, 0, 0, 0.1)', padding: '0.5rem 2rem'}}>
+  <section
+    class="sl-section"
+    style={{ backgroundColor: 'rgba(255, 0, 0, 0.1)' }}
+  >
+    <div
+      style={{
+        backgroundColor: 'rgba(255, 0, 0, 0.1)',
+        padding: '0.5rem 2rem',
+      }}
+    >
       <p>This is a Section</p>
-      <p>There's a dummy `div` in here with a background color that allows you to see where the container actually is. You're welcome.</p>
-      <p>You can see the padding at the bottom here. Don't copy the background color style when using this markup, <em>obvs</em>.</p>
+      <p>
+        There's a dummy `div` in here with a background color that allows you to
+        see where the section actually is. You're welcome.
+      </p>
+      <p>
+        You can see the padding at the bottom here. Don't copy the background
+        color style when using this markup, <em>obvs</em>.
+      </p>
     </div>
   </section>
 </Story>

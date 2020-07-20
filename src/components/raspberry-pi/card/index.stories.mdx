@@ -1,5 +1,5 @@
-import './_index.scss';
-import { Meta, Story } from '@storybook/addon-docs/blocks';
+import './_index.scss'
+import { Meta, Story } from '@storybook/addon-docs/blocks'
 
 <Meta title="Components|Raspberry Pi/Card" />
 
@@ -9,11 +9,13 @@ import { Meta, Story } from '@storybook/addon-docs/blocks';
   <div class="sc-rp-card">
     <div class="sc-rp-card__summary">
       <h3 class="sc-rp-card__heading">
-        <a class="sc-rp-card__link" href="#">Learn with Scratch</a>
+        <a class="sc-rp-card__link" href="#">
+          Learn with Scratch
+        </a>
       </h3>
       <p class="sc-rp-card__excerpt">
-        Learn how to use Scratch to create musical instruments,
-        animations, games and other interactive apps.
+        Learn how to use Scratch to create musical instruments, animations,
+        games and other interactive apps.
       </p>
     </div>
     <img
@@ -38,4 +40,4 @@ If at all possible be sure to include the real width and height attributes of th
 
 CSS is responsible for ensuring the size doesn't escape the confines of the card, but providing width and height helps compatible browsers calculate an aspect ration allowing them to create a correctly sized placeholder for the image to load into, which reduces repaint when the image arrives over the network.
 
-Remember, it's the `width` and `height` of the image *file*. It's **not** the size at which you wish the image to be *displayed*.
+Remember, it's the `width` and `height` of the image _file_. It's **not** the size at which you wish the image to be _displayed_.
