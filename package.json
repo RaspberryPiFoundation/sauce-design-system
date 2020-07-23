@@ -25,6 +25,9 @@
     "storybook:build": "build-storybook -c .storybook -o dist",
     "storybook:start": "start-storybook -p 54321 --ci"
   },
+  "dependencies": {
+    "prettier-stylelint": "^0.4.2"
+  },
   "devDependencies": {
     "@babel/core": "^7.10.2",
     "@babel/plugin-proposal-class-properties": "^7.10.1",
@@ -96,12 +99,9 @@
   },
   "keywords": [],
   "engines": {
-    "node": "12.18.1"
+    "node": "^12.18.1"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
-  },
-  "dependencies": {
-    "prettier-stylelint": "^0.4.2"
   }
 }
