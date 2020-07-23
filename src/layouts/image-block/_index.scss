@@ -6,32 +6,31 @@
 @mixin unsafe-debug {
   @warn 'PLEASE REMOVE ALL DEBUG INCLUDES BEFORE DEPLOYING TO PRODUCTION';
 
-  .sc-sl-block--debug & {
+  .sl-block--debug & {
     @content;
   }
 }
 
 @mixin image-bottom {
-  .sc-sl-block--image-top & {
+  .sl-block--image-top & {
     @content;
   }
 }
 
 @mixin image-top {
-  .sc-sl-block--image-top & {
+  .sl-block--image-top & {
     @content;
   }
 }
 
 @mixin reverse {
-  .sc-sl-block--reverse & {
+  .sl-block--reverse & {
     @content;
   }
 }
 
-.sc-sl-block {
+.sl-block {
   @include container.primitive;
-  @include section.primitive;
   @include padding.h('none');
 
   align-items: center;
@@ -50,7 +49,7 @@
   }
 }
 
-.sc-sl-block--reverse {
+.sl-block--reverse {
   flex-direction: column-reverse;
 
   @include device.min-width(760px) {
@@ -58,7 +57,7 @@
   }
 }
 
-.sc-sl-block__content {
+.sl-block__content {
   @include padding.l([ 'bee', 'grizzly' ]);
   @include padding.r([ 'bee', 'ant' ]);
   @include padding.v('dog');
@@ -81,7 +80,7 @@
   }
 }
 
-.sc-sl-block__figure {
+.sl-block__figure {
   max-width: 50rem;
 
   @include device.min-width(760px) {
@@ -105,7 +104,7 @@
   }
 }
 
-.sc-sl-block__image-container {
+.sl-block__image-container {
   display: block;
   height: auto;
   object-fit: cover;
@@ -150,7 +149,7 @@
   }
 }
 
-.sc-sl-block__image {
+.sl-block__image {
   display: block;
   height: auto;
   width: 100%;
