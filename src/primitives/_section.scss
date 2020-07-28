@@ -1,7 +1,0 @@
-@use 'src/mixins/margin';
-
-@mixin primitive {
-  @include margin.b('eagle');
-
-  @content;
-}
