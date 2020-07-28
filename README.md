@@ -12,7 +12,7 @@ This site uses [Storybook JS](https://storybook.js.org) to create a documentatio
 
 ### Requirements
 
-- [NodeJS](https://nodejs.org/) 12.18.1 - install with [`asdf`](https://asdf-vm.com/)
+- [NodeJS](https://nodejs.org/) 12.18.2 - install with [`asdf`](https://asdf-vm.com/)
 
 ### Setup instructions
 
@@ -40,8 +40,8 @@ You may find yourself in this scenario:
 
 In order to do so, your application must meet the requirements as detailed in the "For Developers / Getting Started" documentation. The following points are essential:
 
-* Your application *must* run on the same version of NodeJS as Sauce (currently 12.18.1)
-* Your Node dependencies *should* be installed through `npm`. If this isn't possible then this should still work for Yarn.
+- Your application _must_ run on the same version of NodeJS as Sauce (currently 12.18.2)
+- Your Node dependencies _should_ be installed through `npm`. If this isn't possible then this should still work for Yarn.
 
 If those two points are satisfied, and you're able to include Sauce in your application as the "For Developers / Getting Started" documentation, you're ready to test a local copy of Sauce.
 
@@ -49,16 +49,16 @@ If those two points are satisfied, and you're able to include Sauce in your appl
 
 In Terminal, navigate to the root of the `sauce-design-system` repository, and execute the following commands.
 
-* `npm install`
-* `npm link`
-* `npm start`
+- `npm install`
+- `npm link`
+- `npm start`
 
 ### STEP 2: Link to Sauce in your application
 
 In Terminal, navigate to the root of your application, which should be the same directory as its `package.json` file. Execute the following commands.
 
-* `npm install`
-* `npm link @rpf/sauce`
+- `npm install`
+- `npm link @rpf/sauce`
 
 This will replace the `@rpf/sauce` directory in the application's `node_modules` directory with a symlink to your local copy of Sauce. Any changes you make in Sauce will be reflected in your application.
 
