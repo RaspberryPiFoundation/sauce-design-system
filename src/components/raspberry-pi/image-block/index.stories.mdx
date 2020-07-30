@@ -1,6 +1,6 @@
 import './_index.scss'
-import '../../components/raspberry-pi/type/_index.scss'
-import '../../components/raspberry-pi/button/_index.scss'
+import '../type/_index.scss'
+import '../button/_index.scss'
 import { Meta, Story } from '@storybook/addon-docs/blocks'
 import christinaSm from './images/christina-sm.jpg'
 import christinaMd from './images/christina-md.jpg'
@@ -9,9 +9,9 @@ import coolestProjectsSm from './images/coolest-projects-sm.jpg'
 import coolestProjectsMd from './images/coolest-projects-md.jpg'
 import coolestProjectsLg from './images/coolest-projects-lg.jpg'
 
-<Meta title="Layouts|Image Block?" />
+<Meta title="Components|Raspberry Pi/Image Block" />
 
-# Image Block?
+# Image Block
 
 An image block has some content and an image. The important thing here is the image, which must meet a certain set of requirements.
 
@@ -23,22 +23,22 @@ The purpose of the quiet area is to allow the image to adapt to different screen
 
 Quiet areas can contain graphical elements (or nothing at all).
 
-Avoid images going "full-bleed" on the `x` axis. Full bleed on one of the edges of the `y` axis is fine, but never both. Vertical image aligment is accomplished with the `.sl-block--image-bottom` and `.sl-block--image-top` modifier classes.
+Avoid images going "full-bleed" on the `x` axis. Full bleed on one of the edges of the `y` axis is fine, but never both. Vertical image aligment is accomplished with the `.sc-rp-image-block--image-bottom` and `.sc-rp-image-block--image-top` modifier classes.
 
 Use the `<picture>` element to deliver the correct image for the correct screen size. There are no set breakpoints for swapping the image for higher/lower resolution versions. Test your image and see what works, and edit your markup accordingly. Different image sizes should maintain the same aspect ratio and quiet areas, but they don't have to be the same image as the other image sizes. Your fallback `img` should show a 'mid-point' option, as we can't make any reasonable assumption about screen size, device capability, network bandwidth, etc. It may be seen by IE11, or an old Android device. Picking a mid-resolution image is the safest way to make sure everyone gets a roughtly equivalent experience.
 
 Another important point, is that you must specify the true width and height of the image in the HTML. If you are unable to do so due to CMS restrictions it's not the end of the world, but providing these sizes allows CSS to proportionally set aside space for the image, reducing the need for [browser reflow](https://developers.google.com/speed/docs/insights/browser-reflow). In future we will be able to use the [CSS `aspect-ratio` property](https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio) to help out too.
 
-In the following examples you can see the quiet area on the images illustrated with a transparent red box. This is enabled with the `.sl-block--debug` modifier. **Do not use this classname in production**.
+In the following examples you can see the quiet area on the images illustrated with a transparent red box. This is enabled with the `.sc-rp-image-block--debug` modifier. **Do not use this classname in production**.
 
 ### Image aligned to bottom of layout
 
 <Story name="Vanilla">
   <div
-    class="sl-block sl-block--debug sl-block--image-bottom"
+    class="sc-rp-image-block sc-rp-image-block--debug sc-rp-image-block--image-bottom"
     style={{ backgroundColor: 'rgb(240, 248, 255)' }}
   >
-    <div class="sl-block__content">
+    <div class="sc-rp-image-block__content">
       <h2 class="sc-rp-type-secondary-heading">Digital Making at Home</h2>
       <p>
         Every week, we’re offering new code-along videos, led by our team, to
@@ -49,14 +49,14 @@ In the following examples you can see the quiet area on the images illustrated w
         Learn to code with us!
       </a>
     </div>
-    <div class="sl-block__figure">
-      <picture class="sl-block__image-container">
+    <div class="sc-rp-image-block__figure">
+      <picture class="sc-rp-image-block__image-container">
         <source srcset={christinaSm} />
         <source media="(min-width: 600px)" srcset={christinaMd} />
         <source media="(min-width: 1000px)" srcset={christinaLg} />
         <img
           alt="Christina Foust, from Raspberry Pi Foundation North America"
-          class="sl-block__image"
+          class="sc-rp-image-block__image"
           height="800"
           src={christinaMd}
           width="1600"
@@ -70,10 +70,10 @@ In the following examples you can see the quiet area on the images illustrated w
 
 <Story name="Reversed">
   <div
-    class="sl-block sl-block--debug sl-block--reverse"
+    class="sc-rp-image-block sc-rp-image-block--debug sc-rp-image-block--reverse"
     style={{ backgroundColor: 'rgb(255, 243, 236)' }}
   >
-    <div class="sl-block__content">
+    <div class="sc-rp-image-block__content">
       <h2 class="sc-rp-type-secondary-heading">Coolest Projects</h2>
       <p>
         Our annual showcasing event, online this year, is something fun for
@@ -85,14 +85,14 @@ In the following examples you can see the quiet area on the images illustrated w
         View Coolest Projects
       </a>
     </div>
-    <div class="sl-block__figure">
-      <picture class="sl-block__image-container">
+    <div class="sc-rp-image-block__figure">
+      <picture class="sc-rp-image-block__image-container">
         <source srcset={coolestProjectsSm} />
         <source media="(min-width: 600px)" srcset={coolestProjectsMd} />
         <source media="(min-width: 1000px)" srcset={coolestProjectsLg} />
         <img
           alt="A Makers shows her creation at Coolest Project International 2019"
-          class="sl-block__image"
+          class="sc-rp-image-block__image"
           height="800"
           src={coolestProjectsMd}
           width="1600"
