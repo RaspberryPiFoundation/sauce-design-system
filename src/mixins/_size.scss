@@ -1,0 +1,29 @@
+@mixin width($value) {
+  block-size: $value;
+  width: $value;
+}
+
+@mixin height($value) {
+  height: $value;
+  inline-size: $value;
+}
+
+@mixin min-width($value) {
+  min-block-size: $value;
+  min-width: $value;
+}
+
+@mixin min-height($value) {
+  min-height: $value;
+  min-inline-size: $value;
+}
+
+@mixin max-width($value) {
+  max-block-size: $value;
+  max-width: $value;
+}
+
+@mixin max-height($value) {
+  max-height: $value;
+  max-inline-size: $value;
+}

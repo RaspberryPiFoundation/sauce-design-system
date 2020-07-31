@@ -5,25 +5,47 @@
 }
 
 @mixin h($sizes) {
-  @include spacing.h('padding', $sizes);
+  @warn 'DEPRECATED: Use padding.block instead';
+
+  @include block($sizes);
+}
+
+@mixin block($sizes) {
+  @include spacing.output(
+    [ 'padding-left',
+    'padding-right',
+    'padding-block' ],
+    $sizes
+  );
 }
 
 @mixin v($sizes) {
-  @include spacing.v('padding', $sizes);
+  @warn 'DEPRECATED: Use padding.inline instead';
+
+  @include inline($sizes);
+}
+
+@mixin inline($sizes) {
+  @include spacing.output(
+    [ 'padding-top',
+    'padding-bottom',
+    'padding-inline' ],
+    $sizes
+  );
 }
 
 @mixin t($sizes) {
-  @include spacing.t('padding', $sizes);
+  @include spacing.output([ 'padding-top', 'padding-inline-start' ], $sizes);
 }
 
 @mixin r($sizes) {
-  @include spacing.r('padding', $sizes);
+  @include spacing.output([ 'padding-right', 'padding-block-end' ], $sizes);
 }
 
 @mixin b($sizes) {
-  @include spacing.b('padding', $sizes);
+  @include spacing.output([ 'padding-bottom', 'padding-inline-end' ], $sizes);
 }
 
 @mixin l($sizes) {
-  @include spacing.l('padding', $sizes);
+  @include spacing.output([ 'padding-left', 'padding-block-start' ], $sizes);
 }
