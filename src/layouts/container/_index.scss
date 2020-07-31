@@ -1,7 +1,7 @@
 @use 'src/mixins/padding';
 
 .sl-container {
-  @include padding.h([ 'bee', 'grizzly' ]);
+  @include padding.block([ 'bee', 'grizzly' ]);
 
   margin-left: auto;
   margin-right: auto;

@@ -7,7 +7,7 @@
 
 @mixin primitive {
   @include type-scale.skateboard;
-  @include padding.v('ant');
+  @include padding.inline('ant');
 
   display: inline-block;
   font-family: font-family.$sans-serif;
@@ -17,7 +17,7 @@
   text-decoration: none;
 
   @include device.min-width(550px) {
-    @include padding.h('dog');
+    @include padding.block('dog');
   }
 
   @content;
