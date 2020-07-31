@@ -1,0 +1,40 @@
+@use 'true' as *;
+@use 'lib/validation';
+
+$catch-errors: true;
+
+@include describe('no-shorthand') {
+  @include it('allows individual values') {
+    @include assert {
+      @include output {
+        @include validation.no-shorthand(10px);
+      }
+
+      @include expect {
+      }
+    }
+  }
+
+  @include it('throws an error for a list of values') {
+    @include assert {
+      @include output {
+        @include validation.no-shorthand(10px 20px);
+      }
+
+      @include expect {
+        /* ERROR [no-shorthand]: */
+        /*   Shorthand CSS is not permitted */
+      }
+    }
+  }
+}
+
+@include describe('shorthand-present') {
+  @include it('returns false for single values') {
+    @include assert-equal(validation.shorthand-present(10px), false);
+  }
+
+  @include it('returns true for lists of values') {
+    @include assert-equal(validation.shorthand-present(10px 20px), true);
+  }
+}

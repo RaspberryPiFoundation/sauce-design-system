@@ -5,6 +5,10 @@
     "stylelint-config-standard",
     "stylelint-config-recommended-scss"
   ],
+  "ignoreFiles": [
+    "spec/spec_helper.scss"
+    "spec/**/*.scss"
+  ],
   "plugins": [
     "stylelint-order",
     "stylelint-scss"
