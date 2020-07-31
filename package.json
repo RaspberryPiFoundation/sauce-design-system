@@ -24,7 +24,8 @@
     "start": "NODE_ENV=development run-p storybook:start playroom:start",
     "storybook:build": "build-storybook -c .storybook -o dist",
     "storybook:start": "start-storybook -p 54321 --ci",
-    "test": "jest --notify --runInBand --watchAll"
+    "test": "jest --notify --runInBand --watchAll",
+    "test-ci": "jest --runInBand"
   },
   "dependencies": {
     "prettier-stylelint": "^0.4.2"
