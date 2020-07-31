@@ -1,5 +1,21 @@
 version: 2
 jobs:
+  build:
+    docker:
+      - image: circleci/node:12.18.2
+    steps:
+      - checkout
+      - restore_cache:
+        keys:
+          - v2-npm-{{ checksum "package-lock.json" }}
+      - run: npm ci
+      - save_cache:
+          paths:
+            - ~/.npm
+          key: v2-npm-{{ checksum "package-lock.json" }}
+      - run:
+        name: Build application
+        command: npm run build
   test:
     docker:
       - image: circleci/node:12.18.2
