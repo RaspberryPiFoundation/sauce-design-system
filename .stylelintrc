@@ -6,7 +6,7 @@
     "stylelint-config-recommended-scss"
   ],
   "ignoreFiles": [
-    "spec/spec_helper.scss"
+    "spec/spec_helper.scss",
     "spec/**/*.scss"
   ],
   "plugins": [
