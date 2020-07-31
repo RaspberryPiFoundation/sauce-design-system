@@ -1,25 +1,22 @@
 version: 2
 jobs:
-  build:
+  test:
     docker:
       - image: circleci/node:12.18.2
-
+    environment:
+      - BASE_HREF: undefined
     working_directory: ~/repo
-
     steps:
       - checkout
-
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            - v1-dependencies-
-
-      - run: npm install
-
+            - v2-npm-{{ checksum "package-lock.json" }}
+      - run: npm ci
       - save_cache:
           paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-
-      - run: npm test
-      - run: npm run chromatic test --app-code=<app-code> --exit-zero-on-changes
+            - ~/.npm
+          key: v2-npm-{{ checksum "package-lock.json" }}
+      - run:
+          name: Run tests
+          command: |
+            npm run test-ci
