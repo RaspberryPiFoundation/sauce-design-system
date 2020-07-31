@@ -1,6 +1,8 @@
 @use 'sass:list';
 @use 'sass:map';
+@use 'sass:meta';
 @use 'lib/responsive-values';
+@use 'lib/validation';
 
 $base-sizes: (
   null: 1.6rem,
@@ -27,47 +29,37 @@ $valid-properties: (
   'grid-gap',
   'grid-row-gap',
   'margin',
+  'margin-top',
   'margin-bottom',
   'margin-left',
   'margin-right',
-  'margin-top',
+  'margin-inline',
+  'margin-inline-end',
+  'margin-inline-start',
+  'margin-block',
+  'margin-block-end',
+  'margin-block-start',
   'padding',
+  'padding-top',
   'padding-bottom',
   'padding-left',
   'padding-right',
-  'padding-top'
+  'padding-inline',
+  'padding-inline-end',
+  'padding-inline-start',
+  'padding-block',
+  'padding-block-end',
+  'padding-block-start'
 );
 
-@mixin output($property, $sizes) {
-  @include responsive-values.check-property($property, $valid-properties);
+@mixin output($properties, $sizes) {
+  @if (meta.type-of($properties) == 'string') {
+    $properties: [$properties];
+  }
+
+  @include validation.property-allowed($properties, $valid-properties);
   @include responsive-values.output(
-    $property,
+    $properties,
     responsive-values.map($base-sizes, $scale, $sizes)
   );
-}
-
-@mixin h($property, $sizes) {
-  @include output('#{$property}-left', $sizes);
-  @include output('#{$property}-right', $sizes);
-}
-
-@mixin v($property, $sizes) {
-  @include output('#{$property}-bottom', $sizes);
-  @include output('#{$property}-top', $sizes);
-}
-
-@mixin t($property, $sizes) {
-  @include output('#{$property}-top', $sizes);
-}
-
-@mixin r($property, $sizes) {
-  @include output('#{$property}-right', $sizes);
-}
-
-@mixin b($property, $sizes) {
-  @include output('#{$property}-bottom', $sizes);
-}
-
-@mixin l($property, $sizes) {
-  @include output('#{$property}-left', $sizes);
 }
