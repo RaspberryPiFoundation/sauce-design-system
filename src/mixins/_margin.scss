@@ -1,5 +1,9 @@
 @use 'lib/spacing';
 
+@mixin reset {
+  margin: 0;
+}
+
 @mixin all($sizes) {
   @include spacing.output('margin', $sizes);
 }

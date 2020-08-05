@@ -1,5 +1,9 @@
 @use 'lib/spacing';
 
+@mixin reset {
+  padding: 0;
+}
+
 @mixin all($sizes) {
   @include spacing.output('padding', $sizes);
 }
