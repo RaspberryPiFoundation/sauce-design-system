@@ -18,6 +18,7 @@
   ],
   "scripts": {
     "build": "NODE_ENV=production run-s storybook:build playroom:build",
+    "chromatic:build": "npm run chromatic -b storybook:build",
     "playroom:build": "playroom build",
     "playroom:start": "playroom start",
     "prepublishOnly": "npm run build",
@@ -25,6 +26,7 @@
     "storybook:build": "build-storybook -c .storybook -o dist",
     "storybook:start": "start-storybook -p 54321 --ci",
     "test": "jest --notify --runInBand --watchAll",
+    "test-chromatic": "npm run chromatic test --exit-zero-on-changes",
     "test-ci": "jest --runInBand"
   },
   "dependencies": {
@@ -71,6 +73,7 @@
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
     "browserslist": "^4.12.2",
+    "chromatic": "^5.1.0",
     "css-loader": "^3.6.0",
     "dotenv": "^8.2.0",
     "eslint": "^7.2.0",
