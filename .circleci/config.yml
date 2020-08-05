@@ -21,7 +21,7 @@ jobs:
           command: npm run test-ci
 workflows:
   version: 2.1
-  main-workflow:
+  tests:
     jobs:
       - test
       - chromatic/test:
