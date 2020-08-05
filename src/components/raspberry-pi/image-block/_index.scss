@@ -10,7 +10,7 @@
 }
 
 @mixin image-bottom {
-  .sc-rp-image-block--image-top & {
+  .sc-rp-image-block--image-bottom & {
     @content;
   }
 }
@@ -59,7 +59,6 @@
   @include padding.l([ 'bee', 'grizzly' ]);
   @include padding.r([ 'bee', 'ant' ]);
   @include padding.inline('dog');
-
   width: 100%;
 
   @include reverse {
