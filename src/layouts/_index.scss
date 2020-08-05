@@ -1,2 +1,6 @@
+@warn 'DO NOT INCLUDE THIS FILE IN PRODUCTION APPLICATIONS';
+@warn "It's for the preview on sauce.raspberrypi.org.";
+@warn "Including this could lead to duplicated styles in your compiled CSS.";
+@warn "Please be more specific about the layouts your application requires.";
 @use './section';
 @use './container';
