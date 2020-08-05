@@ -13,20 +13,20 @@
 
 @mixin t($value) {
   top: $value;
-  inset-inline-start: $value;
+  inset-block-start: $value;
 }
 
 @mixin l($value) {
   left: $value;
-  inset-block-start: $value;
+  inset-inline-start: $value;
 }
 
 @mixin r($value) {
   right: $value;
-  inset-block-end: $value;
+  inset-inline-end: $value;
 }
 
 @mixin b($value) {
   bottom: $value;
-  inset-inline-end: $value;
+  inset-block-end: $value;
 }

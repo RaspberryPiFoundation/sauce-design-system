@@ -3,8 +3,17 @@
 
 @mixin all($value) {
   @include validation.no-shorthand($value);
-
   border-radius: $value;
+}
+
+@mixin bl($value) {
+  border-bottom-left-radius: $value;
+  border-start-end-radius: $value;
+}
+
+@mixin br($value) {
+  border-bottom-right-radius: $value;
+  border-end-end-radius: $value;
 }
 
 @mixin tl($value) {
@@ -14,15 +23,5 @@
 
 @mixin tr($value) {
   border-top-right-radius: $value;
-  border-start-end-radius: $value;
-}
-
-@mixin bl($value) {
-  border-bottom-left-radius: $value;
   border-end-start-radius: $value;
-}
-
-@mixin br($value) {
-  border-bottom-right-radius: $value;
-  border-end-end-radius: $value;
 }

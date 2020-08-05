@@ -1,4 +1,5 @@
 @use 'lib/spacing';
+@use 'lib/warn';
 
 @mixin reset {
   padding: 0;
@@ -9,47 +10,45 @@
 }
 
 @mixin h($sizes) {
-  @warn 'DEPRECATED: Use padding.block instead';
-
-  @include block($sizes);
-}
-
-@mixin block($sizes) {
-  @include spacing.output(
-    [ 'padding-left',
-    'padding-right',
-    'padding-block' ],
-    $sizes
-  );
-}
-
-@mixin v($sizes) {
-  @warn 'DEPRECATED: Use padding.inline instead';
-
+  @include warn.deprecated('Use padding.inline instead');
   @include inline($sizes);
 }
 
 @mixin inline($sizes) {
   @include spacing.output(
-    [ 'padding-top',
-    'padding-bottom',
+    [ 'padding-left',
+    'padding-right',
     'padding-inline' ],
     $sizes
   );
 }
 
+@mixin v($sizes) {
+  @include warn.deprecated('Use padding.block instead');
+  @include block($sizes);
+}
+
+@mixin block($sizes) {
+  @include spacing.output(
+    [ 'padding-top',
+    'padding-bottom',
+    'padding-block' ],
+    $sizes
+  );
+}
+
 @mixin t($sizes) {
-  @include spacing.output([ 'padding-top', 'padding-inline-start' ], $sizes);
+  @include spacing.output([ 'padding-top', 'padding-block-start' ], $sizes);
 }
 
 @mixin r($sizes) {
-  @include spacing.output([ 'padding-right', 'padding-block-end' ], $sizes);
+  @include spacing.output([ 'padding-right', 'padding-inline-end' ], $sizes);
 }
 
 @mixin b($sizes) {
-  @include spacing.output([ 'padding-bottom', 'padding-inline-end' ], $sizes);
+  @include spacing.output([ 'padding-bottom', 'padding-block-end' ], $sizes);
 }
 
 @mixin l($sizes) {
-  @include spacing.output([ 'padding-left', 'padding-block-start' ], $sizes);
+  @include spacing.output([ 'padding-left', 'padding-inline-start' ], $sizes);
 }

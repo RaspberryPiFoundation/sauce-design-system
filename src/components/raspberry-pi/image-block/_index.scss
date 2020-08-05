@@ -58,7 +58,7 @@
 .sc-rp-image-block__content {
   @include padding.l([ 'bee', 'grizzly' ]);
   @include padding.r([ 'bee', 'ant' ]);
-  @include padding.inline('dog');
+  @include padding.block('dog');
   width: 100%;
 
   @include reverse {

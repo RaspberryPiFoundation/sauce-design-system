@@ -1,4 +1,5 @@
 @use 'lib/spacing';
+@use 'lib/warn';
 
 @mixin reset {
   margin: 0;
@@ -9,47 +10,45 @@
 }
 
 @mixin h($sizes) {
-  @warn 'DEPRECATED: Use margin.block instead';
-
-  @include block($sizes);
-}
-
-@mixin block($sizes) {
-  @include spacing.output(
-    [ 'margin-left',
-    'margin-right',
-    'margin-block' ],
-    $sizes
-  );
-}
-
-@mixin v($sizes) {
-  @warn 'DEPRECATED: Use margin.inline instead';
-
+  @include warn.deprecated('Use margin.inline instead');
   @include inline($sizes);
 }
 
 @mixin inline($sizes) {
   @include spacing.output(
-    [ 'margin-top',
-    'margin-bottom',
+    [ 'margin-left',
+    'margin-right',
     'margin-inline' ],
     $sizes
   );
 }
 
+@mixin v($sizes) {
+  @include warn.deprecated('Use margin.block instead');
+  @include block($sizes);
+}
+
+@mixin block($sizes) {
+  @include spacing.output(
+    [ 'margin-top',
+    'margin-bottom',
+    'margin-block' ],
+    $sizes
+  );
+}
+
 @mixin t($sizes) {
-  @include spacing.output([ 'margin-top', 'margin-inline-start' ], $sizes);
+  @include spacing.output([ 'margin-top', 'margin-block-start' ], $sizes);
 }
 
 @mixin r($sizes) {
-  @include spacing.output([ 'margin-right', 'margin-block-end' ], $sizes);
+  @include spacing.output([ 'margin-right', 'margin-inline-end' ], $sizes);
 }
 
 @mixin b($sizes) {
-  @include spacing.output([ 'margin-bottom', 'margin-inline-end' ], $sizes);
+  @include spacing.output([ 'margin-bottom', 'margin-block-end' ], $sizes);
 }
 
 @mixin l($sizes) {
-  @include spacing.output([ 'margin-left', 'margin-block-start' ], $sizes);
+  @include spacing.output([ 'margin-left', 'margin-inline-start' ], $sizes);
 }
