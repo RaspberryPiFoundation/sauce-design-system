@@ -8,7 +8,7 @@ commands:
             - v2-npm-{{ checksum "package-lock.json" }}
       - run:
           command: npm ci
-          name: Install Node Dependencies
+          name: Install Node dependencies
       - save_cache:
           paths:
             - ~/.npm
