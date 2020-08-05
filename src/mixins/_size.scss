@@ -1,6 +1,7 @@
+/* stylelint-disable order/properties-alphabetical-order */
 @mixin width($value) {
-  block-size: $value;
   width: $value;
+  block-size: $value;
 }
 
 @mixin height($value) {
@@ -9,8 +10,8 @@
 }
 
 @mixin min-width($value) {
-  min-block-size: $value;
   min-width: $value;
+  min-block-size: $value;
 }
 
 @mixin min-height($value) {
@@ -19,8 +20,8 @@
 }
 
 @mixin max-width($value) {
-  max-block-size: $value;
   max-width: $value;
+  max-block-size: $value;
 }
 
 @mixin max-height($value) {
