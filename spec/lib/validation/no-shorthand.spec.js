@@ -1,2 +1,2 @@
-import Spec from 'spec_helper'
+import Spec from 'SpecHelper'
 Spec(__dirname, 'no-shorthand')
