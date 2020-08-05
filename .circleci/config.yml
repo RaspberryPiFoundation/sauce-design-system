@@ -1,32 +1,37 @@
----
+version: 2.1
 commands:
-  chromatic-test-accept-all-changes:
-    steps:
-      - run:
-          command: 'npm run chromatic test --auto-accept-changes'
-          name: 'Chromatic - accept all changes'
-  chromatic-test-exit-cleanly-on-changes:
-    steps:
-      - run:
-          command: 'npm run chromatic test --exit-zero-on-changes'
-          name: 'Chromatic - report changes to chromatic'
-  jest-test:
-    steps:
-      - command: 'npm run test-ci'
-        name: 'Run unit tests'
-        run: ~
   load-node-modules:
-    description: 'Load and cache node modules, restoring from cache if available'
+    description: Load and cache node modules, restoring from cache if available
     steps:
       - restore_cache:
           keys:
-            - 'v2-npm-{{ checksum "package-lock.json" }}'
-      - run: 'npm ci'
+            - v2-npm-{{ checksum "package-lock.json" }}
+      - run: npm ci
       - save_cache:
-          key: 'v2-npm-{{ checksum "package-lock.json" }}'
           paths:
             - ~/.npm
+          key: v2-npm-{{ checksum "package-lock.json" }}
+  chromatic-test-accept-all-changes:
+    description: Chromatic - accept all changes
+    steps:
+      - run: npm run chromatic test --auto-accept-changes
+  chromatic-test-exit-cleanly-on-changes:
+    description: Chromatic - report changes to chromatic
+    steps:
+      - run: npm run chromatic test --exit-zero-on-changes
+  jest-test:
+    description: Run unit tests
+    steps:
+      - run: npm run test-ci
 jobs:
+  test:
+    docker:
+      - image: circleci/node:12.18.2
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - load-node-modules
+      - jest-test
   chromatic-run-and-accept-all:
     steps:
       - checkout
@@ -37,16 +42,8 @@ jobs:
       - checkout
       - load-node-modules
       - chromatic-test-exit-cleanly-on-changes
-  test:
-    docker:
-      - image: 'circleci/node:12.18.2'
-    steps:
-      - checkout
-      - load-node-modules
-      - jest-test
-    working_directory: ~/repo
-version: 2.1
 workflows:
+  version: 2.1
   tests:
     jobs:
       - test
@@ -58,4 +55,3 @@ workflows:
           filters:
             branches:
               only: master
-  version: 2.1
