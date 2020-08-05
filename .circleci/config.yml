@@ -31,6 +31,7 @@ executors:
     docker:
       - image: circleci/node:12.18.2
 jobs:
+  working_directory: ~/sauce-design-system
   test:
     executor:
       name: node
