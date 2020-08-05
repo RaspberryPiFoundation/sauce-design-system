@@ -19,7 +19,7 @@ jobs:
           command: npm run test-ci
       - run:
           name: Run Chromatic UI tests
-          command: npx chromatic test --exit-zero-on-changes
+          command: npm run chromatic test --exit-zero-on-changes
 workflows:
   version: 2
   build-deploy:

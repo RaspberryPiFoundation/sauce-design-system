@@ -20,6 +20,7 @@
     "build": "NODE_ENV=production run-s build-storybook build-playroom",
     "build-playroom": "playroom build",
     "build-storybook": "build-storybook",
+    "chromatic": "chromatic",
     "start": "NODE_ENV=development run-p start-storybook start-playroom",
     "start-playroom": "playroom start",
     "start-storybook": "start-storybook -p 54321 --ci",
