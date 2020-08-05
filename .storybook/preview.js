@@ -1,8 +1,8 @@
 import '!style-loader!css-loader!sass-loader!postcss-loader!./preview.scss'
 
+import { addDecorator, addParameters } from '@storybook/react'
+
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
-import { addDecorator } from '@storybook/react'
-import { addParameters } from '@storybook/react'
 import { withA11y } from '@storybook/addon-a11y'
 import { withHTML } from '@whitespace/storybook-addon-html/react'
 import { withPlayroom } from 'storybook-addon-playroom'
@@ -26,15 +26,15 @@ addParameters({
 addDecorator(withA11y)
 
 // HTML Output
-// addDecorator(
-//   withHTML({
-//     prettier: {
-//       tabWidth: 2,
-//       useTabs: false,
-//       htmlWhitespaceSensitivity: 'ignore',
-//     },
-//   })
-// )
+addDecorator(
+  withHTML({
+    prettier: {
+      tabWidth: 2,
+      useTabs: false,
+      htmlWhitespaceSensitivity: 'ignore',
+    },
+  })
+)
 
 // Design Tokens
 const scssReq = require.context('!!raw-loader!../src/tokens', true, /.\.scss$/)
