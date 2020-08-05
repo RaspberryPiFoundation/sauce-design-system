@@ -1,8 +1,22 @@
 version: 2.1
-commands:
-  load-node-modules:
+aliases:
+  - &defaults
+    executor:
+      name: node
+    docker:
+      - image: circleci/node:12-browsers
+    working_directory: /tmp/storybook
+executors:
+  node:
+    description: Circle CI standard node docker image
+    docker:
+      - image: circleci/node:12.18.2
+jobs:
+  install:
+    <<: *defaults
     description: Load and cache node modules, restoring from cache if available
     steps:
+      - checkout
       - restore_cache:
           keys:
             - v2-npm-{{ checksum "package-lock.json" }}
@@ -13,51 +27,44 @@ commands:
           paths:
             - ~/.npm
           key: v2-npm-{{ checksum "package-lock.json" }}
-  chromatic-test-accept-all-changes:
-    description: Chromatic - accept all changes
-    steps:
-      - run: npm run chromatic test --auto-accept-changes
-  chromatic-test-exit-cleanly-on-changes:
-    description: Chromatic - report changes to chromatic
-    steps:
-      - run: npm run chromatic test --exit-zero-on-changes
-  jest-test:
-    description: Run unit tests
-    steps:
-      - run: npm run test-ci
-executors:
-  node:
-    description: Circle CI standard node docker image
-    docker:
-      - image: circleci/node:12.18.2
-jobs:
-  working_directory: ~/sauce-design-system
+      - persist_to_workspace:
+          root: .
+          paths:
+            - node_modules
   test:
-    executor:
-      name: node
+    <<: *defaults
     steps:
-      - checkout
-      - load-node-modules
-      - jest-test
+      - attach_workspace:
+          at: .
+      - run:
+          command: npm run test-ci
+          name: Run unit tests
   chromatic-run-and-accept-all:
-    executor:
-      name: node
+    <<: *defaults
     steps:
       - checkout
-      - load-node-modules
-      - chromatic-test-accept-all-changes
+      - attach_workspace:
+          at: .
+      - run:
+          command: npm run chromatic test --auto-accept-changes
+          name: Chromatic - accept all changes
   chromatic-test:
-    executor:
-      name: node
+    <<: *defaults
     steps:
       - checkout
-      - load-node-modules
-      - chromatic-test-exit-cleanly-on-changes
+      - attach_workspace:
+          at: .
+      - run:
+          command: npm run chromatic test --exit-zero-on-changes
+          name: Chromatic - report changes to chromatic
 workflows:
   version: 2.1
   tests:
     jobs:
-      - test
+      - install
+      - test:
+          requires:
+            - install
       - chromatic-test:
           requires:
             - test
