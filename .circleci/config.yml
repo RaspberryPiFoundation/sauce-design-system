@@ -23,21 +23,29 @@ commands:
     description: Run unit tests
     steps:
       - run: npm run test-ci
-jobs:
-  test:
+executors:
+  node:
+    description: Circle CI standard node docker image
     docker:
       - image: circleci/node:12.18.2
-    working_directory: ~/repo
+jobs:
+  test:
+    executor:
+      name: node
     steps:
       - checkout
       - load-node-modules
       - jest-test
   chromatic-run-and-accept-all:
+    executor:
+      name: node
     steps:
       - checkout
       - load-node-modules
       - chromatic-test-accept-all-changes
   chromatic-test:
+    executor:
+      name: node
     steps:
       - checkout
       - load-node-modules
