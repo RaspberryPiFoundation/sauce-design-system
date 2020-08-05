@@ -5,7 +5,8 @@ import { addDecorator, addParameters } from '@storybook/react'
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 import { withA11y } from '@storybook/addon-a11y'
 import { withHTML } from '@whitespace/storybook-addon-html/react'
-import { withPlayroom } from 'storybook-addon-playroom'
+
+// import { withPlayroom } from 'storybook-addon-playroom'
 
 // Viewport testing
 addParameters({
@@ -15,12 +16,12 @@ addParameters({
 })
 
 // Playroom
-addDecorator(withPlayroom)
-addParameters({
-  playroom: {
-    url: 'http://localhost:9000', // your Playroom URL (default)
-  },
-})
+// addDecorator(withPlayroom)
+// addParameters({
+//   playroom: {
+//     url: 'http://localhost:9000',
+//   },
+// })
 
 // Accessibility
 addDecorator(withA11y)
