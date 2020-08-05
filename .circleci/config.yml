@@ -5,6 +5,7 @@ aliases:
       name: node
     docker:
       - image: circleci/node:12-browsers
+    working_directory: /tmp/storybook
 executors:
   node:
     description: Circle CI standard node docker image
@@ -26,9 +27,16 @@ jobs:
           paths:
             - ~/.npm
           key: sauce-{{ checksum "package-lock.json" }}
+      - persist_to_workspace:
+          root: .
+          paths:
+            - node_modules
   sass-unit-test:
     <<: *defaults
     steps:
+      - checkout
+      - attach_workspace:
+          at: .
       - run:
           command: npm run test-ci
           name: Run Sass unit tests
@@ -36,12 +44,17 @@ jobs:
     <<: *defaults
     steps:
       - checkout
+      - attach_workspace:
+          at: .
       - run:
           command: npm run chromatic test --auto-accept-changes
           name: Chromatic - accept all changes
   chromatic-test:
     <<: *defaults
     steps:
+      - checkout
+      - attach_workspace:
+          at: .
       - run:
           command: npm run chromatic test --exit-zero-on-changes
           name: Chromatic - report changes to chromatic
