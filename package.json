@@ -17,13 +17,12 @@
     "src"
   ],
   "scripts": {
-    "build": "NODE_ENV=production run-s storybook:build playroom:build",
-    "playroom:build": "playroom build",
-    "playroom:start": "playroom start",
-    "prepublishOnly": "npm run build",
-    "start": "NODE_ENV=development run-p storybook:start playroom:start",
-    "storybook:build": "build-storybook -c .storybook -o dist",
-    "storybook:start": "start-storybook -p 54321 --ci",
+    "build": "NODE_ENV=production run-s build-storybook build-playroom",
+    "build-playroom": "playroom build",
+    "build-storybook": "build-storybook -c .storybook -o dist",
+    "start": "NODE_ENV=development run-p start-storybook start-playroom",
+    "start-playroom": "playroom start",
+    "start-storybook": "start-storybook -p 54321 --ci",
     "test": "jest --notify --runInBand --watchAll",
     "test-ci": "jest --runInBand"
   },
