@@ -26,15 +26,15 @@ addParameters({
 addDecorator(withA11y)
 
 // HTML Output
-addDecorator(
-  withHTML({
-    prettier: {
-      tabWidth: 2,
-      useTabs: false,
-      htmlWhitespaceSensitivity: 'ignore',
-    },
-  })
-)
+// addDecorator(
+//   withHTML({
+//     prettier: {
+//       tabWidth: 2,
+//       useTabs: false,
+//       htmlWhitespaceSensitivity: 'ignore',
+//     },
+//   })
+// )
 
 // Design Tokens
 const scssReq = require.context('!!raw-loader!../src/tokens', true, /.\.scss$/)
