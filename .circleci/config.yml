@@ -47,7 +47,7 @@ jobs:
       - attach_workspace:
           at: .
       - run:
-          command: npm run chromatic test --auto-accept-changes
+          command: npm run chromatic test --auto-accept-changes master
           name: Chromatic - accept all changes
   chromatic-test:
     <<: *defaults
@@ -56,7 +56,7 @@ jobs:
       - attach_workspace:
           at: .
       - run:
-          command: npm run chromatic test --exit-zero-on-changes
+          command: npm run chromatic test --exit-once-uploaded
           name: Chromatic - report changes to chromatic
 workflows:
   version: 2.1
