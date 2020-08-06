@@ -17,11 +17,11 @@
     "src"
   ],
   "scripts": {
-    "build": "run-s build-storybook",
+    "build": "build-storybook",
     "build-playroom": "playroom build",
     "build-storybook": "build-storybook",
     "chromatic": "chromatic",
-    "start": "run-p start-storybook",
+    "start": "start-storybook",
     "start-playroom": "playroom start",
     "start-storybook": "start-storybook -p 54321 --ci",
     "test": "jest --notify --runInBand --watchAll",
