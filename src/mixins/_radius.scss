@@ -1,0 +1,27 @@
+/* stylelint-disable order/properties-alphabetical-order */
+@use 'lib/validation';
+
+@mixin all($value) {
+  @include validation.no-shorthand($value);
+  border-radius: $value;
+}
+
+@mixin bl($value) {
+  border-bottom-left-radius: $value;
+  border-start-end-radius: $value;
+}
+
+@mixin br($value) {
+  border-bottom-right-radius: $value;
+  border-end-end-radius: $value;
+}
+
+@mixin tl($value) {
+  border-top-left-radius: $value;
+  border-start-start-radius: $value;
+}
+
+@mixin tr($value) {
+  border-top-right-radius: $value;
+  border-end-start-radius: $value;
+}

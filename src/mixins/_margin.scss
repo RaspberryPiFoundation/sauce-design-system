@@ -1,29 +1,54 @@
 @use 'lib/spacing';
+@use 'lib/warn';
+
+@mixin reset {
+  margin: 0;
+}
 
 @mixin all($sizes) {
   @include spacing.output('margin', $sizes);
 }
 
 @mixin h($sizes) {
-  @include spacing.h('margin', $sizes);
+  @include warn.deprecated('Use margin.inline instead');
+  @include inline($sizes);
+}
+
+@mixin inline($sizes) {
+  @include spacing.output(
+    [ 'margin-left',
+    'margin-right',
+    'margin-inline' ],
+    $sizes
+  );
 }
 
 @mixin v($sizes) {
-  @include spacing.v('margin', $sizes);
+  @include warn.deprecated('Use margin.block instead');
+  @include block($sizes);
+}
+
+@mixin block($sizes) {
+  @include spacing.output(
+    [ 'margin-top',
+    'margin-bottom',
+    'margin-block' ],
+    $sizes
+  );
 }
 
 @mixin t($sizes) {
-  @include spacing.t('margin', $sizes);
+  @include spacing.output([ 'margin-top', 'margin-block-start' ], $sizes);
 }
 
 @mixin r($sizes) {
-  @include spacing.r('margin', $sizes);
+  @include spacing.output([ 'margin-right', 'margin-inline-end' ], $sizes);
 }
 
 @mixin b($sizes) {
-  @include spacing.b('margin', $sizes);
+  @include spacing.output([ 'margin-bottom', 'margin-block-end' ], $sizes);
 }
 
 @mixin l($sizes) {
-  @include spacing.l('margin', $sizes);
+  @include spacing.output([ 'margin-left', 'margin-inline-start' ], $sizes);
 }

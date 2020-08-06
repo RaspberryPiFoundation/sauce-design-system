@@ -1,0 +1,8 @@
+@use 'src/mixins/margin';
+@use 'src/mixins/padding';
+
+@mixin reset {
+  list-style: none;
+  @include margin.reset;
+  @include padding.reset;
+}

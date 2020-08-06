@@ -5,7 +5,6 @@
 @mixin primitive {
   @include type-scale.scooter;
   @include margin.b('chaffinch');
-
   font-weight: font-weight.$bold;
   margin-top: 0;
 }

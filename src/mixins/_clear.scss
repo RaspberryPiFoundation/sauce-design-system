@@ -1,0 +1,9 @@
+@mixin left {
+  clear: left;
+  clear: inline-start;
+}
+
+@mixin right {
+  clear: right;
+  clear: inline-end;
+}

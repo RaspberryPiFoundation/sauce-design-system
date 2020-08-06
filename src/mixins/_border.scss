@@ -1,0 +1,78 @@
+/* stylelint-disable order/properties-alphabetical-order */
+
+@use 'lib/validation';
+
+@mixin color($value) {
+  @include validation.no-shorthand($value);
+  border-color: $value;
+}
+
+@mixin style($value) {
+  @include validation.no-shorthand($value);
+  border-style: $value;
+}
+
+@mixin width($value) {
+  @include validation.no-shorthand($value);
+  border-width: $value;
+}
+
+@mixin top-color($value) {
+  border-top-color: $value;
+  border-block-start-color: $value;
+}
+
+@mixin top-style($value) {
+  border-top-style: $value;
+  border-block-start-style: $value;
+}
+
+@mixin top-width($value) {
+  border-top-width: $value;
+  border-block-start-width: $value;
+}
+
+@mixin right-color($value) {
+  border-right-color: $value;
+  border-inline-end-color: $value;
+}
+
+@mixin right-style($value) {
+  border-right-style: $value;
+  border-inline-end-style: $value;
+}
+
+@mixin right-width($value) {
+  border-right-width: $value;
+  border-inline-end-width: $value;
+}
+
+@mixin bottom-color($value) {
+  border-bottom-color: $value;
+  border-block-end-color: $value;
+}
+
+@mixin bottom-style($value) {
+  border-bottom-style: $value;
+  border-block-end-style: $value;
+}
+
+@mixin bottom-width($value) {
+  border-bottom-width: $value;
+  border-block-end-width: $value;
+}
+
+@mixin left-color($value) {
+  border-left-color: $value;
+  border-inline-start-color: $value;
+}
+
+@mixin left-style($value) {
+  border-left-style: $value;
+  border-inline-start-style: $value;
+}
+
+@mixin left-width($value) {
+  border-left-width: $value;
+  border-inline-start-width: $value;
+}

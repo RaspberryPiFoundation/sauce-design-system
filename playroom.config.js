@@ -4,7 +4,7 @@ module.exports = {
   components: './src/components',
   exampleCode: '',
   openBrowser: false,
-  outputPath: './dist/playroom',
+  outputPath: './storybook-static/playroom',
   webpackConfig: () => {
     return {
       module: {

@@ -31,20 +31,26 @@
   @return $output;
 }
 
-@mixin check-property($property, $valid-properties) {
-  @if (list.index($valid-properties, $property) == null) {
-    @error "Invalid property: #{$property}";
+@mixin output($properties, $values) {
+  @each $breakpoint, $value in $values {
+    @if ($breakpoint == null) {
+      @include output-static($properties, $value);
+    } @else {
+      @include output-responsive($breakpoint, $properties, $value);
+    }
   }
 }
 
-@mixin output($property, $values) {
-  @each $breakpoint, $value in $values {
-    @if ($breakpoint == null) {
+@mixin output-responsive($breakpoint, $properties, $value) {
+  @include device.min-width($breakpoint) {
+    @each $property in $properties {
       #{$property}: $value;
-    } @else {
-      @include device.min-width($breakpoint) {
-        #{$property}: $value;
-      }
     }
+  }
+}
+
+@mixin output-static($properties, $value) {
+  @each $property in $properties {
+    #{$property}: $value;
   }
 }

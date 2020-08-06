@@ -1,6 +1,7 @@
 # Files
 .DS_Store
+build-storybook.log
 
 # Directories
-dist
 node_modules
+storybook-static

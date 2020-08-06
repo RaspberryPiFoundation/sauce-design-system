@@ -1,0 +1,32 @@
+/* stylelint-disable order/properties-alphabetical-order */
+@mixin all($values) {
+  inset: $values;
+}
+
+@mixin inline($values) {
+  inset-inline: $values;
+}
+
+@mixin block($values) {
+  inset-block: $values;
+}
+
+@mixin t($value) {
+  top: $value;
+  inset-block-start: $value;
+}
+
+@mixin l($value) {
+  left: $value;
+  inset-inline-start: $value;
+}
+
+@mixin r($value) {
+  right: $value;
+  inset-inline-end: $value;
+}
+
+@mixin b($value) {
+  bottom: $value;
+  inset-block-end: $value;
+}

@@ -12,6 +12,7 @@ const sassWebpackConfig = {
         implementation: sass,
         sassOptions: {
           outputStyle: 'compressed',
+          includePaths: ['node_modules/sass-true/sass'],
         },
         sourceMap: true,
       },
