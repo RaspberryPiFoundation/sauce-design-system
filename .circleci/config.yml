@@ -47,7 +47,7 @@ jobs:
       - attach_workspace:
           at: .
       - run:
-          command: npm run chromatic test --auto-accept-changes
+          command: npm run chromatic test --auto-accept-changes master
           name: Chromatic - accept all changes
   chromatic-test:
     <<: *defaults
