@@ -10,7 +10,7 @@
   "homepage": "https://sauce.raspberrypi.org",
   "repository": "github:RaspberryPiFoundation/sauce-design-system",
   "bugs": "https://github.com/RaspberryPiFoundation/sauce-design-system/issues",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0-alpha.3",
   "main": "src/index.js",
   "files": [
     "lib",
@@ -26,6 +26,9 @@
     "start-storybook": "start-storybook -p 54321 --ci",
     "test": "jest --notify --runInBand --watchAll",
     "test-ci": "jest --runInBand"
+  },
+  "peerDependencies": {
+    "sass-true": "^6.0.0"
   },
   "dependencies": {
     "prettier": "^2.0.5",
