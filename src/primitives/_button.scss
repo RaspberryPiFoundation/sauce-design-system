@@ -1,23 +1,20 @@
 @use 'src/mixins/device';
-@use 'src/mixins/type-scale';
-@use 'src/mixins/padding';
 @use 'src/tokens/font-family';
 @use 'src/tokens/font-weight';
 @use 'src/tokens/line-height';
+@use 'src/mixins/padding';
+@use 'src/mixins/type-scale';
 
 @mixin primitive {
-  @include type-scale.skateboard;
-  @include padding.block('ant');
   display: inline-block;
   font-family: font-family.$sans-serif;
   font-weight: font-weight.$regular;
   line-height: line-height.$regular;
   text-align: center;
   text-decoration: none;
-
-  @include device.min-width(550px) {
-    @include padding.inline('dog');
-  }
+  @include padding.block('ant');
+  @include padding.inline('dog');
+  @include type-scale.skateboard;
 
   @content;
 }
