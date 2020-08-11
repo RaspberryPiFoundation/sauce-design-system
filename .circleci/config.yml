@@ -40,23 +40,23 @@ jobs:
       - run:
           command: npm run test-ci
           name: Run Sass unit tests
-  chromatic-run-and-accept-all:
+  chromatic-master-update:
     <<: *defaults
     steps:
       - checkout
       - attach_workspace:
           at: .
       - run:
-          command: npm run chromatic test --ci --auto-accept-changes
+          command: npm run chromatic-ci-master-update
           name: Chromatic - accept all changes
-  chromatic-test:
+  chromatic-branch-test:
     <<: *defaults
     steps:
       - checkout
       - attach_workspace:
           at: .
       - run:
-          command: npm run chromatic test --ci --exit-zero-on-changes --skip '@(renovate/**|dependabot/**)'
+          command: npm run chromatic-ci-branch-test
           name: Chromatic - report changes to chromatic
 workflows:
   version: 2.1
@@ -66,13 +66,13 @@ workflows:
       - sass-unit-test:
           requires:
             - install
-      - chromatic-test:
+      - chromatic-branch-test:
           requires:
             - install
           filters:
             branches:
               ignore: master
-      - chromatic-run-and-accept-all:
+      - master-update:
           requires:
             - install
           filters:
