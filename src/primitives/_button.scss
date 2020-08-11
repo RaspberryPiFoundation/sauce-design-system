@@ -15,9 +15,7 @@
   text-align: center;
   text-decoration: none;
 
-  @include device.min-width(550px) {
-    @include padding.inline('dog');
-  }
+  @include padding.inline('dog');
 
   @content;
 }
