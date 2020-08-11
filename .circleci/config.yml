@@ -72,7 +72,7 @@ workflows:
           filters:
             branches:
               ignore: master
-      - master-update:
+      - chromatic-master-update:
           requires:
             - install
           filters:
