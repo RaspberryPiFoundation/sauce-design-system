@@ -5,7 +5,7 @@ aliases:
       name: node
     docker:
       - image: circleci/node:12-browsers
-    working_directory: /tmp/storybook
+    working_directory: /mnt/ramdisk
 executors:
   node:
     description: Circle CI standard node docker image
@@ -47,7 +47,7 @@ jobs:
       - attach_workspace:
           at: .
       - run:
-          command: npm run chromatic test --auto-accept-changes master
+          command: npm run chromatic test --ci --auto-accept-changes
           name: Chromatic - accept all changes
   chromatic-test:
     <<: *defaults
@@ -56,7 +56,7 @@ jobs:
       - attach_workspace:
           at: .
       - run:
-          command: npm run chromatic test --exit-once-uploaded
+          command: npm run chromatic test --ci --exit-once-uploaded --skip '@(renovate/**|dependabot/**)'
           name: Chromatic - report changes to chromatic
 workflows:
   version: 2.1
