@@ -3,7 +3,6 @@
 
 p {
   @include margin.b('bee');
-  @include type.primitive;
-
   max-width: 50ch;
+  @include type.primitive;
 }
