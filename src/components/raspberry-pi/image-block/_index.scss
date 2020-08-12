@@ -1,32 +1,6 @@
 @use 'src/mixins/device';
 @use 'src/mixins/padding';
 
-@mixin unsafe-debug {
-  @warn 'PLEASE REMOVE ALL DEBUG INCLUDES BEFORE DEPLOYING TO PRODUCTION';
-
-  .sc-rp-image-block--debug & {
-    @content;
-  }
-}
-
-@mixin image-bottom {
-  .sc-rp-image-block--image-bottom & {
-    @content;
-  }
-}
-
-@mixin image-top {
-  .sc-rp-image-block--image-top & {
-    @content;
-  }
-}
-
-@mixin reverse {
-  .sc-rp-image-block--reverse & {
-    @content;
-  }
-}
-
 .sc-rp-image-block {
   align-items: center;
   display: flex;
@@ -47,33 +21,16 @@
   }
 }
 
-.sc-rp-image-block--reverse {
-  flex-direction: column-reverse;
-
-  @include device.min-width(760px) {
-    flex-direction: row-reverse;
-  }
-}
-
 .sc-rp-image-block__content {
   @include padding.l([ 'bee', 'grizzly' ]);
   @include padding.r([ 'bee', 'ant' ]);
   @include padding.block('dog');
   width: 100%;
 
-  @include reverse {
-    @include padding.l([ 'bee', 'ant' ]);
-    @include padding.r([ 'bee', 'grizzly' ]);
-  }
-
   @include device.min-width(760px) {
     grid-column: 1 / 4;
     grid-row: 1 / 2;
     z-index: 1;
-
-    @include reverse {
-      grid-column: 3 / 5;
-    }
   }
 }
 
@@ -86,18 +43,6 @@
     grid-row: 1 / 2;
     justify-content: flex-end;
     max-width: 100%;
-
-    @include image-bottom {
-      align-self: flex-end;
-    }
-
-    @include image-top {
-      align-self: flex-start;
-    }
-
-    @include reverse {
-      grid-column: 1 / 4;
-    }
   }
 }
 
@@ -108,7 +53,63 @@
   transform: translateX(-18.75%);
   width: 160%;
 
-  @include unsafe-debug {
+  @include device.min-width(760px) {
+    transform: translateX(0%);
+    width: 100%;
+  }
+}
+
+.sc-rp-image-block__image {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+/* MODIFIERS */
+
+.sc-rp-image-block--image-bottom {
+  .sc-rp-image-block__figure {
+    @include device.min-width(760px) {
+      align-self: flex-end;
+    }
+  }
+}
+
+.sc-rp-image-block--image-top {
+  .sc-rp-image-block__figure {
+    @include device.min-width(760px) {
+      align-self: flex-start;
+    }
+  }
+}
+
+.sc-rp-image-block--reverse {
+  flex-direction: column-reverse;
+
+  @include device.min-width(760px) {
+    flex-direction: row-reverse;
+  }
+
+  .sc-rp-image-block__content {
+    @include padding.l([ 'bee', 'ant' ]);
+    @include padding.r([ 'bee', 'grizzly' ]);
+
+    @include device.min-width(760px) {
+      grid-column: 3 / 5;
+    }
+  }
+
+  .sc-rp-image-block__figure {
+    @include device.min-width(760px) {
+      grid-column: 1 / 4;
+    }
+  }
+}
+
+/* DEBUG */
+
+.sc-rp-image-block--debug {
+  .sc-rp-image-block__image-container {
     position: relative;
 
     &::after,
@@ -139,15 +140,4 @@
       transform: rotateY(180deg);
     }
   }
-
-  @include device.min-width(760px) {
-    transform: translateX(0%);
-    width: 100%;
-  }
-}
-
-.sc-rp-image-block__image {
-  display: block;
-  height: auto;
-  width: 100%;
 }
