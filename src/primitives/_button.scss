@@ -13,7 +13,7 @@
   text-align: center;
   text-decoration: none;
   @include padding.block('ant');
-  @include padding.inline('dog');
+  @include padding.inline('chaffinch');
   @include type-scale.skateboard;
 
   @content;
