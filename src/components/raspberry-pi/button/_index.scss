@@ -1,6 +1,7 @@
 @use 'src/mixins/device';
 @use 'src/primitives/button';
 @use 'src/tokens/color-greyscale';
+@use 'src/tokens/font-weight';
 @use 'src/tokens/raspberry-pi/color-brand';
 @use 'src/tokens/raspberry-pi/color-palette';
 @use 'src/tokens/transition-duration';
@@ -9,22 +10,17 @@
 .sc-rp-button,
 .sc-rp-button:visited {
   @include button.primitive;
-
   background-color: color-palette.$navy;
   border-width: 0;
   color: color-greyscale.$white;
+  font-weight: font-weight.$medium;
   max-width: 50ch;
   transition-duration: transition-duration.$short;
-  transition-property: background-color transform;
+  transition-property: background-color, transform;
   transition-timing-function: transition-timing.$eased;
-  width: 100%;
 
   &:hover {
-    background-color: color-greyscale.$dark;
+    background-color: color-brand.$primary;
     transform: scale(1.05);
-  }
-
-  @include device.min-width(550px) {
-    width: auto;
   }
 }
