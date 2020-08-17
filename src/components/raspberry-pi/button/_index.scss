@@ -18,14 +18,9 @@
   transition-duration: transition-duration.$short;
   transition-property: background-color, transform;
   transition-timing-function: transition-timing.$eased;
-  width: 100%;
 
   &:hover {
     background-color: color-brand.$primary;
     transform: scale(1.05);
-  }
-
-  @include device.min-width(550px) {
-    width: auto;
   }
 }
