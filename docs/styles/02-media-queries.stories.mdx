@@ -1,6 +1,6 @@
 import { Meta } from '@storybook/addon-docs/blocks'
 
-<Meta title="Styles|Media Queries" />
+<Meta title="Styles/Media Queries" />
 
 # Media Queries
 
@@ -8,7 +8,7 @@ When the term "Responsive Design" was [coined by Ethan Marcotte in 2010](https:/
 
 Fast-forward ten years. With the number of devices available to us, from watches up to smart TVs and everything inbetween, it's gotten almost impossible to confidently set three or four breakpoints for your entire application and trust that they'll always deliver the best experience.
 
-What's more, the web is much more fluid that "viewport width". We can—and *should*—employ a greater range of media queries to ensure that our experiences offer the best experience we can to any user, on any device.
+What's more, the web is much more fluid that "viewport width". We can—and _should_—employ a greater range of media queries to ensure that our experiences offer the best experience we can to any user, on any device.
 
 Using a greater mix of all the [media queries available to us in modern web browsers](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries), we can better cater for a user's accessibility needs, device preferences, ambient lighting, pointer resolution, and more. We can even detect if JavaScript is available, **in CSS**.
 
@@ -80,7 +80,7 @@ Users with displays with a high pixel density can be targetted with this mixin. 
 }
 ```
 
-FUN FACT: One day we may be able to detect a user's connection speed with another media query, and use a combination to determine if a user has both the screen pixel density *and* the connection bandwidth to handle downloading a higher-resolution image.
+FUN FACT: One day we may be able to detect a user's connection speed with another media query, and use a combination to determine if a user has both the screen pixel density _and_ the connection bandwidth to handle downloading a higher-resolution image.
 
 ## Last Resort
 
@@ -88,13 +88,13 @@ That said, the following breakpoints are available, but please consider them a g
 
 Be very careful using these, as they may be removed in a future release. At present your Scss output will contain a warning when you use one of these.
 
-Name                | min-width
---------------------|----------
-`$phone-portrait`   | 0px
-`$phone-landscape`  | 600px
-`$tablet-portrait`  | 800px
-`$tablet-landscape` | 1000px
-`$laptop`           | 1200px
+| Name                | min-width |
+| ------------------- | --------- |
+| `$phone-portrait`   | 0px       |
+| `$phone-landscape`  | 600px     |
+| `$tablet-portrait`  | 800px     |
+| `$tablet-landscape` | 1000px    |
+| `$laptop`           | 1200px    |
 
 Use like this:
 
