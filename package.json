@@ -17,7 +17,7 @@
     "src"
   ],
   "scripts": {
-    "build": "build-storybook",
+    "build": "npm run build-storybook",
     "build-playroom": "playroom build",
     "chromatic-ci-branch-test": "chromatic test --ci --exit-once-uploaded --skip '@(renovate/**|dependabot/**)'",
     "chromatic-ci-master-update": "chromatic test --ci --auto-accept-changes master",
