@@ -11,10 +11,13 @@
 .sc-rp-button:visited {
   @include button.primitive;
   background-color: color-palette.$navy;
-  border-width: 0;
+  border-color: orange;
+  border-style: dashed;
+  border-width: 5px;
   color: color-greyscale.$white;
   font-weight: font-weight.$medium;
   max-width: 50ch;
+  text-transform: uppercase;
   transition-duration: transition-duration.$short;
   transition-property: background-color, transform;
   transition-timing-function: transition-timing.$eased;
