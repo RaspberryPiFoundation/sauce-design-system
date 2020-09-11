@@ -8,6 +8,7 @@ import christinaLg from './images/christina-lg.jpg'
 import coolestProjectsSm from './images/coolest-projects-sm.jpg'
 import coolestProjectsMd from './images/coolest-projects-md.jpg'
 import coolestProjectsLg from './images/coolest-projects-lg.jpg'
+import compliance from './images/compliance.jpg'
 
 <Meta title="Components/Raspberry Pi/Image Block" />
 
@@ -15,7 +16,7 @@ import coolestProjectsLg from './images/coolest-projects-lg.jpg'
 
 An image block has some content and an image. The important thing here is the image, which must meet a certain set of requirements.
 
-The image's aspect ratio must be `2:1`. The image must also have a "quiet area" on either side of the horizontal axis. Propotionally this is a ratio of `3:10:3`.
+The image must have a "quiet area" on either side of the horizontal axis. Propotionally this is a ratio of `3:10:3`.
 
 For example, an image with a size of 1,600 pixels would would have 300 pixels quiet area, 1,000 pixels for the image's focus area, and another 300 pixels quiet area.
 
@@ -96,6 +97,68 @@ In the following examples you can see the quiet area on the images illustrated w
           height="800"
           src={coolestProjectsMd}
           width="1600"
+        />
+      </picture>
+    </div>
+  </div>
+</Story>
+
+### With padded image
+
+<Story name="Padded image">
+  <div
+    class="sc-rp-image-block sc-rp-image-block--debug sc-rp-image-block--padded-image"
+    style={{ backgroundColor: 'rgb(255, 243, 236)' }}
+  >
+    <div class="sc-rp-image-block__content">
+      <h2 class="sc-rp-type-secondary-heading">Compliance and support</h2>
+      <p>
+        We’ve done the hard work so you don’t have to. Raspberry Pi products are
+        subject to rigorous compliance testing, designed to save you time and
+        money.
+      </p>
+      <a class="sc-rp-button" href="#">
+        Find out more
+      </a>
+    </div>
+    <div class="sc-rp-image-block__figure">
+      <picture class="sc-rp-image-block__image-container">
+        <source srcset={compliance} />
+        <img
+          alt="A Maker shows her creation at Coolest Project International 2019"
+          class="sc-rp-image-block__image"
+          src={compliance}
+        />
+      </picture>
+    </div>
+  </div>
+</Story>
+
+### Reversed with padded image
+
+<Story name="Reversed with added image">
+  <div
+    class="sc-rp-image-block sc-rp-image-block--debug sc-rp-image-block--padded-image sc-rp-image-block--reverse"
+    style={{ backgroundColor: 'rgb(255, 243, 236)' }}
+  >
+    <div class="sc-rp-image-block__content">
+      <h2 class="sc-rp-type-secondary-heading">Compliance and support</h2>
+      <p>
+        We’ve done the hard work so you don’t have to. Raspberry Pi products are
+        subject to rigorous compliance testing, designed to save you time and
+        money.
+      </p>
+      <a class="sc-rp-button" href="#">
+        Find out more
+      </a>
+    </div>
+    <div class="sc-rp-image-block__figure">
+      <picture class="sc-rp-image-block__image-container">
+        <source srcset={compliance} />
+        <img
+          alt="A Maker shows her creation at Coolest Project International 2019"
+          class="sc-rp-image-block__image"
+          src={compliance}
         />
       </picture>
     </div>
