@@ -1,0 +1,12 @@
+@use 'src/mixins/margin';
+@use 'src/primitives/heading';
+@use 'src/mixins/type-scale';
+@use 'src/tokens/line-height';
+
+.sc-rp-type-body-heading {
+  @include heading.primitive;
+  font-size: inherit;
+  line-height: line-height.$cosy;
+  max-width: 100%;
+  @include margin.b('ant');
+}
