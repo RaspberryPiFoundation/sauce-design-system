@@ -4,6 +4,7 @@
 @use 'src/tokens/font-weight';
 @use 'src/tokens/raspberry-pi/color-brand';
 @use 'src/tokens/raspberry-pi/color-palette';
+@use 'src/mixins/size';
 @use 'src/tokens/transition-duration';
 @use 'src/tokens/transition-timing';
 
@@ -18,6 +19,10 @@
   transition-duration: transition-duration.$short;
   transition-property: background-color, transform;
   transition-timing-function: transition-timing.$eased;
+
+  @include device.mq('max-width', 420px) {
+    @include size.width(100%);
+  }
 
   &:hover {
     background-color: color-brand.$primary;
