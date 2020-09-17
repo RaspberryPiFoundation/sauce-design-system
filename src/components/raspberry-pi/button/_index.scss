@@ -23,7 +23,7 @@
   @include size.width(100%);
 
   @include device.min-width(420px) {
-    width: auto;
+    @include size.width(auto);
   }
 
   &:hover {
