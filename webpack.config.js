@@ -20,8 +20,9 @@ const sassWebpackConfig = {
     {
       loader: 'postcss-loader',
       options: {
-        ident: 'postcss',
-        plugins: () => [postcssPresetEnv()],
+        postcssOptions: {
+          plugins: ['postcss-preset-env'],
+        }
       },
     },
   ],
