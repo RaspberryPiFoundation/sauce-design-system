@@ -16,3 +16,15 @@
     }
   }
 }
+
+.sc-rp-link--inverted-text,
+[sauce-inverted-text] .sc-rp-link,
+[sauce-inverted-text] .sc-rp-link:visited {
+  color: color-greyscale.$white;
+  text-decoration: underline;
+
+  &:hover {
+    color: color-brand.$lightest;
+    text-decoration: none;
+  }
+}
