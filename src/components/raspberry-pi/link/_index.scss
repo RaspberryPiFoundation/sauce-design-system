@@ -19,6 +19,7 @@
 }
 
 .sc-rp-link--inverted-text,
+.sc-rp-link[data-sauce-inverted-text],
 [data-sauce-inverted-text] .sc-rp-link,
 [data-sauce-inverted-text] .sc-rp-link:visited {
   color: color-greyscale.$white;
