@@ -1,3 +1,4 @@
+@use 'src/tokens/color-greyscale';
 @use 'src/tokens/raspberry-pi/color-brand';
 @use 'src/tokens/raspberry-pi/color-palette';
 
@@ -18,13 +19,13 @@
 }
 
 .sc-rp-link--inverted-text,
-[sauce-inverted-text] .sc-rp-link,
-[sauce-inverted-text] .sc-rp-link:visited {
+[data-sauce-inverted-text] .sc-rp-link,
+[data-sauce-inverted-text] .sc-rp-link:visited {
   color: color-greyscale.$white;
   text-decoration: underline;
 
   &:hover {
-    color: color-brand.$lightest;
+    color: color-greyscale.$lightest;
     text-decoration: none;
   }
 }

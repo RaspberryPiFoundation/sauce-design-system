@@ -2,6 +2,10 @@ import './_index.scss'
 import '../type/_index.scss'
 import '../button/_index.scss'
 import { Meta, Story } from '@storybook/addon-docs/blocks'
+
+import astroSm from './images/astro-sm.jpg'
+import astroMd from './images/astro-md.jpg'
+import astroLg from './images/astro-lg.jpg'
 import christinaSm from './images/christina-sm.jpg'
 import christinaMd from './images/christina-md.jpg'
 import christinaLg from './images/christina-lg.jpg'
@@ -159,6 +163,43 @@ In the following examples you can see the quiet area on the images illustrated w
           alt="A Maker shows her creation at Coolest Project International 2019"
           class="sc-rp-image-block__image"
           src={compliance}
+        />
+      </picture>
+    </div>
+  </div>
+</Story>
+
+### With inverted text
+
+<Story name="With inverted text utility">
+  <div
+    class="sc-rp-image-block"
+    data-sauce-inverted-text
+    style={{ backgroundColor: '#002B3F' }}
+  >
+    <div class="sc-rp-image-block__content">
+      <h2 class="sc-rp-type-secondary-heading">
+        Join the Astro Pi competition
+      </h2>
+      <p>
+        Help your students create code experiments that run on the Raspberry Pi
+        computers aboard the International Space Station.
+      </p>
+      <a class="sc-rp-button" href="#">
+        Blast off!
+      </a>
+    </div>
+    <div class="sc-rp-image-block__figure">
+      <picture class="sc-rp-image-block__image-container">
+        <source media="(min-width: 1000px)" srcset={astroLg} />
+        <source media="(min-width: 600px)" srcset={astroMd} />
+        <source srcset={astroSm} />
+        <img
+          alt="Explore outer space with Raspberry Pi!"
+          class="sc-rp-image-block__image"
+          height="800"
+          src={astroMd}
+          width="1600"
         />
       </picture>
     </div>
