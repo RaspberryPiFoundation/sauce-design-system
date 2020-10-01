@@ -1,5 +1,5 @@
 @use 'src/mixins/utilities';
 
-[sauce-screen-reader-only] {
+[data-sauce-screen-reader-only] {
   @include utilities.screen-reader-only;
 }
