@@ -1,3 +1,9 @@
+@use 'src/tokens/color-greyscale';
+
+@mixin inverted-text {
+  color: color-greyscale.$white !important;
+}
+
 @mixin screen-reader-only {
   clip: rect(0 0 0 0) !important;
   clip-path: inset(100%) !important;
