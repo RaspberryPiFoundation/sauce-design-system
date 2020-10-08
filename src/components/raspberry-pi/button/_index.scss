@@ -30,4 +30,10 @@
     background-color: color-brand.$primary;
     transform: scale(1.05);
   }
+
+  &:disabled {
+    background-color: color-greyscale.$medium;
+    opacity: 0.8;
+    pointer-events: none;
+  }
 }
