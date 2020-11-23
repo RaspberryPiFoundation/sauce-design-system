@@ -7,3 +7,7 @@
   @include size.max-width(130rem);
   @include padding.inline([ 'bee', 'grizzly' ]);
 }
+
+.sl-container--full-width {
+  @include padding.inline('none');
+}
