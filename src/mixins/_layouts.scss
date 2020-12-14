@@ -1,0 +1,46 @@
+@use 'src/mixins/padding';
+@use 'src/mixins/margin';
+@use 'src/mixins/size';
+
+@mixin block {
+  @include padding.inline([ 'bee', 'grizzly' ]);
+}
+
+@mixin container {
+  @include size.max-width(130rem);
+  margin: 0 auto;
+}
+
+@mixin full-bleed {
+  margin-left: calc(50% - 50vw);
+  width: 100vw;
+
+  > * {
+    @include container;
+  }
+}
+
+@mixin slice {
+  @include margin.block([ 'eagle', 'flamingo', 'grizzly' ]);
+}
+
+@mixin flex-columns {
+  display: flex;
+
+  & > * {
+    @include margin.inline('ant');
+
+    &:first-child {
+      @include margin.l('none');
+    }
+
+    &:last-child {
+      @include margin.r('none');
+    }
+  }
+}
+
+@mixin flex-columns-reverse {
+  @include flex-columns;
+  flex-direction: row-reverse;
+}
