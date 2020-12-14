@@ -1,3 +1,7 @@
+@mixin careful($message) {
+  @warn "CAREFUL! #{$message}";
+}
+
 @mixin deprecated($message) {
   @warn "DEPRECATED: #{$message}";
 }

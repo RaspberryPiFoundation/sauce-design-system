@@ -26,6 +26,7 @@
     @include size.width(auto);
   }
 
+  &:focus,
   &:hover {
     background-color: color-brand.$primary;
     transform: scale(1.05);
