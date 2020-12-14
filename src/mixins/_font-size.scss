@@ -1,0 +1,30 @@
+@use 'lib/clamp';
+@use 'src/tokens/font-size';
+
+@mixin rollerskate {
+  @include clamp.apply('font-size', font-size.$rollerskate);
+}
+
+@mixin skateboard {
+  @include clamp.apply('font-size', font-size.$skateboard);
+}
+
+@mixin scooter {
+  @include clamp.apply('font-size', font-size.$scooter);
+}
+
+@mixin bike {
+  @include clamp.apply('font-size', font-size.$bike);
+}
+
+@mixin moped {
+  @include clamp.apply('font-size', font-size.$moped);
+}
+
+@mixin car {
+  @include clamp.apply('font-size', font-size.$car);
+}
+
+@mixin van {
+  @include clamp.apply('font-size', font-size.$van);
+}
