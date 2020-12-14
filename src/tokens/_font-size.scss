@@ -1,0 +1,62 @@
+$rollerskate: (
+  clamp: (
+    min: 1.28rem,
+    target: 1.6rem,
+    max: 1.92rem,
+  ),
+  static: 1.6rem,
+);
+
+$skateboard: (
+  clamp: (
+    min: 1.6rem,
+    target: 2rem,
+    max: 2.4rem,
+  ),
+  static: 2rem,
+);
+
+$scooter: (
+  clamp: (
+    min: 1.92rem,
+    target: 2.4rem,
+    max: 2.88rem,
+  ),
+  static: 2.4rem,
+);
+
+$bike: (
+  clamp: (
+    min: 2.4rem,
+    target: 3rem,
+    max: 3.6rem,
+  ),
+  static: 3rem,
+);
+
+$moped: (
+  clamp: (
+    min: 3.2rem,
+    target: 4rem,
+    max: 4.8rem,
+  ),
+  static: 4rem,
+);
+
+$car: (
+  clamp: (
+    min: 4rem,
+    target: 5rem,
+    max: 6rem,
+  ),
+  static: 5rem,
+);
+
+$van: (
+  clamp: (
+    min: 5.6rem,
+    target: 7rem,
+    max: 8.4rem,
+  ),
+  static: 7rem,
+);
