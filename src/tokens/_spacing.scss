@@ -1,0 +1,92 @@
+$ant: (
+  clamp: (
+    min: 0.8rem,
+    target: 1vw,
+    max: 1.2rem,
+  ),
+  static: 1rem,
+);
+
+$bee: (
+  clamp: (
+    min: 1.6rem,
+    target: 2vw,
+    max: 2.4rem,
+  ),
+  static: 2rem,
+);
+
+$chaffinch: (
+  clamp: (
+    min: 2.4rem,
+    target: 3vw,
+    max: 3.6rem,
+  ),
+  static: 3rem,
+);
+
+$dog: (
+  clamp: (
+    min: 3.2rem,
+    target: 4vw,
+    max: 4.8rem,
+  ),
+  static: 4rem,
+);
+
+$eagle: (
+  clamp: (
+    min: 4rem,
+    target: 5vw,
+    max: 6rem,
+  ),
+  static: 5rem,
+);
+
+$flamingo: (
+  clamp: (
+    min: 4.8rem,
+    target: 6vw,
+    max: 7.2rem,
+  ),
+  static: 6rem,
+);
+
+$grizzly: (
+  clamp: (
+    min: 5.6rem,
+    target: 7vw,
+    max: 8.4rem,
+  ),
+  static: 7rem,
+);
+
+$hippo: (
+  clamp: (
+    min: 6.4rem,
+    target: 8vw,
+    max: 9.6rem,
+  ),
+  static: 8rem,
+);
+
+$iguanadon: (
+  clamp: (
+    min: 7.2rem,
+    target: 9vw,
+    max: 12rem,
+  ),
+  static: 9rem,
+);
+
+$map: (
+  ant: $ant,
+  bee: $bee,
+  chaffinch: $chaffinch,
+  dog: $dog,
+  eagle: $eagle,
+  flamingo: $flamingo,
+  grizzly: $grizzly,
+  hippo: $hippo,
+  iguanadon: $iguanadon,
+);
