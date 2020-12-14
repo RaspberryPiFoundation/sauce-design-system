@@ -1,5 +1,6 @@
 @use 'sass:map';
 @use 'lib/responsive-values';
+@use 'lib/warn';
 
 $base-sizes: (
   null: 1.6rem,
@@ -17,6 +18,7 @@ $scale: (
 );
 
 @mixin output($sizes) {
+  @include warn.careful('Maybe take a look at the new font-size mixins file?');
   @include responsive-values.output(
     'font-size',
     responsive-values.map($base-sizes, $scale, $sizes)
