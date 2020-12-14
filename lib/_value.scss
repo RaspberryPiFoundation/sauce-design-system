@@ -1,12 +1,20 @@
 @use 'sass:map';
 @use 'sass:meta';
 
-@mixin apply($property, $tokens) {
-  @include static($property, $tokens);
+@mixin apply($property, $tokens, $fixed: false) {
+  @if ($fixed) {
+    @include fixed($property, $tokens);
+  @else {
+    @include clamp($property, $tokens);
+  }
+}
+
+@mixin clamp($property, $tokens) {
+  @include fixed($property, $tokens);
 
   @if (meta.type-of($property) == 'list') {
     @each $sub-property in $property {
-      @include apply($sub-property, $tokens);
+      @include clamp($sub-property, $tokens);
     }
   } @else {
     $clamp-values: map-get($tokens, clamp);
@@ -19,12 +27,12 @@
   }
 }
 
-@mixin static($property, $tokens) {
+@mixin fixed($property, $tokens) {
   @if (meta.type-of($property) == 'list') {
     @each $sub-property in $property {
-      @include static($sub-property, $tokens);
+      @include fixed($sub-property, $tokens);
     }
   } @else {
-    #{$property}: map-get($tokens, static);
+    #{$property}: map-get($tokens, fixed);
   }
 }
