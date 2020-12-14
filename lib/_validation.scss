@@ -1,6 +1,5 @@
 @use 'lib/throw';
 @use 'sass:list';
-@use 'sass:meta';
 
 @function shorthand-present($value) {
   @return list.length($value) > 1;
