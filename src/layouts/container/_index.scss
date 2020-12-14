@@ -1,5 +1,6 @@
 @use 'src/mixins/padding';
 @use 'src/mixins/size';
+@warn "CAREFUL! We might stop using this in favor of the layouts.container and layouts.block mixin";
 
 .sl-container {
   margin-left: auto;
