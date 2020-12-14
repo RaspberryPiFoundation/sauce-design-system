@@ -2,4 +2,6 @@
 
 a {
   @include link.primitive;
+  align-items: center;
+  display: flex;
 }
