@@ -4,7 +4,7 @@
 @mixin apply($property, $tokens, $fixed: false) {
   @if ($fixed) {
     @include fixed($property, $tokens);
-  @else {
+  } @else {
     @include clamp($property, $tokens);
   }
 }
