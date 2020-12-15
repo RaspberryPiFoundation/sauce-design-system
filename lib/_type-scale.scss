@@ -17,7 +17,7 @@ $scale: (
 );
 
 @mixin output($sizes) {
-  @include warn.careful('Maybe take a look at the new font-size mixins file?');
+  // @include warn.careful('Maybe take a look at the new font-size mixins file?');
   @include responsive-values.output(
     'font-size',
     responsive-values.map($base-sizes, $scale, $sizes)

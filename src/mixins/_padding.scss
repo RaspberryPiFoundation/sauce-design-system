@@ -10,7 +10,7 @@
 }
 
 @mixin h($sizes) {
-  @include warn.deprecated('Use padding.inline instead');
+  // @include warn.deprecated('Use padding.inline instead');
   @include inline($sizes);
 }
 
@@ -24,7 +24,7 @@
 }
 
 @mixin v($sizes) {
-  @include warn.deprecated('Use padding.block instead');
+  // @include warn.deprecated('Use padding.block instead');
   @include block($sizes);
 }
 
