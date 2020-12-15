@@ -9,12 +9,14 @@
   }
 }
 
-@mixin clamp($property, $tokens) {
-  @include fixed($property, $tokens);
+@mixin clamp($property, $tokens, $with-fixed: true) {
+  @if ($with-fixed) {
+    @include fixed($property, $tokens);
+  }
 
   @if (meta.type-of($property) == 'list') {
     @each $sub-property in $property {
-      @include clamp($sub-property, $tokens);
+      @include clamp($sub-property, $tokens, $with-fixed: false);
     }
   } @else {
     $clamp-values: map-get($tokens, clamp);
