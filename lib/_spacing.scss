@@ -22,6 +22,7 @@ $scale: (
 );
 
 $valid-properties: (
+  'column-gap',
   'gap',
   'grid-column-gap',
   'grid-gap',
@@ -47,7 +48,8 @@ $valid-properties: (
   'padding-inline-start',
   'padding-block',
   'padding-block-end',
-  'padding-block-start'
+  'padding-block-start',
+  'row-gap'
 );
 
 @mixin output($properties, $sizes) {
