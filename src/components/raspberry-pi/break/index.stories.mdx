@@ -8,7 +8,7 @@ import { Meta, Story } from '@storybook/addon-docs/blocks'
 Creates a thematic break in a piece of content. Not much else to say. Here's what it looks like:
 
 <Story name="Vanilla">
-  <hr class="sc-rp-break" />
+  <hr className="sc-rp-break" />
 </Story>
 
 That's about it. Make sure you're using the `hr` element correctly. For guidance, here's how it's defined in the [HTML Living Standard](https://html.spec.whatwg.org/multipage/grouping-content.html#the-hr-element).
@@ -22,11 +22,11 @@ That's about it. Make sure you're using the `hr` element correctly. For guidance
 It is **not** intended to be used as a page break, or to denote sections of a page. It's very rare that we would need this. It's possible that you want a purely decorative line-break, without any semantics attached. It's possible to achieve this look with an element that contains no semantic meaning by switching the `hr` for a `div`, as seen in this example.
 
 <Story name="Non-Semantic">
-  <div class="sc-rp-break"></div>
+  <div className="sc-rp-break"></div>
 </Story>
 
 Here's a subtle on, for when you need it. Same rules about semantics apply.
 
 <Story name="Subtle">
-  <div class="sc-rp-break sc-rp-break--subtle"></div>
+  <div className="sc-rp-break sc-rp-break--subtle"></div>
 </Story>
