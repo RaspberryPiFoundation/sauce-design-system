@@ -1,5 +1,8 @@
-@use 'src/mixins/margin';
+@use 'src/mixins/layouts';
+@use 'lib/warn';
+
+// @include warn.careful('We might stop using this in favor of the layouts.slice mixin');
 
 .sl-section {
-  @include margin.b('eagle');
+  @include layouts.slice;
 }

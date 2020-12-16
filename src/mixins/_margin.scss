@@ -10,7 +10,7 @@
 }
 
 @mixin h($sizes) {
-  @include warn.deprecated('Use margin.inline instead');
+  // @include warn.deprecated('Use margin.inline instead');
   @include inline($sizes);
 }
 
@@ -24,7 +24,7 @@
 }
 
 @mixin v($sizes) {
-  @include warn.deprecated('Use margin.block instead');
+  // @include warn.deprecated('Use margin.block instead');
   @include block($sizes);
 }
 

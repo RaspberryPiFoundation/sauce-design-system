@@ -1,9 +1,9 @@
-@use 'src/mixins/padding';
-@use 'src/mixins/size';
+@use 'src/mixins/layouts';
+@use 'lib/warn';
+
+// @include warn.careful('We might stop using this in favor of the layouts.container and layouts.block mixin');
 
 .sl-container {
-  margin-left: auto;
-  margin-right: auto;
-  @include size.max-width(130rem);
-  @include padding.inline([ 'bee', 'grizzly' ]);
+  @include layouts.container;
+  @include layouts.block;
 }

@@ -5,6 +5,7 @@
 .sc-rp-link {
   color: color-palette.$navy;
 
+  &:focus,
   &:hover {
     color: color-brand.$primary;
   }
@@ -12,6 +13,7 @@
   &:visited {
     color: color-palette.$violet;
 
+    &:focus,
     &:hover {
       color: color-brand.$primary;
     }

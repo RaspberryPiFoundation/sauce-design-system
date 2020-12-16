@@ -1,0 +1,40 @@
+@use 'sass:map';
+@use 'sass:meta';
+
+@mixin apply($property, $tokens, $fixed: false) {
+  @if ($fixed) {
+    @include fixed($property, $tokens);
+  } @else {
+    @include clamp($property, $tokens);
+  }
+}
+
+@mixin clamp($property, $tokens, $with-fixed: true) {
+  @if ($with-fixed) {
+    @include fixed($property, $tokens);
+  }
+
+  @if (meta.type-of($property) == 'list') {
+    @each $sub-property in $property {
+      @include clamp($sub-property, $tokens, $with-fixed: false);
+    }
+  } @else {
+    $clamp-values: map-get($tokens, clamp);
+
+    $min: map-get($clamp-values, min);
+    $target: map-get($clamp-values, target);
+    $max: map-get($clamp-values, max);
+
+    #{$property}: clamp($min, $target, $max);
+  }
+}
+
+@mixin fixed($property, $tokens) {
+  @if (meta.type-of($property) == 'list') {
+    @each $sub-property in $property {
+      @include fixed($sub-property, $tokens);
+    }
+  } @else {
+    #{$property}: map-get($tokens, fixed);
+  }
+}
