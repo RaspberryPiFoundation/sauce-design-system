@@ -10,7 +10,7 @@
   "homepage": "https://sauce.raspberrypi.org",
   "repository": "github:RaspberryPiFoundation/sauce-design-system",
   "bugs": "https://github.com/RaspberryPiFoundation/sauce-design-system/issues",
-  "version": "1.0.0-alpha.9",
+  "version": "1.0.0-alpha.10",
   "main": "src/index.js",
   "files": [
     "lib",
