@@ -14,6 +14,7 @@ body {
   font-variant-ligatures: none;
   font-weight: font-weight.$regular;
   line-height: line-height.$regular;
+  margin: 0;
   padding: env(safe-area-inset-top) env(safe-area-inset-right)
     env(safe-area-inset-bottom) env(safe-area-inset-left);
   position: relative;
