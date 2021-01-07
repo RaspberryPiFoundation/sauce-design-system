@@ -1,5 +1,9 @@
 @use 'src/primitives/link';
 
+a {
+  @include link.base;
+}
+
 a:not([class]) {
   @include link.default;
 }
