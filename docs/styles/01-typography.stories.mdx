@@ -49,61 +49,47 @@ For a deep-dive explanation of what's happening, read Harry Roberts' article "[T
 }
 ```
 
-## Base Font Sizing
+## Font Size
 
-All types is set in `rem` units. `1rem` is equal to the `font-size` of the "root" (`<html>`) element.
+Try to use the `font-size` mixin module where possible. These named sizes have different values depending on the screen size, so we can employ the correct font-size for a particular screen size. They use [CSS's `clamp`]() to provide scaling styles without the need for `@media` queries.
 
-Browsers set the default font-size on the `<html>` element to 16px. We set it to 62.5%:
+The clamped values attempt to set a "target" value based on the size we would expect to see in a browser exactly 1000px wide:
 
-`1rem` = 16px &times; 0.625<br />
-16px &times; 0.625 = `10px`<br />
-∴ `1rem` = `10px`.
+| Token          | "target" |
+| -------------- | -------- |
+| `$rollerskate` | 1.6rem   |
+| `$skateboard`  | 2rem     |
+| `$scooter`     | 2.4rem   |
+| `$bike`        | 3rem     |
+| `$moped`       | 4rem     |
+| `$car`         | 5rem     |
+| `$van`         | 7rem     |
 
-The consequence of this is that `rem` units are much easier to work with. We can convert a `px` to `rem` by adding or moving a decimal point.
+To achieve this with `clamp`, we can state that to achieve `$scooter: 2.4rem` at 1000px browser width, we need the "target" size to equal `2.4vw` (1000px &times; 2.4vw = 24px = 2.4rem).
 
-`2.4rem` = `24px`
-`3.2rem` = `32px`
-`7.8rem` = `78px`
+We also instruct the browser to cap the values at a minimum and maximum size. Our values currently work out we will use the "min" value between 0 and 800px width, the "target" value between 800px and 1200px, and the "max" value from 1200px upwards:
 
-We get to think in `px`, but use `rem`. Nice.
-
-## Typographic Scale
-
-Try to use the `type-scale` module where possible. These named sizes have different values depending on the screen size, so we can employ the correct font-size for a particular screen size.
-
-| Name           | 0–800px | 800–1200px | 1200–∞  | Scale      |
+| Token          | Min     | Target     | Max     | Scale      |
 | -------------- | ------- | ---------- | ------- | ---------- |
-| `$rollerskate` | 1.28rem | 1.6rem     | 1.92rem | &times;0.8 |
-| `$skateboard`  | 1.6rem  | 2rem       | 2.4rem  | &times;1   |
-| `$scooter`     | 1.92rem | 2rem       | 2.88rem | &times;1.2 |
-| `$bike`        | 2.4rem  | 3rem       | 3.6rem  | &times;1.5 |
-| `$moped`       | 3.2rem  | 4rem       | 4.8rem  | &times;2   |
-| `$car`         | 4rem    | 5rem       | 6rem    | &times;2.5 |
-| `$van`         | 5.6rem  | 7rem       | 8.4rem  | &times;3.5 |
+| `$rollerskate` | 1.28rem | 1.6vw      | 1.92rem | &times;0.8 |
+| `$skateboard`  | 1.6rem  | 2vw        | 2.4rem  | &times;1   |
+| `$scooter`     | 1.92rem | 2.4vw      | 2.88rem | &times;1.2 |
+| `$bike`        | 2.4rem  | 3vw        | 3.6rem  | &times;1.5 |
+| `$moped`       | 3.2rem  | 4vw        | 4.8rem  | &times;2   |
+| `$car`         | 4rem    | 5vw        | 6rem    | &times;2.5 |
+| `$van`         | 5.6rem  | 7vw        | 8.4rem  | &times;3.5 |
 
 ```scss
-@use 'src/mixins/type-scale';
+@use 'src/mixins/font-size';
 
 .some-selector {
-  @include type-scale.rollerskate;
-  @include type-scale.skateboard;
-  @include type-scale.scooter;
-  @include type-scale.bike;
-  @include type-scale.moped;
-  @include type-scale.car;
-  @include type-scale.van;
-}
-```
-
-In some cases you may need to employ a different font size across different breakpoints. For example you may wish to use the `$scooter` size at the smallest screen size, and `$moped` from thereon upwards.
-
-In order to achieve this, use the `variable` mixin, which optionally takes a [Sass list](https://sass-lang.com/documentation/modules/list) as an argument, with the names of the font-sizes you need:
-
-```scss
-@use 'src/mixins/type-scale';
-
-.some-selector {
-  @include type-scale.variable([ 'rollerskate', 'scooter' ]);
+  @include font-size.rollerskate;
+  @include font-size.skateboard;
+  @include font-size.scooter;
+  @include font-size.bike;
+  @include font-size.moped;
+  @include font-size.car;
+  @include font-size.van;
 }
 ```
 
