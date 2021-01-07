@@ -19,13 +19,7 @@
       @include clamp($sub-property, $tokens, $with-fixed: false);
     }
   } @else {
-    $clamp-values: map-get($tokens, clamp);
-
-    $min: map-get($clamp-values, min);
-    $target: map-get($clamp-values, target);
-    $max: map-get($clamp-values, max);
-
-    #{$property}: clamp($min, $target, $max);
+    #{$property}: map-get($tokens, clamp);
   }
 }
 
