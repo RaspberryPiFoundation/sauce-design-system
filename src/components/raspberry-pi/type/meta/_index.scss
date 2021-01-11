@@ -1,9 +1,7 @@
-@use 'src/primitives/type';
-@use 'src/mixins/type-scale';
+@use 'src/mixins/font-size';
 
 .sc-rp-type-meta {
-  @include type.primitive;
-  @include type-scale.rollerskate;
+  @include font-size.rollerskate;
 
   margin: 0;
   max-width: 60ch;

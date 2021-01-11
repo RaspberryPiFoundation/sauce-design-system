@@ -1,4 +1,4 @@
-@use 'src/mixins/type-scale';
+@use 'src/mixins/font-size';
 @use 'src/mixins/margin';
 @use 'src/primitives/heading';
 @use 'src/tokens/line-height';
@@ -6,7 +6,7 @@
 
 .sc-rp-type-hero-heading {
   @include heading.primitive;
-  @include type-scale.van;
+  @include font-size.van;
   @include margin.b('chaffinch');
 
   color: color-brand.$primary;

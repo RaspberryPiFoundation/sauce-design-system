@@ -1,12 +1,12 @@
+@use 'src/mixins/font-size';
 @use 'src/mixins/margin';
 @use 'src/primitives/heading';
-@use 'src/mixins/type-scale';
 @use 'src/tokens/line-height';
 @use 'src/tokens/raspberry-pi/color-brand';
 
 .sc-rp-type-primary-heading {
   @include heading.primitive;
-  @include type-scale.car;
+  @include font-size.car;
   @include margin.b('ant');
 
   color: color-brand.$primary;
