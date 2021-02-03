@@ -1,4 +1,4 @@
-@use 'lib/throw';
+@use '/lib/throw';
 @use 'sass:list';
 
 @function shorthand-present($value) {

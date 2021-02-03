@@ -1,6 +1,6 @@
-@use 'src/mixins/margin';
-@use 'src/mixins/padding';
-@use 'src/primitives/type';
+@use '/src/mixins/margin';
+@use '/src/mixins/padding';
+@use '/src/primitives/type';
 
 ul {
   @include type.primitive;

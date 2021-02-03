@@ -1,5 +1,5 @@
-@use 'true' as *;
-@use 'lib/validation';
+@use '~sass-true/sass/true' as *;
+@use '/lib/validation';
 
 @include describe('shorthand-present') {
   @include it('returns false for single values') {

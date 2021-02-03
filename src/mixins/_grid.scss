@@ -1,4 +1,4 @@
-@use 'lib/spacing';
+@use '/lib/spacing';
 
 @mixin column-gap($sizes) {
   @include spacing.output('grid-column-gap', $sizes);

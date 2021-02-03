@@ -1,5 +1,5 @@
-@use 'lib/spacing';
-@use 'lib/warn';
+@use '/lib/spacing';
+@use '/lib/warn';
 
 @mixin reset {
   margin: 0;

@@ -1,4 +1,4 @@
-@use 'src/mixins/font-size';
+@use '/src/mixins/font-size';
 
 .sc-rp-type-meta {
   @include font-size.rollerskate;

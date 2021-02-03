@@ -1,5 +1,5 @@
-@use 'src/mixins/font-size';
-@use 'src/mixins/margin';
+@use '/src/mixins/font-size';
+@use '/src/mixins/margin';
 
 .sc-rp-type-lead {
   @include font-size.scooter;

@@ -1,6 +1,6 @@
 /* stylelint-disable order/properties-alphabetical-order */
 
-@use 'lib/validation';
+@use '/lib/validation';
 
 @mixin color($value) {
   @include validation.no-shorthand($value);

@@ -1,9 +1,9 @@
-@use 'src/mixins/device';
-@use 'src/mixins/padding';
-@use 'src/mixins/type-scale';
-@use 'src/tokens/font-family';
-@use 'src/tokens/font-weight';
-@use 'src/tokens/line-height';
+@use '/src/mixins/device';
+@use '/src/mixins/padding';
+@use '/src/mixins/type-scale';
+@use '/src/tokens/font-family';
+@use '/src/tokens/font-weight';
+@use '/src/tokens/line-height';
 
 @mixin primitive {
   display: inline-block;

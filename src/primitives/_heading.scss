@@ -1,6 +1,6 @@
-@use 'src/mixins/margin';
-@use 'src/mixins/type-scale';
-@use 'src/tokens/font-weight';
+@use '/src/mixins/margin';
+@use '/src/mixins/type-scale';
+@use '/src/tokens/font-weight';
 
 @mixin primitive {
   @include margin.reset;

@@ -1,4 +1,4 @@
-@use 'src/mixins/type-scale';
+@use '/src/mixins/type-scale';
 
 @mixin primitive {
   @include type-scale.skateboard;

@@ -1,5 +1,5 @@
-@use 'src/mixins/layouts';
-@use 'lib/warn';
+@use '/src/mixins/layouts';
+@use '/lib/warn';
 
 // @include warn.careful('We might stop using this in favor of the layouts.container and layouts.block mixin');
 

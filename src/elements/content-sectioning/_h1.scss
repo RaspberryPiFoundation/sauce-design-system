@@ -1,4 +1,4 @@
-@use 'src/primitives/heading';
+@use '/src/primitives/heading';
 
 h1 {
   @include heading.primitive;

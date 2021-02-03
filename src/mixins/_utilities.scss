@@ -1,4 +1,4 @@
-@use 'src/tokens/color-greyscale';
+@use '/src/tokens/color-greyscale';
 
 @mixin inverted-text {
   color: color-greyscale.$white !important;

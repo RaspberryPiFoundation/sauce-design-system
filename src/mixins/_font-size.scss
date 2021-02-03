@@ -1,5 +1,5 @@
-@use 'lib/value';
-@use 'src/tokens/font-size';
+@use '/lib/value';
+@use '/src/tokens/font-size';
 
 @mixin rollerskate($fixed: false) {
   @include value.apply(

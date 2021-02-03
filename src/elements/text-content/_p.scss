@@ -1,5 +1,5 @@
-@use 'src/mixins/margin';
-@use 'src/primitives/type';
+@use '/src/mixins/margin';
+@use '/src/primitives/type';
 
 p {
   @include margin.b('bee');

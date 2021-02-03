@@ -1,6 +1,6 @@
-@use 'src/tokens/raspberry-pi/color-brand';
-@use 'src/tokens/color-greyscale';
-@use 'src/mixins/margin';
+@use '/src/tokens/raspberry-pi/color-brand';
+@use '/src/tokens/color-greyscale';
+@use '/src/mixins/margin';
 
 .sc-rp-break {
   @include margin.b('eagle');

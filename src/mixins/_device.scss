@@ -1,7 +1,7 @@
 @use 'sass:list';
 @use 'sass:map';
 @use 'sass:math';
-@use 'src/tokens/breakpoint';
+@use '/src/tokens/breakpoint';
 
 @mixin high-dpi {
   @include mq('min-resolution', 2dpi) {

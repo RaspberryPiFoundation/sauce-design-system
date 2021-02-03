@@ -1,6 +1,6 @@
-@use 'src/mixins/border';
-@use 'src/mixins/radius';
-@use 'src/mixins/padding';
+@use '/src/mixins/border';
+@use '/src/mixins/radius';
+@use '/src/mixins/padding';
 
 .sc-cc-button {
   @include border.width(0.3rem);

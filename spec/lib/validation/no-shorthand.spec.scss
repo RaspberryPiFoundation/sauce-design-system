@@ -1,5 +1,5 @@
-@use 'true' as *;
-@use 'lib/validation';
+@use '~sass-true/sass/true' as *;
+@use '/lib/validation';
 
 $catch-errors: true;
 

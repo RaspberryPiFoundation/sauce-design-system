@@ -1,9 +1,9 @@
-@use 'src/tokens/font-family';
-@use 'src/tokens/font-weight';
-@use 'src/tokens/color-greyscale';
-@use 'src/tokens/line-height';
-@use 'src/mixins/device';
-@use 'src/mixins/type-scale';
+@use '/src/tokens/font-family';
+@use '/src/tokens/font-weight';
+@use '/src/tokens/color-greyscale';
+@use '/src/tokens/line-height';
+@use '/src/mixins/device';
+@use '/src/mixins/type-scale';
 
 body {
   @include type-scale.skateboard;

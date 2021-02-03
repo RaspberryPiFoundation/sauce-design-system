@@ -1,4 +1,4 @@
-@use 'src/primitives/link';
+@use '/src/primitives/link';
 
 .sc-rp-link {
   @include link.default;

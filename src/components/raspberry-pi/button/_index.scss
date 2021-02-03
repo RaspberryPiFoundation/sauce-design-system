@@ -1,12 +1,12 @@
-@use 'src/mixins/device';
-@use 'src/primitives/button';
-@use 'src/tokens/color-greyscale';
-@use 'src/tokens/font-weight';
-@use 'src/tokens/raspberry-pi/color-brand';
-@use 'src/tokens/raspberry-pi/color-palette';
-@use 'src/mixins/size';
-@use 'src/tokens/transition-duration';
-@use 'src/tokens/transition-timing';
+@use '/src/mixins/device';
+@use '/src/primitives/button';
+@use '/src/tokens/color-greyscale';
+@use '/src/tokens/font-weight';
+@use '/src/tokens/raspberry-pi/color-brand';
+@use '/src/tokens/raspberry-pi/color-palette';
+@use '/src/mixins/size';
+@use '/src/tokens/transition-duration';
+@use '/src/tokens/transition-timing';
 
 .sc-rp-button,
 .sc-rp-button:visited {

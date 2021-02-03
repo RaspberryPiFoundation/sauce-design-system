@@ -1,7 +1,7 @@
-@use 'src/mixins/font-size';
-@use 'src/mixins/margin';
-@use 'src/primitives/heading';
-@use 'src/tokens/line-height';
+@use '/src/mixins/font-size';
+@use '/src/mixins/margin';
+@use '/src/primitives/heading';
+@use '/src/tokens/line-height';
 
 .sc-rp-type-secondary-heading {
   @include heading.primitive;

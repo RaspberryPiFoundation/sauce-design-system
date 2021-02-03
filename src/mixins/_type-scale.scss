@@ -1,4 +1,4 @@
-@use 'lib/type-scale';
+@use '/lib/type-scale';
 
 @mixin variable($sizes) {
   @include type-scale.output($sizes);

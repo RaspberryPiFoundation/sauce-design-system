@@ -27,7 +27,7 @@ If you find yourself using regular margin and padding rules with arbitrary value
 ## Margin
 
 ```scss
-@use 'src/mixins/margin';
+@use '/src/mixins/margin';
 
 .some-selector {
   // All four sides
@@ -50,7 +50,7 @@ If you find yourself using regular margin and padding rules with arbitrary value
 ## Padding
 
 ```scss
-@use 'src/mixins/padding';
+@use '/src/mixins/padding';
 
 .some-selector {
   // All four sides
@@ -77,8 +77,8 @@ In some cases you may need to employ different spacing sizes across different br
 In order to achieve this, all of the mixins referenced on this page optionally take a [Sass list](https://sass-lang.com/documentation/modules/list) as an argument, with the names of the spacing units you need:
 
 ```scss
-@use 'src/mixins/margin';
-@use 'src/mixins/padding';
+@use '/src/mixins/margin';
+@use '/src/mixins/padding';
 
 .some-selector {
   @include margin.block([ 'bee', 'bee', 'hippo' ]);

@@ -1,8 +1,8 @@
-@use 'src/tokens/color-greyscale';
-@use 'src/tokens/raspberry-pi/color-brand';
-@use 'src/tokens/raspberry-pi/color-palette';
-@use 'src/tokens/transition-duration';
-@use 'src/tokens/transition-timing';
+@use '/src/tokens/color-greyscale';
+@use '/src/tokens/raspberry-pi/color-brand';
+@use '/src/tokens/raspberry-pi/color-palette';
+@use '/src/tokens/transition-duration';
+@use '/src/tokens/transition-timing';
 
 @mixin base {
   text-decoration: underline;
@@ -13,7 +13,6 @@
 }
 
 @mixin default {
-  @include base;
   color: color-palette.$navy;
 
   &:visited {
@@ -26,7 +25,6 @@
 }
 
 @mixin inverted {
-  @include base;
   color: rgba(color-greyscale.$white, 0.8);
 
   &:visited {
@@ -35,5 +33,18 @@
 
   &:focus, &:hover, &:active {
     color: color-greyscale.$white;
+  }
+}
+
+@mixin big-click {
+  &::after {
+    bottom: 0;
+    content: ' ';
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
   }
 }

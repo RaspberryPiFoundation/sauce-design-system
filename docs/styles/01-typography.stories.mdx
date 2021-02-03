@@ -42,7 +42,7 @@ For a deep-dive explanation of what's happening, read Harry Roberts' article "[T
 | `$monospace`  | 'Lucida Console', 'Monaco', monospace; |
 
 ```scss
-@use 'src/tokens/font-family';
+@use '/src/tokens/font-family';
 
 .some-selector {
   font-family: font-family.$monospace;
@@ -80,7 +80,7 @@ We also instruct the browser to cap the values at a minimum and maximum size. Ou
 | `$van`         | 5.6rem  | 7vw        | 8.4rem  | &times;3.5 |
 
 ```scss
-@use 'src/mixins/font-size';
+@use '/src/mixins/font-size';
 
 .some-selector {
   @include font-size.rollerskate;
@@ -103,7 +103,7 @@ We also instruct the browser to cap the values at a minimum and maximum size. Ou
 | `$bold`    | 700   |
 
 ```scss
-@use 'src/tokens/font-weight';
+@use '/src/tokens/font-weight';
 
 .some-selector {
   font-weight: font-weight.$light;
@@ -122,7 +122,7 @@ We also instruct the browser to cap the values at a minimum and maximum size. Ou
 Use like this:
 
 ```scss
-@use 'src/tokens/line-height';
+@use '/src/tokens/line-height';
 
 .some-selector {
   line-height: line-height.$cosy;

@@ -1,6 +1,6 @@
-@use 'src/mixins/padding';
-@use 'src/mixins/margin';
-@use 'src/mixins/size';
+@use '/src/mixins/padding';
+@use '/src/mixins/margin';
+@use '/src/mixins/size';
 
 @mixin block {
   @include padding.inline([ 'bee', 'grizzly' ]);
