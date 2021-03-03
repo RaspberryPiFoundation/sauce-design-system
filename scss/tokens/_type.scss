@@ -1,0 +1,19 @@
+@use '/scss/tokens/font-size';
+
+$rollerskate: font-size.$d-1;
+$skateboard:  font-size.$base;
+$scooter:     font-size.$u-2;
+$bike:        font-size.$u-3;
+$moped:       font-size.$u-5;
+$car:         font-size.$u-6;
+$van:         font-size.$u-8;
+
+$map: (
+  rollerskate: $rollerskate,
+  skateboard:  $skateboard,
+  scooter:     $scooter,
+  bike:        $bike,
+  moped:       $moped,
+  car:         $car,
+  van:         $van,
+);

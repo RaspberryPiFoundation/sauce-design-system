@@ -1,0 +1,48 @@
+/**
+* @tokens Breakpoint
+*/
+$phone-portrait:   0;
+$phone-landscape:  600px;
+$tablet-portrait:  768px;
+$tablet-landscape: 1024px;
+$laptop:           1200px;
+$desktop:          1440px;
+
+$categories: (
+  'phone-portrait',
+  'phone-landscape',
+  'tablet-portrait',
+  'tablet-landscape',
+  'laptop',
+  'desktop'
+);
+
+$media-queries: (
+  default: (
+    $metric: min-width,
+    $orientation: null,
+    $value:  0,
+  ),
+  phone-portrait: (
+    $metric: max-width,
+    $value: $phone-portrait,
+  ),
+  phone-landscape: (
+    $metric: max-width,
+    $orientation: landscape,
+    $value: $phone-landscape,
+  ),
+  tablet-portrait: (
+    $value: $tablet-portrait,
+  ),
+  tablet-landscape: (
+    $orientation: landscape,
+    $value: $tablet-landscape,
+  ),
+  laptop: (
+    $value: $laptop,
+  ),
+  desktop: (
+    $value: $desktop,
+  ),
+);

@@ -1,0 +1,15 @@
+/**
+* @tokens Border
+* @presenter Border
+*/
+$none:   0;
+$narrow: 0.1rem;
+$medium: 0.2rem;
+$wide:   0.3rem;
+
+$map: (
+  none:   $none,
+  narrow: $narrow,
+  medium: $medium,
+  wide:   $wide,
+);
