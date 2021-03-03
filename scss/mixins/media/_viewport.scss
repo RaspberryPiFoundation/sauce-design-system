@@ -1,0 +1,24 @@
+@use 'sass:math';
+
+@mixin size($axis, $value) {
+  @if (math.unit($value) != 'px') {
+    @warn "Please specify min-width value with in `px`";
+  }
+
+  @include mq('min-width', $value) {
+    @content;
+  }
+}
+
+@mixin min-width($value) {
+  @if (math.unit($value) != 'px') {
+    @warn "Please specify min-width value with in `px`";
+  }
+
+  @include mq('min-width', $value) {
+    @content;
+  }
+}
+
+// width/max-width/min-width
+// height/max-height/min-height

@@ -1,0 +1,78 @@
+@use 'sass:list';
+@use 'sass:map';
+@use 'sass:math';
+
+@use '/scss/tokens/device';
+
+// tests whether ANY available input mechanism can hover over elements
+// any-hover
+//   hover
+//   none
+
+// tests whether the user's PRIMARY input mechanism can hover over elements
+// hover
+//   hover
+//   none
+
+// tests whether the user has ANY pointing device (such as a mouse), and if so, how accurate it is
+// any-pointer
+//   coarse
+//   fine
+//   none
+
+// tests whether the user has A pointing device (such as a mouse), and if so, how accurate the primary pointing device is
+// pointer
+//   coarse
+//   fine
+//   none
+
+// scripting
+//   none
+//   initial-only
+//   enabled
+@mixin scripting($value: enabled) {
+  @include media.query(scripting, $value) {
+    @content;
+  }
+}
+@mixin scripting-initial-only { @include orientation(initial-only) { @content; } }
+@mixin scripting-none         { @include orientation(none)         { @content; } }
+
+// orientation
+//   landscape
+//   portrait
+@mixin orientation($orientation) {
+  @include media.query(orientation, $orientation) {
+    @content;
+  }
+}
+@mixin orientation-landspace { @include orientation(landspace) { @content; } }
+@mixin orientation-portrait  { @include orientation(portrait)  { @content; } }
+
+@mixin respond($metric, $value, $orientation: null) {
+  @include media.query($metric, $value) {
+    @if $orientation {
+      @include orientation($orientation) {
+        @content;
+      }
+    }
+    @else {
+      @content;
+    }
+  }
+}
+
+@mixin category($value) {
+  @if list.index(device.$categories, $value) == null {
+    @error "Invalid device: #{$value}";
+  }
+
+  $values: map.merge(
+    map.get(default),
+    map.get($value),
+  );
+
+  @include respond(map.values($values)) {
+    @content;
+  }
+}

@@ -1,0 +1,15 @@
+@use '/scss/mixins/media';
+
+// display-mode
+//   browser
+//   fullscreen
+//   minimal-ui
+//   standalone
+@mixin display-mode($value: 'browser') {
+  @include media.query('display-mode', $value) {
+    @content;
+  }
+}
+@mixin display-mode-fullscreen { @include display-mode(fullscreen) { @content; } }
+@mixin display-mode-minimal-ui { @include display-mode(minimal-ui) { @content; } }
+@mixin display-mode-standalone { @include display-mode(standalone) { @content; } }

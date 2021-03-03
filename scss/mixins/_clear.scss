@@ -1,0 +1,16 @@
+@mixin none { clear: none; }
+
+@mixin start {
+  clear: left;
+  clear: inline-start;
+}
+
+@mixin end {
+  clear: right;
+  clear: inline-end;
+}
+
+@mixin both { clear: both; }
+
+@mixin left  { @include start; }
+@mixin right { @include end;   }

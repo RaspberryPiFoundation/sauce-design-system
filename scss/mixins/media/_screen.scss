@@ -1,0 +1,16 @@
+@use 'sass:math';
+
+// resolution/min-resolution/max-resolution
+//   1x
+//   2x
+//   3x
+
+@mixin high-dpi {
+  @if (math.unit($value) != 'dpi') {
+    @warn "Please specify min-width value with in `px`";
+  }
+  @include mq('min-resolution', 2dpi) {
+    @content;
+  }
+}
+// device-aspect-ratio

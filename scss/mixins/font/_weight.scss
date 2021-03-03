@@ -1,0 +1,5 @@
+@use '/scss/tokens/font-weight';
+
+@mixin weight($value) {
+  @include prop.define(font-weight, $value);
+}

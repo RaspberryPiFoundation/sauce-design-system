@@ -1,0 +1,24 @@
+@use '/scss/mixins/prop';
+@use '/scss/tokens/border-radius';
+
+$-valid-properties: (
+  border-bottom-left-radius,
+  border-bottom-right-radius,
+  border-end-end-radius,
+  border-end-start-radius,
+  border-radius,
+  border-start-end-radius,
+  border-start-start-radius,
+  border-top-left-radius,
+  border-top-right-radius,
+);
+
+@mixin apply($properties, $value) {
+  @include prop.output($properties, $value, $-valid-properties, border-radius.$map);
+}
+
+@mixin all($value) { @mixin apply(border-radius, $value); }
+@mixin bl($value)  { @mixin apply([ border-bottom-left-radius,  border-start-end-radius ],   $value); }
+@mixin br($value)  { @mixin apply([ border-bottom-right-radius, border-end-end-radius ],     $value); }
+@mixin tl($value)  { @mixin apply([ border-top-left-radius,     border-start-start-radius ], $value); }
+@mixin tr($value)  { @mixin apply([ border-top-right-radius,    border-end-start-radius ],   $value); }

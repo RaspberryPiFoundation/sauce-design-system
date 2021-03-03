@@ -1,0 +1,35 @@
+@use 'src/tokens/color-greyscale';
+
+@mixin focusable {
+  // &::-moz-focus-inner {} ?
+
+  &:focus {
+    /* Provide a fallback style for browsers
+      that don't support :focus-visible */
+  }
+
+  &:focus:not(:focus-visible) {
+    /* Remove the focus indicator on mouse-focus for browsers
+      that do support :focus-visible */
+  }
+
+  &:focus-visible {
+    /* Draw a very noticeable focus style for
+      keyboard-focus on browsers that do support
+      :focus-visible */
+  }
+}
+
+@mixin inverted {
+  color: color-greyscale.$white !important;
+}
+
+@mixin visually-hidden {
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(100%) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+}

@@ -1,0 +1,31 @@
+@use '/scss/mixins/prop';
+@use '/scss/mixins/spacing';
+
+$valid-properties: (
+  'padding',
+  'padding-block',
+  'padding-block-end',
+  'padding-block-start',
+  'padding-bottom',
+  'padding-inline',
+  'padding-inline-end',
+  'padding-inline-start',
+  'padding-left',
+  'padding-right',
+  'padding-top',
+);
+
+@mixin apply($properties, $value) {
+  @include prop.output($properties, $value, $valid-properties, spacing.$map);
+}
+
+@mixin none           { @include prop.apply(padding, 0); }
+@mixin all($value)    { @include apply(padding, $value); }
+
+@mixin inline($value) { @include apply([ padding-left,  padding-right,  padding-inline ], $value); }
+@mixin block($value)  { @include apply([ padding-top,   padding-bottom, padding-block ],  $value); }
+
+@mixin t($value)      { @include apply([ padding-top,    padding-block-start ],  $value); }
+@mixin r($value)      { @include apply([ padding-right,  padding-inline-end ],   $value); }
+@mixin b($value)      { @include apply([ padding-bottom, padding-block-end ],    $value); }
+@mixin l($value)      { @include apply([ padding-left,   padding-inline-start ], $value); }

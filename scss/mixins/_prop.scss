@@ -1,0 +1,37 @@
+@use 'sass:map';
+@use 'sass:meta';
+
+@use '/lib/validation';
+
+@mixin apply($name, $value) {
+  @include def($name, $value);
+  @include use($name);
+}
+
+@mixin def($name, $value) {
+  --#{$name}: #{$value};
+}
+
+@mixin use($name) {
+  #{$name}: var(--#{$name});
+}
+
+@mixin output($properties, $value, $valid-properties: null, $values-map: null) {
+  @include validation.no-shorthand($value);
+
+  @if (meta.type-of($properties) == 'string') {
+    $properties: [ $properties ];
+  }
+
+  @if ($valid-properties) {
+    @include validation.property-allowed($properties, $valid-properties);
+  }
+
+  @if ($values-map) {
+    $value: map.get($values-map, $value);
+  }
+
+  @each $property in $properties {
+    @include apply($property, $value);
+  }
+}

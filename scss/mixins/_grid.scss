@@ -1,0 +1,5 @@
+@use '/scss/mixins/gap';
+
+@mixin gap($value)        { @include gap.all($value);    }
+@mixin column-gap($value) { @include gap.column($value); }
+@mixin row-gap($value)    { @include gap.row($value);    }
