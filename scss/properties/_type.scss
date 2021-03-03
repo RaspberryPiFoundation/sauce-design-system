@@ -1,0 +1,12 @@
+@use '/scss/tokens/type';
+@use '/scss/mixins/prop';
+
+:root {
+  @include prop.set('type-rollerskate', type.$rollerskate);
+  @include prop.set('type-skateboard',  type.$skateboard);
+  @include prop.set('type-scooter',     type.$scooter);
+  @include prop.set('type-bike',        type.$bike);
+  @include prop.set('type-moped',       type.$moped);
+  @include prop.set('type-car',         type.$car);
+  @include prop.set('type-van',         type.$van);
+}
