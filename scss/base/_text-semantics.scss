@@ -1,0 +1,51 @@
+@use '/scss/tokens/font-family';
+@use '/scss/tokens/font-weight';
+
+abbr {
+  text-decoration: underline dotted;
+}
+
+b {
+  font-weight: font-weight.$bold;
+}
+
+cite {
+  font-style: italic;
+}
+
+em {
+  font-style: italic;
+}
+
+i {
+  font-style: italic;
+}
+
+kbd {
+  font-family: font-family.$monospace;
+}
+
+s {
+  text-decoration: line-through;
+}
+
+samp {
+  font-family: font-family.$monospace;
+}
+
+strong {
+  font-weight: font-weight.$bold;
+}
+
+sub {}
+
+sup {}
+
+u {
+  text-decoration: underline;
+}
+
+var {
+  font-style: italic;
+  font-weight: font-weight.$bold;
+}

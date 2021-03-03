@@ -1,0 +1,16 @@
+@use '/scss/mixins/margin';
+@use '/scss/mixins/padding';
+@use '/scss/primitives/type';
+
+ol, ul {
+  @include type.primitive;
+  @include margin.b('bee');
+  @include padding.l('bee');
+
+  li {
+    ol,
+    ul {
+      margin-bottom: 0;
+    }
+  }
+}
