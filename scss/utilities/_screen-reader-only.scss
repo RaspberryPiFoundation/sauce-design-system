@@ -1,0 +1,5 @@
+@use '/scss/mixins/utilities';
+
+[data-sauce-screen-reader-only] {
+  @include utilities.screen-reader-only;
+}
