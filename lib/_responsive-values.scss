@@ -1,7 +1,7 @@
 @use 'sass:list';
 @use 'sass:map';
 @use 'sass:meta';
-@use 'src/mixins/device';
+@use '/scss/mixins/device';
 
 @function map($base-sizes, $scale, $sizes) {
   @if (meta.type-of($sizes) == 'string') {

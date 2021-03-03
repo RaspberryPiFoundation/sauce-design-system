@@ -42,7 +42,7 @@ For a deep-dive explanation of what's happening, read Harry Roberts' article "[T
 | `$monospace`  | 'Lucida Console', 'Monaco', monospace; |
 
 ```scss
-@use 'src/tokens/font-family';
+@use '/scss/tokens/font-family';
 
 .some-selector {
   font-family: font-family.$monospace;
@@ -82,7 +82,7 @@ Try to use the `type-scale` module where possible. These named sizes have differ
 | `$van`         | 5.6rem  | 7rem       | 8.4rem  | &times;3.5 |
 
 ```scss
-@use 'src/mixins/type-scale';
+@use '/scss/mixins/type-scale';
 
 .some-selector {
   @include type-scale.rollerskate;
@@ -100,7 +100,7 @@ In some cases you may need to employ a different font size across different brea
 In order to achieve this, use the `variable` mixin, which optionally takes a [Sass list](https://sass-lang.com/documentation/modules/list) as an argument, with the names of the font-sizes you need:
 
 ```scss
-@use 'src/mixins/type-scale';
+@use '/scss/mixins/type-scale';
 
 .some-selector {
   @include type-scale.variable([ 'rollerskate', 'scooter' ]);
@@ -117,7 +117,7 @@ In order to achieve this, use the `variable` mixin, which optionally takes a [Sa
 | `$bold`    | 700   |
 
 ```scss
-@use 'src/tokens/font-weight';
+@use '/scss/tokens/font-weight';
 
 .some-selector {
   font-weight: font-weight.$light;
@@ -136,7 +136,7 @@ In order to achieve this, use the `variable` mixin, which optionally takes a [Sa
 Use like this:
 
 ```scss
-@use 'src/tokens/line-height';
+@use '/scss/tokens/line-height';
 
 .some-selector {
   line-height: line-height.$cosy;
