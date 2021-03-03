@@ -1,0 +1,71 @@
+@use 'sauce_overrides/mixins/utilities';
+
+/**
+ * PLEASE NOTE
+ *
+ * The order of the visited/focus/hover/active states is deliberate.
+ * See https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Styling_links#styling_some_links
+ *
+ * Remember: LoVe Fears HAte!
+ */
+@mixin primary {
+  // Include mixins
+  @include utilities.focusable;
+
+  // Setup tokens
+  --color-text-base:    var(--color-text-link-primary-base);
+  --color-text-active:  var(--color-text-link-primary-active);
+  --color-text-visited: var(--color-text-link-primary-visited);
+
+  // Setup custom properties
+  --color-text: var(--color-text-base);
+
+  // Define rules
+  color: var(--color-text);
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  transition: none;
+
+  // Define pseudo-classes
+  &:visited {
+    --color-text: var(--color-text-visited);
+  }
+
+  &:focus, &:hover, &:active {
+    --color-text: var(--color-text-active);
+  }
+}
+
+@mixin breakout {
+  [data-breakout] &,
+  &[data-breakout] {
+    &::after {
+      bottom: 0;
+      content: ' ';
+      display: block;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1;
+    }
+  }
+}
+
+@mixin inverted {
+  [data-inverted] &,
+  &[data-inverted] {
+    // Override tokens
+    --color-text-base:    var(--color-text-link-inverse-base);
+    --color-text-active:  var(--color-text-link-inverse-active);
+    --color-text-visited: var(--color-text-link-inverse-visited);
+  }
+}
+
+@mixin no-visited-state {
+  [data-no-visited-state] &:visited,
+  &:visited[data-no-visited-state] {
+    // Override properties
+    --color-text-visited: var(--color-text-base);
+  }
+}
