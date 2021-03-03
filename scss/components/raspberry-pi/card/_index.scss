@@ -1,0 +1,78 @@
+@use '/scss/mixins/device';
+@use '/scss/mixins/type-scale';
+@use '/scss/mixins/margin';
+@use '/scss/mixins/padding';
+@use '/scss/primitives/heading';
+@use '/scss/tokens/transition-duration';
+@use '/scss/tokens/line-height';
+@use '/scss/tokens/transition-timing';
+@use '/brands/raspberry-pi/tokens/color-palette';
+
+.sc-rp-card {
+  background-color: #f0f8ff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column-reverse;
+  flex-grow: 1;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  transition-duration: transition-duration.$short;
+  transition-property: box-shadow transform;
+  transition-timing-function: transition-timing.$eased;
+
+  &:hover,
+  &:focus-within {
+    box-shadow: 0 0 2rem 0 rgba(color-palette.$navy, 0.2);
+    transform: scale(1.05);
+  }
+}
+
+.sc-rp-card__summary {
+  @include padding.all('bee');
+
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.sc-rp-card__heading {
+  @include heading.primitive;
+  @include type-scale.scooter;
+  @include margin.b('ant');
+
+  max-width: 100%;
+}
+
+.sc-rp-card__link,
+.sc-rp-card__link:visited {
+  color: color-palette.$navy;
+  text-decoration: none;
+
+  &:focus,
+  .sc-rp-card:focus-within &,
+  .sc-rp-card:hover & {
+    text-decoration: underline;
+  }
+
+  &::after {
+    bottom: 0;
+    content: ' ';
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+  }
+}
+
+.sc-rp-card__excerpt {
+  margin: 0;
+}
+
+.sc-rp-card__image {
+  display: block;
+  height: auto;
+  width: 100%;
+}

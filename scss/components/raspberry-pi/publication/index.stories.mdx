@@ -1,0 +1,130 @@
+import './_index.scss'
+import { Meta, Story } from '@storybook/addon-docs/blocks'
+
+<Meta title="Components/Raspberry Pi/Publication" />
+
+# Publication
+
+This component is intended to wrap rich text content from a CMS. It will attempt to apply sensible default styles for bare HTML elements within. This is useful if you'd like to have more control over the styling of ad-hoc HTML.
+
+This is not intended as a drop-in solution for styling content when you are directly in control of the markup. You _could_ use it like that, but it would be better to use the correct components instead.
+
+<Story name="Vanilla">
+  <div className="sc-rp-publication">
+    <h1>This is a h1 element</h1>
+    <p>
+      And now a paragraph. Oh look it's <a href="#">a link</a>, how about that.
+    </p>
+    <p>Here's a list of Talking Heads albums, for some reason:</p>
+    <ul>
+      <li>Talking Heads: 77 (1977)</li>
+      <li>More Songs About Buildings and Food (1978)</li>
+      <li>Fear of Music (1979)</li>
+      <li>Remain in Light (1980)</li>
+      <li>Speaking in Tongues (1983)</li>
+      <li>Little Creatures (1985)</li>
+      <li>True Stories (1986)</li>
+      <li>Naked (1988)</li>
+    </ul>
+    <p>Wasn't that fun?</p>
+    <h2>Okay now let's do a h2</h2>
+    <p>
+      Heck yes get a load of that. Okay what next? Let's list the tracks on the
+      much-celebrated Talking Heads live album "Stop Making Sense":
+    </p>
+    <ol>
+      <li>"Psycho Killer" (Byrne, Frantz, Weymouth) – 4:24</li>
+      <li>"Heaven" (Byrne, Harrison) – 3:41</li>
+      <li>"Thank You for Sending Me an Angel" (Byrne) – 2:09</li>
+      <li>"Found a Job" (Byrne) – 3:15</li>
+      <li>"Slippery People" – 4:00</li>
+      <li>"Burning Down the House" – 4:06</li>
+      <li>"Life During Wartime" – 5:51</li>
+      <li>"Making Flippy Floppy" – 4:40</li>
+      <li>"Swamp" – 4:30</li>
+      <li>"What a Day That Was" (Byrne) – 6:00</li>
+      <li>"This Must Be the Place (Naive Melody)" – 4:57</li>
+      <li>
+        "Once in a Lifetime" (Byrne, Eno, Frantz, Harrison, Weymouth) – 5:25
+      </li>
+      <li>
+        "Genius of Love" (Weymouth, Frantz, Adrian Belew, Steven Stanley)
+        (performed by Tom Tom Club) – 4:30
+      </li>
+      <li>"Girlfriend Is Better" – 5:06</li>
+      <li>"Take Me to the River" (Green, Hodges) – 5:32</li>
+      <li>
+        "Crosseyed and Painless" (Byrne, Eno, Frantz, Harrison, Weymouth) – 6:11
+      </li>
+    </ol>
+    <p>Are you having fun yet? What can we look at next?</p>
+    <h3>How about this h3?</h3>
+    <p>
+      From 1971 to 1972, David Byrne was a member of a duo named Bizadi with
+      Marc Kehoe. He performed various offbeat acts and developed an interest in
+      performing. He attended the Rhode Island School of Design in the 1970–1971
+      term, and the Maryland Institute College of Art in the 1971–1972 term.
+    </p>
+    <p>Do you even like Talking Heads? I hope so.</p>
+    <h4>WOW it's a h4!</h4>
+    <p>
+      Have you ever wondered how Talking Heads got their name? Here's what
+      bassist Tina Weymouth had to say about <strong>that very topic</strong>:
+    </p>
+    <blockquote>
+      A friend had found the name in the TV Guide, which explained the term used
+      by TV studios to describe a head-and-shoulder shot of a person talking as
+      'all content, no action'. It fit.
+    </blockquote>
+    <cite>Tina Weymouth on the telly in like 1992.</cite>
+    <p>You know what we should probably write some code.</p>
+    <h5>Here's a h5 before we do that.</h5>
+    <p>Don't worry this bit won't be about Talking Heads.</p>
+    <pre>
+      <code>
+        const lyrics = () => [ `Watch out, you might get what you're after`,
+        `Cool babies, strange but not a stranger`, `I'm an ordinary guy`,
+        `Burning down the house`, `Hold tight`, `Wait 'til the party's over`,
+        `Hold tight`, `We're in for nasty weather`, `There has got to be a way`,
+        `Burning down the house`, ] lyrics.map((line) => console.log(line))
+      </code>
+    </pre>
+    <p>
+      Ha. I lied to you. That <em>was</em> about Talking Heads after all.
+    </p>
+    <h2>You are a fool to have trusted me.</h2>
+    <p>
+      Hey, the heading size was supposed to be a h6, but I used a h2 instead.
+      It's a bit like when David Byrne returns to the stage in his iconic "big
+      suit" for the closing numbers of the Stop Making Sense show. If you
+      haven't see Stop Making Sense, you really should watch it:
+    </p>
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube-nocookie.com/embed/4xL7Ilh1DFI"
+      frameBorder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+    ></iframe>
+    <h6>h6: Same as it ever was</h6>
+    <ul>
+      <li>Same as it ever was</li>
+      <li>
+        Same as it ever was
+        <ol>
+          <li>Same as it ever was</li>
+          <li>Same as it ever was</li>
+          <li>Once in a lifetime</li>
+        </ol>
+      </li>
+      <li>Let the water hold me down</li>
+      <li>Letting the days go by</li>
+      <li>Water flowing underground</li>
+    </ul>
+    <p>
+      <em>Note to other maintainers</em>: should you ever need to add further
+      examples to this page, try to keep the content on-topic, yeah?
+    </p>
+  </div>
+</Story>

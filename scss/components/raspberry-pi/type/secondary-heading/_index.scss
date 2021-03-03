@@ -1,0 +1,13 @@
+@use '/scss/mixins/margin';
+@use '/scss/primitives/heading';
+@use '/scss/mixins/type-scale';
+@use '/scss/tokens/line-height';
+
+.sc-rp-type-secondary-heading {
+  @include heading.primitive;
+  @include type-scale.bike;
+  @include margin.b('ant');
+
+  line-height: line-height.$cosy;
+  max-width: 100%;
+}

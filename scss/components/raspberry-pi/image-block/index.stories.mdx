@@ -1,0 +1,207 @@
+import './_index.scss'
+import '../type/_index.scss'
+import '../button/_index.scss'
+import { Meta, Story } from '@storybook/addon-docs/blocks'
+
+import astroSm from './images/astro-sm.jpg'
+import astroMd from './images/astro-md.jpg'
+import astroLg from './images/astro-lg.jpg'
+import christinaSm from './images/christina-sm.jpg'
+import christinaMd from './images/christina-md.jpg'
+import christinaLg from './images/christina-lg.jpg'
+import coolestProjectsSm from './images/coolest-projects-sm.jpg'
+import coolestProjectsMd from './images/coolest-projects-md.jpg'
+import coolestProjectsLg from './images/coolest-projects-lg.jpg'
+import compliance from './images/compliance.jpg'
+
+<Meta title="Components/Raspberry Pi/Image Block" />
+
+# Image Block
+
+An image block has some content and an image. The important thing here is the image, which must meet a certain set of requirements.
+
+The image must have a "quiet area" on either side of the horizontal axis. Propotionally this is a ratio of `3:10:3`.
+
+For example, an image with a size of 1,600 pixels would would have 300 pixels quiet area, 1,000 pixels for the image's focus area, and another 300 pixels quiet area.
+
+The purpose of the quiet area is to allow the image to adapt to different screen sizes, without losing the focus of the image, similar to the concept of "[Overscan](https://en.wikipedia.org/wiki/Overscan)" on old CRT TVs.
+
+Quiet areas can contain graphical elements (or nothing at all).
+
+Avoid images going "full-bleed" on the `x` axis. Full bleed on one of the edges of the `y` axis is fine, but never both. Vertical image aligment is accomplished with the `.sc-rp-image-block--image-bottom` and `.sc-rp-image-block--image-top` modifier classes.
+
+Use the `<picture>` element to deliver the correct image for the correct screen size. There are no set breakpoints for swapping the image for higher/lower resolution versions. Test your image and see what works, and edit your markup accordingly. Different image sizes should maintain the same aspect ratio and quiet areas, but they don't have to be the same image as the other image sizes. Your fallback `img` should show a 'mid-point' option, as we can't make any reasonable assumption about screen size, device capability, network bandwidth, etc. It may be seen by IE11, or an old Android device. Picking a mid-resolution image is the safest way to make sure everyone gets a roughtly equivalent experience.
+
+Another important point, is that you must specify the true width and height of the image in the HTML. If you are unable to do so due to CMS restrictions it's not the end of the world, but providing these sizes allows CSS to proportionally set aside space for the image, reducing the need for [browser reflow](https://developers.google.com/speed/docs/insights/browser-reflow). In future we will be able to use the [CSS `aspect-ratio` property](https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio) to help out too.
+
+In the following examples you can see the quiet area on the images illustrated with a transparent red box. This is enabled with the `.sc-rp-image-block--debug` modifier. **Do not use this classname in production**.
+
+### Image aligned to bottom of layout
+
+<Story name="Vanilla">
+  <div
+    className="sc-rp-image-block sc-rp-image-block--debug sc-rp-image-block--image-bottom"
+    style={{ backgroundColor: 'rgb(240, 248, 255)' }}
+  >
+    <div className="sc-rp-image-block__content">
+      <h2 className="sc-rp-type-secondary-heading">Digital Making at Home</h2>
+      <p>
+        Every week, we’re offering new code-along videos, led by our team, to
+        inspire and engage young people. Join us as we walk you through fun,
+        creative projects.
+      </p>
+      <a className="sc-rp-button" href="#">
+        Learn to code with us!
+      </a>
+    </div>
+    <div className="sc-rp-image-block__figure">
+      <picture className="sc-rp-image-block__image-container">
+        <source media="(min-width: 1000px)" srcset={christinaLg} />
+        <source media="(min-width: 600px)" srcset={christinaMd} />
+        <source srcset={christinaSm} />
+        <img
+          alt="Christina Foust, from Raspberry Pi Foundation North America"
+          className="sc-rp-image-block__image"
+          height="800"
+          src={christinaMd}
+          width="1600"
+        />
+      </picture>
+    </div>
+  </div>
+</Story>
+
+### Reversed content and image
+
+<Story name="Reversed">
+  <div
+    className="sc-rp-image-block sc-rp-image-block--debug sc-rp-image-block--reverse"
+    style={{ backgroundColor: 'rgb(255, 243, 236)' }}
+  >
+    <div className="sc-rp-image-block__content">
+      <h2 className="sc-rp-type-secondary-heading">Coolest Projects</h2>
+      <p>
+        Our annual showcasing event, online this year, is something fun for
+        young people to enjoy over a longer period. It gives them the
+        opportunity to share their creative ideas and be inspired by others. All
+        projects are welcome, from beginner to advanced.
+      </p>
+      <a className="sc-rp-button" href="#">
+        View Coolest Projects
+      </a>
+    </div>
+    <div className="sc-rp-image-block__figure">
+      <picture className="sc-rp-image-block__image-container">
+        <source media="(min-width: 1000px)" srcset={coolestProjectsLg} />
+        <source media="(min-width: 600px)" srcset={coolestProjectsMd} />
+        <source srcset={coolestProjectsSm} />
+        <img
+          alt="A Maker shows her creation at Coolest Project International 2019"
+          className="sc-rp-image-block__image"
+          height="800"
+          src={coolestProjectsMd}
+          width="1600"
+        />
+      </picture>
+    </div>
+  </div>
+</Story>
+
+### With padded image
+
+<Story name="Padded image">
+  <div
+    className="sc-rp-image-block sc-rp-image-block--debug sc-rp-image-block--padded-image"
+    style={{ backgroundColor: 'rgb(255, 243, 236)' }}
+  >
+    <div className="sc-rp-image-block__content">
+      <h2 className="sc-rp-type-secondary-heading">Compliance and support</h2>
+      <p>
+        We’ve done the hard work so you don’t have to. Raspberry Pi products are
+        subject to rigorous compliance testing, designed to save you time and
+        money.
+      </p>
+      <a className="sc-rp-button" href="#">
+        Find out more
+      </a>
+    </div>
+    <div className="sc-rp-image-block__figure">
+      <picture className="sc-rp-image-block__image-container">
+        <source srcset={compliance} />
+        <img
+          alt="A Maker shows her creation at Coolest Project International 2019"
+          className="sc-rp-image-block__image"
+          src={compliance}
+        />
+      </picture>
+    </div>
+  </div>
+</Story>
+
+### Reversed with padded image
+
+<Story name="Reversed with added image">
+  <div
+    className="sc-rp-image-block sc-rp-image-block--debug sc-rp-image-block--padded-image sc-rp-image-block--reverse"
+    style={{ backgroundColor: 'rgb(255, 243, 236)' }}
+  >
+    <div className="sc-rp-image-block__content">
+      <h2 className="sc-rp-type-secondary-heading">Compliance and support</h2>
+      <p>
+        We’ve done the hard work so you don’t have to. Raspberry Pi products are
+        subject to rigorous compliance testing, designed to save you time and
+        money.
+      </p>
+      <a className="sc-rp-button" href="#">
+        Find out more
+      </a>
+    </div>
+    <div className="sc-rp-image-block__figure">
+      <picture className="sc-rp-image-block__image-container">
+        <source srcset={compliance} />
+        <img
+          alt="A Maker shows her creation at Coolest Project International 2019"
+          className="sc-rp-image-block__image"
+          src={compliance}
+        />
+      </picture>
+    </div>
+  </div>
+</Story>
+
+### With inverted text
+
+<Story name="With inverted text utility">
+  <div
+    className="sc-rp-image-block"
+    data-sauce-inverted-text
+    style={{ backgroundColor: '#002B3F' }}
+  >
+    <div className="sc-rp-image-block__content">
+      <h2 className="sc-rp-type-secondary-heading">
+        Join the Astro Pi competition
+      </h2>
+      <p>
+        Help your students create code experiments that run on the Raspberry Pi
+        computers aboard the International Space Station.
+      </p>
+      <a className="sc-rp-button" href="#">
+        Blast off!
+      </a>
+    </div>
+    <div className="sc-rp-image-block__figure">
+      <picture className="sc-rp-image-block__image-container">
+        <source media="(min-width: 1000px)" srcset={astroLg} />
+        <source media="(min-width: 600px)" srcset={astroMd} />
+        <source srcset={astroSm} />
+        <img
+          alt="Explore outer space with Raspberry Pi!"
+          className="sc-rp-image-block__image"
+          height="800"
+          src={astroMd}
+          width="1600"
+        />
+      </picture>
+    </div>
+  </div>
+</Story>

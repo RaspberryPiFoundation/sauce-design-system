@@ -1,0 +1,40 @@
+@use '/scss/mixins/device';
+@use '/scss/primitives/button';
+@use '/scss/tokens/color-greyscale';
+@use '/scss/tokens/font-weight';
+@use '/brands/raspberry-pi/tokens/color-brand';
+@use '/brands/raspberry-pi/tokens/color-palette';
+@use '/scss/mixins/size';
+@use '/scss/tokens/transition-duration';
+@use '/scss/tokens/transition-timing';
+
+.sc-rp-button,
+.sc-rp-button:visited {
+  @include button.primitive;
+  background-color: color-palette.$navy;
+  border-width: 0;
+  color: color-greyscale.$white;
+  font-weight: font-weight.$medium;
+  max-width: 50ch;
+  transition-duration: transition-duration.$short;
+  transition-property: background-color, transform;
+  transition-timing-function: transition-timing.$eased;
+
+  @include size.width(100%);
+
+  @include device.min-width(420px) {
+    @include size.width(auto);
+  }
+
+  &:focus,
+  &:hover {
+    background-color: color-brand.$primary;
+    transform: scale(1.05);
+  }
+
+  &:disabled {
+    background-color: color-greyscale.$medium;
+    opacity: 0.8;
+    pointer-events: none;
+  }
+}
