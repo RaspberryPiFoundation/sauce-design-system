@@ -26,15 +26,15 @@ addParameters({
 addDecorator(withA11y)
 
 // Design Tokens
-const scssReq = require.context('!!raw-loader!../src/tokens', true, /.\.scss$/)
-const scssTokenFiles = scssReq
-  .keys()
-  .map((filename) => ({ filename, content: scssReq(filename).default }))
+// const scssReq = require.context('!!raw-loader!../scss/tokens', true, /.\.scss$/)
+// const scssTokenFiles = scssReq
+//   .keys()
+//   .map((filename) => ({ filename, content: scssReq(filename).default }))
 
-addParameters({
-  designToken: {
-    files: {
-      scss: scssTokenFiles,
-    },
-  },
-})
+// addParameters({
+//   designToken: {
+//     files: {
+//       scss: scssTokenFiles,
+//     },
+//   },
+// })

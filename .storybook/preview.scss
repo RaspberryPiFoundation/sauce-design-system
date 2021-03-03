@@ -1,5 +1,4 @@
-@use '~normalize-scss/sass/normalize/import-now';
-@use 'src/elements';
-@use 'src/layouts';
-@use 'src/components';
-@use 'src/utilities';
+@use '/scss/sauce';
+@use '/scss/layouts';
+@use '/scss/components';
+@use '/scss/utilities';
