@@ -1,0 +1,10 @@
+@forward 'modern-css-reset';
+
+@forward '/scss/properties/font-size';
+@forward '/scss/properties/spacing';
+@forward '/scss/properties/type';
+
+@forward '/scss/base/document-root';
+@forward '/scss/base/headings';
+@forward '/scss/base/links';
+@forward '/scss/base/typography';
