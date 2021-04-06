@@ -1,7 +1,7 @@
 const sassWebpackConfig = require('./webpack.config.js')
 
 module.exports = {
-  components: './src/components',
+  components: './scss/components',
   exampleCode: '',
   openBrowser: false,
   outputPath: './storybook-static/playroom',
