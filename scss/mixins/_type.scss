@@ -1,6 +1,6 @@
 @use 'sass:map';
-@use '/scss/tokens/type';
-@use '/scss/mixins/font';
+@use 'scss/tokens/type';
+@use 'scss/mixins/font';
 
 @mixin use($name) {
   @include font.size(map.get(type.$map, $name));

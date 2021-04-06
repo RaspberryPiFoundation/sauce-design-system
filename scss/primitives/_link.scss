@@ -13,9 +13,9 @@
   @include utilities.focusable;
 
   // Setup tokens
-  --color-text-base:    var(--color-text-link-primary-base);
-  --color-text-active:  var(--color-text-link-primary-active);
-  --color-text-visited: var(--color-text-link-primary-visited);
+  --color-text-base:    var(--color-text-link-base);
+  --color-text-active:  var(--color-text-link-active);
+  --color-text-visited: var(--color-text-link-visited);
 
   // Setup custom properties
   --color-text: var(--color-text-base);

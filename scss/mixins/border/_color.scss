@@ -1,0 +1,28 @@
+@use 'scss/lib/prop';
+
+$-valid-properties: (
+  border-block-end-color,
+  border-block-start-color,
+  border-color,
+  border-inline-end-color,
+  border-inline-start-color
+);
+
+@mixin output($properties, $value) {
+  @include prop.output(
+    $properties,
+    $value,
+    $-valid-properties
+  );
+}
+
+@mixin all    ($value) { @include output(border-color,              $value); }
+@mixin bottom ($value) { @include output(border-block-end-color,    $value); }
+@mixin left   ($value) { @include output(border-inline-start-color, $value); }
+@mixin right  ($value) { @include output(border-inline-end-color,   $value); }
+@mixin top    ($value) { @include output(border-block-start-color,  $value); }
+
+@mixin b ($value) { @include bottom($value); }
+@mixin l ($value) { @include left($value);   }
+@mixin r ($value) { @include right($value);  }
+@mixin t ($value) { @include top($value);    }

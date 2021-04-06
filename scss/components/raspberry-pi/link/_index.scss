@@ -1,34 +1,34 @@
-@use '/scss/tokens/color-greyscale';
-@use '/brands/raspberry-pi/tokens/color-brand';
-@use '/brands/raspberry-pi/tokens/color-palette';
+// @use 'scss/tokens/color-greyscale';
+// @use 'brands/raspberry-pi/tokens/color-brand';
+// @use 'brands/raspberry-pi/tokens/color-palette';
 
-.sc-rp-link {
-  color: color-palette.$navy;
+// .sc-rp-link {
+//   color: color-palette.$navy;
 
-  &:focus,
-  &:hover {
-    color: color-brand.$primary;
-  }
+//   &:focus,
+//   &:hover {
+//     color: color-brand.$primary;
+//   }
 
-  &:visited {
-    color: color-palette.$violet;
+//   &:visited {
+//     color: color-palette.$violet;
 
-    &:focus,
-    &:hover {
-      color: color-brand.$primary;
-    }
-  }
-}
+//     &:focus,
+//     &:hover {
+//       color: color-brand.$primary;
+//     }
+//   }
+// }
 
-.sc-rp-link--inverted-text,
-.sc-rp-link[data-sauce-inverted-text],
-[data-sauce-inverted-text] .sc-rp-link,
-[data-sauce-inverted-text] .sc-rp-link:visited {
-  color: color-greyscale.$white;
-  text-decoration: underline;
+// .sc-rp-link--inverted-text,
+// .sc-rp-link[data-sauce-inverted-text],
+// [data-sauce-inverted-text] .sc-rp-link,
+// [data-sauce-inverted-text] .sc-rp-link:visited {
+//   color: color-greyscale.$white;
+//   text-decoration: underline;
 
-  &:hover {
-    color: color-greyscale.$lightest;
-    text-decoration: none;
-  }
-}
+//   &:hover {
+//     color: color-greyscale.$lighter;
+//     text-decoration: none;
+//   }
+// }

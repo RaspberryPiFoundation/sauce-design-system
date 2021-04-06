@@ -1,5 +1,5 @@
-@use '/scss/mixins/prop';
-@use '/scss/mixins/spacing';
+@use 'scss/lib/prop';
+@use 'scss/mixins/spacing';
 
 $-valid-properties: (
   'width',

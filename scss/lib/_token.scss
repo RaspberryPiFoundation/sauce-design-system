@@ -1,0 +1,24 @@
+@use '.sauce/config';
+@use 'sass:map';
+@use 'scss/lib/string';
+@use 'tokens/web/scss' as *;
+
+@function get($keys, $scope: '', $brand: null) {
+  $value: map.get(
+    $tokens,
+    $brand or config.$brand,
+    $scope,
+    string.explode($keys, '.')...
+  );
+
+  @if ($value == null) {
+    @if ($brand == default) {
+      @warn 'token.get: not found - #{$keys}';
+    }
+    @else {
+      @return get($keys, $brand: default);
+    }
+  }
+
+  @return $value;
+}

@@ -1,13 +1,13 @@
-@use '/scss/mixins/device';
-@use '/scss/mixins/margin';
-@use '/scss/mixins/font';
-@use '/scss/mixins/type';
-@use '/scss/mixins/prop';
-@use '/scss/primitives/heading';
+@use 'scss/lib/prop';
+@use 'scss/mixins/device';
+@use 'scss/mixins/font';
+@use 'scss/mixins/margin';
+@use 'scss/mixins/type';
+@use 'scss/primitives/heading';
 
 blockquote, ol, p, ul {
   @include font.use('base');
-  @include margin.b('ant');
+  @include margin.b('bee');
 }
 
 .size-nudge-down {
@@ -33,12 +33,6 @@ blockquote, ol, p, ul {
 
 .type-heading-primary {
   @include heading.primitive;
-  @include type.use('bike');
-
-  @include device.respond-to('tablet-portrait') {
-    color: rgba(255, 0, 0, 0.75);
-    @include type.use('moped');
-  }
 }
 
 .type-heading-secondary {

@@ -1,0 +1,9 @@
+@use 'scss/tokens/color-greyscale';
+
+@mixin inverted {
+  color: color-greyscale.$white !important;
+}
+
+[data-sauce-util-inverted] {
+  @include inverted;
+}

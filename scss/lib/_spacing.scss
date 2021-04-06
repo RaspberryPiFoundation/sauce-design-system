@@ -1,6 +1,6 @@
 @use 'sass:meta';
-@use 'lib/responsive-values';
-@use 'lib/validation';
+@use 'scss/lib/responsive-values';
+@use 'scss/lib/validation';
 
 $base-sizes: (
   null: 1.6rem,

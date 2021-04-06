@@ -1,6 +1,6 @@
-@use '/scss/mixins/prop';
-@use '/scss/mixins/size/height';
-@use '/scss/mixins/size/width';
+@use 'scss/lib/prop';
+@use 'scss/mixins/size/height';
+@use 'scss/mixins/size/width';
 
 @mixin height($value)     { @include height.set($value); }
 @mixin max-height($value) { @include height.max($value); }

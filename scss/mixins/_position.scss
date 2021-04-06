@@ -1,5 +1,5 @@
-@use '/scss/mixins/prop';
-@use '/scss/mixins/spacing';
+@use 'scss/lib/prop';
+@use 'scss/mixins/spacing';
 
 $valid-properties: (
   'bottom',
@@ -26,6 +26,6 @@ $valid-properties: (
 @mixin block($value)  { @include apply(inset-block,  $value); }
 
 @mixin t($value) { @include apply([ top,    inset-block-start  ], $value); }
-@mixin l($value) { @include apply([ left,   inset-inline-start ], $values); }
 @mixin r($value) { @include apply([ right,  inset-inline-end   ], $values); }
 @mixin b($value) { @include apply([ bottom, inset-block-end    ], $values); }
+@mixin l($value) { @include apply([ left,   inset-inline-start ], $values); }

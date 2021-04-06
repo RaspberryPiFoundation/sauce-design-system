@@ -1,0 +1,28 @@
+@use 'scss/mixins/border/color';
+@use 'scss/mixins/border/radius';
+@use 'scss/mixins/border/style';
+@use 'scss/mixins/border/width';
+
+@mixin color               ($value) { @include color.all($value);           }
+@mixin color-bottom        ($value) { @include color.bottom($value);        }
+@mixin color-left          ($value) { @include color.left($value);          }
+@mixin color-right         ($value) { @include color.right($value);         }
+@mixin color-top           ($value) { @include color.top($value);           }
+
+@mixin radius              ($value) { @include radius.all($value);          }
+@mixin radius-bottom-left  ($value) { @include radius.bottom-left($value);  }
+@mixin radius-bottom-right ($value) { @include radius.bottom-right($value); }
+@mixin radius-top-left     ($value) { @include radius.top-left($value);     }
+@mixin radius-top-right    ($value) { @include radius.top-right($value);    }
+
+@mixin style               ($value) { @include style.all($value);           }
+@mixin style-bottom        ($value) { @include style.bottom($value);        }
+@mixin style-left          ($value) { @include style.left($value);          }
+@mixin style-right         ($value) { @include style.right($value);         }
+@mixin style-top           ($value) { @include style.top($value);           }
+
+@mixin width               ($value) { @include width.all($value);           }
+@mixin width-bottom        ($value) { @include width.bottom($value);        }
+@mixin width-left          ($value) { @include width.left($value);          }
+@mixin width-right         ($value) { @include width.right($value);         }
+@mixin width-top           ($value) { @include width.top($value);           }

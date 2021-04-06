@@ -1,10 +1,10 @@
 @use 'sauce_overrides/mixins/utilities';
-@use '@rpf/sauce/src/mixins/device';
-@use '@rpf/sauce/src/mixins/padding';
-@use '@rpf/sauce/src/mixins/type-scale';
-@use '@rpf/sauce/src/tokens/color-greyscale';
-@use '@rpf/sauce/src/tokens/font-weight';
-@use '@rpf/sauce/src/tokens/line-height';
+@use '@rpf/sauce/scss/mixins/device';
+@use '@rpf/sauce/scss/mixins/padding';
+@use '@rpf/sauce/scss/mixins/type-scale';
+@use '@rpf/sauce/scss/tokens/color-greyscale';
+@use '@rpf/sauce/scss/tokens/font-weight';
+@use '@rpf/sauce/scss/tokens/line-height';
 
 @mixin primary {
   // Include mixins

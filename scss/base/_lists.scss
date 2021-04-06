@@ -1,6 +1,6 @@
-@use '/scss/mixins/margin';
-@use '/scss/mixins/padding';
-@use '/scss/primitives/type';
+@use 'scss/mixins/margin';
+@use 'scss/mixins/padding';
+@use 'scss/primitives/type';
 
 ol, ul {
   @include type.primitive;
@@ -10,7 +10,8 @@ ol, ul {
   li {
     ol,
     ul {
-      margin-bottom: 0;
+      --margin-block-end: 0;
+      --margin-bottom: 0;
     }
   }
 }

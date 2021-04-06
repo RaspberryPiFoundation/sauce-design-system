@@ -1,0 +1,33 @@
+@use 'sass:list';
+@use 'sass:map';
+@use 'sass:math';
+
+@use 'scss/tokens/device';
+
+@mixin apply($metric, $value, $orientation: null) {
+  @include media.query($metric, $value) {
+    @if $orientation {
+      @include orientation($orientation) {
+        @content;
+      }
+    }
+    @else {
+      @content;
+    }
+  }
+}
+
+@mixin match($value) {
+  @if list.index(device.$categories, $value) == null {
+    @error "Invalid device: #{$value}";
+  }
+
+  $values: map.merge(
+    map.get(default),
+    map.get($value),
+  );
+
+  @include apply(map.values($values)) {
+    @content;
+  }
+}

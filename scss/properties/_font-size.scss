@@ -1,17 +1,17 @@
-@use '/scss/tokens/font-size';
-@use '/scss/mixins/prop';
+@use 'scss/tokens/font-size';
+@use 'scss/lib/prop';
 
 :root {
-  @include prop.set('font-size-u-8',  font-size.$u-8);
-  @include prop.set('font-size-u-7',  font-size.$u-7);
-  @include prop.set('font-size-u-6',  font-size.$u-6);
-  @include prop.set('font-size-u-5',  font-size.$u-5);
-  @include prop.set('font-size-u-4',  font-size.$u-4);
-  @include prop.set('font-size-u-3',  font-size.$u-3);
-  @include prop.set('font-size-u-2',  font-size.$u-2);
-  @include prop.set('font-size-u-1',  font-size.$u-1);
-  @include prop.set('font-size-base', font-size.$base);
-  @include prop.set('font-size-d-1',  font-size.$d-1);
-  @include prop.set('font-size-d-2',  font-size.$d-2);
-  @include prop.set('font-size-d-3',  font-size.$d-3);
+  @include prop.define('font-size-u-8',  font-size.$u-8);
+  @include prop.define('font-size-u-7',  font-size.$u-7);
+  @include prop.define('font-size-u-6',  font-size.$u-6);
+  @include prop.define('font-size-u-5',  font-size.$u-5);
+  @include prop.define('font-size-u-4',  font-size.$u-4);
+  @include prop.define('font-size-u-3',  font-size.$u-3);
+  @include prop.define('font-size-u-2',  font-size.$u-2);
+  @include prop.define('font-size-u-1',  font-size.$u-1);
+  @include prop.define('font-size-base', font-size.$base);
+  @include prop.define('font-size-d-1',  font-size.$d-1);
+  @include prop.define('font-size-d-2',  font-size.$d-2);
+  @include prop.define('font-size-d-3',  font-size.$d-3);
 }

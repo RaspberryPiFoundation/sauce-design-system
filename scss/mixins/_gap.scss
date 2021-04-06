@@ -1,7 +1,7 @@
-@use '/lib/spacing';
+@use 'scss/lib/spacing';
 
-@use '/scss/mixins/prop';
-@use '/scss/mixins/spacing';
+@use 'scss/lib/prop';
+@use 'scss/mixins/spacing';
 
 $valid-properties: (
   'column-gap',
@@ -16,6 +16,6 @@ $valid-properties: (
   @include prop.output($properties, $value, $valid-properties, spacing.$map);
 }
 
-@mixin all($value)    { @include apply([ gap,        grid-gap ],        $value); }
+@mixin both($value)   { @include apply([ gap,        grid-gap ],        $value); }
 @mixin column($value) { @include apply([ column-gap, grid-column-gap ], $value); }
 @mixin row($value)    { @include apply([ row-gap,    grid-row-gap ],    $value); }

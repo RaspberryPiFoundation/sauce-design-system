@@ -1,7 +1,22 @@
-@use '/scss/mixins/prop';
-@use '/scss/primitives/heading';
+@use 'scss/mixins/font';
+@use 'scss/primitives/heading';
 
 :is(h1, h2, h3, h4, h5, h6):not([class]) {
   @include heading.primitive;
-  margin-bottom: 2rem;
+}
+
+h1:not([class]) {
+  @include font.use('u-8');
+}
+
+h2:not([class]) {
+  @include font.use('u-6');
+}
+
+h3:not([class]) {
+  @include font.use('u-4');
+}
+
+h4:not([class]) {
+  @include font.use('u-3');
 }

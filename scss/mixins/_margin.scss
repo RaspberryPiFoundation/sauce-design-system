@@ -1,5 +1,5 @@
-@use '/scss/mixins/prop';
-@use '/scss/mixins/spacing';
+@use 'scss/lib/prop';
+@use 'scss/tokens/spacing';
 
 $valid-properties: (
   'margin',
@@ -25,7 +25,14 @@ $valid-properties: (
 @mixin inline($value) { @include apply([ margin-left,  margin-right,  margin-inline ], $value); }
 @mixin block($value)  { @include apply([ margin-top,   margin-bottom, margin-block ],  $value); }
 
-@mixin t($value)      { @include apply([ margin-top,    margin-block-start ],  $value); }
-@mixin r($value)      { @include apply([ margin-right,  margin-inline-end ],   $value); }
-@mixin b($value)      { @include apply([ margin-bottom, margin-block-end ],    $value); }
-@mixin l($value)      { @include apply([ margin-left,   margin-inline-start ], $value); }
+@mixin top($value)    { @include apply([ margin-top,    margin-block-start ],  $value); }
+@mixin t($value)      { @include top($value); }
+
+@mixin right($value)  { @include apply([ margin-right,  margin-inline-end ],   $value); }
+@mixin r($value)      { @include right($value); }
+
+@mixin bottom($value) { @include apply([ margin-bottom, margin-block-end ],    $value); }
+@mixin b($value)      { @include bottom($value); }
+
+@mixin left($value)   { @include apply([ margin-left,   margin-inline-start ], $value); }
+@mixin l($value)      { @include left($value); }

@@ -1,0 +1,8 @@
+@use 'scss/mixins/font';
+@use 'scss/mixins/margin';
+
+@mixin primitive {
+  @include font.use('base');
+  @include font.weight('bold');
+  @include margin.b('bee');
+}

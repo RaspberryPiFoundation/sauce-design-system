@@ -1,5 +1,5 @@
-@use '/scss/mixins/margin';
-@use '/scss/mixins/padding';
+@use 'scss/mixins/margin';
+@use 'scss/mixins/padding';
 
 @mixin reset {
   @include margin.reset;

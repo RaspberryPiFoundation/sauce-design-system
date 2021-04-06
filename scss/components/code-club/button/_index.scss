@@ -1,12 +1,12 @@
-@use '/scss/mixins/border';
-@use '/scss/mixins/radius';
-@use '/scss/mixins/padding';
+// @use 'scss/mixins/border';
+// @use 'scss/mixins/radius';
+// @use 'scss/mixins/padding';
 
-.sc-cc-button {
-  @include border.width(0.3rem);
-  @include border.style(solid);
-  @include radius.tl(1rem);
-  @include radius.br(1rem);
-  @include padding.block('ant');
-  @include padding.inline('dog');
-}
+// .sc-cc-button {
+//   @include border.width(0.3rem);
+//   @include border.style(solid);
+//   @include radius.tl(1rem);
+//   @include radius.br(1rem);
+//   @include padding.block('ant');
+//   @include padding.inline('dog');
+// }

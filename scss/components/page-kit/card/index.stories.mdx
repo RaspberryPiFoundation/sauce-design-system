@@ -1,0 +1,66 @@
+import './_index.scss'
+import { Meta, Story } from '@storybook/addon-docs/blocks'
+
+<Meta title="Components/PageKit/Card" />
+
+# Card
+
+<Story name="Vertical (default)">
+  <div className="c-card" data-flavor="vertical">
+    <div className="c-card__badge">Education</div>
+    <div className="c-card__summary">
+      <h2 className="c-card__heading">
+        <a
+          data-breakout="true"
+          data-no-visited-state="true"
+          href="https://www.raspberrypi.org/blog/how-not-to-code-a-guide-to-concise-programming/"
+        >
+          How not to code: a guide to concise programming
+        </a>
+      </h2>
+      <footer>
+        <div className="c-blog-card-footer">
+          <time datetime="2021-03-15 10:19:53">
+            15th Mar 2021
+          </time>
+        </div>
+      </footer>
+    </div>
+    <figure>
+      <picture className="c-image" height="253" width="450">
+        <source srcSet="https://www.raspberrypi.org/app/uploads/2021/03/PSectorScreenshot1-450x253.jpg, https://www.raspberrypi.org/app/uploads/2021/03/PSectorScreenshot1-900x506.jpg 2x" />
+        <img alt="The 2021 version of Partition Sector" loading="lazy" srcSet="https://www.raspberrypi.org/app/uploads/2021/03/PSectorScreenshot1-450x253.jpg" />
+      </picture>
+    </figure>
+  </div>
+</Story>
+
+<Story name="Horizontal">
+  <div className="c-card" data-flavor="horizontal">
+    <div className="c-card__badge">Education</div>
+    <div className="c-card__summary">
+      <h2 className="c-card__heading">
+        <a
+          data-breakout="true"
+          data-no-visited-state="true"
+          href="https://www.raspberrypi.org/blog/how-not-to-code-a-guide-to-concise-programming/"
+        >
+          How not to code: a guide to concise programming
+        </a>
+      </h2>
+      <footer>
+        <div className="c-blog-card-footer">
+          <time datetime="2021-03-15 10:19:53">
+            15th Mar 2021
+          </time>
+        </div>
+      </footer>
+    </div>
+    <figure>
+      <picture className="c-image" height="253" width="450">
+        <source srcSet="https://www.raspberrypi.org/app/uploads/2021/03/PSectorScreenshot1-150x150.jpg, https://www.raspberrypi.org/app/uploads/2021/03/PSectorScreenshot1-300x300.jpg 2x" />
+        <img alt="The 2021 version of Partition Sector" loading="lazy" srcSet="https://www.raspberrypi.org/app/uploads/2021/03/PSectorScreenshot1-450x253.jpg" />
+      </picture>
+    </figure>
+  </div>
+</Story>

@@ -1,5 +1,0 @@
-@use '/scss/mixins/utilities';
-
-[data-sauce-inverted-text] {
-  @include utilities.inverted-text;
-}

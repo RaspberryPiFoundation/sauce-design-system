@@ -1,14 +1,14 @@
-@use '/scss/tokens/spacing';
-@use '/scss/mixins/prop';
+@use 'scss/tokens/spacing';
+@use 'scss/lib/prop';
 
 :root {
-  @include prop.set('spacing-ant',       spacing.$ant);
-  @include prop.set('spacing-bee',       spacing.$bee);
-  @include prop.set('spacing-chaffinch', spacing.$chaffinch);
-  @include prop.set('spacing-dog',       spacing.$dog);
-  @include prop.set('spacing-eagle',     spacing.$eagle);
-  @include prop.set('spacing-flamingo',  spacing.$flamingo);
-  @include prop.set('spacing-grizzly',   spacing.$grizzly);
-  @include prop.set('spacing-hippo',     spacing.$hippo);
-  @include prop.set('spacing-iguanadon', spacing.$iguanadon);
+  @include prop.define('spacing-ant',       spacing.$ant);
+  @include prop.define('spacing-bee',       spacing.$bee);
+  @include prop.define('spacing-chaffinch', spacing.$chaffinch);
+  @include prop.define('spacing-dog',       spacing.$dog);
+  @include prop.define('spacing-eagle',     spacing.$eagle);
+  @include prop.define('spacing-flamingo',  spacing.$flamingo);
+  @include prop.define('spacing-grizzly',   spacing.$grizzly);
+  @include prop.define('spacing-hippo',     spacing.$hippo);
+  @include prop.define('spacing-iguanadon', spacing.$iguanadon);
 }

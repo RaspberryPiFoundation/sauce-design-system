@@ -1,0 +1,10 @@
+// orientation
+//   landscape
+//   portrait
+@mixin orientation($orientation) {
+  @include media.query(orientation, $orientation) {
+    @content;
+  }
+}
+@mixin orientation-landspace { @include orientation(landspace) { @content; } }
+@mixin orientation-portrait  { @include orientation(portrait)  { @content; } }

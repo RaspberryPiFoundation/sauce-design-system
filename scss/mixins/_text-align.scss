@@ -1,9 +1,11 @@
-@mixin left {
+@mixin start {
   text-align: left;
   text-align: start;
 }
+@mixin left { @include start; }
 
-@mixin right {
+@mixin end {
   text-align: right;
   text-align: end;
 }
+@mixin right { @include end; }

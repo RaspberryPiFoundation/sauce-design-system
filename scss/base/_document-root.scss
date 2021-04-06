@@ -1,21 +1,22 @@
-@use '/scss/mixins/font';
-@use '/scss/mixins/prop';
-@use '/scss/tokens/color-greyscale';
-@use '/scss/tokens/font-family';
-@use '/scss/tokens/font-weight';
-@use '/scss/tokens/line-height';
+@use 'scss/mixins/font';
+@use 'scss/lib/prop';
+@use 'scss/tokens/color-greyscale';
+@use 'scss/tokens/font-family';
+@use 'scss/tokens/font-weight';
+@use 'scss/tokens/line-height';
 
 html {
-  @include font.size(clamp(1em, 3vmin, 1.5em), 1em);
+  @include font.size(clamp(1em, 3vmin, 1.25em), 1em);
+  // @include font.size(clamp(1em, 1.8vmin, 1.25em), 1em);
 
   background-color: color-greyscale.$white;
 }
 
 body {
-  @include font.size(var(--font-size-base));
+  @include font.use(var(--font-size-base));
 
   background-color: color-greyscale.$white;
-  color: color-greyscale.$off-black;
+  color: color-greyscale.$darkest;
   font-display: swap;
   font-family: font-family.$sans-serif;
   font-optical-sizing: none;

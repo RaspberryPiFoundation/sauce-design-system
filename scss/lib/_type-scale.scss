@@ -1,5 +1,5 @@
-@use 'lib/responsive-values';
-@use 'lib/warn';
+@use 'scss/lib/responsive-values';
+@use 'scss/lib/warn';
 
 $base-sizes: (
   null: 1.6rem,
