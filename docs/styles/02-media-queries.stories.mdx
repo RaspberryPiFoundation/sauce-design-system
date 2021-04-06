@@ -19,7 +19,7 @@ It's simply no longer the case that "responsive" means "change the layout as the
 To apply styles for any media query, use can use the `device` module:
 
 ```scss
-@use '/scss/mixins/device';
+@use 'scss/mixins/device';
 
 .some-selector {
   width: 100%;
@@ -41,7 +41,7 @@ To apply styles for any media query, use can use the `device` module:
 For `min-width` specifically there's a convenient mixin. We'll probably end up with more mixins for media-queries we use regularly.
 
 ```scss
-@use '/scss/mixins/device';
+@use 'scss/mixins/device';
 
 .some-selector {
   width: 100%;
@@ -55,7 +55,7 @@ For `min-width` specifically there's a convenient mixin. We'll probably end up w
 Users that prefer reduced motion can be catered for with this mixin:
 
 ```scss
-@use '/scss/mixins/device';
+@use 'scss/mixins/device';
 
 .some-selector {
   transition-duration: 250ms;
@@ -69,7 +69,7 @@ Users that prefer reduced motion can be catered for with this mixin:
 Users with displays with a high pixel density can be targetted with this mixin. An example use here would be swapping an image for a higher resolution equivalent.
 
 ```scss
-@use '/scss/mixins/device';
+@use 'scss/mixins/device';
 
 .some-selector {
   background-image: url('./some-image.jpg');
@@ -99,7 +99,7 @@ Be very careful using these, as they may be removed in a future release. At pres
 Use like this:
 
 ```scss
-@use '/scss/mixins/device';
+@use 'scss/mixins/device';
 
 .some-selector {
   width: 100%;
