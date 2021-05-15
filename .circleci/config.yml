@@ -4,13 +4,13 @@ aliases:
     executor:
       name: node
     docker:
-      - image: circleci/node:12-browsers
+      - image: circleci/node:15-browsers
     working_directory: /mnt/ramdisk
 executors:
   node:
     description: Circle CI standard node docker image
     docker:
-      - image: circleci/node:12.18.2
+      - image: circleci/node:15.14.0
 jobs:
   install:
     <<: *defaults
