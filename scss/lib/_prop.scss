@@ -20,17 +20,7 @@
   #{$name}: var(--#{$name});
 }
 
-// border.bl('large')
-// --border-bottom-left-radius: token.get('radius.border.large');
-// border-bottom-left-radius: var(--border-bottom-left-radius);
-// border-start-end-radius: var(--border-bottom-left-radius);
-
-@mixin output(
-  $properties,
-  $value,
-  $valid-properties: null,
-  $values-map: null
-) {
+@mixin output($properties, $value, $valid-properties: null, $values-map: null) {
   @include validation.no-shorthand($value);
 
   @if (meta.type-of($properties) == 'string') {
