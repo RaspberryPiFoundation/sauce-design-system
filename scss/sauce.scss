@@ -1,4 +1,4 @@
-@forward '~modern-css-reset';
+@forward 'node_modules/modern-css-reset/dist/reset.min.css';
 
 @forward 'scss/properties/font-size';
 @forward 'scss/properties/spacing';
