@@ -1,51 +1,48 @@
-@use 'scss/tokens/font-family';
-@use 'scss/tokens/font-weight';
+// abbr {
+//   text-decoration: underline dotted;
+// }
 
-abbr {
-  text-decoration: underline dotted;
-}
+// b {
+//   font-weight: font-weight.$bold;
+// }
 
-b {
-  font-weight: font-weight.$bold;
-}
+// cite {
+//   font-style: italic;
+// }
 
-cite {
-  font-style: italic;
-}
+// em {
+//   font-style: italic;
+// }
 
-em {
-  font-style: italic;
-}
+// i {
+//   font-style: italic;
+// }
 
-i {
-  font-style: italic;
-}
+// kbd {
+//   font-family: font-family.$monospace;
+// }
 
-kbd {
-  font-family: font-family.$monospace;
-}
+// s {
+//   text-decoration: line-through;
+// }
 
-s {
-  text-decoration: line-through;
-}
+// samp {
+//   font-family: font-family.$monospace;
+// }
 
-samp {
-  font-family: font-family.$monospace;
-}
+// strong {
+//   font-weight: font-weight.$bold;
+// }
 
-strong {
-  font-weight: font-weight.$bold;
-}
+// sub {}
 
-sub {}
+// sup {}
 
-sup {}
+// u {
+//   text-decoration: underline;
+// }
 
-u {
-  text-decoration: underline;
-}
-
-var {
-  font-style: italic;
-  font-weight: font-weight.$bold;
-}
+// var {
+//   font-style: italic;
+//   font-weight: font-weight.$bold;
+// }

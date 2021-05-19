@@ -1,44 +1,24 @@
-@use 'scss/lib/prop';
-@use 'scss/mixins/device';
-@use 'scss/mixins/font';
-@use 'scss/mixins/margin';
-@use 'scss/mixins/type';
-@use 'scss/primitives/heading';
+// @use 'scss/mixins/logical-properties' as prop;
+// @use 'scss/mixins/device';
+// @use 'scss/mixins/font';
+// @use 'scss/mixins/margin';
+// @use 'scss/mixins/type';
+// @use 'scss/primitives/heading';
 
-blockquote, ol, p, ul {
-  @include font.use('base');
-  @include margin.b('bee');
-}
+// blockquote, ol, p, ul {
+//   @include font.use('base');
+//   @include margin.b('bee');
+// }
 
-.size-nudge-down {
-  @include font.size-nudge-down;
-}
+// .type-heading-hero {
+//   @include heading.primitive;
+//   @include font.use('u-8');
+// }
 
-.size-nudge-up {
-  @include font.size-nudge-up;
-}
+// .type-heading-primary {
+//   @include heading.primitive;
+// }
 
-.type-caption {
-  @include font.size-nudge-down;
-}
-
-.type-meta {
-  @include font.size-nudge-down;
-}
-
-.type-heading-hero {
-  @include heading.primitive;
-  @include font.use('u-8');
-}
-
-.type-heading-primary {
-  @include heading.primitive;
-}
-
-.type-heading-secondary {
-  @include heading.primitive;
-}
-
-.type-lead {
-  @include font.size-nudge-up;
-}
+// .type-heading-secondary {
+//   @include heading.primitive;
+// }
