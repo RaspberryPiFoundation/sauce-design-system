@@ -18,6 +18,6 @@
   }
 }
 
-[data-sauce-util-focusable] {
+[data-sauce-util~="focusable"] {
   @include focusable;
 }

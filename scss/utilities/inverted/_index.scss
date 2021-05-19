@@ -4,6 +4,6 @@
   color: color-greyscale.$white !important;
 }
 
-[data-sauce-util-inverted] {
+[data-sauce-util~="inverted"] {
   @include inverted;
 }

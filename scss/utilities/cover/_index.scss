@@ -1,5 +1,6 @@
-@mixin cover {}
+@mixin cover {
+}
 
-[data-sauce-util-cover] {
+[data-sauce-util~='cover'] {
   @include cover;
 }
