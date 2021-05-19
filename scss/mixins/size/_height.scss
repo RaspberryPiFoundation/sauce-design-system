@@ -1,18 +1,5 @@
-@use 'scss/lib/prop';
-@use 'scss/mixins/spacing';
+@use 'scss/mixins/logical-properties' as prop;
 
-$-valid-properties: (
-  'height',
-  'max-block-size',
-  'max-height',
-  'min-block-size',
-  'min-height'
-);
-
-@mixin apply($properties, $value) {
-  @include prop.output($properties, $value, $-valid-properties, spacing.$map);
-}
-
-@mixin max($value) { @include apply([ max-height, max-block-size ], $value); }
-@mixin min($value) { @include apply([ min-height, min-block-size ], $value); }
-@mixin set($value) { @include apply([ height,     block-size     ], $value); }
+@mixin max($value) { @include prop.apply('max-block-size', $value, 'max-height'); }
+@mixin min($value) { @include prop.apply('min-block-size', $value, 'min-height'); }
+@mixin set($value) { @include prop.apply('block-size',     $value, 'height');     }

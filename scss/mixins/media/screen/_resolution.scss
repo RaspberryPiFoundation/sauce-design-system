@@ -1,0 +1,5 @@
+@use 'scss/mixins/media';
+
+@mixin max($value)   { @include media.query('max-resolution', $value) { @content; } }
+@mixin min($value)   { @include media.query('min-resolution', $value) { @content; } }
+@mixin query($value) { @include media.query('resolution',     $value) { @content; } }

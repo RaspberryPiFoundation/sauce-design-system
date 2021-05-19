@@ -1,18 +1,5 @@
-@use 'scss/lib/prop';
-@use 'scss/mixins/spacing';
+@use 'scss/mixins/logical-properties' as prop;
 
-$-valid-properties: (
-  'width',
-  'max-inline-size',
-  'max-width',
-  'min-inline-size',
-  'min-width'
-);
-
-@mixin apply($properties, $value) {
-  @include prop.output($properties, $value, $-valid-properties, spacing.$map);
-}
-
-@mixin max($value) { @include apply([ max-width, max-inline-size ], $value); }
-@mixin min($value) { @include apply([ min-width, min-inline-size ], $value); }
-@mixin set($value) { @include apply([ width,     inline-size     ], $value); }
+@mixin max($value) { @include prop.apply('max-inline-size', $value, 'max-width'); }
+@mixin min($value) { @include prop.apply('min-inline-size', $value, 'min-width'); }
+@mixin set($value) { @include prop.apply('inline-size',     $value, 'width');     }

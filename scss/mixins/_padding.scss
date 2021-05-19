@@ -1,38 +1,17 @@
-@use 'scss/lib/prop';
-@use 'scss/tokens/spacing';
+@use 'scss/mixins/logical-properties' as prop;
 
-$valid-properties: (
-  'padding',
-  'padding-block',
-  'padding-block-end',
-  'padding-block-start',
-  'padding-bottom',
-  'padding-inline',
-  'padding-inline-end',
-  'padding-inline-start',
-  'padding-left',
-  'padding-right',
-  'padding-top',
-);
+@mixin all($value) { @include prop.apply('padding', $value); }
+@mixin none        { @include prop.apply('padding', 0);      }
 
-@mixin apply($properties, $value) {
-  @include prop.output($properties, $value, $valid-properties, spacing.$map);
-}
+@mixin inline($value) { @include prop.apply('padding-inline', $value, ['padding-left', 'padding-right']);  }
+@mixin block($value)  { @include prop.apply('padding-block',  $value, ['padding-top',  'padding-bottom']); }
 
-@mixin none           { @include prop.apply(padding, 0); }
-@mixin all($value)    { @include apply(padding, $value); }
+@mixin top($value)    { @include prop.apply('padding-block-start',  $value, 'padding-top');    }
+@mixin right($value)  { @include prop.apply('padding-inline-end',   $value, 'padding-right');  }
+@mixin bottom($value) { @include prop.apply('padding-block-end',    $value, 'padding-bottom'); }
+@mixin left($value)   { @include prop.apply('padding-inline-start', $value, 'padding-left');   }
 
-@mixin inline($value) { @include apply([ padding-left,  padding-right,  padding-inline ], $value); }
-@mixin block($value)  { @include apply([ padding-top,   padding-bottom, padding-block ],  $value); }
-
-@mixin top($value)    { @include apply([ padding-top,    padding-block-start ],  $value); }
-@mixin t($value)      { @include top($value); }
-
-@mixin right($value)  { @include apply([ padding-right,  padding-inline-end ],   $value); }
-@mixin r($value)      { @include right($value); }
-
-@mixin bottom($value) { @include apply([ padding-bottom, padding-block-end ],    $value); }
-@mixin b($value)      { @include bottom($value); }
-
-@mixin left($value)   { @include apply([ padding-left,   padding-inline-start ], $value); }
-@mixin l($value)      { @include left($value); }
+@mixin t($value) { @include top($value);    }
+@mixin r($value) { @include right($value);  }
+@mixin b($value) { @include bottom($value); }
+@mixin l($value) { @include left($value);   }

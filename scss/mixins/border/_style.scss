@@ -1,28 +1,13 @@
-@use 'scss/lib/prop';
+@use 'scss/mixins/logical-properties' as prop;
 
-$-valid-properties: (
-  border-block-end-style,
-  border-block-start-style,
-  border-inline-end-style,
-  border-inline-start-style,
-  border-style,
-);
+@mixin all($value) { @include prop.apply('border-style', $value); }
 
-@mixin output ($properties, $value) {
-  @include prop.output(
-    $properties,
-    $value,
-    $-valid-properties
-  );
-}
+@mixin bottom($value) { @include prop.apply('border-block-end-style',    $value, 'border-bottom-style'); }
+@mixin left($value)   { @include prop.apply('border-inline-start-style', $value, 'border-left-style');   }
+@mixin right($value)  { @include prop.apply('border-inline-end-style',   $value, 'border-right-style');  }
+@mixin top($value)    { @include prop.apply('border-block-start-style',  $value, 'border-top-style');    }
 
-@mixin all    ($value) { @include output(border-style,              $value); }
-@mixin bottom ($value) { @include output(border-block-end-style,    $value); }
-@mixin left   ($value) { @include output(border-inline-start-style, $value); }
-@mixin right  ($value) { @include output(border-inline-end-style,   $value); }
-@mixin top    ($value) { @include output(border-block-start-style,  $value); }
-
-@mixin b ($value) { @include bottom($value); }
-@mixin l ($value) { @include left($value);   }
-@mixin r ($value) { @include right($value);  }
-@mixin t ($value) { @include top($value);    }
+@mixin b($value) { @include bottom($value); }
+@mixin l($value) { @include left($value);   }
+@mixin r($value) { @include right($value);  }
+@mixin t($value) { @include top($value);    }

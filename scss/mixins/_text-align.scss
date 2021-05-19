@@ -2,10 +2,11 @@
   text-align: left;
   text-align: start;
 }
-@mixin left { @include start; }
 
 @mixin end {
   text-align: right;
   text-align: end;
 }
+
+@mixin left { @include start; }
 @mixin right { @include end; }

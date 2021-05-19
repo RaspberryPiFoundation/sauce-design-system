@@ -5,10 +5,11 @@
   clear: left;
   clear: inline-start;
 }
-@mixin left { @include start; }
 
 @mixin end {
   clear: right;
   clear: inline-end;
 }
-@mixin right { @include end;   }
+
+@mixin left { @include start; }
+@mixin right { @include end; }

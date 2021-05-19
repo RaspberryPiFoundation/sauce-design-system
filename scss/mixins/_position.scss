@@ -1,31 +1,17 @@
-@use 'scss/lib/prop';
-@use 'scss/mixins/spacing';
+@use 'scss/mixins/logical-properties' as prop;
 
-$valid-properties: (
-  'bottom',
-  'inset',
-  'inset-block',
-  'inset-block-end',
-  'inset-block-start',
-  'inset-inline',
-  'inset-inline-end',
-  'inset-inline-start',
-  'left',
-  'right',
-  'top',
-);
+@mixin all($value) { @include prop.apply('inset', $value, ['top', 'right', 'bottom', 'left']); }
+@mixin cover { @include all(0); }
 
-@mixin apply($properties, $value) {
-  @include prop.output($properties, $value, $valid-properties, spacing.$map);
-}
+@mixin inline($value) { @include prop.apply('inset-inline', $value, ['right', 'left']);   }
+@mixin block($value)  { @include prop.apply('inset-block',  $value, ['top',   'bottom']); }
 
-@mixin all($value) { @include apply(inset, $value); }
-@mixin cover       { @include apply(inset, 0);      }
+@mixin top($value) { @include prop.apply('inset-block-start',   $value, 'top');    }
+@mixin right($value) { @include prop.apply('inset-inline-end',  $value, 'right');  }
+@mixin bottom($value) { @include prop.apply('inset-block-end',  $value, 'bottom'); }
+@mixin left($value) { @include prop.apply('inset-inline-start', $value, 'left');   }
 
-@mixin inline($value) { @include apply(inset-inline, $value); }
-@mixin block($value)  { @include apply(inset-block,  $value); }
-
-@mixin t($value) { @include apply([ top,    inset-block-start  ], $value); }
-@mixin r($value) { @include apply([ right,  inset-inline-end   ], $values); }
-@mixin b($value) { @include apply([ bottom, inset-block-end    ], $values); }
-@mixin l($value) { @include apply([ left,   inset-inline-start ], $values); }
+@mixin t($value) { @include top($value);    }
+@mixin r($value) { @include right($value);  }
+@mixin b($value) { @include bottom($value); }
+@mixin l($value) { @include left($value);   }

@@ -1,0 +1,45 @@
+@use 'sass:map';
+@use 'scss/mixins/media';
+@use 'scss/tokens/device';
+
+@mixin apply($metric, $value, $orientation: false) {
+  @include media.query($metric, $value) {
+    @if $orientation {
+      @include media.query('orientation', $orientation) {
+        @content;
+      }
+    } @else {
+      @content;
+    }
+  }
+}
+
+@mixin match($device) {
+  $categories: (
+    'phone-portrait':   ('metric': max-width, 'value': device.$phone-portrait                              ),
+    'phone-landscape':  ('metric': max-width, 'value': device.$phone-landscape,  'orientation': 'landscape'),
+    'tablet-portrait':  (                     'value': device.$tablet-portrait                             ),
+    'tablet-landscape': (                     'value': device.$tablet-landscape, 'orientation': 'landscape'),
+    'laptop':           (                     'value': device.$laptop                                      ),
+    'desktop':          (                     'value': device.$desktop                                     ),
+  );
+
+  @if not map.has-key($categories, $device) {
+    @error "Invalid device: #{$device}";
+  }
+
+  $query_args: map.values(
+    map.merge(
+      (
+        'metric': min-width,
+        'value': 0,
+        'orientation': false
+      ),
+      map.get($categories, $device)
+    )
+  );
+
+  @include apply($query_args...) {
+    @content;
+  }
+}

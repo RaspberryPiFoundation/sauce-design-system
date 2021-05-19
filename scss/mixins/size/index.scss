@@ -1,4 +1,3 @@
-@use 'scss/lib/prop';
 @use 'scss/mixins/size/height';
 @use 'scss/mixins/size/width';
 
@@ -6,6 +5,6 @@
 @mixin max-height($value) { @include height.max($value); }
 @mixin min-height($value) { @include height.min($value); }
 
-@mixin width($value)      { @include width.set($value);  }
-@mixin max-width($value)  { @include width.max($value);  }
-@mixin min-width($value)  { @include width.min($value);  }
+@mixin width($value)      { @include width.set($value); }
+@mixin max-width($value)  { @include width.max($value); }
+@mixin min-width($value)  { @include width.min($value); }

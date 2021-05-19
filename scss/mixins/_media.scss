@@ -1,7 +1,0 @@
-@use 'sass:list';
-
-@mixin query($metric, $value, $types: [all]) {
-  @media only #{list.join($types)} and ($metric: $value) {
-    @content;
-  }
-}

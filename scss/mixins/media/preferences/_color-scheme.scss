@@ -1,0 +1,4 @@
+@use 'scss/mixins/media';
+
+@mixin dark  { @include media.query('prefers-color-scheme', 'dark')  { @content; } }
+@mixin light { @include media.query('prefers-color-scheme', 'light') { @content; } }

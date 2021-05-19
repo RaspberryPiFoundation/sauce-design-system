@@ -1,38 +1,17 @@
-@use 'scss/lib/prop';
-@use 'scss/tokens/spacing';
+@use 'scss/mixins/logical-properties' as prop;
 
-$valid-properties: (
-  'margin',
-  'margin-block',
-  'margin-block-end',
-  'margin-block-start',
-  'margin-bottom',
-  'margin-inline',
-  'margin-inline-end',
-  'margin-inline-start',
-  'margin-left',
-  'margin-right',
-  'margin-top',
-);
+@mixin all($value) { @include prop.apply('margin', $value); }
+@mixin none        { @include all(0); }
 
-@mixin apply($properties, $value) {
-  @include prop.output($properties, $value, $valid-properties, spacing.$map);
-}
+@mixin inline($value) { @include prop.apply('margin-inline', $value, ['margin-left', 'margin-right']);  }
+@mixin block($value)  { @include prop.apply('margin-block',  $value, ['margin-top',  'margin-bottom']); }
 
-@mixin none           { @include prop.apply(margin, 0); }
-@mixin all($value)    { @include apply(margin, $value); }
+@mixin top($value)    { @include prop.apply('margin-block-start',  $value, 'margin-top');    }
+@mixin right($value)  { @include prop.apply('margin-inline-end',   $value, 'margin-right');  }
+@mixin bottom($value) { @include prop.apply('margin-block-end',    $value, 'margin-bottom'); }
+@mixin left($value)   { @include prop.apply('margin-inline-start', $value, 'margin-left');   }
 
-@mixin inline($value) { @include apply([ margin-left,  margin-right,  margin-inline ], $value); }
-@mixin block($value)  { @include apply([ margin-top,   margin-bottom, margin-block ],  $value); }
-
-@mixin top($value)    { @include apply([ margin-top,    margin-block-start ],  $value); }
-@mixin t($value)      { @include top($value); }
-
-@mixin right($value)  { @include apply([ margin-right,  margin-inline-end ],   $value); }
-@mixin r($value)      { @include right($value); }
-
-@mixin bottom($value) { @include apply([ margin-bottom, margin-block-end ],    $value); }
-@mixin b($value)      { @include bottom($value); }
-
-@mixin left($value)   { @include apply([ margin-left,   margin-inline-start ], $value); }
-@mixin l($value)      { @include left($value); }
+@mixin t($value) { @include top($value);    }
+@mixin r($value) { @include right($value);  }
+@mixin b($value) { @include bottom($value); }
+@mixin l($value) { @include left($value);   }

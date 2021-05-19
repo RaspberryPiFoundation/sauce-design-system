@@ -1,0 +1,10 @@
+@use 'category';
+
+// DEVICE CATEGORY
+//   @include device.is('phone-portrait')   { ... }
+//   @include device.is('phone-landscape')  { ... }
+//   @include device.is('tablet-portrait')  { ... }
+//   @include device.is('tablet-landscape') { ... }
+//   @include device.is('laptop')           { ... }
+//   @include device.is('desktop')          { ... }
+@mixin is($value) { @include category.match($value) { @content; } }
