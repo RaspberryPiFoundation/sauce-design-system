@@ -1,9 +1,0 @@
-@use 'scss/mixins/font';
-
-.size-nudge-up {
-  @include font.size-nudge-up;
-}
-
-.size-nudge-down {
-  @include font.size-nudge-down;
-}
