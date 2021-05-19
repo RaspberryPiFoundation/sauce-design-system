@@ -1,0 +1,102 @@
+@use 'true' as *;
+@use 'scss/mixins/border/style';
+
+@include describe('.all') {
+  @include it('outputs the css') {
+    @include assert {
+      @include output { @include style.all(dashed); }
+      @include expect {
+        --border-style: dashed;
+        border-style: var(--border-style);
+      }
+    }
+  }
+}
+
+@include describe('.top') {
+  @include it('outputs the css') {
+    @include assert {
+      @include output { @include style.top(dashed); }
+      @include expect {
+        --border-block-start-style: dashed;
+        border-top-style: var(--border-block-start-style);
+        border-block-start-style: var(--border-block-start-style);
+      }
+    }
+  }
+}
+
+@include describe('.right') {
+  @include it('outputs the css') {
+    @include assert {
+      @include output { @include style.right(dashed); }
+      @include expect {
+        --border-inline-end-style: dashed;
+        border-right-style: var(--border-inline-end-style);
+        border-inline-end-style: var(--border-inline-end-style);
+      }
+    }
+  }
+}
+
+@include describe('.bottom') {
+  @include it('outputs the css') {
+    @include assert {
+      @include output { @include style.bottom(dashed); }
+      @include expect {
+        --border-block-end-style: dashed;
+        border-bottom-style: var(--border-block-end-style);
+        border-block-end-style: var(--border-block-end-style);
+      }
+    }
+  }
+}
+
+@include describe('.left') {
+  @include it('outputs the css') {
+    @include assert {
+      @include output { @include style.left(dashed); }
+      @include expect {
+        --border-inline-start-style: dashed;
+        border-left-style: var(--border-inline-start-style);
+        border-inline-start-style: var(--border-inline-start-style);
+      }
+    }
+  }
+}
+
+@include describe('.t') {
+  @include it('outputs .top') {
+    @include assert {
+      @include output { @include style.t(dashed); }
+      @include expect { @include style.top(dashed); }
+    }
+  }
+}
+
+@include describe('.r') {
+  @include it('outputs .right') {
+    @include assert {
+      @include output { @include style.r(dashed); }
+      @include expect { @include style.right(dashed); }
+    }
+  }
+}
+
+@include describe('.b') {
+  @include it('outputs .bottom') {
+    @include assert {
+      @include output { @include style.b(dashed); }
+      @include expect { @include style.bottom(dashed); }
+    }
+  }
+}
+
+@include describe('.l') {
+  @include it('outputs .left') {
+    @include assert {
+      @include output { @include style.l(dashed); }
+      @include expect { @include style.left(dashed); }
+    }
+  }
+}

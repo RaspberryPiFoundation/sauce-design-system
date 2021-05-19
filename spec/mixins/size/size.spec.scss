@@ -1,0 +1,58 @@
+@use 'true' as *;
+@use 'scss/mixins/size';
+@use 'scss/mixins/size/height';
+@use 'scss/mixins/size/width';
+
+@include describe('.height') {
+  @include it('outputs height.set') {
+    @include assert {
+      @include output { @include size.height(5rem); }
+      @include expect { @include height.set(5rem); }
+    }
+  }
+}
+
+@include describe('.max-height') {
+  @include it('outputs height.max') {
+    @include assert {
+      @include output { @include size.max-height(5rem); }
+      @include expect { @include height.max(5rem); }
+    }
+  }
+}
+
+@include describe('.min-height') {
+  @include it('outputs height.min') {
+    @include assert {
+      @include output { @include size.min-height(5rem); }
+      @include expect { @include height.min(5rem); }
+    }
+  }
+}
+
+@include describe('.width') {
+  @include it('outputs width.set') {
+    @include assert {
+      @include output { @include size.width(5rem); }
+      @include expect { @include width.set(5rem); }
+    }
+  }
+}
+
+@include describe('.max-width') {
+  @include it('outputs width.max') {
+    @include assert {
+      @include output { @include size.max-width(5rem); }
+      @include expect { @include width.max(5rem); }
+    }
+  }
+}
+
+@include describe('.min-width') {
+  @include it('outputs width.min') {
+    @include assert {
+      @include output { @include size.min-width(5rem); }
+      @include expect { @include width.min(5rem); }
+    }
+  }
+}

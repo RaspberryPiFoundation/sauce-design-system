@@ -1,0 +1,54 @@
+@use 'true' as *;
+@use 'scss/mixins/media';
+@use 'scss/mixins/media/screen/resolution';
+
+@include describe('.max') {
+  @include it('calls media.query') {
+    @include assert {
+      @include output {
+        @include resolution.max(2dpi) {
+          color: rebeccapurple;
+        }
+      }
+      @include expect {
+        @include media.query('max-resolution', 2dpi) {
+          color: rebeccapurple;
+        }
+      }
+    }
+  }
+}
+
+@include describe('.min') {
+  @include it('calls media.query') {
+    @include assert {
+      @include output {
+        @include resolution.min(2dpi) {
+          color: rebeccapurple;
+        }
+      }
+      @include expect {
+        @include media.query('min-resolution', 2dpi) {
+          color: rebeccapurple;
+        }
+      }
+    }
+  }
+}
+
+@include describe('.query') {
+  @include it('calls media.query') {
+    @include assert {
+      @include output {
+        @include resolution.query(2dpi) {
+          color: rebeccapurple;
+        }
+      }
+      @include expect {
+        @include media.query('resolution', 2dpi) {
+          color: rebeccapurple;
+        }
+      }
+    }
+  }
+}

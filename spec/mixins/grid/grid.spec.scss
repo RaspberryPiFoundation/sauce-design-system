@@ -1,0 +1,30 @@
+@use 'true' as *;
+@use 'scss/mixins/grid';
+@use 'scss/mixins/gap';
+
+@include describe('.gap') {
+  @include it('outputs gap.all') {
+    @include assert {
+      @include output { @include grid.gap(1rem); }
+      @include expect { @include gap.all(1rem); }
+    }
+  }
+}
+
+@include describe('.column-gap') {
+  @include it('outputs gap.column') {
+    @include assert {
+      @include output { @include grid.column-gap(1rem); }
+      @include expect { @include gap.column(1rem); }
+    }
+  }
+}
+
+@include describe('.row-gap') {
+  @include it('outputs gap.row') {
+    @include assert {
+      @include output { @include grid.row-gap(1rem); }
+      @include expect { @include gap.row(1rem); }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+@use 'true' as *;
+@use 'scss/mixins/media';
+@use 'scss/mixins/media/viewport/width';
+
+@include describe('.max') {
+  @include it('calls media.query') {
+    @include assert {
+      @include output {
+        @include width.max(1rem) {
+          color: rebeccapurple;
+        }
+      }
+      @include expect {
+        @include media.query('max-width', 1rem) {
+          color: rebeccapurple;
+        }
+      }
+    }
+  }
+}
+
+@include describe('.min') {
+  @include it('calls media.query') {
+    @include assert {
+      @include output {
+        @include width.min(1rem) {
+          color: rebeccapurple;
+        }
+      }
+      @include expect {
+        @include media.query('min-width', 1rem) {
+          color: rebeccapurple;
+        }
+      }
+    }
+  }
+}
+
+@include describe('.query') {
+  @include it('calls media.query') {
+    @include assert {
+      @include output {
+        @include width.query(1rem) {
+          color: rebeccapurple;
+        }
+      }
+      @include expect {
+        @include media.query('width', 1rem) {
+          color: rebeccapurple;
+        }
+      }
+    }
+  }
+}

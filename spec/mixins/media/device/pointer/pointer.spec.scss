@@ -1,0 +1,37 @@
+@use 'true' as *;
+@use 'scss/mixins/media';
+@use 'scss/mixins/media/device/pointer';
+
+@include describe('.any') {
+  @include it('calls media.query') {
+    @include assert {
+      @include output {
+        @include pointer.any('coarse') {
+          color: rebeccapurple;
+        }
+      }
+      @include expect {
+        @include media.query('any-pointer', 'coarse') {
+          color: rebeccapurple;
+        }
+      }
+    }
+  }
+}
+
+@include describe('.primary') {
+  @include it('calls media.query') {
+    @include assert {
+      @include output {
+        @include pointer.primary('coarse') {
+          color: rebeccapurple;
+        }
+      }
+      @include expect {
+        @include media.query('pointer', 'coarse') {
+          color: rebeccapurple;
+        }
+      }
+    }
+  }
+}

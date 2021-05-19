@@ -1,0 +1,102 @@
+@use 'true' as *;
+@use 'scss/mixins/border/radius';
+
+@include describe('.all') {
+  @include it('outputs the css') {
+    @include assert {
+      @include output { @include radius.all(1rem); }
+      @include expect {
+        --border-radius: 1rem;
+        border-radius: var(--border-radius);
+      }
+    }
+  }
+}
+
+@include describe('.top-left') {
+  @include it('outputs the css') {
+    @include assert {
+      @include output { @include radius.top-left(1rem); }
+      @include expect {
+        --border-start-start-radius: 1rem;
+        border-top-left-radius: var(--border-start-start-radius);
+        border-start-start-radius: var(--border-start-start-radius);
+      }
+    }
+  }
+}
+
+@include describe('.top-right') {
+  @include it('outputs the css') {
+    @include assert {
+      @include output { @include radius.top-right(1rem); }
+      @include expect {
+        --border-end-start-radius: 1rem;
+        border-top-right-radius: var(--border-end-start-radius);
+        border-end-start-radius: var(--border-end-start-radius);
+      }
+    }
+  }
+}
+
+@include describe('.bottom-right') {
+  @include it('outputs the css') {
+    @include assert {
+      @include output { @include radius.bottom-right(1rem); }
+      @include expect {
+        --border-end-end-radius: 1rem;
+        border-bottom-right-radius: var(--border-end-end-radius);
+        border-end-end-radius: var(--border-end-end-radius);
+      }
+    }
+  }
+}
+
+@include describe('.bottom-left') {
+  @include it('outputs the css') {
+    @include assert {
+      @include output { @include radius.bottom-left(1rem); }
+      @include expect {
+        --border-start-end-radius: 1rem;
+        border-bottom-left-radius: var(--border-start-end-radius);
+        border-start-end-radius: var(--border-start-end-radius);
+      }
+    }
+  }
+}
+
+@include describe('.tl') {
+  @include it('outputs .top-left') {
+    @include assert {
+      @include output { @include radius.tl(1rem); }
+      @include expect { @include radius.top-left(1rem); }
+    }
+  }
+}
+
+@include describe('.tr') {
+  @include it('outputs .top-right') {
+    @include assert {
+      @include output { @include radius.tr(1rem); }
+      @include expect { @include radius.top-right(1rem); }
+    }
+  }
+}
+
+@include describe('.br') {
+  @include it('outputs .bottom-right') {
+    @include assert {
+      @include output { @include radius.br(1rem); }
+      @include expect { @include radius.bottom-right(1rem); }
+    }
+  }
+}
+
+@include describe('.bl') {
+  @include it('outputs .bottom-left') {
+    @include assert {
+      @include output { @include radius.bl(1rem); }
+      @include expect { @include radius.bottom-left(1rem); }
+    }
+  }
+}

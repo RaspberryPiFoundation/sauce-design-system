@@ -1,0 +1,143 @@
+@use 'true' as *;
+@use 'scss/mixins/position';
+
+@include describe('.all') {
+  @include it('outputs the css') {
+    @include assert {
+      @include output { @include position.all(1rem); }
+      @include expect {
+        --inset: 1rem;
+        top: var(--inset);
+        right: var(--inset);
+        bottom: var(--inset);
+        left: var(--inset);
+        inset: var(--inset);
+      }
+    }
+  }
+}
+
+@include describe('.cover') {
+  @include it('outputs .all(0)') {
+    @include assert {
+      @include output { @include position.cover; }
+      @include expect { @include position.all(0); }
+    }
+  }
+}
+
+@include describe('.inline') {
+  @include it('outputs the css') {
+    @include assert {
+      @include output { @include position.inline(1rem); }
+      @include expect {
+        --inset-inline: 1rem;
+        right: var(--inset-inline);
+        left: var(--inset-inline);
+        inset-inline: var(--inset-inline);
+      }
+    }
+  }
+}
+
+@include describe('.block') {
+  @include it('outputs the css') {
+    @include assert {
+      @include output { @include position.block(1rem); }
+      @include expect {
+        --inset-block: 1rem;
+        top: var(--inset-block);
+        bottom: var(--inset-block);
+        inset-block: var(--inset-block);
+      }
+    }
+  }
+}
+
+@include describe('.top') {
+  @include it('outputs the css') {
+    @include assert {
+      @include output { @include position.top(1rem); }
+      @include expect {
+        --inset-block-start: 1rem;
+        top: var(--inset-block-start);
+        inset-block-start: var(--inset-block-start);
+      }
+    }
+  }
+}
+
+@include describe('.right') {
+  @include it('outputs the css') {
+    @include assert {
+      @include output { @include position.right(1rem); }
+      @include expect {
+        --inset-inline-end: 1rem;
+        right: var(--inset-inline-end);
+        inset-inline-end: var(--inset-inline-end);
+      }
+    }
+  }
+}
+
+@include describe('.bottom') {
+  @include it('outputs the css') {
+    @include assert {
+      @include output { @include position.bottom(1rem); }
+      @include expect {
+        --inset-block-end: 1rem;
+        bottom: var(--inset-block-end);
+        inset-block-end: var(--inset-block-end);
+      }
+    }
+  }
+}
+
+@include describe('.left') {
+  @include it('outputs the css') {
+    @include assert {
+      @include output { @include position.left(1rem); }
+      @include expect {
+        --inset-inline-start: 1rem;
+        left: var(--inset-inline-start);
+        inset-inline-start: var(--inset-inline-start);
+      }
+    }
+  }
+}
+
+@include describe('.t') {
+  @include it('outputs .top') {
+    @include assert {
+      @include output { @include position.t(1rem); }
+      @include expect { @include position.top(1rem); }
+    }
+  }
+}
+
+@include describe('.r') {
+  @include it('outputs .right') {
+    @include assert {
+      @include output { @include position.r(1rem); }
+      @include expect { @include position.right(1rem); }
+    }
+  }
+}
+
+@include describe('.b') {
+  @include it('outputs .bottom') {
+    @include assert {
+      @include output { @include position.b(1rem); }
+      @include expect { @include position.bottom(1rem); }
+    }
+  }
+}
+
+@include describe('.l') {
+  @include it('outputs .left') {
+    @include assert {
+      @include output { @include position.l(1rem); }
+      @include expect { @include position.left(1rem); }
+    }
+  }
+}

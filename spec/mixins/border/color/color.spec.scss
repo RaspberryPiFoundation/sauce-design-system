@@ -1,0 +1,102 @@
+@use 'true' as *;
+@use 'scss/mixins/border/color';
+
+@include describe('.all') {
+  @include it('outputs the css') {
+    @include assert {
+      @include output { @include color.all(rebeccapurple); }
+      @include expect {
+        --border-color: rebeccapurple;
+        border-color: var(--border-color);
+      }
+    }
+  }
+}
+
+@include describe('.top') {
+  @include it('outputs the css') {
+    @include assert {
+      @include output { @include color.top(rebeccapurple); }
+      @include expect {
+        --border-block-start-color: rebeccapurple;
+        border-top-color: var(--border-block-start-color);
+        border-block-start-color: var(--border-block-start-color);
+      }
+    }
+  }
+}
+
+@include describe('.right') {
+  @include it('outputs the css') {
+    @include assert {
+      @include output { @include color.right(rebeccapurple); }
+      @include expect {
+        --border-inline-end-color: rebeccapurple;
+        border-right-color: var(--border-inline-end-color);
+        border-inline-end-color: var(--border-inline-end-color);
+      }
+    }
+  }
+}
+
+@include describe('.bottom') {
+  @include it('outputs the css') {
+    @include assert {
+      @include output { @include color.bottom(rebeccapurple); }
+      @include expect {
+        --border-block-end-color: rebeccapurple;
+        border-bottom-color: var(--border-block-end-color);
+        border-block-end-color: var(--border-block-end-color);
+      }
+    }
+  }
+}
+
+@include describe('.left') {
+  @include it('outputs the css') {
+    @include assert {
+      @include output { @include color.left(rebeccapurple); }
+      @include expect {
+        --border-inline-start-color: rebeccapurple;
+        border-left-color: var(--border-inline-start-color);
+        border-inline-start-color: var(--border-inline-start-color);
+      }
+    }
+  }
+}
+
+@include describe('.t') {
+  @include it('outputs .top') {
+    @include assert {
+      @include output { @include color.t(rebeccapurple); }
+      @include expect { @include color.top(rebeccapurple); }
+    }
+  }
+}
+
+@include describe('.r') {
+  @include it('outputs .right') {
+    @include assert {
+      @include output { @include color.r(rebeccapurple); }
+      @include expect { @include color.right(rebeccapurple); }
+    }
+  }
+}
+
+@include describe('.b') {
+  @include it('outputs .bottom') {
+    @include assert {
+      @include output { @include color.b(rebeccapurple); }
+      @include expect { @include color.bottom(rebeccapurple); }
+    }
+  }
+}
+
+@include describe('.l') {
+  @include it('outputs .left') {
+    @include assert {
+      @include output { @include color.l(rebeccapurple); }
+      @include expect { @include color.left(rebeccapurple); }
+    }
+  }
+}

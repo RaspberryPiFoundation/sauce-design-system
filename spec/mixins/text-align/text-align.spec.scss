@@ -1,0 +1,44 @@
+@use 'true' as *;
+@use 'scss/mixins/text-align';
+
+@include describe('.start') {
+  @include it('outputs the css') {
+    @include assert {
+      @include output { @include text-align.start; }
+      @include expect {
+        text-align: left;
+        text-align: start;
+      }
+    }
+  }
+}
+
+@include describe('.end') {
+  @include it('outputs the css') {
+    @include assert {
+      @include output { @include text-align.end; }
+      @include expect {
+        text-align: right;
+        text-align: end;
+      }
+    }
+  }
+}
+
+@include describe('.left') {
+  @include it('outputs .start') {
+    @include assert {
+      @include output { @include text-align.left; }
+      @include expect { @include text-align.start; }
+    }
+  }
+}
+
+@include describe('.right') {
+  @include it('outputs .end') {
+    @include assert {
+      @include output { @include text-align.right; }
+      @include expect { @include text-align.end; }
+    }
+  }
+}

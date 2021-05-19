@@ -1,0 +1,187 @@
+@use 'true' as *;
+@use 'scss/mixins/border';
+@use 'scss/mixins/border/color';
+@use 'scss/mixins/border/radius';
+@use 'scss/mixins/border/style';
+@use 'scss/mixins/border/width';
+
+@include describe('.color') {
+  @include it('outputs color.all') {
+    @include assert {
+      @include output { @include border.color(5rem); }
+      @include expect { @include color.all(5rem); }
+    }
+  }
+}
+
+@include describe('.color-bottom') {
+  @include it('outputs color.bottom') {
+    @include assert {
+      @include output { @include border.color-bottom(5rem); }
+      @include expect { @include color.bottom(5rem); }
+    }
+  }
+}
+
+@include describe('.color-left') {
+  @include it('outputs color.left') {
+    @include assert {
+      @include output { @include border.color-left(5rem); }
+      @include expect { @include color.left(5rem); }
+    }
+  }
+}
+
+@include describe('.color-right') {
+  @include it('outputs color.right') {
+    @include assert {
+      @include output { @include border.color-right(5rem); }
+      @include expect { @include color.right(5rem); }
+    }
+  }
+}
+
+@include describe('.color-top') {
+  @include it('outputs color.top') {
+    @include assert {
+      @include output { @include border.color-top(5rem); }
+      @include expect { @include color.top(5rem); }
+    }
+  }
+}
+
+@include describe('.radius') {
+  @include it('outputs radius.all') {
+    @include assert {
+      @include output { @include border.radius(5rem); }
+      @include expect { @include radius.all(5rem); }
+    }
+  }
+}
+
+@include describe('.radius-bottom-left') {
+  @include it('outputs radius.bottom-left') {
+    @include assert {
+      @include output { @include border.radius-bottom-left(5rem); }
+      @include expect { @include radius.bottom-left(5rem); }
+    }
+  }
+}
+
+@include describe('.radius-bottom-right') {
+  @include it('outputs radius.bottom-right') {
+    @include assert {
+      @include output { @include border.radius-bottom-right(5rem); }
+      @include expect { @include radius.bottom-right(5rem); }
+    }
+  }
+}
+
+@include describe('.radius-top-left') {
+  @include it('outputs radius.top-left') {
+    @include assert {
+      @include output { @include border.radius-top-left(5rem); }
+      @include expect { @include radius.top-left(5rem); }
+    }
+  }
+}
+
+@include describe('.radius-top-right') {
+  @include it('outputs radius.top-right') {
+    @include assert {
+      @include output { @include border.radius-top-right(5rem); }
+      @include expect { @include radius.top-right(5rem); }
+    }
+  }
+}
+
+
+@include describe('.style') {
+  @include it('outputs style.all') {
+    @include assert {
+      @include output { @include border.style(5rem); }
+      @include expect { @include style.all(5rem); }
+    }
+  }
+}
+
+@include describe('.style-bottom') {
+  @include it('outputs style.bottom') {
+    @include assert {
+      @include output { @include border.style-bottom(5rem); }
+      @include expect { @include style.bottom(5rem); }
+    }
+  }
+}
+
+@include describe('.style-left') {
+  @include it('outputs style.left') {
+    @include assert {
+      @include output { @include border.style-left(5rem); }
+      @include expect { @include style.left(5rem); }
+    }
+  }
+}
+
+@include describe('.style-right') {
+  @include it('outputs style.right') {
+    @include assert {
+      @include output { @include border.style-right(5rem); }
+      @include expect { @include style.right(5rem); }
+    }
+  }
+}
+
+@include describe('.style-top') {
+  @include it('outputs style.top') {
+    @include assert {
+      @include output { @include border.style-top(5rem); }
+      @include expect { @include style.top(5rem); }
+    }
+  }
+}
+
+@include describe('.width') {
+  @include it('outputs width.all') {
+    @include assert {
+      @include output { @include border.width(5rem); }
+      @include expect { @include width.all(5rem); }
+    }
+  }
+}
+
+@include describe('.width-bottom') {
+  @include it('outputs width.bottom') {
+    @include assert {
+      @include output { @include border.width-bottom(5rem); }
+      @include expect { @include width.bottom(5rem); }
+    }
+  }
+}
+
+@include describe('.width-left') {
+  @include it('outputs width.left') {
+    @include assert {
+      @include output { @include border.width-left(5rem); }
+      @include expect { @include width.left(5rem); }
+    }
+  }
+}
+
+@include describe('.width-right') {
+  @include it('outputs width.right') {
+    @include assert {
+      @include output { @include border.width-right(5rem); }
+      @include expect { @include width.right(5rem); }
+    }
+  }
+}
+
+@include describe('.width-top') {
+  @include it('outputs width.top') {
+    @include assert {
+      @include output { @include border.width-top(5rem); }
+      @include expect { @include width.top(5rem); }
+    }
+  }
+}
