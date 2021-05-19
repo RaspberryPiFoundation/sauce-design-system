@@ -1,12 +1,5 @@
-/**
-* @tokens Border Radius
-* @presenter BorderRadius
-*/
-
-$map: (
-  circle: $circle,
-  large:  $large,
-  medium: $medium,
-  small:  $small,
-  square: $square,
-);
+$circle: 50%;
+$large: 1rem;
+$medium: 0.5rem;
+$small: 0.25rem;
+$square: 0;

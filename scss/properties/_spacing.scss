@@ -1,14 +1,23 @@
 @use 'scss/tokens/spacing';
-@use 'scss/lib/prop';
 
 :root {
-  @include prop.define('spacing-ant',       spacing.$ant);
-  @include prop.define('spacing-bee',       spacing.$bee);
-  @include prop.define('spacing-chaffinch', spacing.$chaffinch);
-  @include prop.define('spacing-dog',       spacing.$dog);
-  @include prop.define('spacing-eagle',     spacing.$eagle);
-  @include prop.define('spacing-flamingo',  spacing.$flamingo);
-  @include prop.define('spacing-grizzly',   spacing.$grizzly);
-  @include prop.define('spacing-hippo',     spacing.$hippo);
-  @include prop.define('spacing-iguanadon', spacing.$iguanadon);
+  --spacing-ant: #{spacing.$ant};
+  --spacing-bee: #{spacing.$bee};
+  --spacing-chaffinch: #{spacing.$chaffinch};
+  --spacing-dog: #{spacing.$dog};
+  --spacing-eagle: #{spacing.$eagle};
+  --spacing-flamingo: #{spacing.$flamingo};
+  --spacing-grizzly: #{spacing.$grizzly};
+  --spacing-hippo: #{spacing.$hippo};
+  --spacing-iguanadon: #{spacing.$iguanadon};
+
+  --spacing-1: var(--spacing-ant);
+  --spacing-2: var(--spacing-bee);
+  --spacing-3: var(--spacing-chaffinch);
+  --spacing-4: var(--spacing-dog);
+  --spacing-5: var(--spacing-eagle);
+  --spacing-6: var(--spacing-flamingo);
+  --spacing-7: var(--spacing-grizzly);
+  --spacing-8: var(--spacing-hippo);
+  --spacing-9: var(--spacing-iguanadon);
 }

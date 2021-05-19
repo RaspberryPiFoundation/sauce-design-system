@@ -1,0 +1,8 @@
+@use 'scss/tokens/line-height';
+
+:root {
+  --line-height-loose: #{line-height.loose};
+  --line-height-regular: #{line-height.regular};
+  --line-height-cosy: #{line-height.cosy};
+  --line-height-tight: #{line-height.tight};
+}
