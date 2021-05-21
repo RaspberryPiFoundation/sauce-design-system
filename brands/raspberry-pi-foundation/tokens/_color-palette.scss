@@ -1,12 +1,38 @@
-/**
-* @tokens Color / Raspberry Pi / Palette
-* @presenter Color
-*/
-$blue: #41a6c4 !default;
-$green: #53ce63 !default;
-$navy: #004881 !default;
-$orange: #f68e3b !default;
-$red: #f3524f !default;
-$turquoise: #10aeb0 !default;
-$violet: #a76fba !default;
-$yellow: #ffb12a !default;
+:root {
+  --rasperry-pi-red:   #C31B4A;
+  --rasperry-pi-green: #F5F6F9;
+
+  --alice-blue:     hsl(208, 100%, 97% ); // #F0F8FF
+  --bahama-blue:    hsl(207, 90%,  34% ); // #0960A5
+  --cobalt:         hsl(216, 100%, 34% ); // #0044AB
+  --big-stone:      hsl(224, 51%,  15% ); // #131E3B
+
+  --fair-pink:      hsl(0,   100%, 96% ); // #FFEDED
+  --azalea:         hsl(353, 74%,  91% ); // #F9D7DB
+  --deep-blush:     hsl(353, 62%,  69% ); // #E1818C
+  --maroon-flush:   hsl(344, 72%,  44% ); // #C1204C
+
+  --seashell-peach: hsl(22,  100%, 96% ); // #FFF3EC
+  --tuft-bush:      hsl(24,  100%, 89% ); // #FFDDC7
+  --geraldine:      hsl(10,  86%,  75% ); // #F69986
+
+  --mint-green:     hsl(131, 87%,  82% ); // #A7F9B6
+  --madang:         hsl(132, 70%,  77% ); // #9DEEAD
+
+  --jagged-ice:     hsl(158, 51%,  85% ); // #C4ECDD
+  --padua:          hsl(157, 51%,  81% ); // #B5E7D4
+  --algae-green:    hsl(157, 52%,  69% ); // #87D9BA
+
+  --regent-st-blue: hsl(196, 60%,  80% ); // #AFDBEB
+  --aqua-island:    hsl(196, 47%,  75% ); // #A1CDDD
+
+  --buttermilk:     hsl(47,  100%, 85% ); // #FFEEB0
+  --kournikova:     hsl(47,  100%, 72% ); // #FFDF6E
+
+  --athens-grey:    hsl(225, 25%,  96% ); // #F5F6F9
+  --gallery:        hsl(0,   0%,   93% ); // #EEE
+  --mine-shaft:     hsl(0,   0%,   13% ); // #222
+  --shark:          hsl(240, 8%,   12% ); // #1D1D22
+
+  --rasperry-pi-red: var(--maroon-flush);
+}
