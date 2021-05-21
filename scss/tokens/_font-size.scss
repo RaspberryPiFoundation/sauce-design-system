@@ -6,17 +6,18 @@
  * Each step up:   (previous-step) * 1.2
  * Each step down: (previous-step) / 1.2
  */
+$base:  1rem; // 1rem == 16.00px
 $ratio: 1.2;
 
-$u-8: math.pow($ratio, 8) * 1rem; // 4.3rem   == 68.80px
-$u-7: math.pow($ratio, 7) * 1rem; // 3.583rem == 57.33px
-$u-6: math.pow($ratio, 6) * 1rem; // 2.986rem == 47.78px
-$u-5: math.pow($ratio, 5) * 1rem; // 2.488rem == 39.81px
-$u-4: math.pow($ratio, 4) * 1rem; // 2.074rem == 33.18px
-$u-3: math.pow($ratio, 3) * 1rem; // 1.728rem == 27.65px
-$u-2: math.pow($ratio, 2) * 1rem; // 1.44rem  == 23.04px
-$u-1: math.pow($ratio, 1) * 1rem; // 1.2rem   == 19.20px
-$base: 1rem; // 1rem     == 16.00px
+$u-1: math.pow($ratio, 1)  * 1rem; // 1.2rem   == 19.20px
+$u-2: math.pow($ratio, 2)  * 1rem; // 1.44rem  == 23.04px
+$u-3: math.pow($ratio, 3)  * 1rem; // 1.728rem == 27.65px
+$u-4: math.pow($ratio, 4)  * 1rem; // 2.074rem == 33.18px
+$u-5: math.pow($ratio, 5)  * 1rem; // 2.488rem == 39.81px
+$u-6: math.pow($ratio, 6)  * 1rem; // 2.986rem == 47.78px
+$u-7: math.pow($ratio, 7)  * 1rem; // 3.583rem == 57.33px
+$u-8: math.pow($ratio, 8)  * 1rem; // 4.3rem   == 68.80px
+
 $d-1: math.pow($ratio, -1) * 1rem; // 0.833rem == 13.33px
 $d-2: math.pow($ratio, -2) * 1rem; // 0.694rem == 11.11px
 $d-3: math.pow($ratio, -3) * 1rem; // 0.579rem == 9.26px
