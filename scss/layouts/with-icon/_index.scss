@@ -1,0 +1,22 @@
+// <span class="with-icon">
+//   <!-- Icon MUST be first child -->
+//   <svg>
+//     <use href="/path/to/icons.svg#my-icon"></use>
+//   </svg>
+//   Close
+// </span>
+
+.with-icon {
+  --space: 1rem;
+
+  align-items: baseline;
+  display: inline-flex;
+}
+
+.with-icon > :first-child {
+  height: 0.75em;
+  height: 1cap;
+  margin-inline-end: var(--space);
+  width: 0.75em;
+  width: 1cap;
+}

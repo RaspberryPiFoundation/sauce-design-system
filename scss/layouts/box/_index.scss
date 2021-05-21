@@ -1,0 +1,26 @@
+// <div class="layout-box">
+//   <-- the box's contents -->
+// </div>
+
+.layout-box {
+  padding: var(--space);
+  border:  var(--border-thin) solid;
+  --color-light: #fff;
+  --color-dark: #000;
+  color: var(--color-dark);
+  background-color: var(--color-light);
+
+  // Prefers contrast: more
+  outline: var(--border-thin) solid transparent;
+  outline-offset: calc(var(--border-thin) * -1);
+}
+
+.layout-box * {
+  color: inherit;
+}
+
+// Prefers color-scheme: dark
+.layout-box.invert {
+  color: var(--color-light);
+  background-color: var(--color-dark);
+}

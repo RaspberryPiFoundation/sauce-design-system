@@ -1,0 +1,29 @@
+// <div class="layout-switcher">
+//   <div> <!-- intermediary wrapper -->
+//     <div><!-- child element --></div>
+//     <div><!-- another child element --></div>
+//     <div><!-- etc --></div>
+//   </div>
+// </div>
+
+.layout-switcher {
+  --space: 1rem;
+  --measure: 50%;
+}
+
+.layout-switcher > * {
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc((var(--space) / 2) * -1);
+}
+
+.layout-switcher > * > * {
+  flex-grow: 1;
+  flex-basis: calc((var(--measure) - (100% - var(--space))) * 999);
+  margin: calc(var(--space) / 2);
+}
+
+.layout-switcher > * > :nth-last-child(n+4),
+.layout-switcher > * > :nth-last-child(n+4) ~ * {
+  flex-basis: 100%;
+}

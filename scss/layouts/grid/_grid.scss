@@ -1,0 +1,16 @@
+// <div class="layout-grid">
+//   <div><!-- child element --></div>
+//   <div><!-- another child element --></div>
+//   <div><!-- etc --></div>
+// </div>
+
+.layout-grid {
+  display: grid;
+  grid-gap: var(--gap);
+}
+
+@supports (width: min(var(--min-column-width), 100%)) {
+  .layout-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(var(--min-column-width), 100%), 1fr));
+  }
+}
