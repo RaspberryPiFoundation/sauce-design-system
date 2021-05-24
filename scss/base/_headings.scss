@@ -1,21 +1,22 @@
 @use 'scss/primitives/heading';
 
-// :is(h1, h2, h3, h4, h5, h6):not([class]) {
-//   @include heading.primitive;
-// }
+:is(h1, h2, h3, h4, h5, h6):not([class]) {
+  @include heading.primitive;
+  font-size: var(--font-size);
+}
 
-// h1:not([class]) {
-//   @include font.use('u-8');
-// }
+h1:not([class]) {
+  --font-size: var(--font-size-u-8);
+}
 
-// h2:not([class]) {
-//   @include font.use('u-6');
-// }
+h2:not([class]) {
+  --font-size: var(--font-size-u-6);
+}
 
-// h3:not([class]) {
-//   @include font.use('u-4');
-// }
+h3:not([class]) {
+  --font-size: var(--font-size-u-4);
+}
 
-// h4:not([class]) {
-//   @include font.use('u-3');
-// }
+h4:not([class]) {
+  --font-size: var(--font-size-u-3);
+}

@@ -1,32 +1,38 @@
+@use 'scss/mixins/size';
+
 html {
-  --background-color: var(--white);
+  --background-color: #C31B4A;
 
-  background-color: var(---background-color);
-  font-size: clamp(1em, 3vmin, 1.25em);
+  background-color: var(--background-color);
+  font-size:        1em;
 
-  @supports not (font-size: clamp(1em, 1em, 1em)) {
-    font-size: 1em;
+  @supports (font-size: clamp(1em, 1em, 1em)) {
+    font-size: clamp(1em, 3vmin, 1.25em);
   }
 }
 
 body {
   --background-color: var(--white);
-  --color: var(--color-text);
-  --font-family: var(--font-family-sans-serif);
-  --font-size: var(--font-size-base);
-  --font-weight: var(--font-weight-regular);
-  --line-height: var(--line-height-regular);
+  --color:            var(--color-text);
+  --font-family:      var(--font-family-sans-serif);
+  --font-size:        var(--font-size-base);
+  --font-weight:      var(--font-weight-regular);
+  --line-height:      var(--line-height-regular);
 
-  background-color: var(---background-color);
-  color: var(--color);
-  font-display: swap;
-  font-family: var(--font-family);
-  font-optical-sizing: none;
+  @include size.min-height(100vh);
+
+  background-color:       var(--background-color);
+  color:                  var(--color);
+  font-display:           swap;
+  font-family:            var(--font-family);
+  font-optical-sizing:    none;
   font-variant-ligatures: none;
-  font-size: var(--font-size);
-  font-weight: var(--font-weight);
-  line-height: var(--line-height);
-  padding: env(safe-area-inset-top) env(safe-area-inset-right)
-    env(safe-area-inset-bottom) env(safe-area-inset-left);
-  text-size-adjust: 100%;
+  font-size:              var(--font-size);
+  font-weight:            var(--font-weight);
+  line-height:            var(--line-height);
+  padding:                env(safe-area-inset-top)
+                          env(safe-area-inset-right)
+                          env(safe-area-inset-bottom)
+                          env(safe-area-inset-left);
+  text-size-adjust:       100%;
 }

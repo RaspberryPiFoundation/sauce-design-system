@@ -1,24 +1,9 @@
-// @use 'scss/mixins/logical-properties' as prop;
-// @use 'scss/mixins/device';
-// @use 'scss/mixins/font';
-// @use 'scss/mixins/margin';
-// @use 'scss/mixins/type';
-// @use 'scss/primitives/heading';
+@use 'scss/mixins/margin';
 
-// blockquote, ol, p, ul {
-//   @include font.use('base');
-//   @include margin.b('bee');
-// }
+blockquote, ol, p, ul {
+  --margin-bottom: var(--spacing-2);
 
-// .type-heading-hero {
-//   @include heading.primitive;
-//   @include font.use('u-8');
-// }
+  @include margin.b(--margin-bottom);
 
-// .type-heading-primary {
-//   @include heading.primitive;
-// }
-
-// .type-heading-secondary {
-//   @include heading.primitive;
-// }
+  font-size: var(--font-size);
+}
