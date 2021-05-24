@@ -1,0 +1,34 @@
+/**
+ * https://every-layout.dev/layouts/icon/
+ *
+ * <span class="with-icon">
+ *   <!-- Icon MUST be first child -->
+ *   <svg>
+ *     <use href="/path/to/icons.svg#my-icon"></use>
+ *   </svg>
+ *   Close
+ * </span>
+ */
+
+@use 'scss/mixins/margin';
+
+@mixin layout-with-icon {
+  --icon-spacing: var(--spacing-1);
+
+  align-items: baseline;
+  display: inline-flex;
+
+  > :first-child {
+    @include margin.left(--icon-spacing);
+
+    height: 0.75em;
+    width: 0.75em;
+
+    @supports (height: 1cap) {
+      height: 1cap;
+      width: 1cap;
+    }
+  }
+
+  @content;
+}

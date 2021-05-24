@@ -1,0 +1,39 @@
+/**
+ * https://every-layout.dev/layouts/box/
+ *
+ * <div class="layout-box">
+ *   <-- the box's contents -->
+ * </div>
+ */
+
+@use 'scss/mixins/border';
+@use 'scss/mixins/padding';
+@use 'scss/mixins/media/preferences/contrast';
+
+@mixin layout-box {
+  --box-background-color: var(--grey-90);
+  --box-border-color:     var(--grey-20);
+  --box-border-style:     solid;
+  --box-border-width:     var(--border-width-narrow);
+  --box-color:            var(--color);
+  --box-padding:          var(--spacing-2);
+
+  @include border.color(--box-border-color);
+  @include border.style(--box-border-style);
+  @include border.width(--box-border-width);
+  @include padding.all(--box-padding);
+
+  background-color: var(--box-background-color);
+  color: var(--box-color);
+
+  @include contrast.more {
+    --box-outline-width: var(--box-border-width);
+
+    outline-color: transparent;
+    outline-offset: calc(var(--box-outline-width) * -1);
+    outline-style: solid;
+    outline-width: var(--box-outline-width);
+  }
+
+  @content;
+}
