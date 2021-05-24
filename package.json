@@ -5,22 +5,19 @@
   "license": "MIT",
   "author": "The Raspberry Pi Foundation (https://www.raspberrypi.org)",
   "contributors": [
-    "Jonic Linley (https://www.100yen.co.uk/)"
+    "Jonic Linley (https://www.100yen.co.uk)"
   ],
   "homepage": "https://sauce.raspberrypi.org",
   "repository": "github:RaspberryPiFoundation/sauce-design-system",
   "bugs": "https://github.com/RaspberryPiFoundation/sauce-design-system/issues",
   "version": "1.0.0-alpha.10",
-  "main": "scss/index.js",
-  "files": [
-    "lib",
-    "src"
-  ],
+  "main": "scss/sauce.scss",
+  "files": ["scss"],
   "scripts": {
     "build": "build-storybook",
     "build-playroom": "playroom build",
     "build-storybook": "build-storybook",
-    "chromatic-ci-branch-test": "chromatic test --ci --exit-once-uploaded --skip '@(renovate/**|dependabot/**)'",
+    "chromatic-ci-branch-test": "chromatic test --ci --exit-once-uploaded --skip '@(dependabot/**)'",
     "chromatic-ci-master-update": "chromatic test --ci --auto-accept-changes master",
     "start": "start-storybook -p 54321 --ci",
     "gulp": "gulp",
@@ -29,9 +26,6 @@
     "start-playroom": "playroom start",
     "test": "jest --notify --runInBand --watchAll",
     "test-ci": "jest --runInBand"
-  },
-  "peerDependencies": {
-    "sass-true": "^6.0.0"
   },
   "dependencies": {
     "autoprefixer": "^10.2.5",
