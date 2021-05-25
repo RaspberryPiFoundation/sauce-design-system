@@ -46,13 +46,11 @@
 }
 
 @mixin inverted {
-  // Override tokens
   --color-text-base:    var(--color-text-link-inverse-base);
   --color-text-active:  var(--color-text-link-inverse-active);
   --color-text-visited: var(--color-text-link-inverse-visited);
 }
 
 @mixin no-visited-state {
-  // Override properties
   --color-text-visited: var(--color-text-base);
 }

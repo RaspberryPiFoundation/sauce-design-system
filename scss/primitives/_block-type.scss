@@ -1,0 +1,12 @@
+@use 'scss/mixins/margin';
+
+@mixin primitive {
+  --font-size:     var(--font-size-base);
+  --margin-bottom: var(--spacing-2);
+  --max-width:     60ch;
+
+  @include margin.b(--margin-bottom);
+
+  max-width: var(--max-width);
+  font-size: var(--font-size);
+}

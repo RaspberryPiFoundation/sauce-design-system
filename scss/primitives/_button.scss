@@ -48,7 +48,7 @@
     text-decoration: none;
   }
 
-  &:focus, &:hover, &:active {
+  &:is(:focus, :hover, :active) {
     --background-color: var(--color-background-active);
     --color:            var(--color-text-active);
   }
