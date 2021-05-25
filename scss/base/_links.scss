@@ -1,6 +1,6 @@
 @use 'scss/primitives/link';
 
-.sauce-link,
+.link,
 a:not([class]) {
   @include link.primary;
 

@@ -2,21 +2,16 @@
 
 :is(h1, h2, h3, h4, h5, h6):not([class]) {
   @include heading.primitive;
-  font-size: var(--font-size);
 }
 
-h1:not([class]) {
-  --font-size: var(--font-size-u-8);
-}
+h1:not([class]) { @include heading.primary;   }
+h2:not([class]) { @include heading.secondary; }
+h3:not([class]) { @include heading.tertiary;  }
+h4:not([class]) { @include heading.item;      }
 
-h2:not([class]) {
-  --font-size: var(--font-size-u-6);
-}
-
-h3:not([class]) {
-  --font-size: var(--font-size-u-4);
-}
-
-h4:not([class]) {
-  --font-size: var(--font-size-u-3);
-}
+.heading-signpost-hero { @include heading.signpost-hero; }
+.heading-hero          { @include heading.hero;          }
+.heading-primary       { @include heading.primary;       }
+.heading-secondary     { @include heading.secondary;     }
+.heading-tertiary      { @include heading.tertiary;      }
+.heading-item          { @include heading.item;          }

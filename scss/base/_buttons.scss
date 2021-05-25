@@ -1,8 +1,7 @@
 @use 'scss/primitives/button';
 
-button:not([class]),
-input[type="button"]:not([class]),
-.button {
+.button,
+:is(button, input[type="button"], input[type="submit"]):not([class]) {
   @include button.primary;
 
   &:disabled,

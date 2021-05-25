@@ -1,17 +1,19 @@
 @use 'scss/mixins/margin';
 @use 'scss/mixins/padding';
-@use 'scss/primitives/type';
+@use 'scss/primitives/block-type';
 
-// ol, ul {
-//   @include type.primitive;
-//   @include margin.b('bee');
-//   @include padding.l('bee');
+ol:not([class]),
+ul:not([class]) {
+  --padding-left: var(--spacing-2);
 
-//   li {
-//     ol,
-//     ul {
-//       --margin-block-end: 0;
-//       --margin-bottom: 0;
-//     }
-//   }
-// }
+  @include block-type.primitive;
+  @include padding.left(--padding-left);
+
+  li:not([class]) {
+    ol:not([class]),
+    ul:not([class]) {
+      --padding-left: var(--spacing-3);
+      @include margin.b(none);
+    }
+  }
+}
