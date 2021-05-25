@@ -14,8 +14,9 @@
 
   /* Provide a fallback style for browsers that don't support :focus-visible */
   &:is(:focus, :focus-within) {
-    outline-color: var(--color-outline-primary);
-    outline-width: 0.1rem;
+    outline-color:  var(--color-outline-primary);
+    outline-width:  0.1rem;
+    outline-style:  solid;
     outline-offset: 0;
   }
 
@@ -26,8 +27,8 @@
 
   /* Draw a very noticeable focus style for keyboard-focus on browsers that do support :focus-visible */
   &:is(:focus, :focus-within):focus-visible {
-    outline-width: 0.3rem;
-    outline-offset: 0.5rem;
+    outline-width: 0.2rem;
+    outline-offset: 0.2rem;
   }
 }
 
