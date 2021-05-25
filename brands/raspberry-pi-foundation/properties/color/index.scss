@@ -15,10 +15,11 @@
 
   --color-outline-primary:  var(--bahama-blue);
 
-  --color-text-primary:   var(--mine-shaft);
-  --color-text-secondary: var(--grey-30);
-  --color-text-heading:   var(--mine-shaft);
-  --color-text-inverted:  var(--white);
+  --color-text-primary:               var(--mine-shaft);
+  --color-text-secondary:             var(--grey-30);
+  --color-text-heading-base:          var(--mine-shaft);
+  --color-text-heading-signpost-hero: var(--rasperry-pi-red);
+  --color-text-inverted:              var(--white);
 
   --color-text-button-primary-base:           var(--white);
   --color-text-button-primary-active:         var(--white);
@@ -30,5 +31,4 @@
   --color-text-link-inverse-base:    var(--white);
   --color-text-link-inverse-active:  var(--grey-90);
   --color-text-link-inverse-visited: var(--grey-90);
-
 }
