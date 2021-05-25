@@ -1,30 +1,28 @@
-const sassWebpackConfig = require('../webpack.config.js')
+const path = require('path');
 
 module.exports = {
   addons: [
-    // Features
-    '@storybook/addon-links',
-    // Upper panel tabs
-    '@storybook/addon-toolbars',
-    '@storybook/addon-docs',
-    'storybook-addon-playroom',
-    '@storybook/addon-viewport',
-    '@storybook/addon-backgrounds',
-    // Lower panel tabs
-    '@whitespace/storybook-addon-html',
-    '@storybook/addon-a11y',
-    'storybook-mobile',
-    // 'storybook-design-token',
+    "@storybook/addon-links",
+    "@storybook/addon-essentials",
+    "@storybook/preset-scss"
   ],
   stories: [
-    '../docs/*.stories.mdx',
-    '../docs/**/*.stories.mdx',
-    '../scss/layouts/**/*.stories.mdx',
-    '../scss/components/**/*.stories.mdx',
+    "../docs/**/*.stories.mdx",
+    "../components/**/*.stories.mdx"
   ],
-  webpackFinal: async (config) => {
-    config.module.rules.push(sassWebpackConfig)
+  webpackFinal: async (config, { configType }) => {
+    // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
+    // You can change the configuration based on that.
+    // 'PRODUCTION' is used when building the static version of storybook.
 
-    return config
-  },
+    // Make whatever fine-grained changes you need
+    config.module.rules.push({
+      test: /\.scss$/,
+      use: ['style-loader', 'css-loader', 'sass-loader'],
+      include: path.resolve(__dirname, '../'),
+    });
+
+    // Return the altered config
+    return config;
+  }
 }

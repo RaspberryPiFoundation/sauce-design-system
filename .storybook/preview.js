@@ -1,40 +1,15 @@
-import '!style-loader!css-loader!sass-loader!postcss-loader!./preview.scss'
+// import '!sass-loader!./preview.scss'
+// import '!css-loader!sass-loader!./preview.scss'
+// import '!style-loader!css-loader!sass-loader!./preview.scss'
+import './preview.scss'
 
-import { addDecorator, addParameters } from '@storybook/react'
-
-import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
-import { withA11y } from '@storybook/addon-a11y'
-
-// import { withPlayroom } from 'storybook-addon-playroom'
-
-// Viewport testing
-addParameters({
-  viewport: {
-    viewports: INITIAL_VIEWPORTS,
+export const parameters = {
+  actions: { argTypesRegex: "^on[A-Z].*" },
+  controls: {
+    matchers: {
+      color: /(background|color)$/i,
+      date: /Date$/,
+    },
   },
-})
-
-// Playroom
-// addDecorator(withPlayroom)
-// addParameters({
-//   playroom: {
-//     url: 'http://localhost:9000',
-//   },
-// })
-
-// Accessibility
-addDecorator(withA11y)
-
-// Design Tokens
-// const scssReq = require.context('!!raw-loader!../scss/tokens', true, /.\.scss$/)
-// const scssTokenFiles = scssReq
-//   .keys()
-//   .map((filename) => ({ filename, content: scssReq(filename).default }))
-
-// addParameters({
-//   designToken: {
-//     files: {
-//       scss: scssTokenFiles,
-//     },
-//   },
-// })
+  layout: 'centered',
+}
