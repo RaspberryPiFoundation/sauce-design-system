@@ -1,6 +1,0 @@
-@use 'scss/tokens/color-greyscale';
-
-:root {
-  --grey-hue: #{color-greyscale.$grey-hue};
-  --grey-sat: #{color-greyscale.$grey-sat};
-}

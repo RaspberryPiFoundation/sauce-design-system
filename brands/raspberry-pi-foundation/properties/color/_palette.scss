@@ -1,10 +1,8 @@
 :root {
-  --rasperry-pi-red:   #C31B4A;
-  --rasperry-pi-green: #F5F6F9;
-
   --alice-blue:     hsl(208, 100%, 97% ); // #F0F8FF
   --bahama-blue:    hsl(207, 90%,  34% ); // #0960A5
   --cobalt:         hsl(216, 100%, 34% ); // #0044AB
+  --wisteria:       hsl(282, 44%,  47% ); // #A76FBA
   --big-stone:      hsl(224, 51%,  15% ); // #131E3B
 
   --fair-pink:      hsl(0,   100%, 96% ); // #FFEDED
@@ -34,5 +32,10 @@
   --mine-shaft:     hsl(0,   0%,   13% ); // #222
   --shark:          hsl(240, 8%,   12% ); // #1D1D22
 
+  --accent-cool:     var(--alice-blue);
+  --accent-soft:     var(--fair-pink);
+  --accent-warm:     var(--seashell-peach);
+  --accent-fresh:    var(--jagged-ice);
+  --accent-glow:     var(--buttermilk);
   --rasperry-pi-red: var(--maroon-flush);
 }

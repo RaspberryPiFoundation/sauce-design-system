@@ -1,0 +1,34 @@
+@forward 'greyscale';
+@forward 'palette';
+
+:root {
+  --color-background-primary:      var(--white);
+  --color-background-secondary:    var(--grey-90);
+  --color-background-inverted:     var(--grey-10);
+
+  --color-background-button-primary-base:     var(--cobalt);
+  --color-background-button-primary-active:   var(--bahama-blue);
+  --color-background-button-primary-disabled: var(--grey-80);
+
+  --color-border-primary:   var(--grey-60);
+  --color-border-secondary: var(--grey-50);
+
+  --color-outline-primary:  var(--bahama-blue);
+
+  --color-text-primary:   var(--mine-shaft);
+  --color-text-secondary: var(--grey-30);
+  --color-text-heading:   var(--mine-shaft);
+  --color-text-inverted:  var(--white);
+
+  --color-text-button-primary-base:           var(--white);
+  --color-text-button-primary-active:         var(--white);
+  --color-text-button-primary-disabled:       var(--grey-40);
+
+  --color-text-link-base:            var(--cobalt);
+  --color-text-link-active:          var(--rasperry-pi-red);
+  --color-text-link-visited:         var(--wisteria);
+  --color-text-link-inverse-base:    var(--white);
+  --color-text-link-inverse-active:  var(--grey-90);
+  --color-text-link-inverse-visited: var(--grey-90);
+
+}
