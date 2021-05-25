@@ -1,17 +1,15 @@
-@use 'sauce_overrides/mixins/utilities';
-@use '@rpf/sauce/scss/mixins/device';
-@use '@rpf/sauce/scss/mixins/padding';
-@use '@rpf/sauce/scss/mixins/type-scale';
-@use '@rpf/sauce/scss/tokens/color-greyscale';
-@use '@rpf/sauce/scss/tokens/font-weight';
-@use '@rpf/sauce/scss/tokens/line-height';
+@use 'scss/mixins/media/viewport/width';
+@use 'scss/mixins/padding';
+@use 'scss/mixins/helpers';
+@use 'scss/tokens/color-greyscale';
+@use 'scss/tokens/font-weight';
+@use 'scss/tokens/line-height';
 
 @mixin primary {
   // Include mixins
-  @include padding.block('ant');
-  @include padding.inline('dog');
-  @include type-scale.skateboard;
-  @include utilities.focusable;
+  @include padding.block(--spacing-1);
+  @include padding.inline(--spacing-4);
+  @include helpers.focusable;
 
   // Setup tokens
   --color-background-base:     var(--color-background-button-primary-base);
@@ -22,49 +20,50 @@
   --color-text-disabled:       var(--color-text-button-primary-disabled);
 
   // Setup custom properties
-  --color-background: var(--color-background-base);
-  --color-text:       var(--color-text-base);
-  --width: 100%;
+  --background-color:           var(--color-background-base);
+  --color:                      var(--color-text-base);
+  --transition-duration:        var(--transition-duration-promptly);
+  --transition-timing-function: var(--transition-timing-eased), var(--transition-timing-eased), var(--transition-timing-elastic);
+  --width:                      100%;
 
   // Define rules
-  background-color: var(--color-background);
-  border-radius: 0.5rem;
-  border-width: 0;
-  color: var(--color-text);
-  display: inline-block;
-  font-weight: font-weight.$medium;
-  line-height: line-height.$cosy;
-  text-align: center;
-  width: var(--width);
+  background-color:           var(--background-color);
+  border-radius:              0.5rem;
+  border-width:               0;
+  color:                      var(--color);
+  display:                    inline-block;
+  font-weight:                font-weight.$medium;
+  line-height:                line-height.$cosy;
+  text-align:                 center;
+  transition-duration:        var(--transition-duration);
+  transition-property:        background-color, color, outline-offset;
+  transition-timing-function: var(--transition-timing-function);
+  width:                      var(--width);
 
   // Define pseudo-classes
   &:any-link {
-    --color-background: var(--color-background-base);
-    --color-text:       var(--color-text-base);
+    --background-color: var(--color-background-base);
+    --color:            var(--color-text-base);
 
     text-decoration: none;
   }
 
   &:focus, &:hover, &:active {
-    --color-background: var(--color-background-active);
-    --color-text:       var(--color-text-active);
+    --background-color: var(--color-background-active);
+    --color:            var(--color-text-active);
   }
 
   // Define media-queries
-  @include device.min-width(600px) {
+  @include width.min(600px) {
     --width: auto;
   }
 }
 
 @mixin disabled {
-  &:disabled,
-  &[disabled] {
-    // Override custom properties
-    --color-background: var(--color-background-disabled);
-    --color-text:       var(--color-text-disabled);
+  // Override custom properties
+  --background-color: var(--color-background-disabled);
+  --color:            var(--color-text-disabled);
 
-    // Define other rules
-    pointer-events: none;
-  }
-
+  // Define other rules
+  pointer-events: none;
 }

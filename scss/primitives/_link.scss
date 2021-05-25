@@ -1,4 +1,4 @@
-@use 'sauce_overrides/mixins/utilities';
+@use 'scss/mixins/helpers';
 
 /**
  * PLEASE NOTE
@@ -10,7 +10,7 @@
  */
 @mixin primary {
   // Include mixins
-  @include utilities.focusable;
+  @include helpers.focusable;
 
   // Setup tokens
   --color-text-base:    var(--color-text-link-base);
@@ -18,54 +18,41 @@
   --color-text-visited: var(--color-text-link-visited);
 
   // Setup custom properties
-  --color-text: var(--color-text-base);
+  --color:                      var(--color-text-base);
+  --transition-duration:        var(--transition-duration-promptly);
+  --transition-timing-function: var(--transition-timing-eased), var(--transition-timing-elastic);
 
   // Define rules
-  color: var(--color-text);
-  text-decoration: none;
-  text-decoration-skip-ink: auto;
-  transition: none;
+  color:                      var(--color);
+  text-decoration:            none;
+  transition-duration:        var(--transition-duration);
+  transition-property:        color, outline-offset;
+  transition-timing-function: var(--transition-timing-function);
 
   // Define pseudo-classes
   &:visited {
-    --color-text: var(--color-text-visited);
+    --color: var(--color-text-visited);
   }
 
   &:focus, &:hover, &:active {
-    --color-text: var(--color-text-active);
+    --color: var(--color-text-active);
   }
 }
 
 @mixin breakout {
-  [data-breakout] &,
-  &[data-breakout] {
-    &::after {
-      bottom: 0;
-      content: ' ';
-      display: block;
-      left: 0;
-      position: absolute;
-      right: 0;
-      top: 0;
-      z-index: 1;
-    }
+  &::after {
+    @include helpers.cover;
   }
 }
 
 @mixin inverted {
-  [data-inverted] &,
-  &[data-inverted] {
-    // Override tokens
-    --color-text-base:    var(--color-text-link-inverse-base);
-    --color-text-active:  var(--color-text-link-inverse-active);
-    --color-text-visited: var(--color-text-link-inverse-visited);
-  }
+  // Override tokens
+  --color-text-base:    var(--color-text-link-inverse-base);
+  --color-text-active:  var(--color-text-link-inverse-active);
+  --color-text-visited: var(--color-text-link-inverse-visited);
 }
 
 @mixin no-visited-state {
-  [data-no-visited-state] &:visited,
-  &:visited[data-no-visited-state] {
-    // Override properties
-    --color-text-visited: var(--color-text-base);
-  }
+  // Override properties
+  --color-text-visited: var(--color-text-base);
 }
