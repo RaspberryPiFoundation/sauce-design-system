@@ -12,10 +12,6 @@
 @forward 'scss/properties/transition-duration';
 @forward 'scss/properties/transition-timing';
 
-@forward 'brands/raspberry-pi-foundation/properties/color';
-@forward 'brands/raspberry-pi-foundation/properties/document-root';
-@forward 'brands/raspberry-pi-foundation/properties/font-size';
-
 @forward 'scss/base/document-root';
 @forward 'scss/base/buttons';
 @forward 'scss/base/code';
@@ -27,3 +23,8 @@
 @forward 'scss/base/lists';
 @forward 'scss/base/text-semantics';
 @forward 'scss/base/typography';
+
+// These will go in application styles - they're the per-brand application of the tokens
+@forward 'brands/raspberry-pi-foundation/properties/color';
+@forward 'brands/raspberry-pi-foundation/properties/document-root';
+@forward 'brands/raspberry-pi-foundation/properties/font-size';
