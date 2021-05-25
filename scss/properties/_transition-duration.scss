@@ -1,10 +1,10 @@
 @use 'scss/tokens/timing-duration';
 
 :root {
-  --time-instantly: #{time.$instantly};
+  --time-instantly:   #{time.$instantly};
   --time-immediately: #{time.$immediately};
-  --time-quickly: #{time.$quickly};
-  --time-promptly: #{time.$promptly};
-  --time-slowly: #{time.$slowly};
-  --time-paused: #{time.$paused};
+  --time-quickly:     #{time.$quickly};
+  --time-promptly:    #{time.$promptly};
+  --time-slowly:      #{time.$slowly};
+  --time-paused:      #{time.$paused};
 }

@@ -1,6 +1,8 @@
 @use 'scss/tokens/font-size';
 
 :root {
+  --font-size-base: #{font-size.$base};
+
   --font-size-u-8: #{font-size.$u-8};
   --font-size-u-7: #{font-size.$u-7};
   --font-size-u-6: #{font-size.$u-6};
@@ -9,7 +11,7 @@
   --font-size-u-3: #{font-size.$u-3};
   --font-size-u-2: #{font-size.$u-2};
   --font-size-u-1: #{font-size.$u-1};
-  --font-size-base: #{font-size.$base};
+
   --font-size-d-1: #{font-size.$d-1};
   --font-size-d-2: #{font-size.$d-2};
   --font-size-d-3: #{font-size.$d-3};

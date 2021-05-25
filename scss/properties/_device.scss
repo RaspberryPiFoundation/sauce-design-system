@@ -1,10 +1,10 @@
 @use 'scss/tokens/device';
 
 :root {
-  --device-phone-portrait: #{device.$phone-portrait};
-  --device-phone-landscape: #{device.$phone-landscape};
-  --device-tablet-portrait: #{device.$tablet-portrait};
+  --device-phone-portrait:   #{device.$phone-portrait};
+  --device-phone-landscape:  #{device.$phone-landscape};
+  --device-tablet-portrait:  #{device.$tablet-portrait};
   --device-tablet-landscape: #{device.$tablet-landscape};
-  --device-laptop: #{device.$laptop};
-  --device-desktop: #{device.$desktop};
+  --device-laptop:           #{device.$laptop};
+  --device-desktop:          #{device.$desktop};
 }
