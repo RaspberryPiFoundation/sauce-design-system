@@ -1,0 +1,49 @@
+@use 'scss/mixins/position';
+
+@mixin cover {
+  @include position.cover;
+
+  content: ' ';
+  display: block;
+  position: absolute;
+  z-index: 1;
+}
+
+@mixin focusable {
+  outline-offset: -0.1rem;
+
+  /* Provide a fallback style for browsers that don't support :focus-visible */
+  &:is(:focus, :focus-within) {
+    outline-color: var(--color-outline-primary);
+    outline-width: 0.1rem;
+    outline-offset: 0;
+  }
+
+  /* Remove the focus indicator on mouse-focus for browsers that do support :focus-visible */
+  &:is(:focus, :focus-within):not(:focus-visible) {
+    outline-offset: -0.1rem;
+  }
+
+  /* Draw a very noticeable focus style for keyboard-focus on browsers that do support :focus-visible */
+  &:is(:focus, :focus-within):focus-visible {
+    outline-width: 0.3rem;
+    outline-offset: 0.5rem;
+  }
+}
+
+@mixin inverted-background { --background-color: var(--color-background-inverted); }
+@mixin inverted-text       { --color:            var(--color-text-inverted);       }
+@mixin inverted {
+  @include inverted-background;
+  @include inverted-text;
+}
+
+@mixin visually-hidden {
+  clip:        rect(0 0 0 0) !important;
+  clip-path:   inset(100%)   !important;
+  height:      1px           !important;
+  overflow:    hidden        !important;
+  position:    absolute      !important;
+  white-space: nowrap        !important;
+  width:       1px           !important;
+}
