@@ -1,0 +1,8 @@
+@use 'scss/mixins/helpers';
+
+[data-sauce-helper~='cover']               { @include helpers.cover;               }
+[data-sauce-helper~='focusable']           { @include helpers.focusable;           }
+[data-sauce-helper~='inverted']            { @include helpers.inverted;            }
+[data-sauce-helper~='inverted-background'] { @include helpers.inverted-background; }
+[data-sauce-helper~='inverted-text']       { @include helpers.inverted-text;       }
+[data-sauce-helper~='visually-hidden']     { @include helpers.visually-hidden;     }

@@ -1,6 +1,6 @@
 @use 'scss/mixins/margin';
 
-blockquote, ol, p, ul {
+:is(blockquote, ol, p, ul):not([class]) {
   --margin-bottom: var(--spacing-2);
 
   @include margin.b(--margin-bottom);
