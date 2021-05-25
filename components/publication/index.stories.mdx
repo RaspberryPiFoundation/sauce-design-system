@@ -10,7 +10,7 @@ This component is intended to wrap rich text content from a CMS. It will attempt
 This is not intended as a drop-in solution for styling content when you are directly in control of the markup. You _could_ use it like that, but it would be better to use the correct components instead.
 
 <Story name="Vanilla">
-  <div className="sc-rp-publication">
+  <div>
     <h1>This is a h1 element</h1>
     <p>
       And now a paragraph. Oh look it's <a href="#">a link</a>, how about that.
@@ -22,11 +22,12 @@ This is not intended as a drop-in solution for styling content when you are dire
       <li>Fear of Music (1979)</li>
       <li>Remain in Light (1980)</li>
       <li>Speaking in Tongues (1983)</li>
-      <li className="size-nudge-up">Little Creatures (1985)</li>
-      <li className="size-nudge-down">True Stories (1986)</li>
+      <li>Little Creatures (1985)</li>
+      <li>True Stories (1986)</li>
       <li>Naked (1988)</li>
     </ul>
     <p>Wasn't that fun?</p>
+    <p><button>It's a Button</button></p>
     <h2>Okay now let's do a h2</h2>
     <p>
       Heck yes get a load of that. Okay what next? Let's list the tracks on the
@@ -82,11 +83,20 @@ This is not intended as a drop-in solution for styling content when you are dire
     <p>Don't worry this bit won't be about Talking Heads.</p>
     <pre>
       <code>
-        const lyrics = () => [ `Watch out, you might get what you're after`,
-        `Cool babies, strange but not a stranger`, `I'm an ordinary guy`,
-        `Burning down the house`, `Hold tight`, `Wait 'til the party's over`,
-        `Hold tight`, `We're in for nasty weather`, `There has got to be a way`,
-        `Burning down the house`, ] lyrics.map((line) => console.log(line))
+        const lyrics = () => [
+          `Watch out, you might get what you're after`,
+          `Cool babies, strange but not a stranger`,
+          `I'm an ordinary guy`,
+          `Burning down the house`,
+          `Hold tight`,
+          `Wait 'til the party's over`,
+          `Hold tight`,
+          `We're in for nasty weather`,
+          `There has got to be a way`,
+          `Burning down the house`,
+        ]
+
+        lyrics.each((line) => console.log(line))
       </code>
     </pre>
     <p>
