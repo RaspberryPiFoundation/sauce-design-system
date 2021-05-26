@@ -71,7 +71,7 @@
     "@whitespace/storybook-addon-html": "4.0.2",
     "babel-eslint": "10.1.0",
     "babel-loader": "8.2.2",
-    "browserslist": "4.16.0",
+    "browserslist": "4.16.5",
     "chromatic": "5.5.0",
     "css-loader": "5.0.1",
     "dotenv": "8.2.0",
