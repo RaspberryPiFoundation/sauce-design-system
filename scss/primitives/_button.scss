@@ -1,4 +1,4 @@
-@use 'scss/mixins/media/viewport/width';
+@use 'scss/mixins/media/viewport';
 @use 'scss/mixins/padding';
 @use 'scss/mixins/helpers';
 @use 'scss/tokens/color-greyscale';
@@ -54,7 +54,7 @@
   }
 
   // Define media-queries
-  @include width.min(600px) {
+  @include viewport.min-width(600px) {
     --width: auto;
   }
 }
