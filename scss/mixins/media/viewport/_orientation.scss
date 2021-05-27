@@ -1,5 +1,5 @@
 @use 'scss/mixins/media';
 
-@mixin landspace     { @include media.query('orientation', 'landspace')  { @content; } }
-@mixin portrait      { @include media.query('orientation', 'portrait')   { @content; } }
-@mixin query($value) { @include media.query('orientation', $value)       { @content; } }
+@mixin is($value) { @include media.query('orientation', $value)       { @content; } }
+@mixin landspace  { @include media.query('orientation', 'landspace')  { @content; } }
+@mixin portrait   { @include media.query('orientation', 'portrait')   { @content; } }

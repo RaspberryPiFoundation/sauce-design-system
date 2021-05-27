@@ -1,5 +1,5 @@
 @use 'scss/mixins/media';
 
-@mixin max($value)   { @include media.query('max-aspect-ratio', $value) { @content; } }
-@mixin min($value)   { @include media.query('min-aspect-ratio', $value) { @content; } }
-@mixin query($value) { @include media.query('aspect-ratio',     $value) { @content; } }
+@mixin is($value)  { @include media.query('aspect-ratio',     $value) { @content; } }
+@mixin max($value) { @include media.query('max-aspect-ratio', $value) { @content; } }
+@mixin min($value) { @include media.query('min-aspect-ratio', $value) { @content; } }
