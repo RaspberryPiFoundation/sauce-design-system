@@ -21,7 +21,7 @@
     "chromatic-ci-branch-test": "chromatic test --ci --exit-once-uploaded --skip '@(dependabot/**)'",
     "chromatic-ci-master-update": "chromatic test --ci --auto-accept-changes master",
     "start": "npm run storybook",
-    "test": "jest --notify --runInBand --watchAll",
+    "test": "jest --notify --runInBand --watchAll --no-cache",
     "test-ci": "jest --runInBand",
     "storybook": "start-storybook -p 6006 --no-manager-cache"
   },
@@ -31,6 +31,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.2",
     "@storybook/addon-actions": "^6.2.9",
     "@storybook/addon-essentials": "^6.2.9",
     "@storybook/addon-links": "^6.2.9",
@@ -38,6 +39,7 @@
     "@storybook/preset-scss": "^1.0.3",
     "@storybook/react": "^6.2.9",
     "@storybook/theming": "^6.2.9",
+    "babel-jest": "^26.6.3",
     "babel-loader": "^8.2.2",
     "chromatic": "5.5.0",
     "css-loader": "^5.2.6",

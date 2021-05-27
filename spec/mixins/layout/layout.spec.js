@@ -1,2 +1,2 @@
 const Spec = require('SpecHelper')
-Spec(__dirname, 'clear')
+Spec(__dirname, 'layout')

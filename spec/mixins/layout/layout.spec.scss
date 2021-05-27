@@ -1,0 +1,72 @@
+@use 'true' as *;
+@use 'scss/mixins/layout';
+@use 'scss/mixins/layout/box';
+@use 'scss/mixins/layout/center';
+@use 'scss/mixins/layout/frame';
+@use 'scss/mixins/layout/grid';
+@use 'scss/mixins/layout/stack';
+@use 'scss/mixins/layout/with-icon';
+@use 'scss/mixins/layout/with-sidebar';
+
+@include describe('.box') {
+  @include it('outputs box.layout-box') {
+    @include assert {
+      @include output { @include layout.box; }
+      @include expect { @include box.layout-box; }
+    }
+  }
+}
+
+@include describe('.center') {
+  @include it('outputs center.layout-center') {
+    @include assert {
+      @include output { @include layout.center; }
+      @include expect { @include center.layout-center; }
+    }
+  }
+}
+
+@include describe('.frame') {
+  @include it('outputs frame.layout-frame') {
+    @include assert {
+      @include output { @include layout.frame; }
+      @include expect { @include frame.layout-frame; }
+    }
+  }
+}
+
+@include describe('.grid') {
+  @include it('outputs grid.layout-grid') {
+    @include assert {
+      @include output { @include layout.grid; }
+      @include expect { @include grid.layout-grid; }
+    }
+  }
+}
+
+@include describe('.stack') {
+  @include it('outputs stack.layout-stack') {
+    @include assert {
+      @include output { @include layout.stack; }
+      @include expect { @include stack.layout-stack; }
+    }
+  }
+}
+
+@include describe('.with-icon') {
+  @include it('outputs include with-icon.layout-with-icon') {
+    @include assert {
+      @include output { @include layout.with-icon; }
+      @include expect { @include with-icon.layout-with-icon; }
+    }
+  }
+}
+
+@include describe('.with-sidebar') {
+  @include it('outputs include with-sidebar.layout-with-sidebar') {
+    @include assert {
+      @include output { @include layout.with-sidebar; }
+      @include expect { @include with-sidebar.layout-with-sidebar; }
+    }
+  }
+}

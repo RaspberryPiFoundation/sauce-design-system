@@ -1,0 +1,58 @@
+@use 'true' as *;
+@use 'scss/mixins/media/viewport';
+@use 'scss/mixins/media/viewport/height';
+@use 'scss/mixins/media/viewport/width';
+
+@include describe('.max-height') {
+  @include it('outputs height.max') {
+    @include assert {
+      @include output { @include viewport.max-height(5rem); }
+      @include expect { @include height.max(5rem); }
+    }
+  }
+}
+
+@include describe('.min-height') {
+  @include it('outputs height.min') {
+    @include assert {
+      @include output { @include viewport.min-height(5rem); }
+      @include expect { @include height.min(5rem); }
+    }
+  }
+}
+
+@include describe('.height') {
+  @include it('outputs height.is') {
+    @include assert {
+      @include output { @include viewport.height(5rem); }
+      @include expect { @include height.is(5rem); }
+    }
+  }
+}
+
+@include describe('.max-width') {
+  @include it('outputs width.max') {
+    @include assert {
+      @include output { @include viewport.max-width(5rem); }
+      @include expect { @include width.max(5rem); }
+    }
+  }
+}
+
+@include describe('.min-width') {
+  @include it('outputs width.min') {
+    @include assert {
+      @include output { @include viewport.min-width(5rem); }
+      @include expect { @include width.min(5rem); }
+    }
+  }
+}
+
+@include describe('.width') {
+  @include it('outputs width.is') {
+    @include assert {
+      @include output { @include viewport.width(5rem); }
+      @include expect { @include width.is(5rem); }
+    }
+  }
+}

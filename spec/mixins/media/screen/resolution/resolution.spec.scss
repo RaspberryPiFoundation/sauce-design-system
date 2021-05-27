@@ -2,6 +2,23 @@
 @use 'scss/mixins/media';
 @use 'scss/mixins/media/screen/resolution';
 
+@include describe('.is') {
+  @include it('calls media.query') {
+    @include assert {
+      @include output {
+        @include resolution.is(2dpi) {
+          color: rebeccapurple;
+        }
+      }
+      @include expect {
+        @include media.query('resolution', 2dpi) {
+          color: rebeccapurple;
+        }
+      }
+    }
+  }
+}
+
 @include describe('.max') {
   @include it('calls media.query') {
     @include assert {
@@ -29,23 +46,6 @@
       }
       @include expect {
         @include media.query('min-resolution', 2dpi) {
-          color: rebeccapurple;
-        }
-      }
-    }
-  }
-}
-
-@include describe('.query') {
-  @include it('calls media.query') {
-    @include assert {
-      @include output {
-        @include resolution.query(2dpi) {
-          color: rebeccapurple;
-        }
-      }
-      @include expect {
-        @include media.query('resolution', 2dpi) {
           color: rebeccapurple;
         }
       }
