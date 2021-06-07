@@ -1,6 +1,6 @@
 @use 'scss/primitives/heading';
 
-:is(h1, h2, h3, h4, h5, h6):not([class]) {
+h1, h2, h3, h4, h5, h6 {
   @include heading.primitive;
 }
 
