@@ -1,6 +1,3 @@
-// import '!sass-loader!./preview.scss'
-// import '!css-loader!sass-loader!./preview.scss'
-// import '!style-loader!css-loader!sass-loader!./preview.scss'
 import './preview.scss'
 
 export const parameters = {
@@ -11,5 +8,4 @@ export const parameters = {
       date: /Date$/,
     },
   },
-  layout: 'centered',
 }
