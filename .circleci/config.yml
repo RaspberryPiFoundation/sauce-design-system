@@ -3,14 +3,12 @@ aliases:
   - &defaults
     executor:
       name: node
-    docker:
-      - image: circleci/node:12-browsers
     working_directory: /mnt/ramdisk
 executors:
   node:
     description: Circle CI standard node docker image
     docker:
-      - image: circleci/node:12.18.2
+      - image: circleci/node:14
 jobs:
   install:
     <<: *defaults
@@ -38,25 +36,25 @@ jobs:
       - attach_workspace:
           at: .
       - run:
-          command: npm run test-ci
+          command: npm run test:ci
           name: Run Sass unit tests
-  chromatic-master-update:
+  chromatic-deploy:
     <<: *defaults
     steps:
       - checkout
       - attach_workspace:
           at: .
       - run:
-          command: npm run chromatic-ci-master-update
+          command: npm run chromatic:deploy
           name: Chromatic - accept all changes
-  chromatic-branch-test:
+  chromatic-test:
     <<: *defaults
     steps:
       - checkout
       - attach_workspace:
           at: .
       - run:
-          command: npm run chromatic-ci-branch-test
+          command: npm run chromatic:test
           name: Chromatic - report changes to chromatic
 workflows:
   version: 2.1
@@ -66,13 +64,13 @@ workflows:
       - sass-unit-test:
           requires:
             - install
-      - chromatic-branch-test:
+      - chromatic-test:
           requires:
             - install
           filters:
             branches:
               ignore: master
-      - chromatic-master-update:
+      - chromatic-deploy:
           requires:
             - install
           filters:

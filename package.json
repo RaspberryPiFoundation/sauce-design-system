@@ -16,14 +16,12 @@
     "scss"
   ],
   "scripts": {
-    "build": "build-storybook",
-    "build-storybook": "build-storybook",
-    "chromatic-ci-branch-test": "chromatic test --ci --exit-once-uploaded --skip '@(dependabot/**)'",
-    "chromatic-ci-master-update": "chromatic test --ci --auto-accept-changes master",
-    "start": "npm run storybook",
+    "build": "npm run build-storybook",
+    "chromatic:deploy": "chromatic test --ci --auto-accept-changes master",
+    "chromatic:test": "chromatic test --ci --exit-once-uploaded --skip '@(dependabot/**)'",
+    "start": "npm run start-storybook -p 6006",
     "test": "jest --notify --runInBand --watchAll --no-cache",
-    "test-ci": "jest --runInBand",
-    "storybook": "start-storybook -p 6006"
+    "test:ci": "jest --runInBand"
   },
   "dependencies": {
     "modern-css-reset": "1.4.0",
