@@ -1,0 +1,94 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import Type from './Type';
+export const Template = (args) => <Type {...args} />
+
+<Meta
+  title="Components/Type"
+  argTypes={{
+    children: {
+      name: 'Heading Content',
+      control: {
+        type: 'text'
+      }
+    },
+    className: {
+      name: 'Heading Type',
+      options: {
+        'Signpost Hero': 'signpost-hero',
+        'Hero': 'hero',
+        'Primary': 'primary',
+        'Secondary': 'secondary',
+        'Tertiary': 'tertiary',
+        'Item': 'item'
+      },
+      control: {
+        type: 'select'
+      }
+    },
+    element: {
+      name: 'Element',
+      options: {
+        'Heading Level 1': 'h1',
+        'Heading Level 2': 'h2',
+        'Heading Level 3': 'h3',
+        'Heading Level 4': 'h4',
+        'Heading Level 5': 'h5',
+        'Heading Level 6': 'h6',
+        'Paragraph': 'p'
+      },
+      control: {
+        type: 'select'
+      }
+    }
+  }}
+/>
+
+# Signpost Hero
+
+With `MDX`, we can define a story for `Checkbox` right in the middle of our
+Markdown documentation.
+
+<Canvas>
+  <Story name="Signpost Hero" args={{
+    children: 'Sauce Design System',
+    className: 'signpost-hero',
+    element: 'h1'
+  }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="Hero" args={{
+    children: 'Sauce Design System',
+    className: 'hero',
+    element: 'h1'
+  }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="Primary" args={{
+    children: 'Sauce Design System',
+    className: 'primary',
+    element: 'h2'
+  }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="Secondary" args={{
+    children: 'Sauce Design System',
+    className: 'secondary',
+    element: 'h3'
+  }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="Tertiary" args={{
+    children: 'Sauce Design System',
+    className: 'tertiary',
+    element: 'h4'
+  }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="Item" args={{
+    children: 'Sauce Design System',
+    className: 'item',
+    element: 'h3'
+  }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
