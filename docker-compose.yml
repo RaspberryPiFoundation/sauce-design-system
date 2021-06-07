@@ -1,0 +1,16 @@
+version: "2"
+services:
+  storybook:
+    command: "npm run storybook"
+    environment:
+      - NODE_ENV=production
+    expose:
+      - "6006"
+    image: "node:14"
+    ports:
+      - "6006:6006"
+    tty: true
+    user: "node"
+    volumes:
+      - ./:/home/node/app
+    working_dir: /home/node/app
