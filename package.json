@@ -16,10 +16,10 @@
     "scss"
   ],
   "scripts": {
-    "build": "npm run build-storybook",
+    "build-storybook": "build-storybook",
     "chromatic:deploy": "chromatic test --ci --auto-accept-changes master",
     "chromatic:test": "chromatic test --ci --exit-once-uploaded --skip '@(dependabot/**)'",
-    "start": "npm run start-storybook -p 6006",
+    "start": "start-storybook -p 6006",
     "test": "jest --notify --runInBand --watchAll --no-cache",
     "test:ci": "jest --runInBand"
   },
