@@ -4,11 +4,12 @@ import React from 'react'
 const Type = ({ children, className, element }) => {
   const Element = element
   return (
-    <Element className={`heading-${className}`}>{children}</Element>
+    <Element className={className}>{children}</Element>
   )
 }
 
 Type.defaultProps = {
+  className: '',
   element: 'p',
 }
 
@@ -17,8 +18,8 @@ Type.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
     PropTypes.object,
-  ]),
-  className: PropTypes.string.isRequired,
+  ]).isRequired,
+  className: PropTypes.string,
   element: PropTypes.string,
 }
 

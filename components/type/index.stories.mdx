@@ -6,35 +6,36 @@ export const Template = (args) => <Type {...args} />
   title="Components/Type"
   argTypes={{
     children: {
-      name: 'Heading Content',
+      name: 'Content',
       control: {
         type: 'text'
       }
     },
     className: {
-      name: 'Heading Type',
+      name: 'Style',
       options: {
-        'Signpost Hero': 'signpost-hero',
-        'Hero': 'hero',
-        'Primary': 'primary',
-        'Secondary': 'secondary',
-        'Tertiary': 'tertiary',
-        'Item': 'item'
+        'Base (no class attribute)': '',
+        'Heading: Signpost Hero': 'heading-signpost-hero',
+        'Heading: Hero': 'heading-hero',
+        'Heading: Primary': 'heading-primary',
+        'Heading: Secondary': 'heading-secondary',
+        'Heading: Tertiary': 'heading-tertiary',
+        'Heading: Item': 'heading-item'
       },
       control: {
         type: 'select'
       }
     },
     element: {
-      name: 'Element',
+      name: 'Element - does not alter style when class attribute is present',
       options: {
+        'Paragraph': 'p',
         'Heading Level 1': 'h1',
         'Heading Level 2': 'h2',
         'Heading Level 3': 'h3',
         'Heading Level 4': 'h4',
         'Heading Level 5': 'h5',
-        'Heading Level 6': 'h6',
-        'Paragraph': 'p'
+        'Heading Level 6': 'h6'
       },
       control: {
         type: 'select'
@@ -49,44 +50,51 @@ With `MDX`, we can define a story for `Checkbox` right in the middle of our
 Markdown documentation.
 
 <Canvas>
-  <Story name="Signpost Hero" args={{
+  <Story name="Base Type" args={{
     children: 'Sauce Design System',
-    className: 'signpost-hero',
+    className: '',
+    element: 'p'
+  }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="Heading: Signpost Hero" args={{
+    children: 'Sauce Design System',
+    className: 'heading-signpost-hero',
     element: 'h1'
   }}>
     {Template.bind({})}
   </Story>
-  <Story name="Hero" args={{
+  <Story name="Heading: Hero" args={{
     children: 'Sauce Design System',
-    className: 'hero',
+    className: 'heading-hero',
     element: 'h1'
   }}>
     {Template.bind({})}
   </Story>
-  <Story name="Primary" args={{
+  <Story name="Heading: Primary" args={{
     children: 'Sauce Design System',
-    className: 'primary',
+    className: 'heading-primary',
     element: 'h2'
   }}>
     {Template.bind({})}
   </Story>
-  <Story name="Secondary" args={{
+  <Story name="Heading: Secondary" args={{
     children: 'Sauce Design System',
-    className: 'secondary',
+    className: 'heading-secondary',
     element: 'h3'
   }}>
     {Template.bind({})}
   </Story>
-  <Story name="Tertiary" args={{
+  <Story name="Heading: Tertiary" args={{
     children: 'Sauce Design System',
-    className: 'tertiary',
+    className: 'heading-tertiary',
     element: 'h4'
   }}>
     {Template.bind({})}
   </Story>
-  <Story name="Item" args={{
+  <Story name="Heading: Item" args={{
     children: 'Sauce Design System',
-    className: 'item',
+    className: 'heading-item',
     element: 'h3'
   }}>
     {Template.bind({})}
