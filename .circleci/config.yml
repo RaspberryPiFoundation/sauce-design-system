@@ -17,14 +17,15 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - sauce-packages-{{ checksum "package-lock.json" }}
+            - sauce-dependencies-{{ checksum "package-lock.json" }}
+            - sauce-dependencies-
       - run:
           command: npm ci
           name: Install Node dependencies
       - save_cache:
           paths:
             - ~/.npm
-          key: sauce-packages-{{ checksum "package-lock.json" }}
+          key: sauce-dependencies-{{ checksum "package-lock.json" }}
       - persist_to_workspace:
           root: .
           paths:
