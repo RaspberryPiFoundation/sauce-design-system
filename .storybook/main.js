@@ -1,11 +1,11 @@
 module.exports = {
-  "addons": [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "@storybook/preset-scss"
+  addons: [
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    '@storybook/preset-scss'
   ],
-  "stories": [
-    "../docs/**/*.stories.mdx",
-    "../components/**/*.stories.mdx"
+  stories: [
+    '../docs/**/*.stories.mdx',
+    '../components/**/*.stories.mdx'
   ]
 }
