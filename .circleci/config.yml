@@ -20,7 +20,7 @@ jobs:
             - sauce-dependencies-{{ checksum "package-lock.json" }}
             - sauce-dependencies-
       - run:
-          command: npm ci
+          command: npm install
           name: Install Node dependencies
       - save_cache:
           paths:
