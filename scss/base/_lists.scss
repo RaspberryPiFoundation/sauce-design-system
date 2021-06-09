@@ -7,7 +7,7 @@ ul:not([class]) {
   --padding-left: var(--spacing-2);
 
   @include block-type.primitive;
-  @include padding.left(--padding-left);
+  @include padding.l(--padding-left);
 
   li:not([class]) {
     ol:not([class]),

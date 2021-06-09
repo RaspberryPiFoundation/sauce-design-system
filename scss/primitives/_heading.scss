@@ -8,8 +8,8 @@
   --line-height:   var(--line-height-regular);
   --margin-bottom: var(--spacing-1);
 
-  @include margin.bottom(--margin-bottom);
-  @include margin.top(none);
+  @include margin.b(--margin-bottom);
+  @include margin.t(none);
 
   color:       var(--color);
   font-family: var(--font-family);
