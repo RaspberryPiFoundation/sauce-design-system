@@ -6,10 +6,10 @@
 @mixin inline($value) { @include prop.apply('inset-inline', $value, ['right', 'left']);   }
 @mixin block($value)  { @include prop.apply('inset-block',  $value, ['top',   'bottom']); }
 
-@mixin top($value) { @include prop.apply('inset-block-start',   $value, 'top');    }
-@mixin right($value) { @include prop.apply('inset-inline-end',  $value, 'right');  }
-@mixin bottom($value) { @include prop.apply('inset-block-end',  $value, 'bottom'); }
-@mixin left($value) { @include prop.apply('inset-inline-start', $value, 'left');   }
+@mixin top($value)    { @include prop.apply('inset-block-start',  $value, 'top');    }
+@mixin right($value)  { @include prop.apply('inset-inline-end',   $value, 'right');  }
+@mixin bottom($value) { @include prop.apply('inset-block-end',    $value, 'bottom'); }
+@mixin left($value)   { @include prop.apply('inset-inline-start', $value, 'left');   }
 
 @mixin t($value) { @include top($value);    }
 @mixin r($value) { @include right($value);  }

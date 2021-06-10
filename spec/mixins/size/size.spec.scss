@@ -12,24 +12,6 @@
   }
 }
 
-@include describe('.max-height') {
-  @include it('outputs height.max') {
-    @include assert {
-      @include output { @include size.max-height(5rem); }
-      @include expect { @include height.max(5rem); }
-    }
-  }
-}
-
-@include describe('.min-height') {
-  @include it('outputs height.min') {
-    @include assert {
-      @include output { @include size.min-height(5rem); }
-      @include expect { @include height.min(5rem); }
-    }
-  }
-}
-
 @include describe('.width') {
   @include it('outputs width.set') {
     @include assert {
@@ -39,11 +21,29 @@
   }
 }
 
+@include describe('.max-height') {
+  @include it('outputs height.max') {
+    @include assert {
+      @include output { @include size.max-height(5rem); }
+      @include expect { @include height.max(5rem); }
+    }
+  }
+}
+
 @include describe('.max-width') {
   @include it('outputs width.max') {
     @include assert {
       @include output { @include size.max-width(5rem); }
       @include expect { @include width.max(5rem); }
+    }
+  }
+}
+
+@include describe('.min-height') {
+  @include it('outputs height.min') {
+    @include assert {
+      @include output { @include size.min-height(5rem); }
+      @include expect { @include height.min(5rem); }
     }
   }
 }

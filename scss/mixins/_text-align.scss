@@ -8,5 +8,5 @@
   text-align: end;
 }
 
-@mixin left { @include start; }
-@mixin right { @include end; }
+@mixin left  { @include start; }
+@mixin right { @include end;   }
