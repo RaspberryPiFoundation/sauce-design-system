@@ -1,23 +1,26 @@
 @use 'scss/tokens/spacing';
 
 :root {
-  --spacing-ant: #{spacing.$ant};
-  --spacing-bee: #{spacing.$bee};
-  --spacing-chaffinch: #{spacing.$chaffinch};
-  --spacing-dog: #{spacing.$dog};
-  --spacing-eagle: #{spacing.$eagle};
-  --spacing-flamingo: #{spacing.$flamingo};
-  --spacing-grizzly: #{spacing.$grizzly};
-  --spacing-hippo: #{spacing.$hippo};
-  --spacing-iguanadon: #{spacing.$iguanadon};
+  --spacing-multiplier: #{spacing.$multiplier};
 
-  --spacing-1: var(--spacing-ant);
-  --spacing-2: var(--spacing-bee);
-  --spacing-3: var(--spacing-chaffinch);
-  --spacing-4: var(--spacing-dog);
-  --spacing-5: var(--spacing-eagle);
-  --spacing-6: var(--spacing-flamingo);
-  --spacing-7: var(--spacing-grizzly);
-  --spacing-8: var(--spacing-hippo);
-  --spacing-9: var(--spacing-iguanadon);
+  --spacing-0: 0;
+  --spacing-1: #{spacing.$size-1};
+  --spacing-2: #{spacing.$size-2};
+  --spacing-3: #{spacing.$size-3};
+  --spacing-4: #{spacing.$size-4};
+  --spacing-5: #{spacing.$size-5};
+  --spacing-6: #{spacing.$size-6};
+  --spacing-7: #{spacing.$size-7};
+  --spacing-8: #{spacing.$size-8};
+  --spacing-9: #{spacing.$size-9};
+
+  --spacing-ant:       var(--spacing-1);
+  --spacing-bee:       var(--spacing-2);
+  --spacing-chaffinch: var(--spacing-3);
+  --spacing-dog:       var(--spacing-4);
+  --spacing-eagle:     var(--spacing-5);
+  --spacing-flamingo:  var(--spacing-6);
+  --spacing-grizzly:   var(--spacing-7);
+  --spacing-hippo:     var(--spacing-8);
+  --spacing-iguanadon: var(--spacing-9);
 }

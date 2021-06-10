@@ -1,11 +1,11 @@
 $multiplier: 0.625;
 
-$ant:       #{1rem * $multiplier};
-$bee:       #{2rem * $multiplier};
-$chaffinch: #{3rem * $multiplier};
-$dog:       #{4rem * $multiplier};
-$eagle:     #{5rem * $multiplier};
-$flamingo:  #{6rem * $multiplier};
-$grizzly:   #{7rem * $multiplier};
-$hippo:     #{8rem * $multiplier};
-$iguanadon: #{9rem * $multiplier};
+$size-1: #{1rem * $multiplier}; // 0.625rem
+$size-2: #{2rem * $multiplier}; // 1.25rem
+$size-3: #{3rem * $multiplier}; // 1.875rem
+$size-4: #{4rem * $multiplier}; // 2.5rem
+$size-5: #{5rem * $multiplier}; // 3.125rem
+$size-6: #{6rem * $multiplier}; // 3.75rem
+$size-7: #{7rem * $multiplier}; // 4.375rem
+$size-8: #{8rem * $multiplier}; // 5rem
+$size-9: #{9rem * $multiplier}; // 5.625rem
