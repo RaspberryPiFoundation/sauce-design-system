@@ -4,11 +4,6 @@ h1, h2, h3, h4, h5, h6 {
   @include heading.primitive;
 }
 
-h1:not([class]) { @include heading.primary;   }
-h2:not([class]) { @include heading.secondary; }
-h3:not([class]) { @include heading.tertiary;  }
-h4:not([class]) { @include heading.item;      }
-
 .heading-signpost-hero { @include heading.signpost-hero; }
 .heading-hero          { @include heading.hero;          }
 .heading-primary       { @include heading.primary;       }
