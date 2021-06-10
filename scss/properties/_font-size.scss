@@ -1,7 +1,14 @@
 @use 'scss/tokens/font-size';
 
+/**
+ * Based on a scale of 1.2
+ * https://www.modularscale.com/?16&px&1.2
+ * Each step up:   (previous-step) * 1.2
+ * Each step down: (previous-step) / 1.2
+ */
 :root {
-  --font-size-base: #{font-size.$base};
+  --font-size-base:  #{font-size.$base};
+  --font-size-ratio: #{font-size.$ratio};
 
   --font-size-u-8: #{font-size.$u-8};
   --font-size-u-7: #{font-size.$u-7};
