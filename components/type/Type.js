@@ -3,13 +3,16 @@ import React from 'react'
 
 const Type = ({ children, className, element }) => {
   const Element = element
-  return (
-    <Element className={className}>{children}</Element>
-  )
+
+  if (className) {
+    return (<Element className={className}>{children}</Element>)
+  }
+
+  return (<Element>{children}</Element>)
 }
 
 Type.defaultProps = {
-  className: '',
+  className: false,
   element: 'p',
 }
 
