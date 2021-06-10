@@ -8,7 +8,7 @@ executors:
   node:
     description: Circle CI standard node docker image
     docker:
-      - image: circleci/node:14
+      - image: circleci/node:12
 jobs:
   install:
     <<: *defaults
