@@ -6,7 +6,7 @@ services:
       - NODE_ENV=production
     expose:
       - "6006"
-    image: "node:14"
+    image: "node:12"
     ports:
       - "6006:6006"
     tty: true
