@@ -9,8 +9,8 @@
 @use 'scss/mixins/_position.scss';
 
 @mixin layout-frame {
-  --frame-height: 9;  // aspect-ratio "numerator"
-  --frame-width:  16; // aspect-ratio "denominator"
+  --frame-height: 9;
+  --frame-width:  16;
 
   padding-bottom: calc(var(--frame-height) / var(--frame-width) * 100%);
   position: relative;
