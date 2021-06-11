@@ -28,6 +28,7 @@
 
 // Sub-page Hero
 @mixin hero {
+  --color:         var(--color-text-heading-hero);
   --font-size:     var(--font-size-u-6);
   --line-height:   var(--line-height-cosy);
   --margin-bottom: var(--spacing-2);
