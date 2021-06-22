@@ -17,11 +17,10 @@
     "scss"
   ],
   "scripts": {
-    "build": "NODE_ENV=production npm-run-all -s clean build:gulp build:fractal",
+    "build": "npm-run-all -s build:gulp build:fractal",
     "build:fractal": "fractal build",
     "build:gulp": "gulp build",
     "ci:test": "jest --runInBand",
-    "clean": "rm -rf ./dist",
     "serve": "gulp serve",
     "start": "npm-run-all -p start:*",
     "start:fractal": "fractal start",
