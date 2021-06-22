@@ -26,6 +26,7 @@ sauce.web.set('builder.ext', '.html')
 sauce.web.set('builder.urls.ext', null)
 sauce.web.set('server.sync', true)
 sauce.web.set('server.port', 31415)
+sauce.web.set('static.mount', 'assets')
 sauce.web.set('static.path', `${__dirname}/public`)
 sauce.web.theme(sauceTheme)
 
