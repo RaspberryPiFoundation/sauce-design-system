@@ -2,15 +2,15 @@ version: 2.1
 orbs:
   node: circleci/node@4.5.1
 jobs:
-  test:
+  sass-tests:
     docker:
       - image: 'cimg/node:lts'
     steps:
       - checkout
       - node/install-packages
-      - node/test:
-          run-command: jest --runInBand
+      - run:
+          command: npm test
 workflows:
   sass-mixin-tests:
     jobs:
-      - test
+      - sass-tests
