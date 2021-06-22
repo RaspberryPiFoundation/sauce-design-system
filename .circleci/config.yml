@@ -1,49 +1,16 @@
 version: 2.1
-aliases:
-  - &defaults
-    executor:
-      name: node
-    working_directory: /mnt/ramdisk
-executors:
-  node:
-    description: Circle CI standard node docker image
-    docker:
-      - image: circleci/node:14
+orbs:
+  node: circleci/node@4.5.1
 jobs:
-  install:
-    <<: *defaults
-    description: Load and cache node modules, restoring from cache if available
+  test:
+    docker:
+      - image: 'cimg/node:14'
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - sauce-dependencies-{{ checksum "package-lock.json" }}
-            - sauce-dependencies-
-      - run:
-          command: npm install
-          name: Install Node dependencies
-      - save_cache:
-          paths:
-            - ~/.npm
-          key: sauce-dependencies-{{ checksum "package-lock.json" }}
-      - persist_to_workspace:
-          root: .
-          paths:
-            - node_modules
-  sass-unit-test:
-    <<: *defaults
-    steps:
-      - checkout
-      - attach_workspace:
-          at: .
+      - node/install
       - run:
           command: npm run ci:test
-          name: Run Sass unit tests
 workflows:
-  version: 2.1
-  tests:
+  sass-mixin-tests:
     jobs:
-      - install
-      - sass-unit-test:
-          requires:
-            - install
+      - test
