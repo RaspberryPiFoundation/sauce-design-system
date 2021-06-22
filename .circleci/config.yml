@@ -8,7 +8,7 @@ executors:
   node:
     description: Circle CI standard node docker image
     docker:
-      - image: circleci/node:12
+      - image: circleci/node:14
 jobs:
   install:
     <<: *defaults
@@ -37,26 +37,8 @@ jobs:
       - attach_workspace:
           at: .
       - run:
-          command: npm run test:ci
+          command: npm run ci:test
           name: Run Sass unit tests
-  chromatic-deploy:
-    <<: *defaults
-    steps:
-      - checkout
-      - attach_workspace:
-          at: .
-      - run:
-          command: npm run chromatic:deploy
-          name: Chromatic - accept all changes
-  chromatic-test:
-    <<: *defaults
-    steps:
-      - checkout
-      - attach_workspace:
-          at: .
-      - run:
-          command: npm run chromatic:test
-          name: Chromatic - report changes to chromatic
 workflows:
   version: 2.1
   tests:
@@ -65,15 +47,3 @@ workflows:
       - sass-unit-test:
           requires:
             - install
-      - chromatic-test:
-          requires:
-            - install
-          filters:
-            branches:
-              ignore: main
-      - chromatic-deploy:
-          requires:
-            - install
-          filters:
-            branches:
-              only: main
