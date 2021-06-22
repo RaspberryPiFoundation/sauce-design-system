@@ -6,7 +6,6 @@ public/*.map
 # Directories
 dist
 node_modules
-storybook-static
 
 # Local Netlify folder
 .netlify

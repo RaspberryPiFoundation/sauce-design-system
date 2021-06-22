@@ -8,15 +8,17 @@ module.exports = {
   notify: true,
   testEnvironment: 'node',
   testPathIgnorePatterns: [
-    '.cache',
     '.circleci',
     '.github',
-    '.storybook',
+    '.vscode',
     'brands',
     'components',
+    'dist',
     'docs',
     'node_modules',
+    'public',
     'scss',
+    'theme',
   ],
-  verbose: true
+  verbose: true,
 }
