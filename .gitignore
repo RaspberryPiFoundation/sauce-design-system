@@ -1,7 +1,12 @@
 # Files
 .DS_Store
-build-storybook.log
+public/*.css
+public/*.map
 
 # Directories
+dist
 node_modules
 storybook-static
+
+# Local Netlify folder
+.netlify
