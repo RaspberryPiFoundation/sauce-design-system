@@ -18,6 +18,7 @@
   ],
   "scripts": {
     "build": "npm-run-all -s build:gulp build:fractal",
+    "build:debug": "npm-run-all -s build serve",
     "build:fractal": "fractal build",
     "build:gulp": "gulp build",
     "ci:test": "jest --runInBand",
