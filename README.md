@@ -12,7 +12,7 @@ This site uses [Fractal](https://fractal.build) to create a documentation site f
 
 ### Requirements
 
-- [NodeJS](https://nodejs.org/) - any recent version will do
+- [NodeJS](https://nodejs.org/) - any [supported LTS version](https://github.com/nodejs/Release)
 - [Netlify CLI](https://docs.netlify.com/cli/get-started/#installation) - be sure to `netlify login` after installation
 
 ### Setup instructions
