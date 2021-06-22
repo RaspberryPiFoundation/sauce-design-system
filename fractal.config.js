@@ -22,8 +22,6 @@ sauce.docs.set('indexLabel', 'Home')
 sauce.docs.set('path', `${__dirname}/docs`)
 
 sauce.web.set('builder.dest', `${__dirname}/dist`)
-sauce.web.set('builder.ext', '.html')
-sauce.web.set('builder.urls.ext', null)
 sauce.web.set('server.sync', true)
 sauce.web.set('server.port', 31415)
 sauce.web.set('static.mount', 'assets')
