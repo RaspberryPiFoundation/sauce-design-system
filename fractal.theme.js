@@ -29,6 +29,6 @@ const sauceTheme = mandelbrot({
   },
 })
 sauceTheme.addLoadPath(`${__dirname}/theme/views`)
-// sauceTheme.addStatic(`${__dirname}/theme/assets`)
+sauceTheme.addStatic(`${__dirname}/theme/assets`)
 
 module.exports = sauceTheme
