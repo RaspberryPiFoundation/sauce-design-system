@@ -41,6 +41,16 @@ The development server watches for changes to your docs and Sass files, so reloa
 
 While editing Sass files, your Terminal application will show any output from the compilation of styles. This may include errors, warnings, and debug information from the files that power the underlying architecture of the pattern library. Keep it visible and pay attention to anything it tells you.
 
+### Testing the build target locally
+
+To run the output of the `npm build` command locally, run the following command:
+
+```sh
+npm run build:debug
+```
+
+This will compile Sauce's styles, build fractal, and start a local Web server at http://localhost:8000
+
 ## Consuming this package locally
 
 You may find yourself in this scenario:
