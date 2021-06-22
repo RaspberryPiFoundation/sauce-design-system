@@ -7,7 +7,8 @@ jobs:
       - image: 'cimg/node:lts'
     steps:
       - checkout
-      - node/install
+      - node/install:
+          lts: true
       - run:
           command: npm run ci:test
 workflows:
