@@ -21,7 +21,6 @@
     "build:debug": "npm-run-all -s build serve",
     "build:fractal": "fractal build",
     "build:gulp": "gulp build",
-    "ci:test": "jest --runInBand",
     "serve": "gulp serve",
     "start": "npm-run-all -p start:*",
     "start:fractal": "fractal start",
