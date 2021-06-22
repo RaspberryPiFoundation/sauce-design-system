@@ -1,14 +1,12 @@
-import { Meta } from '@storybook/addon-docs/blocks'
-
-<Meta title="Styles/Typography" />
-
-# Typography
+---
+title: Typography
+---
 
 ## Font Size
 
 Sauce’s font sizes are based on a [modular typographic scale](https://www.modularscale.com/?16&px&1.2), calculated against a ratio of `1.2`. They are defined as CSS custom properties on the document’s `:root` element, and are available across your entire application without importing any Sass mixins.
 
-> If you’re looking for `skateboard`, `scooter`, `car` etc, they've gone. Sorry! We were incorrectly using them as if they represented *Type Components* instead of just *font-sizes*. They weren't doing the job correctly because a Type Component should also contain styles for the `color`, `font-weight`, `line-height`, `margin`, etc. A new collection of Type Components (powered by these `font-size` values) have been created as a replacement.
+> If you’re looking for `skateboard`, `scooter`, `car` etc, they've gone. Sorry! We were incorrectly using them as if they represented _Type Components_ instead of just _font-sizes_. They weren't doing the job correctly because a Type Component should also contain styles for the `color`, `font-weight`, `line-height`, `margin`, etc. A new collection of Type Components (powered by these `font-size` values) have been created as a replacement.
 
 | Property               | Relative Size | `1em == 16px` |
 | ---------------------- | ------------- | ------------- |
@@ -25,7 +23,7 @@ Sauce’s font sizes are based on a [modular typographic scale](https://www.modu
 | `--font-size-d-2`      | `0.694rem`    | `11.11px`     |
 | `--font-size-d-3`      | `0.579rem`    | `9.26px`      |
 
-The "base size" is equal to `1rem` (as defined on the `html` element). Starting from this base size, each step *up* the scale is equal to `[current step] * 1.2`, and each step *down* is `[current step] / 1.2`. For example, where `base = 1`:
+The "base size" is equal to `1rem` (as defined on the `html` element). Starting from this base size, each step _up_ the scale is equal to `[current step] * 1.2`, and each step _down_ is `[current step] / 1.2`. For example, where `base = 1`:
 
 ```
 up_2   = up_1   * 1.2
@@ -53,9 +51,9 @@ A clamp, consists of three values: `min`, `ideal`, and `max`. It will always try
 
 The `vmin` unit represents the smaller of the two viewport axes. In a portrait viewport this will be the `x` axis, and — in portrait — the `y`. Therefore, the `clamp` will attempt to size the `html` element’s `font-size` to 3% of whichever axis is smaller.
 
-The `1em` and `1.25em` values represent the *minimum* and *maximum* values that the clamp will output, so in the case that `3vmin` is equal to greater than `1.25em`, the clamp will return `1.25em`.
+The `1em` and `1.25em` values represent the _minimum_ and _maximum_ values that the clamp will output, so in the case that `3vmin` is equal to greater than `1.25em`, the clamp will return `1.25em`.
 
-Taking this approach means that for the first time we have effortlessly scalable font sizing on the viewport’s width *and* height, instead of just applying `min-width` media queries to handle resized text. This is particularly useful on phones and smaller laptops in landscape orientation.
+Taking this approach means that for the first time we have effortlessly scalable font sizing on the viewport’s width _and_ height, instead of just applying `min-width` media queries to handle resized text. This is particularly useful on phones and smaller laptops in landscape orientation.
 
 A user who has zoomed their browser (or provided their own default browser stylesheet) will still see our font-sizes calculated as relative values for their preferences, which helps us continue to deliver accessible type by default.
 
@@ -65,10 +63,22 @@ Include this in your application `<head>`.
 
 ```html
 <link href="https://fonts.gstatic.com" crossorigin="true" rel="preconnect" />
-<link as="style" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&amp;family=Roboto+Slab:wght@400;700&amp;family=Space+Mono&amp;display=swap" rel="preload" />
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&amp;family=Roboto+Slab:wght@400;700&amp;family=Space+Mono&amp;display=swap" media="print" onload="this.media=&quot;all&quot;" rel="stylesheet" />
+<link
+  as="style"
+  href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&amp;family=Roboto+Slab:wght@400;700&amp;family=Space+Mono&amp;display=swap"
+  rel="preload"
+/>
+<link
+  href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&amp;family=Roboto+Slab:wght@400;700&amp;family=Space+Mono&amp;display=swap"
+  media="print"
+  onload='this.media="all"'
+  rel="stylesheet"
+/>
 <noscript>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&amp;family=Roboto+Slab:wght@400;700&amp;family=Space+Mono&amp;display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&amp;family=Roboto+Slab:wght@400;700&amp;family=Space+Mono&amp;display=swap"
+    rel="stylesheet"
+  />
 </noscript>
 ```
 

@@ -1,12 +1,10 @@
-import { Meta } from '@storybook/addon-docs/blocks'
-
-<Meta title="Styles/Spacing" />
-
-# Spacing
+---
+title: Spacing
+---
 
 Sauce’s spacing sizes are calculated in `rem` units, which in turn means that they are sized relative to the calculated value of `font-size` on the `html` element. Before reading this document it’s important that you understand how `1rem` is calculated, so make sure you’ve read `Styles / Typography` before continuing here!
 
-----
+---
 
 Now that we understand how `1rem` is calculated, we can now talk about how the spacing values are calculated in turn.
 
@@ -14,17 +12,17 @@ In a previous version of Sauce, we had a set of sizing units named after animals
 
 Here are the values:
 
-| Property              | Value      | Alias                 |
-| --------------------- | ---------- | --------------------- |
-| `--spacing-1`         | `0.625rem` | `--spacing-ant`       |
-| `--spacing-2`         | `1.25rem`  | `--spacing-bee`       |
-| `--spacing-3`         | `1.875rem` | `--spacing-chaffinch` |
-| `--spacing-4`         | `2.5rem`   | `--spacing-dog`       |
-| `--spacing-5`         | `3.125rem` | `--spacing-eagle`     |
-| `--spacing-6`         | `3.75rem`  | `--spacing-flamingo`  |
-| `--spacing-7`         | `4.375rem` | `--spacing-grizzly`   |
-| `--spacing-8`         | `5rem`     | `--spacing-hippo`     |
-| `--spacing-9`         | `5.625rem` | `--spacing-iguanadon` |
+| Property      | Value      | Alias                 |
+| ------------- | ---------- | --------------------- |
+| `--spacing-1` | `0.625rem` | `--spacing-ant`       |
+| `--spacing-2` | `1.25rem`  | `--spacing-bee`       |
+| `--spacing-3` | `1.875rem` | `--spacing-chaffinch` |
+| `--spacing-4` | `2.5rem`   | `--spacing-dog`       |
+| `--spacing-5` | `3.125rem` | `--spacing-eagle`     |
+| `--spacing-6` | `3.75rem`  | `--spacing-flamingo`  |
+| `--spacing-7` | `4.375rem` | `--spacing-grizzly`   |
+| `--spacing-8` | `5rem`     | `--spacing-hippo`     |
+| `--spacing-9` | `5.625rem` | `--spacing-iguanadon` |
 
 The rule of thumb is `spacing number * 0.625`. So for example, `spacing-3` is `3 * 0.625 = 1.875rem`. This multiplier-based system is in place to avoid layouts altering too drastically with the new spacing system applied.
 
@@ -40,7 +38,7 @@ Now that we have built responsive `font-size` scaling into the document root, we
 
 The biggest advantage here is that with mobile-first development, our interfaces will fluidly scale at the same rate as the viewport size grows (on either axis). This also means fewer `@media` queries, and far less unused CSS being sent to the browser. It also helps solve those awkward "inbetween" viewport sizes, because the viewport will automatically scale everything at the same rate.
 
-When an interface starts to look broken, *then* we can introduce a `@media` query to address that specific layout issue, rather than attempting to deliver a few pre-designed "breakpoints". We can address responsive layout issues in an individual capacity, and in the browser too!
+When an interface starts to look broken, _then_ we can introduce a `@media` query to address that specific layout issue, rather than attempting to deliver a few pre-designed "breakpoints". We can address responsive layout issues in an individual capacity, and in the browser too!
 
 ## Property names
 

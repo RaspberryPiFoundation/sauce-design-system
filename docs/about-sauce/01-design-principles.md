@@ -1,8 +1,6 @@
-import { Meta } from '@storybook/addon-docs/blocks'
-
-<Meta title="Design Principles" />
-
-# Design Principles
+---
+title: Design Principles
+---
 
 There are three:
 
