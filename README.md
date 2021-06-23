@@ -4,6 +4,8 @@
 
 https://sauce.raspberrypi.org/
 
+**This README documents the setup procedure for development of Sauce itself, it does *not* document the process through which Sauce is consumed in an application. See the [Installation](https://sauce.raspberrypi.org/docs/get-started/installation) guide on the Sauce documentaton site.**
+
 ## Architecture Overview
 
 This site uses [Fractal](https://fractal.build) to create a documentation site for the Sauce Design System. It contains technical and non-technical documentation, and holds the [Sass](https://sass-lang.com/) files that make up the Pattern Library for us in our applications.
@@ -53,13 +55,15 @@ This will compile Sauce's styles, build fractal, and start a local Web server at
 
 ## Consuming this package locally
 
+**HERE BE MONSTERS** - we need to look at this section again to make sure it's accurate.
+
 You may find yourself in this scenario:
 
 `As a developer I want to test changes to Sauce components in the local development environment of [application].`
 
 In order to do so, your application must meet the requirements as detailed in the "For Developers / Getting Started" documentation. The following points are essential:
 
-- Your application _must_ run on the same version of NodeJS as Sauce (currently 12.18.2)
+- Your application _must_ run on the same version of NodeJS as Sauce
 - Your Node dependencies _should_ be installed through `npm`. If this isn't possible then this should still work for Yarn.
 
 If those two points are satisfied, and you're able to include Sauce in your application as the "For Developers / Getting Started" documentation, you're ready to test a local copy of Sauce.
