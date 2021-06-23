@@ -1,6 +1,7 @@
 {
   "private": true,
   "name": "@rpf/sauce",
+  "version": "1.0.0-beta.2",
   "description": "The Raspberry Pi Foundation’s Digital Design System",
   "license": "MIT",
   "author": "The Raspberry Pi Foundation (https://www.raspberrypi.org)",
@@ -10,7 +11,6 @@
   "homepage": "https://sauce.raspberrypi.org",
   "repository": "github:RaspberryPiFoundation/sauce-design-system",
   "bugs": "https://github.com/RaspberryPiFoundation/sauce-design-system/issues",
-  "version": "1.0.0-beta.2",
   "main": "scss/sauce.scss",
   "files": [
     "brands",
@@ -61,7 +61,6 @@
     "stylelint-order": "4.1.0",
     "stylelint-scss": "3.19.0"
   },
-  "keywords": [],
   "engines": {
     "node": "^14.0.0",
     "yarn": "^2.4.0"
