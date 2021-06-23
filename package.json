@@ -62,6 +62,10 @@
     "stylelint-scss": "3.19.0"
   },
   "keywords": [],
+  "engines": {
+    "node": "^14.0.0",
+    "yarn": "^2.4.0"
+  },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   }
