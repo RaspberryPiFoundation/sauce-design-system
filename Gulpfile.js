@@ -8,7 +8,6 @@ const rename = require('gulp-rename')
 const cssnano = require('cssnano')
 const sass = require('gulp-dart-sass')
 const sourcemaps = require('gulp-sourcemaps')
-const webserver = require('gulp-webserver')
 
 const pkg = require('./package.json')
 
@@ -41,14 +40,9 @@ const build = () => {
     .pipe(debug())
 }
 
-const serve = () => {
-  return src('dist').pipe(webserver())
-}
-
 const start = () => {
   return watch('./**/*.scss').on('change', build)
 }
 
 task('build', build)
-task('serve', serve)
 task('start', series(build, start))
