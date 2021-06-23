@@ -14,7 +14,12 @@
   "main": "scss/sauce.scss",
   "files": [
     "brands",
-    "scss"
+    "components",
+    "docs",
+    "public",
+    "scss",
+    "spec",
+    "theme"
   ],
   "scripts": {
     "build": "npm-run-all -s build:fractal build:gulp",
@@ -22,8 +27,8 @@
     "build:fractal": "fractal build",
     "build:gulp": "gulp build",
     "ci:test": "jest --runInBand",
-    "serve": "gulp serve",
-    "start": "npm-run-all -p start:*",
+    "serve": "http-server ./dist --brotli --gzip",
+    "start": "npm-run-all -p start:gulp start:fractal",
     "start:fractal": "fractal start",
     "start:gulp": "gulp start",
     "test": "jest --notify --runInBand --watchAll --no-cache"
@@ -46,7 +51,7 @@
     "gulp-prepend": "0.3.0",
     "gulp-rename": "2.0.0",
     "gulp-sourcemaps": "3.0.0",
-    "gulp-webserver": "0.9.1",
+    "http-server": "^0.12.3",
     "jest": "27.0.5",
     "modern-css-reset": "1.4.0",
     "npm-run-all": "4.1.5",
@@ -63,7 +68,7 @@
   },
   "engines": {
     "node": "^14.0.0",
-    "yarn": "^2.4.0"
+    "npm": "^7.0.0"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
