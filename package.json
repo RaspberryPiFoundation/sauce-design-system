@@ -20,7 +20,7 @@
     "build-storybook": "build-storybook",
     "chromatic:deploy": "chromatic test --ci --auto-accept-changes master",
     "chromatic:test": "chromatic test --ci --exit-once-uploaded --skip '@(dependabot/**)'",
-    "start": "start-storybook --ci --port 54321 --quiet",
+    "start": "start-storybook --ci --port 54321 --quiet --no-manager-cache",
     "test": "jest --notify --runInBand --watchAll --no-cache",
     "test:ci": "jest --runInBand"
   },
