@@ -1,0 +1,4 @@
+@use 'scss/mixins/media';
+
+@mixin any($value)     { @include media.query('any-hover', $value) { @content; } }
+@mixin primary($value) { @include media.query('hover',     $value) { @content; } }

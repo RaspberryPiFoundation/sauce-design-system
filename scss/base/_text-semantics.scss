@@ -1,0 +1,32 @@
+abbr {
+  text-decoration: underline dotted;
+}
+
+b, strong {
+  font-weight: var(--font-weight-bold);
+}
+
+cite, em, i {
+  font-style: italic;
+}
+
+kbd, samp {
+  font-family: var(--font-family-monospace);
+}
+
+s {
+  text-decoration: line-through;
+}
+
+sub, sup {
+  font-size: 80%;
+}
+
+u {
+  text-decoration: underline;
+}
+
+var {
+  font-style:  italic;
+  font-weight: var(--font-weight-bold);
+}

@@ -1,9 +1,0 @@
-@use 'src/mixins/margin';
-@use 'src/mixins/padding';
-@use 'src/primitives/type';
-
-ol {
-  @include type.primitive;
-  @include margin.b('bee');
-  @include padding.l('bee');
-}

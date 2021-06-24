@@ -1,0 +1,30 @@
+html {
+  background-color: var(--background-color);
+  font-size:        var(--font-size-clamp-fallback);
+
+  @supports (font-size: clamp(1em, 1em, 1em)) {
+    font-size: clamp(
+      var(--font-size-clamp-min),
+      var(--font-size-clamp-ideal),
+      var(--font-size-clamp-max)
+    );
+  }
+}
+
+body {
+  background-color:       var(--background-color);
+  color:                  var(--color);
+  font-display:           swap;
+  font-family:            var(--font-family);
+  font-optical-sizing:    none;
+  font-variant-ligatures: none;
+  font-size:              var(--font-size);
+  font-weight:            var(--font-weight);
+  line-height:            var(--line-height);
+  padding:                env(safe-area-inset-top)
+                          env(safe-area-inset-right)
+                          env(safe-area-inset-bottom)
+                          env(safe-area-inset-left);
+  quotes:                 "“" "”";
+  text-size-adjust:       100%;
+}

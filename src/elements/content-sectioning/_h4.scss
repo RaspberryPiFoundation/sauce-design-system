@@ -1,5 +1,0 @@
-@use 'src/primitives/heading';
-
-h4 {
-  @include heading.primitive;
-}

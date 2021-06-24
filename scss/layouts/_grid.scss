@@ -1,0 +1,23 @@
+/**
+ * https://every-layout.dev/layouts/grid/
+ *
+ * <div class="layout-grid">
+ *   <div><!-- child element --></div>
+ *   <div><!-- another child element --></div>
+ *   <div><!-- etc --></div>
+ * </div>
+ */
+
+@mixin layout-grid {
+  --grid-gap: var(--spacing-4);
+  --grid-min-column-width: 15rem;
+
+  display: grid;
+  gap: var(--grid-gap);
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(var(--grid-min-column-width), 1fr)
+  );
+
+  @content;
+}

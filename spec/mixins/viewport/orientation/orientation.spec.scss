@@ -1,0 +1,54 @@
+@use 'true' as *;
+@use 'scss/mixins/media';
+@use 'scss/mixins/viewport/orientation';
+
+@include describe('.is') {
+  @include it('calls media.query') {
+    @include assert {
+      @include output {
+        @include orientation.is('landscape') {
+          color: rebeccapurple;
+        }
+      }
+      @include expect {
+        @include media.query('orientation', 'landscape') {
+          color: rebeccapurple;
+        }
+      }
+    }
+  }
+}
+
+@include describe('.landspace') {
+  @include it('calls media.query') {
+    @include assert {
+      @include output {
+        @include orientation.landspace {
+          color: rebeccapurple;
+        }
+      }
+      @include expect {
+        @include media.query('orientation', 'landspace') {
+          color: rebeccapurple;
+        }
+      }
+    }
+  }
+}
+
+@include describe('.portrait') {
+  @include it('calls media.query') {
+    @include assert {
+      @include output {
+        @include orientation.portrait {
+          color: rebeccapurple;
+        }
+      }
+      @include expect {
+        @include media.query('orientation', 'portrait') {
+          color: rebeccapurple;
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,0 @@
-@use 'src/mixins/type-scale';
-
-@mixin primitive {
-  @include type-scale.skateboard;
-}

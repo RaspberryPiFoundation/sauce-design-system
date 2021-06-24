@@ -1,0 +1,25 @@
+/**
+ * https://every-layout.dev/layouts/stack/
+ *
+ * <div class="layout-stack">
+ *   <-- the stack's children -->
+ * </div>
+ */
+
+@mixin layout-stack {
+  --stack-spacing: var(--spacing-1);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  > * {
+    margin-block: none;
+  }
+
+  > * + * {
+    margin-block-start: var(--stack-spacing);
+  }
+
+  @content;
+}

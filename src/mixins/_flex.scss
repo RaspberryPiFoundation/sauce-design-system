@@ -1,5 +1,0 @@
-@use 'lib/spacing';
-
-@mixin gap($sizes) {
-  @include spacing.output('gap', $sizes);
-}

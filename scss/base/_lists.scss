@@ -1,0 +1,18 @@
+@use 'scss/primitives/block-type';
+
+ol:not([class]),
+ul:not([class]) {
+  @include block-type.primitive;
+
+  --padding-left: var(--spacing-2);
+
+  padding-inline-start: var(--padding-left);
+
+  li:not([class]) {
+    ol:not([class]),
+    ul:not([class]) {
+      --padding-left: var(--spacing-3);
+      margin-block-end: none;
+    }
+  }
+}

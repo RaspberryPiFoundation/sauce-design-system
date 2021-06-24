@@ -1,0 +1,43 @@
+/**
+ * https://every-layout.dev/layouts/frame/
+ *
+ * <div class="layout-frame">
+ *   <!-- the frame's child -->
+ * </div>
+ */
+
+@mixin layout-frame {
+  --frame-height: 9;
+  --frame-width: 16;
+
+  @supports not (aspect-ratio: var(--frame-width) / var(--frame-height)) {
+    padding-bottom: calc(var(--frame-height) / var(--frame-width) * 100%);
+    position: relative;
+
+    > * {
+      align-items: center;
+      display: flex;
+      inset: 0;
+      justify-content: center;
+      overflow: hidden;
+      position: absolute;
+    }
+  }
+
+  @supports (aspect-ratio: var(--frame-width) / var(--frame-height)) {
+    aspect-ratio: var(--frame-width) / var(--frame-height);
+    padding-bottom: 0;
+  }
+
+  @supports (aspect-ratio: attr(width) / attr(height)) {
+    aspect-ratio: attr(width) / attr(height);
+  }
+
+  > :is(figure, iframe, img, picture, video) {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  @content;
+}

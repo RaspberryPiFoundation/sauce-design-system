@@ -1,0 +1,4 @@
+@use 'scss/mixins/media';
+
+@mixin no-preference { @include media.query('prefers-reduced-motion', 'no-preference') { @content; } }
+@mixin reduce        { @include media.query('prefers-reduced-motion', 'reduce')        { @content; } }

@@ -1,0 +1,100 @@
+@use 'true' as *;
+@use 'scss/layouts';
+@use 'scss/layouts/box';
+@use 'scss/layouts/center';
+@use 'scss/layouts/frame';
+@use 'scss/layouts/grid';
+@use 'scss/layouts/stack';
+@use 'scss/layouts/with-icon';
+@use 'scss/layouts/with-sidebar';
+
+@include describe(".box") {
+  @include it("outputs box.layout-box") {
+    @include assert {
+      @include output {
+        @include layouts.box;
+      }
+      @include expect {
+        @include box.layout-box;
+      }
+    }
+  }
+}
+
+@include describe(".center") {
+  @include it("outputs center.layout-center") {
+    @include assert {
+      @include output {
+        @include layouts.center;
+      }
+      @include expect {
+        @include center.layout-center;
+      }
+    }
+  }
+}
+
+@include describe(".frame") {
+  @include it("outputs frame.layout-frame") {
+    @include assert {
+      @include output {
+        @include layouts.frame;
+      }
+      @include expect {
+        @include frame.layout-frame;
+      }
+    }
+  }
+}
+
+@include describe(".grid") {
+  @include it("outputs grid.layout-grid") {
+    @include assert {
+      @include output {
+        @include layouts.grid;
+      }
+      @include expect {
+        @include grid.layout-grid;
+      }
+    }
+  }
+}
+
+@include describe(".stack") {
+  @include it("outputs stack.layout-stack") {
+    @include assert {
+      @include output {
+        @include layouts.stack;
+      }
+      @include expect {
+        @include stack.layout-stack;
+      }
+    }
+  }
+}
+
+@include describe(".with-icon") {
+  @include it("outputs include with-icon.layout-with-icon") {
+    @include assert {
+      @include output {
+        @include layouts.with-icon;
+      }
+      @include expect {
+        @include with-icon.layout-with-icon;
+      }
+    }
+  }
+}
+
+@include describe(".with-sidebar") {
+  @include it("outputs include with-sidebar.layout-with-sidebar") {
+    @include assert {
+      @include output {
+        @include layouts.with-sidebar;
+      }
+      @include expect {
+        @include with-sidebar.layout-with-sidebar;
+      }
+    }
+  }
+}

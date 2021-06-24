@@ -1,30 +1,31 @@
-const sassWebpackConfig = require('../webpack.config.js')
+/**
+ * See https://storybook.js.org/docs/react/essentials/introduction
+ */
 
 module.exports = {
   addons: [
-    // Features
+    // Background addons (don't add anything to UI)
     '@storybook/addon-links',
-    // Upper panel tabs
-    '@storybook/addon-toolbars',
-    '@storybook/addon-docs',
-    'storybook-addon-playroom',
-    '@storybook/addon-viewport',
-    '@storybook/addon-backgrounds',
-    // Lower panel tabs
-    '@whitespace/storybook-addon-html',
-    '@storybook/addon-a11y',
-    'storybook-mobile',
-    'storybook-design-token',
-  ],
-  stories: [
-    '../docs/*.stories.mdx',
-    '../docs/**/*.stories.mdx',
-    '../src/layouts/**/*.stories.mdx',
-    '../src/components/**/*.stories.mdx',
-  ],
-  webpackFinal: async (config) => {
-    config.module.rules.push(sassWebpackConfig)
+    '@storybook/preset-scss',
 
-    return config
+    // Top Toolbar - added to toolbar UI in order of declaration
+    '@storybook/addon-essentials',
+
+    // Addons Drawer - added to drawer UI in order of declaration
+    '@storybook/addon-a11y',
+    '@whitespace/storybook-addon-html',
+  ],
+  features: {
+    postcss: false,
   },
+  stories: [
+    '../docs/index.stories.mdx',
+    '../docs/design-principles.stories.mdx',
+    '../docs/design-process.stories.mdx',
+    '../docs/get-started/**/*.stories.mdx',
+    '../docs/personas/**/*.stories.mdx',
+    '../docs/styles/**/*.stories.mdx',
+    '../docs/accessibility-inclusion/**/*.stories.mdx',
+    '../components/**/*.stories.mdx'
+  ]
 }

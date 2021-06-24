@@ -1,0 +1,54 @@
+@use 'true' as *;
+@use 'scss/mixins/media';
+@use 'scss/mixins/viewport/aspect-ratio';
+
+@include describe('.is') {
+  @include it('calls media.query') {
+    @include assert {
+      @include output {
+        @include aspect-ratio.is('16 / 9') {
+          color: rebeccapurple;
+        }
+      }
+      @include expect {
+        @include media.query('aspect-ratio', '16 / 9') {
+          color: rebeccapurple;
+        }
+      }
+    }
+  }
+}
+
+@include describe('.max') {
+  @include it('calls media.query') {
+    @include assert {
+      @include output {
+        @include aspect-ratio.max('16 / 9') {
+          color: rebeccapurple;
+        }
+      }
+      @include expect {
+        @include media.query('max-aspect-ratio', '16 / 9') {
+          color: rebeccapurple;
+        }
+      }
+    }
+  }
+}
+
+@include describe('.min') {
+  @include it('calls media.query') {
+    @include assert {
+      @include output {
+        @include aspect-ratio.min('16 / 9') {
+          color: rebeccapurple;
+        }
+      }
+      @include expect {
+        @include media.query('min-aspect-ratio', '16 / 9') {
+          color: rebeccapurple;
+        }
+      }
+    }
+  }
+}

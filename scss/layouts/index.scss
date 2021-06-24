@@ -1,0 +1,15 @@
+@use './box';
+@use './center';
+@use './frame';
+@use './grid';
+@use './stack';
+@use './with-icon';
+@use './with-sidebar';
+
+@mixin box          { @include box.layout-box;                   }
+@mixin center       { @include center.layout-center;             }
+@mixin frame        { @include frame.layout-frame;               }
+@mixin grid         { @include grid.layout-grid;                 }
+@mixin stack        { @include stack.layout-stack;               }
+@mixin with-icon    { @include with-icon.layout-with-icon;       }
+@mixin with-sidebar { @include with-sidebar.layout-with-sidebar; }
