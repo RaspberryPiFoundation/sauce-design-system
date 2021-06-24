@@ -1,8 +1,6 @@
-@use 'scss/tokens/font-family';
-
 :root {
-  --font-family-heading:    #{font-family.$heading};
-  --font-family-monospace:  #{font-family.$monospace};
-  --font-family-sans-serif: #{font-family.$sans-serif};
-  --font-family-serif:      #{font-family.$serif};
+  --font-family-heading: "Roboto", sans-serif;
+  --font-family-monospace: "Space Mono", monospace;
+  --font-family-sans-serif: "Roboto", sans-serif;
+  --font-family-serif: "Roboto", serif;
 }

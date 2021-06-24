@@ -1,10 +1,8 @@
-@use 'scss/tokens/transition-duration';
-
 :root {
-  --transition-duration-instantly:   #{transition-duration.$instantly};
-  --transition-duration-immediately: #{transition-duration.$immediately};
-  --transition-duration-quickly:     #{transition-duration.$quickly};
-  --transition-duration-promptly:    #{transition-duration.$promptly};
-  --transition-duration-slowly:      #{transition-duration.$slowly};
-  --transition-duration-paused:      #{transition-duration.$paused};
+  --transition-duration-instantly: 0s;
+  --transition-duration-immediately: 0.05s;
+  --transition-duration-quickly: 0.1s;
+  --transition-duration-promptly: 0.2s;
+  --transition-duration-slowly: 0.4s;
+  --transition-duration-paused: 3.2s;
 }

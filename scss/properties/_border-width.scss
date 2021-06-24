@@ -1,8 +1,6 @@
-@use 'scss/tokens/border-width';
-
 :root {
-  --border-width-none:   #{border-width.$none};
-  --border-width-narrow: #{border-width.$narrow};
-  --border-width-medium: #{border-width.$medium};
-  --border-width-wide:   #{border-width.$wide};
+  --border-width-none: 0;
+  --border-width-narrow: 0.1rem;
+  --border-width-medium: 0.2rem;
+  --border-width-wide: 0.3rem;
 }
