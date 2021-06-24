@@ -17,7 +17,14 @@ const sauceTheme = mandelbrot({
     },
   ],
   nav: ['search', 'docs', 'components', 'information'],
-  panels: ['html', 'view', 'context', 'resources', 'info', 'notes'],
+  panels: [
+    'html',
+    // 'view',
+    // 'context',
+    'resources',
+    'notes',
+    'info',
+  ],
   skin: 'maroon',
   styles: [
     'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&amp;family=Roboto+Slab:wght@400;700&amp;family=Space+Mono&amp;display=swap',
