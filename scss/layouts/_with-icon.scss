@@ -10,8 +10,6 @@
  * </span>
  */
 
-@use 'scss/mixins/margin';
-
 @mixin layout-with-icon {
   --icon-spacing: var(--spacing-1);
 
@@ -19,9 +17,8 @@
   display: inline-flex;
 
   > :first-child {
-    @include margin.left(--icon-spacing);
-
     height: 0.75em;
+    margin-inline-start: var(--icon-spacing);
     width: 0.75em;
 
     @supports (height: 1cap) {

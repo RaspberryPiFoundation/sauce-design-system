@@ -6,14 +6,23 @@
  * </div>
  */
 
-@use 'scss/mixins/_position.scss';
-
 @mixin layout-frame {
   --frame-height: 9;
-  --frame-width:  16;
+  --frame-width: 16;
 
-  padding-bottom: calc(var(--frame-height) / var(--frame-width) * 100%);
-  position: relative;
+  @supports not (aspect-ratio: var(--frame-width) / var(--frame-height)) {
+    padding-bottom: calc(var(--frame-height) / var(--frame-width) * 100%);
+    position: relative;
+
+    > * {
+      align-items: center;
+      display: flex;
+      inset: 0;
+      justify-content: center;
+      overflow: hidden;
+      position: absolute;
+    }
+  }
 
   @supports (aspect-ratio: var(--frame-width) / var(--frame-height)) {
     aspect-ratio: var(--frame-width) / var(--frame-height);
@@ -22,16 +31,6 @@
 
   @supports (aspect-ratio: attr(width) / attr(height)) {
     aspect-ratio: attr(width) / attr(height);
-  }
-
-  > * {
-    @include position.cover;
-
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-    position: absolute;
   }
 
   > :is(figure, iframe, img, picture, video) {

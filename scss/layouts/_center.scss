@@ -1,0 +1,37 @@
+/**
+ * https://every-layout.dev/layouts/center/
+ *
+ * <div class="layout-center">
+ *   <!-- centered content -->
+ * </div>
+ */
+
+@mixin layout-center {
+  --center-gutter-preferred: 5vw;
+  --center-gutter-max: var(--spacing-6);
+  --center-gutter: min(
+    var(--center-gutter-preferred),
+    var(--center-gutter-max)
+  );
+  --center-measure: var(--center-measure-full);
+  --center-measure-full: 1300px;
+  --center-measure-mini: 500px;
+  --center-measure-midi: 750px;
+  --center-measure-maxi: 1000px;
+
+  padding-inline: var(--center-gutter);
+  margin-inline: auto;
+  max-inline-size: var(--center-measure);
+
+  &--mini {
+    --center-measure: var(--center-measure-mini);
+  }
+  &--midi {
+    --center-measure: var(--center-measure-midi);
+  }
+  &--maxi {
+    --center-measure: var(--center-measure-maxi);
+  }
+
+  @content;
+}

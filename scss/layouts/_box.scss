@@ -6,25 +6,22 @@
  * </div>
  */
 
-@use 'scss/mixins/border';
-@use 'scss/mixins/padding';
-@use 'scss/mixins/media/preferences/contrast';
+@use 'scss/mixins/preferences/contrast';
 
 @mixin layout-box {
   --box-background-color: var(--grey-90);
-  --box-border-color:     var(--grey-20);
-  --box-border-style:     solid;
-  --box-border-width:     var(--border-width-narrow);
-  --box-color:            var(--color);
-  --box-padding:          var(--spacing-2);
-
-  @include border.color(--box-border-color);
-  @include border.style(--box-border-style);
-  @include border.width(--box-border-width);
-  @include padding.all(--box-padding);
+  --box-border-color: var(--grey-20);
+  --box-border-style: solid;
+  --box-border-width: var(--border-width-narrow);
+  --box-color: var(--color);
+  --box-padding: var(--spacing-2);
 
   background-color: var(--box-background-color);
+  border-color: var(--box-border-color);
+  border-style: var(--box-border-style);
+  border-width: var(--box-border-width);
   color: var(--box-color);
+  padding: var(--box-padding);
 
   @include contrast.more {
     --box-outline-width: var(--box-border-width);

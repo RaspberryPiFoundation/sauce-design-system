@@ -8,22 +8,15 @@
  * </div>
  */
 
-@use 'scss/mixins/grid';
-
 @mixin layout-grid {
-  --grid-gap:              var(--spacing-4);
+  --grid-gap: var(--spacing-4);
   --grid-min-column-width: 15rem;
 
-  @include grid.gap(--grid-gap);
-
   display: grid;
-
+  gap: var(--grid-gap);
   grid-template-columns: repeat(
     auto-fit,
-    minmax(
-      var(--grid-min-column-width),
-      1fr
-    )
+    minmax(var(--grid-min-column-width), 1fr)
   );
 
   @content;

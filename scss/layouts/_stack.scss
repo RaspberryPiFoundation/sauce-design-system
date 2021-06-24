@@ -6,8 +6,6 @@
  * </div>
  */
 
-@use 'scss/mixins/margin';
-
 @mixin layout-stack {
   --stack-spacing: var(--spacing-1);
 
@@ -16,11 +14,11 @@
   justify-content: flex-start;
 
   > * {
-    @include margin.block(none);
+    margin-block: none;
   }
 
   > * + * {
-    @include margin.top(--stack-spacing);
+    margin-block-start: var(--stack-spacing);
   }
 
   @content;
