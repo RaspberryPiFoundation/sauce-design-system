@@ -1,5 +1,0 @@
-@use 'scss/mixins/logical-properties' as prop;
-
-@mixin all($value)    { @include prop.apply('gap',        $value, 'grid-gap');        }
-@mixin column($value) { @include prop.apply('column-gap', $value, 'grid-column-gap'); }
-@mixin row($value)    { @include prop.apply('row-gap',    $value, 'grid-row-gap');    }
