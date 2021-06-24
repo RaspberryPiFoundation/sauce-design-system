@@ -1,4 +1,36 @@
 title: Type Components
 status: ready
 context:
-  title: Sauce Design System
+  element: p
+  content: Sauce Design System
+variants:
+  - name: 'Heading: Signpost Hero'
+    context:
+      class: heading-signpost-hero
+      element: h1
+      content: Heading Signpost Hero
+  - name: 'Heading: Hero'
+    context:
+      class: heading-hero
+      element: h1
+      content: Heading Hero
+  - name: 'Heading: Primary'
+    context:
+      class: heading-primary
+      element: h1
+      content: Heading Primary
+  - name: 'Heading: Secondary'
+    context:
+      class: heading-secondary
+      element: h2
+      content: Heading Secondary
+  - name: 'Heading: Tertiary'
+    context:
+      class: heading-tertiary
+      element: h3
+      content: Heading Tertiary
+  - name: 'Heading: Item'
+    context:
+      class: heading-item
+      element: h3
+      content: Heading Item
