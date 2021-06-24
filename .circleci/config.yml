@@ -37,7 +37,7 @@ jobs:
       - attach_workspace:
           at: .
       - run:
-          command: npm run ci:test
+          command: npm run test:ci
           name: Run Sass unit tests
 workflows:
   version: 2.1

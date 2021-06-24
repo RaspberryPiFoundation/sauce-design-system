@@ -1,10 +1,7 @@
-@use 'scss/mixins/position';
-
 @mixin cover {
-  @include position.cover;
-
-  content: ' ';
+  content: " ";
   display: block;
+  inset: 0;
   position: absolute;
   z-index: 1;
 }
@@ -14,9 +11,9 @@
 
   /* Provide a fallback style for browsers that don't support :focus-visible */
   &:is(:focus, :focus-within) {
-    outline-color:  var(--color-outline-primary);
-    outline-width:  0.1rem;
-    outline-style:  solid;
+    outline-color: var(--color-outline-primary);
+    outline-width: 0.1rem;
+    outline-style: solid;
     outline-offset: 0;
   }
 
@@ -32,19 +29,23 @@
   }
 }
 
-@mixin inverted-background { --background-color: var(--color-background-inverted); }
-@mixin inverted-text       { --color:            var(--color-text-inverted);       }
+@mixin inverted-background {
+  --background-color: var(--color-background-inverted);
+}
+@mixin inverted-text {
+  --color: var(--color-text-inverted);
+}
 @mixin inverted {
   @include inverted-background;
   @include inverted-text;
 }
 
 @mixin visually-hidden {
-  clip:        rect(0 0 0 0) !important;
-  clip-path:   inset(100%)   !important;
-  height:      1px           !important;
-  overflow:    hidden        !important;
-  position:    absolute      !important;
-  white-space: nowrap        !important;
-  width:       1px           !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(100%) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
 }

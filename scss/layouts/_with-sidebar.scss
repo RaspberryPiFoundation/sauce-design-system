@@ -1,0 +1,59 @@
+/**
+ * https://every-layout.dev/layouts/sidebar/
+ *
+ * <div class="layout-with-sidebar">
+ *   <div><!-- non-sidebar --></div>
+ *   <div><!-- sidebar --></div>
+ * </div>
+ */
+
+@mixin layout-with-sidebar {
+  --sidebar-content-wrap-width: 70%;
+  --sidebar-side-width: 15rem;
+  --sidebar-column-gap: var(--spacing-5);
+  --sidebar-row-gap: var(--spacing-2);
+
+  align-items: flex-start;
+  column-gap: var(--sidebar-column-gap);
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  row-gap: var(--sidebar-row-gap);
+
+  @content;
+}
+
+@mixin sidebar {
+  flex-basis: var(--sidebar-side-width);
+  flex-grow: 1;
+  min-width: 0;
+}
+
+@mixin content {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: calc(
+    var(--sidebar-content-wrap-width) - var(--sidebar-column-gap)
+  );
+}
+
+.layout-with-sidebar > :first-child {
+  @include sidebar;
+}
+.layout-with-sidebar > :last-child {
+  @include content;
+}
+
+.layout-with-sidebar--on-left > :first-child {
+  @include sidebar;
+}
+.layout-with-sidebar--on-left > :last-child {
+  @include content;
+}
+
+.layout-with-sidebar--on-right > :first-child {
+  @include content;
+}
+.layout-with-sidebar--on-right > :last-child {
+  @include sidebar;
+}

@@ -1,9 +1,7 @@
-@use 'scss/tokens/border-radius';
-
 :root {
-  --border-radius-circle: #{border-radius.$circle};
-  --border-radius-large:  #{border-radius.$large};
-  --border-radius-medium: #{border-radius.$medium};
-  --border-radius-small:  #{border-radius.$small};
-  --border-radius-square: #{border-radius.$square};
+  --border-radius-circle: 50%;
+  --border-radius-large: 1rem;
+  --border-radius-medium: 0.5rem;
+  --border-radius-small: 0.25rem;
+  --border-radius-square: 0;
 }

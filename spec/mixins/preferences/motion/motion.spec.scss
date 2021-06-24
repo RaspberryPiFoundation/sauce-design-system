@@ -1,0 +1,37 @@
+@use 'true' as *;
+@use 'scss/mixins/media';
+@use 'scss/mixins/preferences/motion';
+
+@include describe('.no-preference') {
+  @include it('calls media.query') {
+    @include assert {
+      @include output {
+        @include motion.no-preference {
+          color: rebeccapurple;
+        }
+      }
+      @include expect {
+        @include media.query('prefers-reduced-motion', 'no-preference') {
+          color: rebeccapurple;
+        }
+      }
+    }
+  }
+}
+
+@include describe('.reduce') {
+  @include it('calls media.query') {
+    @include assert {
+      @include output {
+        @include motion.reduce {
+          color: rebeccapurple;
+        }
+      }
+      @include expect {
+        @include media.query('prefers-reduced-motion', 'reduce') {
+          color: rebeccapurple;
+        }
+      }
+    }
+  }
+}

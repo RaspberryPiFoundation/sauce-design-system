@@ -1,19 +1,18 @@
-@use 'scss/mixins/margin';
-@use 'scss/mixins/padding';
 @use 'scss/primitives/block-type';
 
 ol:not([class]),
 ul:not([class]) {
+  @include block-type.primitive;
+
   --padding-left: var(--spacing-2);
 
-  @include block-type.primitive;
-  @include padding.l(--padding-left);
+  padding-inline-start: var(--padding-left);
 
   li:not([class]) {
     ol:not([class]),
     ul:not([class]) {
       --padding-left: var(--spacing-3);
-      @include margin.b(none);
+      margin-block-end: none;
     }
   }
 }

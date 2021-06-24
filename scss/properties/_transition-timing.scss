@@ -1,7 +1,4 @@
-@use 'scss/tokens/transition-timing';
-
 :root {
-  --transition-timing-elastic: #{transition-timing.$elastic};
-  --transition-timing-eased:   #{transition-timing.$eased};
-  --transition-timing-linear:  #{transition-timing.$linear};
+  --transition-timing-default: ease-in-out;
+  --transition-timing-elastic: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }

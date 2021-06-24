@@ -26,12 +26,14 @@
     "build:debug": "npm-run-all -s build serve",
     "build:fractal": "fractal build",
     "build:gulp": "gulp build",
-    "ci:test": "jest --runInBand",
-    "serve": "http-server ./dist --brotli --gzip",
+    "debug": "npm-run-all -s debug:build debug:serve",
+    "debug:build": "build",
+    "debug:serve": "http-server ./dist --brotli --gzip",
     "start": "npm-run-all -p start:gulp start:fractal",
     "start:fractal": "fractal start",
     "start:gulp": "gulp start",
-    "test": "jest --notify --runInBand --watchAll --no-cache"
+    "test": "jest --notify --runInBand --watchAll --no-cache",
+    "test:ci": "jest --runInBand"
   },
   "dependencies": {
     "@babel/core": "7.14.6",

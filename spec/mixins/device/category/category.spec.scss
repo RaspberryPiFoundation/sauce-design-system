@@ -1,0 +1,149 @@
+@use 'true' as *;
+@use 'scss/mixins/media';
+@use 'scss/mixins/device/category';
+
+@include describe(".apply") {
+  @include it("outputs media.query") {
+    @include assert {
+      @include output {
+        @include category.apply("min-resolution", 2dpi) {
+          color: rebeccapurple;
+        }
+      }
+      @include expect {
+        @include media.query("min-resolution", 2dpi) {
+          color: rebeccapurple;
+        }
+      }
+    }
+  }
+
+  @include it("outputs media.query with orientation") {
+    @include assert {
+      @include output {
+        @include category.apply("min-resolution", 2dpi, "portrait") {
+          color: rebeccapurple;
+        }
+      }
+      @include expect {
+        @include media.query("min-resolution", 2dpi) {
+          @include media.query("orientation", "portrait") {
+            color: rebeccapurple;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include describe(".match") {
+  @include describe("$device: phone-portrait") {
+    @include it("outputs .apply") {
+      @include assert {
+        @include output {
+          @include category.match("phone-portrait") {
+            color: rebeccapurple;
+          }
+        }
+        @include expect {
+          @include category.apply("max-width", category.$phone-portrait) {
+            color: rebeccapurple;
+          }
+        }
+      }
+    }
+  }
+
+  @include describe("$device: phone-landscape") {
+    @include it("outputs .apply") {
+      @include assert {
+        @include output {
+          @include category.match("phone-landscape") {
+            color: rebeccapurple;
+          }
+        }
+        @include expect {
+          @include category.apply(
+            "max-width",
+            category.$phone-landscape,
+            "landscape"
+          ) {
+            color: rebeccapurple;
+          }
+        }
+      }
+    }
+  }
+
+  @include describe("$device: tablet-portrait") {
+    @include it("outputs .apply") {
+      @include assert {
+        @include output {
+          @include category.match("tablet-portrait") {
+            color: rebeccapurple;
+          }
+        }
+        @include expect {
+          @include category.apply("min-width", category.$tablet-portrait) {
+            color: rebeccapurple;
+          }
+        }
+      }
+    }
+  }
+
+  @include describe("$device: tablet-landscape") {
+    @include it("outputs .apply") {
+      @include assert {
+        @include output {
+          @include category.match("tablet-landscape") {
+            color: rebeccapurple;
+          }
+        }
+        @include expect {
+          @include category.apply(
+            "min-width",
+            category.$tablet-landscape,
+            "landscape"
+          ) {
+            color: rebeccapurple;
+          }
+        }
+      }
+    }
+  }
+
+  @include describe("$device: laptop") {
+    @include it("outputs .apply") {
+      @include assert {
+        @include output {
+          @include category.match("laptop") {
+            color: rebeccapurple;
+          }
+        }
+        @include expect {
+          @include category.apply("min-width", category.$laptop) {
+            color: rebeccapurple;
+          }
+        }
+      }
+    }
+  }
+
+  @include describe("$device: desktop") {
+    @include it("outputs .apply") {
+      @include assert {
+        @include output {
+          @include category.match("desktop") {
+            color: rebeccapurple;
+          }
+        }
+        @include expect {
+          @include category.apply("min-width", category.$desktop) {
+            color: rebeccapurple;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,0 @@
-@use 'scss/mixins/logical-properties' as prop;
-
-@mixin max($value) { @include prop.apply('max-block-size', $value, 'max-height'); }
-@mixin min($value) { @include prop.apply('min-block-size', $value, 'min-height'); }
-@mixin set($value) { @include prop.apply('block-size',     $value, 'height');     }
