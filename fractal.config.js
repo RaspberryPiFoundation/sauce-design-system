@@ -10,8 +10,8 @@ sauce.set('project.author', pkg.author)
 
 sauce.components.set('default.context', {
   display: {
-    'max-width': '400px',
-    'min-width': '250px',
+    'max-width': '1300px',
+    'min-width': '400px',
   },
 })
 sauce.components.set('default.status', 'wip')
