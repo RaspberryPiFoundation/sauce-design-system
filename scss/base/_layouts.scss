@@ -1,4 +1,4 @@
-@use 'scss/mixins/layout';
+@use 'scss/layouts';
 
 /**
  * Layouts implement patterns as found in https://every-layout.dev (with some tweaks)
@@ -7,10 +7,37 @@
  * that allows us to unlocks the full site: https://every-layout.dev/login/?email=web@raspberrypi.org
  */
 
-.layout-box          { @include layout.box;          } // https://every-layout.dev/layouts/box/
-.layout-center       { @include layout.center;       } // https://every-layout.dev/layouts/center/
-.layout-frame        { @include layout.frame;        } // https://every-layout.dev/layouts/frame/
-.layout-grid         { @include layout.grid;         } // https://every-layout.dev/layouts/grid/
-.layout-stack        { @include layout.stack;        } // https://every-layout.dev/layouts/stack/
-.layout-with-icon    { @include layout.with-icon;    } // https://every-layout.dev/layouts/icon/
-.layout-with-sidebar { @include layout.with-sidebar; } // https://every-layout.dev/layouts/sidebar/
+// https://every-layout.dev/layouts/box
+.layout-box {
+  @include layouts.box;
+}
+
+// https://every-layout.dev/layouts/center
+.layout-center {
+  @include layouts.center;
+}
+
+// https://every-layout.dev/layouts/frame
+.layout-frame {
+  @include layouts.frame;
+}
+
+// https://every-layout.dev/layouts/grid
+.layout-grid {
+  @include layouts.grid;
+}
+
+// https://every-layout.dev/layouts/stack
+.layout-stack {
+  @include layouts.stack;
+}
+
+// https://every-layout.dev/layouts/icon
+.layout-with-icon {
+  @include layouts.with-icon;
+}
+
+// https://every-layout.dev/layouts/sidebar
+.layout-with-sidebar {
+  @include layouts.with-sidebar;
+}

@@ -1,56 +1,57 @@
-@use 'scss/mixins/media/viewport';
-@use 'scss/mixins/padding';
+@use 'scss/mixins/viewport';
 @use 'scss/mixins/helpers';
-@use 'scss/tokens/color-greyscale';
-@use 'scss/tokens/font-weight';
-@use 'scss/tokens/line-height';
 
 @mixin primary {
   // Include mixins
-  @include padding.block(--spacing-1);
-  @include padding.inline(--spacing-4);
   @include helpers.focusable;
 
   // Setup tokens
-  --color-background-base:     var(--color-background-button-primary-base);
-  --color-background-active:   var(--color-background-button-primary-active);
+  --color-background-base: var(--color-background-button-primary-base);
+  --color-background-active: var(--color-background-button-primary-active);
   --color-background-disabled: var(--color-background-button-primary-disabled);
-  --color-text-base:           var(--color-text-button-primary-base);
-  --color-text-active:         var(--color-text-button-primary-active);
-  --color-text-disabled:       var(--color-text-button-primary-disabled);
+  --color-text-base: var(--color-text-button-primary-base);
+  --color-text-active: var(--color-text-button-primary-active);
+  --color-text-disabled: var(--color-text-button-primary-disabled);
 
   // Setup custom properties
-  --background-color:           var(--color-background-base);
-  --color:                      var(--color-text-base);
-  --transition-duration:        var(--transition-duration-promptly);
-  --transition-timing-function: var(--transition-timing-eased), var(--transition-timing-eased), var(--transition-timing-elastic);
-  --width:                      100%;
+  --background-color: var(--color-background-base);
+  --color: var(--color-text-base);
+  --font-weight: var(--font-weight-medium);
+  --line-height: var(--line-height-cosy);
+  --transition-duration: var(--transition-duration-promptly);
+  --transition-timing-function: var(--transition-timing-eased),
+    var(--transition-timing-eased), var(--transition-timing-elastic);
+  --width: 100%;
+  --padding-block: var(--spacing-1);
+  --padding-inline: var(--spacing-4);
 
   // Define rules
-  background-color:           var(--background-color);
-  border-radius:              0.5rem;
-  border-width:               0;
-  color:                      var(--color);
-  display:                    inline-block;
-  font-weight:                font-weight.$medium;
-  line-height:                line-height.$cosy;
-  text-align:                 center;
-  transition-duration:        var(--transition-duration);
-  transition-property:        background-color, color, outline-offset;
+  background-color: var(--background-color);
+  border-radius: 0.5rem;
+  border-width: 0;
+  color: var(--color);
+  display: inline-block;
+  font-weight: var(--font-weight);
+  line-height: var(--line-height);
+  padding-block: var(--padding-block);
+  padding-inline: var(--padding-inline);
+  text-align: center;
+  transition-duration: var(--transition-duration);
+  transition-property: background-color, color, outline-offset;
   transition-timing-function: var(--transition-timing-function);
-  width:                      var(--width);
+  width: var(--width);
 
   // Define pseudo-classes
   &:any-link {
     --background-color: var(--color-background-base);
-    --color:            var(--color-text-base);
+    --color: var(--color-text-base);
 
     text-decoration: none;
   }
 
   &:is(:focus, :hover, :active) {
     --background-color: var(--color-background-active);
-    --color:            var(--color-text-active);
+    --color: var(--color-text-active);
   }
 
   // Define media-queries
@@ -62,7 +63,7 @@
 @mixin disabled {
   // Override custom properties
   --background-color: var(--color-background-disabled);
-  --color:            var(--color-text-disabled);
+  --color: var(--color-text-disabled);
 
   // Define other rules
   pointer-events: none;

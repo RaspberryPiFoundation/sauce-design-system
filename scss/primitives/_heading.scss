@@ -1,49 +1,47 @@
-@use 'scss/mixins/margin';
-
 @mixin primitive {
-  --color:         var(--color-text-heading-base);
-  --font-family:   var(--font-family-heading);
-  --font-size:     var(--font-size-base);
-  --font-weight:   var(--font-weight-bold);
-  --line-height:   var(--line-height-regular);
+  --color: var(--color-text-heading-base);
+  --font-family: var(--font-family-heading);
+  --font-size: var(--font-size-base);
+  --font-weight: var(--font-weight-bold);
+  --line-height: var(--line-height-regular);
   --margin-bottom: var(--spacing-1);
+  --margin-top: var(--spacing-0);
 
-  @include margin.b(--margin-bottom);
-  @include margin.t(none);
-
-  color:       var(--color);
+  color: var(--color);
   font-family: var(--font-family);
-  font-size:   var(--font-size);
+  font-size: var(--font-size);
   font-weight: var(--font-weight);
   line-height: var(--line-height);
+  margin-block-start: var(--margin-top);
+  margin-block-end: var(--margin-bottom);
 }
 
 // Signpost Page Hero
 @mixin signpost-hero {
-  --color:         var(--color-text-heading-signpost-hero);
-  --font-size:     var(--font-size-u-8);
-  --line-height:   var(--line-height-tight);
+  --color: var(--color-text-heading-signpost-hero);
+  --font-size: var(--font-size-u-8);
+  --line-height: var(--line-height-tight);
   --margin-bottom: var(--spacing-3);
 }
 
 // Sub-page Hero
 @mixin hero {
-  --color:         var(--color-text-heading-hero);
-  --font-size:     var(--font-size-u-6);
-  --line-height:   var(--line-height-cosy);
+  --color: var(--color-text-heading-hero);
+  --font-size: var(--font-size-u-6);
+  --line-height: var(--line-height-cosy);
   --margin-bottom: var(--spacing-2);
 }
 
 // Blog Post
 @mixin primary {
-  --font-size:     var(--font-size-u-5);
-  --font-weight:   var(--font-weight-medium);
+  --font-size: var(--font-size-u-5);
+  --font-weight: var(--font-weight-medium);
   --margin-bottom: var(--spacing-2);
 }
 
 // Section Headings
 @mixin secondary {
-  --font-size:   var(--font-size-u-3);
+  --font-size: var(--font-size-u-3);
   --line-height: var(--line-height-cosy);
 }
 
@@ -51,7 +49,7 @@
 // List Title
 // Form Title
 @mixin tertiary {
-  --font-size:     var(--font-size-u-2);
+  --font-size: var(--font-size-u-2);
   --margin-bottom: var(--spacing-2);
 }
 
