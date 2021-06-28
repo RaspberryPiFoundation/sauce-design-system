@@ -4,32 +4,32 @@ context:
   element: p
   content: Sauce Design System
 variants:
-  - name: 'Heading: Signpost Hero'
+  - name: 'Signpost Hero Heading'
     context:
       class: heading-signpost-hero
       element: h1
       content: Heading Signpost Hero
-  - name: 'Heading: Hero'
+  - name: 'Hero Heading'
     context:
       class: heading-hero
       element: h1
       content: Heading Hero
-  - name: 'Heading: Primary'
+  - name: 'Primary Heading'
     context:
       class: heading-primary
       element: h1
       content: Heading Primary
-  - name: 'Heading: Secondary'
+  - name: 'Secondary Heading'
     context:
       class: heading-secondary
       element: h2
       content: Heading Secondary
-  - name: 'Heading: Tertiary'
+  - name: 'Tertiary Heading'
     context:
       class: heading-tertiary
       element: h3
       content: Heading Tertiary
-  - name: 'Heading: Item'
+  - name: 'Item Heading'
     context:
       class: heading-item
       element: h3
