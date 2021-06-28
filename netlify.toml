@@ -4,16 +4,16 @@
 
 [build.processing]
   skip_processing = false
-  [css]
-    bundle = false
-    minify = false
-  [js]
-    bundle = false
-    minify = false
-  [html]
-    pretty_urls = true
-  [images]
-    compress = true
+[build.processing.css]
+  bundle = false
+  minify = false
+[build.processing.js]
+  bundle = false
+  minify = false
+[build.processing.html]
+  pretty_urls = true
+[build.processing.images]
+  compress = true
 
 [dev]
   autoLaunch = false
