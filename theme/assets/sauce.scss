@@ -1,4 +1,8 @@
-@forward '~modern-css-reset/dist/reset.min.css';
+/**
+ * Styles for component previews, not the theme.
+ * This file more resembles the styles we'd include in an application.
+ */
+@forward 'modern-css-reset/dist/reset.min.css';
 
 @forward 'scss/properties/border-radius';
 @forward 'scss/properties/border-width';
