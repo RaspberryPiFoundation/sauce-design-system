@@ -33,5 +33,12 @@
   "files.associations": {},
   "javascript.validate.enable": false,
   "less.validate": false,
-  "scss.validate": false
+  "scss.validate": false,
+  "cSpell.words": [
+    "Jonic",
+    "Linley",
+    "brotli",
+    "frctl",
+    "stylelint"
+  ]
 }
