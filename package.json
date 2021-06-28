@@ -22,7 +22,7 @@
     "theme"
   ],
   "scripts": {
-    "build": "npm-run-all -s build:fractal build:gulp",
+    "build": "npm-run-all -s build:gulp build:fractal",
     "build:fractal": "fractal build",
     "build:gulp": "gulp build",
     "debug": "npm-run-all -s debug:build debug:serve",
