@@ -39,6 +39,7 @@
     "@babel/eslint-parser": "7.14.7",
     "@babel/preset-env": "7.14.7",
     "@frctl/fractal": "1.5.8",
+    "@frctl/nunjucks": "2.0.11",
     "cssnano": "5.0.6",
     "eslint": "7.29.0",
     "eslint-config-airbnb-base": "14.2.1",

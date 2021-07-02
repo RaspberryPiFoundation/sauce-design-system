@@ -8,6 +8,7 @@ sauce.set('project.title', 'Sauce Design System')
 sauce.set('project.version', pkg.version)
 sauce.set('project.author', pkg.author)
 
+sauce.components.engine('@frctl/nunjucks')
 sauce.components.set('default.context', {
   display: {
     'max-width': '1300px',
@@ -16,6 +17,7 @@ sauce.components.set('default.context', {
 })
 sauce.components.set('default.status', 'wip')
 sauce.components.set('default.preview', '@preview')
+sauce.components.set('ext', '.njk')
 sauce.components.set('path', `${__dirname}/components`)
 
 sauce.docs.set('indexLabel', 'Home')
