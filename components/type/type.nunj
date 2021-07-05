@@ -1,0 +1,1 @@
+<{{ element }}{% if class %} class="{{class}}"{% endif %}>{{content}}</{{element}}>

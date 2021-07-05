@@ -4,19 +4,19 @@ module.exports = {
   moduleNameMapper: {
     SpecHelper: '<rootDir>/spec/SpecHelper.js',
   },
-  modulePaths: ['spec'],
-  notify: true,
   testEnvironment: 'node',
   testPathIgnorePatterns: [
-    '.cache',
     '.circleci',
     '.github',
-    '.storybook',
+    '.vscode',
     'brands',
     'components',
+    'dist',
     'docs',
     'node_modules',
+    'public',
     'scss',
+    'theme',
   ],
-  verbose: true
+  verbose: true,
 }
