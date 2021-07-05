@@ -4,7 +4,7 @@
 
 https://sauce.raspberrypi.org/
 
-**This README documents the setup procedure for development of Sauce itself, it does *not* document the process through which Sauce is consumed in an application. See the [Installation](https://sauce.raspberrypi.org/docs/get-started/installation) guide on the Sauce documentaton site.**
+**This README documents the setup procedure for development of Sauce itself, it does _not_ document the process through which Sauce is consumed in an application. See the [Installation](https://sauce.raspberrypi.org/docs/get-started/installation) guide on the Sauce documentaton site.**
 
 ## Architecture Overview
 
