@@ -17,7 +17,7 @@ sauce.components.set('default.context', {
 })
 sauce.components.set('default.status', 'wip')
 sauce.components.set('default.preview', '@preview')
-sauce.components.set('ext', '.njk')
+sauce.components.set('ext', '.nunj')
 sauce.components.set('path', `${__dirname}/components`)
 
 sauce.docs.set('indexLabel', 'Home')
