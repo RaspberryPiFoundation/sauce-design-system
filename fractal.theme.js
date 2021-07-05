@@ -4,6 +4,8 @@ const pkg = require('./package.json')
 
 const sauceTheme = mandelbrot({
   favicon: '/theme/favicon.svg',
+  highlightStyles:
+    'https://highlightjs.org/static/demo/styles/atom-one-dark.css',
   information: [
     {
       label: '<b>Version</b>',
