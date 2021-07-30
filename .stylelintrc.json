@@ -1,0 +1,17 @@
+{
+  "enabled": false,
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-recommended-scss",
+    "stylelint-config-prettier"
+  ],
+  "ignoreFiles": ["**/*.js"],
+  "plugins": ["stylelint-order", "stylelint-scss"],
+  "rules": {
+    "block-no-empty": null,
+    "declaration-block-single-line-max-declarations": 1,
+    "no-descending-specificity": null,
+    "order/order": ["custom-properties", "declarations"],
+    "order/properties-alphabetical-order": true
+  }
+}
