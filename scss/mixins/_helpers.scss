@@ -1,5 +1,5 @@
 @mixin cover {
-  content: " ";
+  content: ' ';
   display: block;
   inset: 0;
   position: absolute;
@@ -10,31 +10,33 @@
   outline-offset: -0.1rem;
 
   /* Provide a fallback style for browsers that don't support :focus-visible */
-  &:is(:focus, :focus-within) {
+  &:focus {
     outline-color: var(--color-outline-primary);
-    outline-width: 0.1rem;
-    outline-style: solid;
     outline-offset: 0;
-  }
+    outline-style: solid;
+    outline-width: var(--border-width-narrow);
 
-  /* Remove the focus indicator on mouse-focus for browsers that do support :focus-visible */
-  &:is(:focus, :focus-within):not(:focus-visible) {
-    outline-offset: -0.1rem;
-  }
+    /* Remove the focus indicator on mouse-focus for browsers that do support :focus-visible */
+    &:not(:focus-visible) {
+      outline-color: transparent;
+    }
 
-  /* Draw a very noticeable focus style for keyboard-focus on browsers that do support :focus-visible */
-  &:is(:focus, :focus-within):focus-visible {
-    outline-width: 0.2rem;
-    outline-offset: 0.2rem;
+    /* Draw a very noticeable focus style for keyboard-focus on browsers that do support :focus-visible */
+    &:focus-visible {
+      outline-offset: var(--border-width-medium);
+      outline-width: var(--border-width-medium);
+    }
   }
 }
 
 @mixin inverted-background {
   --background-color: var(--color-background-inverted);
 }
+
 @mixin inverted-text {
   --color: var(--color-text-inverted);
 }
+
 @mixin inverted {
   @include inverted-background;
   @include inverted-text;

@@ -18,7 +18,6 @@
 @forward 'scss/base/document-root';
 @forward 'scss/base/buttons';
 @forward 'scss/base/code';
-@forward 'scss/base/forms';
 @forward 'scss/base/headings';
 @forward 'scss/base/helpers';
 @forward 'scss/base/layouts';
@@ -27,7 +26,12 @@
 @forward 'scss/base/text-semantics';
 @forward 'scss/base/typography';
 
-// These will go in application styles - they're the per-brand application of the tokens
-@forward 'brands/raspberry-pi-foundation/properties/color';
-@forward 'brands/raspberry-pi-foundation/properties/document-root';
-@forward 'brands/raspberry-pi-foundation/properties/font-size';
+// Astro Pi Properties
+@forward 'brands/astro-pi/properties/border-width';
+@forward 'brands/astro-pi/properties/color';
+@forward 'brands/astro-pi/properties/font-family';
+
+// Raspberry Pi Properties
+@forward 'brands/raspberry-pi/properties/border-width';
+@forward 'brands/raspberry-pi/properties/color';
+@forward 'brands/raspberry-pi/properties/font-family';

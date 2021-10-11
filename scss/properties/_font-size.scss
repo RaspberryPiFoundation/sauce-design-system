@@ -25,7 +25,6 @@ $_d-3: math.pow($_r, -3) * $_b; // 0.579rem == 9.26px
 :root {
   --font-size-base: #{$_b};
   --font-size-ratio: #{$_r};
-
   --font-size-u-8: #{$_u-8};
   --font-size-u-7: #{$_u-7};
   --font-size-u-6: #{$_u-6};
@@ -34,8 +33,11 @@ $_d-3: math.pow($_r, -3) * $_b; // 0.579rem == 9.26px
   --font-size-u-3: #{$_u-3};
   --font-size-u-2: #{$_u-2};
   --font-size-u-1: #{$_u-1};
-
   --font-size-d-1: #{$_d-1};
   --font-size-d-2: #{$_d-2};
   --font-size-d-3: #{$_d-3};
+  --font-size-root-clamp-ideal: 3vmin;
+  --font-size-root-clamp-min: 1em;
+  --font-size-root-clamp-max: 1.25em;
+  --font-size-root-clamp-fallback: 1em;
 }

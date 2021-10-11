@@ -1,10 +1,13 @@
 :root {
+  // Black/White
   --black: #000;
   --white: #fff;
 
+  // Grey Hue/Saturation
   --grey-hue: 0;
   --grey-sat: 0%;
 
+  //  Grey Scale
   --grey-0: var(--black);
   --grey-10: hsl(var(--grey-hue), var(--grey-sat), 10%);
   --grey-20: hsl(var(--grey-hue), var(--grey-sat), 20%);

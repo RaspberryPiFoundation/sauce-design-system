@@ -11,7 +11,7 @@ $desktop: 1440px;
 @mixin apply($metric, $value, $orientation: false) {
   @include media.query($metric, $value) {
     @if $orientation {
-      @include media.query("orientation", $orientation) {
+      @include media.query('orientation', $orientation) {
         @content;
       }
     } @else {
@@ -22,27 +22,27 @@ $desktop: 1440px;
 
 @mixin match($device) {
   $categories: (
-    "phone-portrait": (
-      "metric": max-width,
-      "value": $phone-portrait,
+    'phone-portrait': (
+      'metric': max-width,
+      'value': $phone-portrait,
     ),
-    "phone-landscape": (
-      "metric": max-width,
-      "value": $phone-landscape,
-      "orientation": "landscape",
+    'phone-landscape': (
+      'metric': max-width,
+      'value': $phone-landscape,
+      'orientation': 'landscape',
     ),
-    "tablet-portrait": (
-      "value": $tablet-portrait,
+    'tablet-portrait': (
+      'value': $tablet-portrait,
     ),
-    "tablet-landscape": (
-      "value": $tablet-landscape,
-      "orientation": "landscape",
+    'tablet-landscape': (
+      'value': $tablet-landscape,
+      'orientation': 'landscape',
     ),
-    "laptop": (
-      "value": $laptop,
+    'laptop': (
+      'value': $laptop,
     ),
-    "desktop": (
-      "value": $desktop,
+    'desktop': (
+      'value': $desktop,
     ),
   );
 
@@ -53,9 +53,9 @@ $desktop: 1440px;
   $query_args: map.values(
     map.merge(
       (
-        "metric": min-width,
-        "value": 0,
-        "orientation": false,
+        'metric': min-width,
+        'value': 0,
+        'orientation': false,
       ),
       map.get($categories, $device)
     )

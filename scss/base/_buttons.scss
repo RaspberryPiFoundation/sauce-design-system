@@ -1,11 +1,29 @@
 @use 'scss/primitives/button';
 
 .button,
-:is(button, input[type="button"], input[type="submit"]):not([class]) {
+:where(button, input[type='button'], input[type='submit']):not([class]) {
   @include button.primary;
 
-  &:disabled,
+  &[data-sauce-mod~='secondary'] {
+    @include button.secondary;
+  }
+
+  &[data-sauce-mod~='disabled'],
   &[disabled] {
     @include button.disabled;
   }
+}
+
+.button--secondary {
+  @include button.secondary;
+
+  &[data-sauce-mod~='disabled'],
+  &[disabled] {
+    @include button.disabled;
+  }
+}
+
+.button--disabled {
+  @include button.primary;
+  @include button.disabled;
 }

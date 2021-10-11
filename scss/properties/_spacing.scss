@@ -1,6 +1,5 @@
 :root {
   --spacing-multiplier: 0.625;
-
   --spacing-0: 0;
   --spacing-1: calc(1rem * var(--spacing-multiplier)); // 0.625rem
   --spacing-2: calc(2rem * var(--spacing-multiplier)); // 1.25rem

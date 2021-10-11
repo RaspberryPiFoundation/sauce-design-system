@@ -4,18 +4,36 @@
 a:not([class]) {
   @include link.primary;
 
-  [data-sauce-mod~="breakout"] &,
-  &[data-sauce-mod~="breakout"] {
+  [data-sauce-mod~='breakout'] &,
+  &[data-sauce-mod~='breakout'] {
     @include link.breakout;
   }
 
-  [data-sauce-mod~="inverted"] &,
-  &[data-sauce-mod~="inverted"] {
+  [data-sauce-mod~='inverted'] &,
+  &[data-sauce-mod~='inverted'] {
     @include link.inverted;
   }
 
-  [data-sauce-mod~="no-visited-state"] &:visited,
-  &:visited[data-sauce-mod~="no-visited-state"] {
+  [data-sauce-mod~='no-visited-state'] &:visited,
+  &:visited[data-sauce-mod~='no-visited-state'] {
+    @include link.no-visited-state;
+  }
+}
+
+.link--breakout {
+  @include link.primary;
+  @include link.breakout;
+}
+
+.link--inverted {
+  @include link.primary;
+  @include link.inverted;
+}
+
+.link--no-visited-state {
+  @include link.primary;
+
+  &:visited {
     @include link.no-visited-state;
   }
 }

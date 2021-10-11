@@ -1,40 +1,38 @@
-@use 'scss/mixins/viewport';
 @use 'scss/mixins/helpers';
+@use 'scss/mixins/viewport';
 
-@mixin primary {
+@mixin button_base {
   // Include mixins
   @include helpers.focusable;
 
-  // Setup tokens
-  --color-background-base: var(--color-background-button-primary-base);
-  --color-background-active: var(--color-background-button-primary-active);
-  --color-background-disabled: var(--color-background-button-primary-disabled);
-  --color-text-base: var(--color-text-button-primary-base);
-  --color-text-active: var(--color-text-button-primary-active);
-  --color-text-disabled: var(--color-text-button-primary-disabled);
-
   // Setup custom properties
-  --background-color: var(--color-background-base);
-  --color: var(--color-text-base);
+  --background-color: var(--color-background);
+  --border-color: var(--color-border);
+  --border-width: var(--border-width-button);
+  --color: var(--color-text);
   --font-weight: var(--font-weight-medium);
   --line-height: var(--line-height-cosy);
+  --padding-block: var(--spacing-1);
+  --padding-inline: var(--spacing-4);
+  --pointer-events: auto;
   --transition-duration: var(--transition-duration-promptly);
   --transition-timing-function: var(--transition-timing-eased),
     var(--transition-timing-eased), var(--transition-timing-elastic);
   --width: 100%;
-  --padding-block: var(--spacing-1);
-  --padding-inline: var(--spacing-4);
 
   // Define rules
   background-color: var(--background-color);
+  border-color: var(--border-color);
   border-radius: 0.5rem;
-  border-width: 0;
+  border-style: solid;
+  border-width: var(--border-width);
   color: var(--color);
   display: inline-block;
   font-weight: var(--font-weight);
   line-height: var(--line-height);
   padding-block: var(--padding-block);
   padding-inline: var(--padding-inline);
+  pointer-events: var(--pointer-events);
   text-align: center;
   transition-duration: var(--transition-duration);
   transition-property: background-color, color, outline-offset;
@@ -43,14 +41,16 @@
 
   // Define pseudo-classes
   &:any-link {
-    --background-color: var(--color-background-base);
-    --color: var(--color-text-base);
+    --background-color: var(--color-background);
+    --border-color: var(--color-border);
+    --color: var(--color-text);
 
     text-decoration: none;
   }
 
-  &:is(:focus, :hover, :active) {
+  &:where(:focus, :hover, :active) {
     --background-color: var(--color-background-active);
+    --border-color: var(--color-border-active);
     --color: var(--color-text-active);
   }
 
@@ -58,13 +58,41 @@
   @include viewport.min-width(600px) {
     --width: auto;
   }
+
+  &:disabled,
+  &[disabled] {
+    @include disabled;
+  }
+}
+
+@mixin primary {
+  @include button_base;
+
+  --color-background: var(--color-background-button-primary);
+  --color-border: var(--color-border-button-primary);
+  --color-text: var(--color-text-button-primary);
+  --color-background-active: var(--color-background-button-primary-active);
+  --color-border-active: var(--color-border-button-primary-active);
+  --color-text-active: var(--color-text-button-primary-active);
+}
+
+@mixin secondary {
+  @include button_base;
+
+  --color-background: var(--color-background-button-secondary);
+  --color-border: var(--color-border-button-secondary);
+  --color-text: var(--color-text-button-secondary);
+  --color-background-active: var(--color-background-button-secondary-active);
+  --color-border-active: var(--color-border-button-secondary-active);
+  --color-text-active: var(--color-text-button-secondary-active);
 }
 
 @mixin disabled {
-  // Override custom properties
-  --background-color: var(--color-background-disabled);
-  --color: var(--color-text-disabled);
-
-  // Define other rules
-  pointer-events: none;
+  --color-background: var(--color-background-button-disabled);
+  --color-border: var(--color-border-button-disabled);
+  --color-text: var(--color-text-disabled);
+  --color-background-active: var(--color-background-button-disabled);
+  --color-border-active: var(--color-border-button-disabled-active);
+  --color-text-active: var(--color-text-disabled-active);
+  --pointer-events: none;
 }
