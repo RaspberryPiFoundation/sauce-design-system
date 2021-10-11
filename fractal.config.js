@@ -15,10 +15,33 @@ sauce.components.set('default.context', {
     'min-width': '400px',
   },
 })
-sauce.components.set('default.status', 'wip')
-sauce.components.set('default.preview', '@preview')
 sauce.components.set('ext', '.nunj')
 sauce.components.set('path', `${__dirname}/components`)
+sauce.components.set('statuses', {
+  deprecated: {
+    label: 'Deprecated',
+    description: 'Do not use! See component notes for guidance.',
+    color: 'rgb(182, 11, 41)',
+  },
+  alpha: {
+    label: 'Alpha',
+    description: 'Very likely to change. Unsuitable for production use.',
+    color: '#551A8B',
+  },
+  beta: {
+    label: 'Beta',
+    description: 'Work in progress. Implement with caution.',
+    color: '#ff9233',
+  },
+  ready: {
+    label: 'Ready',
+    description: 'Ready to implement.',
+    color: '#29cc29',
+  },
+})
+
+sauce.components.set('default.status', 'alpha')
+sauce.components.set('default.preview', '@preview')
 
 sauce.docs.set('indexLabel', 'Home')
 sauce.docs.set('path', `${__dirname}/docs`)
