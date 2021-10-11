@@ -19,4 +19,4 @@
   autoLaunch = false
   command = "npm start"
   framework = "#custom"
-  targetPort = 8888
+  targetPort = 31415
