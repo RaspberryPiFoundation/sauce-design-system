@@ -1,0 +1,15 @@
+// Raspberry Pi - Border - Width
+
+[data-sauce-theme='raspberry-pi'] {
+  // Button
+  --border-width-button: var(--border-width-none);
+
+  // Checkbox
+  --border-width-checkbox: var(--border-width-narrow);
+
+  // Input (inc. Select, Textarea)
+  --border-width-input: var(--border-width-narrow);
+
+  // Radio Button
+  --border-width-radio-button: var(--border-width-medium);
+}

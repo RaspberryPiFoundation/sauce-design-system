@@ -1,0 +1,41 @@
+// Color - Text
+
+[data-sauce-theme='raspberry-pi'] {
+  --color-text-primary: var(--mine-shaft);
+  --color-text-secondary: var(--grey-30);
+  --color-text-inverted: var(--white);
+
+  // Button - Primary
+  --color-text-button-primary: var(--white);
+  --color-text-button-primary-active: var(--white);
+
+  // Button - Secondary
+  --color-text-button-secondary: var(--grey-30);
+  --color-text-button-secondary-active: var(--grey-30);
+
+  // Button - Disabled
+  --color-text-button-disabled: var(--grey-40);
+  --color-text-button-disabled-active: var(--grey-40);
+
+  // Heading
+  --color-text-heading: var(--mine-shaft);
+  --color-text-heading-hero: var(--brand-red);
+  --color-text-heading-signpost-hero: var(--brand-red);
+
+  // Input (inc. Select, Textarea)
+  --color-text-input: var(--color-text-primary);
+  --color-text-input-active: var(--color-text-primary);
+  --color-text-input-disabled: var(--grey-40);
+
+  // Label
+  --color-text-label: var(--color-text-primary);
+  --color-text-label-disabled: var(--grey-60);
+
+  // Link
+  --color-text-link: var(--cobalt);
+  --color-text-link-active: var(--brand-red);
+  --color-text-link-visited: var(--wisteria);
+
+  // Placeholder
+  --color-text-placeholder: var(--grey-60);
+}

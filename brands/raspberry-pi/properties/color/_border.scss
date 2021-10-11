@@ -1,0 +1,33 @@
+// Color - Border
+
+[data-sauce-theme='raspberry-pi'] {
+  --color-border-primary: var(--grey-60);
+  --color-border-secondary: var(--grey-50);
+
+  // Button - Primary
+  --color-border-button-primary: var(--cobalt);
+  --color-border-button-primary-active: var(--bahama-blue);
+
+  // Button - Secondary
+  --color-border-button-secondary: var(--white);
+  --color-border-button-secondary-active: var(--grey-80);
+
+  // Button - Disabled
+  --color-border-button-disabled: var(--grey-60);
+  --color-border-button-disabled-active: var(--grey-60);
+
+  // Checkbox
+  --color-border-checkbox: var(--grey-80);
+  --color-border-checkbox-checked: var(--brand-red);
+  --color-border-checkbox-disabled: var(--grey-60);
+
+  // Input (inc. Select, Textarea)
+  --color-border-input: var(--grey-80);
+  --color-border-input-active: var(--bahama-blue);
+  --color-border-input-disabled: var(--grey-60);
+
+  // Radio Button
+  --color-border-radio-button: var(--grey-80);
+  --color-border-radio-button-checked: var(--brand-red);
+  --color-border-radio-button-disabled: var(--grey-60);
+}
