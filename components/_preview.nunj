@@ -1,6 +1,12 @@
-<html lang='en'>
+<!DOCTYPE html>
+<html data-sauce-theme='' lang='en'>
   <head>
     <meta charset='UTF-8' />
+
+    <script>
+      document.documentElement.dataset.sauceTheme = window.localStorage.getItem('sauce-theme')
+    </script>
+
     <meta
       name='viewport'
       content='width=device-width, initial-scale=1, viewport-fit=cover'

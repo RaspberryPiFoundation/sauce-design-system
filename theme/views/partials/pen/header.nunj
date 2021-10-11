@@ -1,0 +1,43 @@
+<div class="Pen-panel Pen-header">
+  <h1 class="Pen-title">
+    <a class="Pen-previewLink" href="{{ previewUrl }}" title="{{ frctl.theme.get('labels.components.preview.label') }}">
+      {{ entity.title }}
+      {% include "icons/open-in-browser.svg" %}
+    </a>
+  </h1>
+
+  <div class="sauce-theme" style="margin: 0 auto">
+    <label for="sauce-theme__select" style="margin-right: .5rem">Theme: </label>
+
+    <select class="sauce-theme__select" id="sauce-theme__select">
+      <option value="raspberry-pi">Raspberry Pi</option>
+      <option value="astro-pi">Astro Pi</option>
+    </select>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const storageKey = 'sauce-theme'
+      const preview = document.querySelector('.Preview-iframe')
+      const select = document.querySelector('.sauce-theme__select')
+      const theme = window.localStorage.getItem(storageKey)
+
+      const setTheme = () => {
+        window.localStorage.setItem(storageKey, select.value)
+        preview.contentWindow.location.reload()
+      }
+
+      if (theme) {
+        select.value = theme
+      } else {
+        setTheme()
+      }
+
+      select.addEventListener('change', setTheme)
+    });
+  </script>
+
+  <span class="Pen-preview-size" data-role="preview-size" style="margin: 0"></span>
+
+  {{ status.tag(entity.status) }}
+</div>
