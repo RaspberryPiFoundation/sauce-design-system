@@ -1,0 +1,15 @@
+// Astro Pi - Border - Width
+
+[data-sauce-theme='astro-pi'] {
+  // Button
+  --border-width-button: var(--border-width-wide);
+
+  // Checkbox
+  --border-width-checkbox: var(--border-width-narrow);
+
+  // Input (inc. Select, Textarea)
+  --border-width-input: var(--border-width-narrow);
+
+  // Radio Button
+  --border-width-radio-button: var(--border-width-medium);
+}

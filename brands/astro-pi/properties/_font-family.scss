@@ -1,0 +1,24 @@
+// Astro Pi - Font Family
+
+@font-face {
+  font-family: 'NotesEsa';
+  font-style: normal;
+  font-weight: 400;
+  src: url('brands/astro-pi/fonts/notes_esa.woff2') format('woff2'),
+    url('brands/astro-pi/fonts/notes_esa.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'NotesEsa';
+  font-style: normal;
+  font-weight: 700;
+  src: url('brands/astro-pi/fonts/notes_esa_bold.woff2') format('woff2'),
+    url('brands/astro-pi/fonts/notes_esa_bold.woff') format('woff');
+}
+
+[data-sauce-theme='astro-pi'] {
+  --font-family-heading: 'NotesEsa', sans-serif;
+  --font-family-monospace: 'Space Mono', monospace;
+  --font-family-sans-serif: 'Roboto', sans-serif;
+  --font-family-serif: 'Roboto', serif;
+}

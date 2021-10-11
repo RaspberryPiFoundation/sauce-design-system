@@ -1,0 +1,37 @@
+// Color - Text
+
+[data-sauce-theme='astro-pi'] {
+  --color-text-primary: var(--daintree);
+  --color-text-secondary: var(--grey-30);
+  --color-text-inverted: var(--white);
+
+  // Button
+  --color-text-button-disabled: var(--grey-40);
+  --color-text-button-disabled-active: var(--grey-40);
+  --color-text-button-primary: var(--daintree);
+  --color-text-button-primary-active: var(--daintree);
+  --color-text-button-secondary: var(--daintree);
+  --color-text-button-secondary-active: var(--daintree);
+
+  // Heading
+  --color-text-heading: var(--daintree);
+  --color-text-heading-hero: var(--daintree);
+  --color-text-heading-signpost-hero: var(--daintree);
+
+  // Input (inc. Select, Textarea)
+  --color-text-input: var(--daintree);
+  --color-text-input-active: var(--daintree);
+  --color-text-input-disabled: var(--grey-40);
+
+  // Label
+  --color-text-label: var(--daintree);
+  --color-text-label-disabled: var(--grey-60);
+
+  // Link
+  --color-text-link: var(--daintree);
+  --color-text-link-active: var(--persian-green);
+  --color-text-link-visited: var(--daintree);
+
+  // Placeholder
+  --color-text-placeholder: var(--grey-60);
+}
