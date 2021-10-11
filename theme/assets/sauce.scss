@@ -26,12 +26,7 @@
 @forward 'scss/base/text-semantics';
 @forward 'scss/base/typography';
 
-// Astro Pi Properties
-@forward 'brands/astro-pi/properties/border-width';
-@forward 'brands/astro-pi/properties/color';
-@forward 'brands/astro-pi/properties/font-family';
-
-// Raspberry Pi Properties
-@forward 'brands/raspberry-pi/properties/border-width';
-@forward 'brands/raspberry-pi/properties/color';
-@forward 'brands/raspberry-pi/properties/font-family';
+// Brand Properties
+// Your real application should contain only one of these! Fractal needs all of them for its preview.
+@forward 'brands/astro-pi';
+@forward 'brands/raspberry-pi';
