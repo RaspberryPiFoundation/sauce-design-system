@@ -3,6 +3,8 @@ status: ready
 context:
   element: p
   content: Sauce Design System
+  button:
+    label: 'A Nested Button!'
 variants:
   - name: 'Signpost Hero Heading'
     context:

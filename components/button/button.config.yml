@@ -1,0 +1,14 @@
+title: Button
+status: ready
+context:
+  class: button
+  label: A Button
+variants:
+  - name: 'Secondary'
+    context:
+      class: button button--secondary
+      label: A Secondary Button
+  - name: 'Disabled'
+    context:
+      class: button button--disabled
+      label: A Disabled Button
