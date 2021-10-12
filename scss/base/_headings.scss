@@ -1,0 +1,12 @@
+@use 'scss/primitives/heading';
+
+h1, h2, h3, h4, h5, h6 {
+  @include heading.primitive;
+}
+
+.heading-signpost-hero { @include heading.signpost-hero; }
+.heading-hero          { @include heading.hero;          }
+.heading-primary       { @include heading.primary;       }
+.heading-secondary     { @include heading.secondary;     }
+.heading-tertiary      { @include heading.tertiary;      }
+.heading-item          { @include heading.item;          }

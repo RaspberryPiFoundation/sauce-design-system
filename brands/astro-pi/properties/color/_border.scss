@@ -1,0 +1,33 @@
+// Color - Border
+
+[data-sauce-theme='astro-pi'] {
+  --color-border-primary: var(--grey-80);
+  --color-border-secondary: var(--grey-80);
+
+  // Button - Primary
+  --color-border-button-primary: var(--aquamarine);
+  --color-border-button-primary-active: var(--aquamarine);
+
+  // Button - Secondary
+  --color-border-button-secondary: var(--quill-gray);
+  --color-border-button-secondary-active: var(--daintree);
+
+  // Button - Disabled
+  --color-border-button-disabled: var(--grey-60);
+  --color-border-button-disabled-active: var(--grey-80);
+
+  // Checkbox
+  --color-border-checkbox: var(--grey-80);
+  --color-border-checkbox-checked: var(--aquamarine);
+  --color-border-checkbox-disabled: var(--grey-80);
+
+  // Input (inc. Select, Textarea)
+  --color-border-input: var(--grey-80);
+  --color-border-input-active: var(--daintree);
+  --color-border-input-disabled: var(--daintree);
+
+  // Radio Button
+  --color-border-radio-button: var(--congress-blue);
+  --color-border-radio-button-checked: var(--congress-blue);
+  --color-border-radio-button-disabled: var(--grey-80);
+}

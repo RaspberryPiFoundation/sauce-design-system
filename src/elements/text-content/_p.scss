@@ -1,8 +1,0 @@
-@use 'src/mixins/margin';
-@use 'src/primitives/type';
-
-p {
-  @include margin.b('bee');
-  max-width: 50ch;
-  @include type.primitive;
-}

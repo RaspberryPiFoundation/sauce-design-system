@@ -1,0 +1,43 @@
+// Color - Background
+
+[data-sauce-theme='astro-pi'] {
+  --color-background-primary: var(--daintree);
+  --color-background-secondary: var(--aqua-haze);
+  --color-background-inverted: var(--white);
+
+  // Document
+  --color-background-html: var(--fiord);
+  --color-background-body: var(--daintree);
+
+  // Button - Primary
+  --color-background-button-primary: var(--aquamarine);
+  --color-background-button-primary-active: var(--bright-turquoise);
+
+  // Button - Secondary
+  --color-background-button-secondary: var(--white);
+  --color-background-button-secondary-active: var(--porcelain);
+
+  // Button - Disabled
+  --color-background-button-disabled: var(--grey-80);
+  --color-background-button-disabled-active: var(--grey-80);
+
+  // Checkbox
+  --color-background-checkbox: var(--white);
+  --color-background-checkbox-checked: var(--aquamarine);
+  --color-background-checkbox-disabled: var(--grey-40);
+
+  // Input (inc. Select, Textarea)
+  --color-background-input: var(--white);
+  --color-background-input-active: var(--white);
+  --color-background-input-disabled: var(--grey-60);
+
+  // Link
+  --color-background-link: transparent;
+  --color-background-link-active: transparent;
+  --color-background-link-visited: transparent;
+
+  // Radio Button
+  --color-background-radio-button: var(--white);
+  --color-background-radio-button-checked: var(--congress-blue);
+  --color-background-radio-button-disabled: var(--grey-40);
+}

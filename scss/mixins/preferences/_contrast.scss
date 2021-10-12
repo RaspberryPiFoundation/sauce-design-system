@@ -1,0 +1,5 @@
+@use 'scss/mixins/media';
+
+@mixin less          { @include media.query('prefers-contrast', 'less')          { @content; } }
+@mixin more          { @include media.query('prefers-contrast', 'more')          { @content; } }
+@mixin no-preference { @include media.query('prefers-contrast', 'no-preference') { @content; } }

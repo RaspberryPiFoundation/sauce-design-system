@@ -1,0 +1,43 @@
+// Color - Background
+
+[data-sauce-theme='raspberry-pi'] {
+  --color-background-primary: var(--white);
+  --color-background-secondary: var(--grey-90);
+  --color-background-inverted: var(--grey-10);
+
+  // Document
+  --color-background-html: var(--color-background-secondary);
+  --color-background-body: var(--color-background-primary);
+
+  // Button - Primary
+  --color-background-button-primary: var(--cobalt);
+  --color-background-button-primary-active: var(--bahama-blue);
+
+  // Button - Secondary
+  --color-background-button-secondary: var(--white);
+  --color-background-button-secondary-active: var(--grey-80);
+
+  // Button - Disabled
+  --color-background-button-disabled: var(--grey-60);
+  --color-background-button-disabled-active: var(--grey-60);
+
+  // Checkbox
+  --color-background-checkbox: var(--white);
+  --color-background-checkbox-checked: var(--brand-red);
+  --color-background-checkbox-disabled: var(--grey-80);
+
+  // Input (inc. Select, Textarea)
+  --color-background-input: var(--white);
+  --color-background-input-active: var(--white);
+  --color-background-input-disabled: var(--grey-80);
+
+  // Link
+  --color-background-link: transparent;
+  --color-background-link-active: transparent;
+  --color-background-link-visited: transparent;
+
+  // Radio Button
+  --color-background-radio-button: var(--white);
+  --color-background-radio-button-checked: var(--brand-red);
+  --color-background-radio-button-disabled: var(--grey-40);
+}

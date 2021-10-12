@@ -1,0 +1,98 @@
+@use 'true' as *;
+@use 'scss/mixins/media';
+
+@include describe('.query') {
+  @include it('outputs a media query') {
+    @include assert {
+      @include output {
+        @include media.query('min-width', 50rem) {
+          color: rebeccapurple;
+        }
+      }
+      @include expect {
+        @media only all and (min-width: 50rem) {
+          color: rebeccapurple;
+        }
+      }
+    }
+  }
+
+  @include it('accepts a $type value') {
+    @include assert {
+      @include output {
+        @include media.query('min-width', 50rem, 'screen') {
+          color: rebeccapurple;
+        }
+      }
+      @include expect {
+        @media only screen and (min-width: 50rem) {
+          color: rebeccapurple;
+        }
+      }
+    }
+  }
+}
+
+@include describe('.print') {
+  @include it('outputs .media with $type: print') {
+    @include assert {
+      @include output {
+        @include media.print('min-width', 50rem) {
+          color: rebeccapurple;
+        }
+      }
+      @include expect {
+        @include media.query('min-width', 50rem, 'print') {
+          color: rebeccapurple;
+        }
+      }
+    }
+  }
+
+  @include it('outputs a media query') {
+    @include assert {
+      @include output {
+        @include media.print('min-width', 50rem) {
+          color: rebeccapurple;
+        }
+      }
+      @include expect {
+        @media only print and (min-width: 50rem) {
+          color: rebeccapurple;
+        }
+      }
+    }
+  }
+}
+
+@include describe('.screen') {
+  @include it('outputs .media with $type: screen') {
+    @include assert {
+      @include output {
+        @include media.screen('min-width', 50rem) {
+          color: rebeccapurple;
+        }
+      }
+      @include expect {
+        @include media.query('min-width', 50rem, 'screen') {
+          color: rebeccapurple;
+        }
+      }
+    }
+  }
+
+  @include it('outputs a media query') {
+    @include assert {
+      @include output {
+        @include media.screen('min-width', 50rem) {
+          color: rebeccapurple;
+        }
+      }
+      @include expect {
+        @media only screen and (min-width: 50rem) {
+          color: rebeccapurple;
+        }
+      }
+    }
+  }
+}

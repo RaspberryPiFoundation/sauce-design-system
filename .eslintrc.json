@@ -1,0 +1,18 @@
+{
+  "env": {
+    "amd": true,
+    "browser": true,
+    "commonjs": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "airbnb-base",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "impliedStrict": true,
+    "sourceType": "module"
+  }
+}

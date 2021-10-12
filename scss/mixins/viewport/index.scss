@@ -1,0 +1,11 @@
+@use 'height';
+@use 'width';
+
+@mixin height($value)     { @include height.is($value)  { @content; } }
+@mixin width($value)      { @include width.is($value)   { @content; } }
+
+@mixin max-height($value) { @include height.max($value) { @content; } }
+@mixin max-width($value)  { @include width.max($value)  { @content; } }
+
+@mixin min-height($value) { @include height.min($value) { @content; } }
+@mixin min-width($value)  { @include width.min($value)  { @content; } }

@@ -1,0 +1,43 @@
+@use 'scss/layouts';
+
+/**
+ * Layouts implement patterns as found in https://every-layout.dev (with some tweaks)
+ *
+ * There's a copy of the Every Layout book in the Digital Products Google Drive, and we have a license
+ * that allows us to unlocks the full site: https://every-layout.dev/login/?email=web@raspberrypi.org
+ */
+
+// https://every-layout.dev/layouts/box
+.layout-box {
+  @include layouts.box;
+}
+
+// https://every-layout.dev/layouts/center
+.layout-center {
+  @include layouts.center;
+}
+
+// https://every-layout.dev/layouts/frame
+.layout-frame {
+  @include layouts.frame;
+}
+
+// https://every-layout.dev/layouts/grid
+.layout-grid {
+  @include layouts.grid;
+}
+
+// https://every-layout.dev/layouts/stack
+.layout-stack {
+  @include layouts.stack;
+}
+
+// https://every-layout.dev/layouts/icon
+.layout-with-icon {
+  @include layouts.with-icon;
+}
+
+// https://every-layout.dev/layouts/sidebar
+.layout-with-sidebar {
+  @include layouts.with-sidebar;
+}

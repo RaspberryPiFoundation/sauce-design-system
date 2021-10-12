@@ -3,14 +3,12 @@ aliases:
   - &defaults
     executor:
       name: node
-    docker:
-      - image: circleci/node:12-browsers
     working_directory: /mnt/ramdisk
 executors:
   node:
     description: Circle CI standard node docker image
     docker:
-      - image: circleci/node:12.18.2
+      - image: circleci/node:14
 jobs:
   install:
     <<: *defaults
@@ -19,14 +17,15 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - sauce-packages-{{ checksum "package-lock.json" }}
+            - sauce-dependencies-{{ checksum "package-lock.json" }}
+            - sauce-dependencies-
       - run:
-          command: npm ci
+          command: npm install
           name: Install Node dependencies
       - save_cache:
           paths:
             - ~/.npm
-          key: sauce-packages-{{ checksum "package-lock.json" }}
+          key: sauce-dependencies-{{ checksum "package-lock.json" }}
       - persist_to_workspace:
           root: .
           paths:
@@ -38,26 +37,8 @@ jobs:
       - attach_workspace:
           at: .
       - run:
-          command: npm run test-ci
+          command: npm run test:ci
           name: Run Sass unit tests
-  chromatic-master-update:
-    <<: *defaults
-    steps:
-      - checkout
-      - attach_workspace:
-          at: .
-      - run:
-          command: npm run chromatic-ci-master-update
-          name: Chromatic - accept all changes
-  chromatic-branch-test:
-    <<: *defaults
-    steps:
-      - checkout
-      - attach_workspace:
-          at: .
-      - run:
-          command: npm run chromatic-ci-branch-test
-          name: Chromatic - report changes to chromatic
 workflows:
   version: 2.1
   tests:
@@ -66,15 +47,3 @@ workflows:
       - sass-unit-test:
           requires:
             - install
-      - chromatic-branch-test:
-          requires:
-            - install
-          filters:
-            branches:
-              ignore: master
-      - chromatic-master-update:
-          requires:
-            - install
-          filters:
-            branches:
-              only: master

@@ -1,0 +1,54 @@
+@use 'true' as *;
+@use 'scss/mixins/media';
+@use 'scss/mixins/viewport/height';
+
+@include describe('.is') {
+  @include it('calls media.query') {
+    @include assert {
+      @include output {
+        @include height.is(1rem) {
+          color: rebeccapurple;
+        }
+      }
+      @include expect {
+        @include media.query('height', 1rem) {
+          color: rebeccapurple;
+        }
+      }
+    }
+  }
+}
+
+@include describe('.max') {
+  @include it('calls media.query') {
+    @include assert {
+      @include output {
+        @include height.max(1rem) {
+          color: rebeccapurple;
+        }
+      }
+      @include expect {
+        @include media.query('max-height', 1rem) {
+          color: rebeccapurple;
+        }
+      }
+    }
+  }
+}
+
+@include describe('.min') {
+  @include it('calls media.query') {
+    @include assert {
+      @include output {
+        @include height.min(1rem) {
+          color: rebeccapurple;
+        }
+      }
+      @include expect {
+        @include media.query('min-height', 1rem) {
+          color: rebeccapurple;
+        }
+      }
+    }
+  }
+}

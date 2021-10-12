@@ -1,0 +1,11 @@
+@use 'sass:list';
+@use 'sass:meta';
+
+@mixin query($metric, $value, $type: 'all') {
+  @media only #{$type} and (#{$metric}: $value) {
+    @content;
+  }
+}
+
+@mixin print($metric,  $value) { @include query($metric, $value, 'print')  { @content; } }
+@mixin screen($metric, $value) { @include query($metric, $value, 'screen') { @content; } }

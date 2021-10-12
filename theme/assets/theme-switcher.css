@@ -1,0 +1,11 @@
+.sauce-theme-switcher {
+  margin-left: auto;
+  padding: 1rem;
+}
+
+.sauce-theme-switcher__label {
+  font-weight: bold;
+}
+
+.sauce-theme-switcher__select {
+}

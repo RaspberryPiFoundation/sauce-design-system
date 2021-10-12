@@ -1,0 +1,19 @@
+{
+  "recommendations": [
+    "andrejunges.handlebars",
+    "bungcip.better-toml",
+    "codezombiech.gitignore",
+    "dbaeumer.vscode-eslint",
+    "editorconfig.editorconfig",
+    "eg2.vscode-npm-script",
+    "embertooling.prettier-for-handlebars-vscode",
+    "esbenp.prettier-vscode",
+    "jamesqquick.netlify-toml-snippets",
+    "ronnidc.nunjucks",
+    "shailen.netlify",
+    "stylelint.vscode-stylelint",
+    "syler.sass-indented",
+    "tyriar.sort-lines",
+    "yzhang.markdown-all-in-one"
+  ]
+}
