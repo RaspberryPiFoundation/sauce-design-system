@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-sauce-theme='' lang='en'>
+<html class="fractal-preview" data-sauce-theme='' lang='en'>
   <head>
     <meta charset='UTF-8' />
 
@@ -40,7 +40,7 @@
 
     <title>{{ _target.title }} &middot; {{ _config.project.title }}</title>
   </head>
-  <body>
+  <body class="fractal-preview__body">
     {{ yield | safe }}
   </body>
 </html>
