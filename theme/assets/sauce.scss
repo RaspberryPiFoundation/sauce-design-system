@@ -2,8 +2,11 @@
  * Styles for component previews, not the theme.
  * This file more resembles the styles we'd include in an application.
  */
+
+// CSS Reset
 @forward 'modern-css-reset/dist/reset.min.css';
 
+// Framework Properties
 @forward 'scss/properties/border-radius';
 @forward 'scss/properties/border-width';
 @forward 'scss/properties/color';
@@ -15,6 +18,7 @@
 @forward 'scss/properties/transition-duration';
 @forward 'scss/properties/transition-timing';
 
+// Base Element Styles
 @forward 'scss/base/document-root';
 @forward 'scss/base/buttons';
 @forward 'scss/base/code';
@@ -26,7 +30,37 @@
 @forward 'scss/base/text-semantics';
 @forward 'scss/base/typography';
 
-// Brand Properties
-// Your real application should contain only one of these! Fractal needs all of them for its preview.
+// Brand Properties - Your real application should contain only one of these!
 @forward 'brands/astro-pi';
 @forward 'brands/raspberry-pi';
+
+// Astro Pi Fonts
+@font-face {
+  font-family: 'NotesEsa';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/astro-pi/notes_esa.woff2') format('woff2'),
+    url('/assets/fonts/astro-pi/notes_esa.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'NotesEsa';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/assets/fonts/astro-pi/notes_esa_bold.woff2') format('woff2'),
+    url('/assets/fonts/astro-pi/notes_esa_bold.woff') format('woff');
+}
+
+// Preview Background Colors
+[data-sauce-theme='astro-pi'] {
+  --preview-background-color: #fff;
+}
+
+[data-sauce-theme='raspberry-pi'] {
+  --preview-background-color: #fff;
+}
+
+html,
+body {
+  background-color: var(--preview-background-color);
+}

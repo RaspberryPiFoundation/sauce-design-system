@@ -1,0 +1,9 @@
+<div class="sauce-theme-switcher">
+  <label class="sauce-theme-switcher__label" for="sauce-theme-switcher__select">Brand theme: </label>
+
+  <select class="sauce-theme-switcher__select" id="sauce-theme-switcher__select">
+    {% for themeKey, themeName in frctl.theme.get('themes') %}
+      <option value="{{ themeKey }}">{{ themeName }}</option>
+    {% endfor %}
+  </select>
+</div>
