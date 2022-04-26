@@ -69,8 +69,8 @@
     "stylelint-scss": "3.19.0"
   },
   "engines": {
-    "node": "^14.0.0",
-    "npm": "^7.0.0"
+    "node": ">=14.0.0",
+    "npm": ">=7.0.0"
   },
   "peerDependencies": {
     "modern-css-reset": "1.4.0"
