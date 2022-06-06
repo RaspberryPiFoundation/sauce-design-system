@@ -1,4 +1,4 @@
-:root {
+:root, :host {
   --spacing-multiplier: 0.625;
   --spacing-0: 0;
   --spacing-1: calc(1rem * var(--spacing-multiplier)); // 0.625rem
