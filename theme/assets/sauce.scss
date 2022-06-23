@@ -7,32 +7,32 @@
 @forward 'modern-css-reset/dist/reset.min.css';
 
 // Framework Properties
-@forward 'scss/properties/border-radius';
-@forward 'scss/properties/border-width';
-@forward 'scss/properties/color';
-@forward 'scss/properties/font-family';
-@forward 'scss/properties/font-size';
-@forward 'scss/properties/font-weight';
-@forward 'scss/properties/line-height';
-@forward 'scss/properties/spacing';
-@forward 'scss/properties/transition-duration';
-@forward 'scss/properties/transition-timing';
+@forward '../../scss/properties/border-radius';
+@forward '../../scss/properties/border-width';
+@forward '../../scss/properties/color';
+@forward '../../scss/properties/font-family';
+@forward '../../scss/properties/font-size';
+@forward '../../scss/properties/font-weight';
+@forward '../../scss/properties/line-height';
+@forward '../../scss/properties/spacing';
+@forward '../../scss/properties/transition-duration';
+@forward '../../scss/properties/transition-timing';
 
 // Base Element Styles
-@forward 'scss/base/document-root';
-@forward 'scss/base/buttons';
-@forward 'scss/base/code';
-@forward 'scss/base/headings';
-@forward 'scss/base/helpers';
-@forward 'scss/base/layouts';
-@forward 'scss/base/links';
-@forward 'scss/base/lists';
-@forward 'scss/base/text-semantics';
-@forward 'scss/base/typography';
+@forward '../../scss/base/document-root';
+@forward '../../scss/base/buttons';
+@forward '../../scss/base/code';
+@forward '../../scss/base/headings';
+@forward '../../scss/base/helpers';
+@forward '../../scss/base/layouts';
+@forward '../../scss/base/links';
+@forward '../../scss/base/lists';
+@forward '../../scss/base/text-semantics';
+@forward '../../scss/base/typography';
 
 // Brand Properties - Your real application should contain only one of these!
-@forward 'brands/astro-pi';
-@forward 'brands/raspberry-pi';
+@forward '../../brands/astro-pi';
+@forward '../../brands/raspberry-pi';
 
 // Astro Pi Fonts
 @font-face {

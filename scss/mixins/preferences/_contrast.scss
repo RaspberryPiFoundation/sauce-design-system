@@ -1,4 +1,4 @@
-@use 'scss/mixins/media';
+@use '../../mixins/media';
 
 @mixin less          { @include media.query('prefers-contrast', 'less')          { @content; } }
 @mixin more          { @include media.query('prefers-contrast', 'more')          { @content; } }

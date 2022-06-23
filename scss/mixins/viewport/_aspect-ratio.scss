@@ -1,4 +1,4 @@
-@use 'scss/mixins/media';
+@use '../../mixins/media';
 
 @mixin is($value)  { @include media.query('aspect-ratio',     $value) { @content; } }
 @mixin max($value) { @include media.query('max-aspect-ratio', $value) { @content; } }

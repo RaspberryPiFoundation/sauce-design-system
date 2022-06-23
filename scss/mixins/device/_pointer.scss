@@ -1,4 +1,4 @@
-@use 'scss/mixins/media';
+@use '../../mixins/media';
 
 @mixin any($value)     { @include media.query('any-pointer', $value) { @content; } }
 @mixin primary($value) { @include media.query('pointer',     $value) { @content; } }

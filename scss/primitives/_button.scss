@@ -1,5 +1,5 @@
-@use 'scss/mixins/helpers';
-@use 'scss/mixins/viewport';
+@use '../mixins/helpers';
+@use '../mixins/viewport';
 
 @mixin button_base {
   // Include mixins

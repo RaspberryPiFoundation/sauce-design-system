@@ -6,7 +6,7 @@
  * </div>
  */
 
-@use 'scss/mixins/preferences/contrast';
+@use '../mixins/preferences/contrast';
 
 @mixin layout-box {
   --box-background-color: var(--grey-90);
