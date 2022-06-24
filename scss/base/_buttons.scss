@@ -1,4 +1,4 @@
-@use 'scss/primitives/button';
+@use '../primitives/button';
 
 .button,
 :where(button, input[type='button'], input[type='submit']):not([class]) {

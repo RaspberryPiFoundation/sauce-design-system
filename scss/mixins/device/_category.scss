@@ -1,5 +1,5 @@
 @use 'sass:map';
-@use 'scss/mixins/media';
+@use '../../mixins/media';
 
 $phone-portrait: 0;
 $phone-landscape: 600px;

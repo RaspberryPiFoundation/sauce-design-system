@@ -1,4 +1,4 @@
-@use 'scss/mixins/helpers';
+@use '../mixins/helpers';
 
 [data-sauce-helper~='cover']               { @include helpers.cover;               }
 [data-sauce-helper~='focusable']           { @include helpers.focusable;           }
