@@ -1,0 +1,244 @@
+/**
+* @tokens Color / Projects UI / Palette
+* @presenter Color
+*/
+$rpi-off-white: #f5f6f9;
+$rpi-text: #212121;
+
+// new palette colors - in time replace existing colors
+$rpi-red: #F3524F;
+$rpi-red-shade-20: mix($black, $rpi-red, $weight: 20%);
+$rpi-red-tint-25: mix($white, $rpi-red, $weight: 25%);
+$rpi-red-tint-50: mix($white, $rpi-red, $weight: 50%);
+$rpi-red-tint-75: mix($white, $rpi-red, $weight: 75%);
+$rpi-red-tint-90: mix($white, $rpi-red, $weight: 90%);
+
+$rpi-blue: #008FF0;
+$rpi-blue-shade-20: mix($black, $rpi-blue, $weight: 20%);
+$rpi-blue-tint-25: mix($white, $rpi-blue, $weight: 25%);
+$rpi-blue-tint-50: mix($white, $rpi-blue, $weight: 50%);
+$rpi-blue-tint-75: mix($white, $rpi-blue, $weight: 75%);
+$rpi-blue-tint-90: mix($white, $rpi-blue, $weight: 90%);
+
+$rpi-navy: #232e9b;
+$rpi-navy-shade-20: mix($black, $rpi-navy, $weight: 20%);
+$rpi-navy-tint-25: mix($white, $rpi-navy, $weight: 25%);
+$rpi-navy-tint-50: mix($white, $rpi-navy, $weight: 50%);
+$rpi-navy-tint-75: mix($white, $rpi-navy, $weight: 75%);
+$rpi-navy-tint-90: mix($white, $rpi-navy, $weight: 90%);
+
+$rpi-orange: #fe8e15;
+$rpi-orange-shade-20: mix($black, $rpi-orange, $weight: 20%);
+$rpi-orange-tint-25: mix($white, $rpi-orange, $weight: 25%);
+$rpi-orange-tint-50: mix($white, $rpi-orange, $weight: 50%);
+$rpi-orange-tint-75: mix($white, $rpi-orange, $weight: 75%);
+$rpi-orange-tint-90: mix($white, $rpi-orange, $weight: 90%);
+
+$rpi-yellow: #FFDC00;
+$rpi-yellow-shade-20: mix($black, $rpi-yellow, $weight: 20%);
+$rpi-yellow-tint-25: mix($white, $rpi-yellow, $weight: 25%);
+$rpi-yellow-tint-50: mix($white, $rpi-yellow, $weight: 50%);
+$rpi-yellow-tint-75: mix($white, $rpi-yellow, $weight: 75%);
+$rpi-yellow-tint-90: mix($white, $rpi-yellow, $weight: 90%);
+
+$rpi-purple: #8744AA;
+$rpi-purple-shade-20: mix($black, $rpi-purple, $weight: 20%);
+$rpi-purple-tint-25: mix($white, $rpi-purple, $weight: 25%);
+$rpi-purple-tint-50: mix($white, $rpi-purple, $weight: 50%);
+$rpi-purple-tint-75: mix($white, $rpi-purple, $weight: 75%);
+$rpi-purple-tint-90: mix($white, $rpi-purple, $weight: 90%);
+
+$rpi-green: #46af4b;
+$rpi-green-shade-20: mix($black, $rpi-green, $weight: 20%);
+$rpi-green-tint-25: mix($white, $rpi-green, $weight: 25%);
+$rpi-green-tint-50: mix($white, $rpi-green, $weight: 50%);
+$rpi-green-tint-75: mix($white, $rpi-green, $weight: 75%);
+$rpi-green-tint-90: mix($white, $rpi-green, $weight: 90%);
+
+$rpi-teal: #14BCAC;
+$rpi-teal-shade-20: mix($black, $rpi-teal, $weight: 20%);
+$rpi-teal-tint-25: mix($white, $rpi-teal, $weight: 25%);
+$rpi-teal-tint-50: mix($white, $rpi-teal, $weight: 50%);
+$rpi-teal-tint-75: mix($white, $rpi-teal, $weight: 75%);
+$rpi-teal-tint-90: mix($white, $rpi-teal, $weight: 90%);
+
+$rpi-grey-5: darken($white, 5%);
+$rpi-grey-15: darken($white, 15%);
+$rpi-grey-40: darken($white, 40%);
+$rpi-grey-70: darken($white, 70%);
+
+$rpi-brand-raspberry: #cd2355;
+$rpi-brand-leaf: #46af4b;
+$rpi-brand-black: #1d1d1b;
+
+
+:root, :host {
+  --rpi-white: #{$white};
+  --rpi-black: #{$black};
+
+  --rpi-red: #{$rpi-red};
+  --rpi-red-shade-20: #{$rpi-red-shade-20};
+  --rpi-red-tint-25: #{$rpi-red-tint-25};
+  --rpi-red-tint-50: #{$rpi-red-tint-50};
+  --rpi-red-tint-75: #{$rpi-red-tint-75};
+  --rpi-red-tint-90: #{$rpi-red-tint-90};
+
+  --rpi-blue: #{$rpi-blue};
+  --rpi-blue-shade-20: #{$rpi-blue-shade-20};
+  --rpi-blue-tint-25: #{$rpi-blue-tint-25};
+  --rpi-blue-tint-50: #{$rpi-blue-tint-50};
+  --rpi-blue-tint-75: #{$rpi-blue-tint-75};
+  --rpi-blue-tint-90: #{$rpi-blue-tint-90};
+
+  --rpi-navy: #{$rpi-navy};
+  --rpi-navy-shade-20: #{$rpi-navy-shade-20};
+  --rpi-navy-tint-25: #{$rpi-navy-tint-25};
+  --rpi-navy-tint-50: #{$rpi-navy-tint-50};
+  --rpi-navy-tint-75: #{$rpi-navy-tint-75};
+  --rpi-navy-tint-90: #{$rpi-navy-tint-90};
+
+  --rpi-orange: #{$rpi-orange};
+  --rpi-orange-shade-20: #{$rpi-orange-shade-20};
+  --rpi-orange-tint-25: #{$rpi-orange-tint-25};
+  --rpi-orange-tint-50: #{$rpi-orange-tint-50};
+  --rpi-orange-tint-75: #{$rpi-orange-tint-75};
+  --rpi-orange-tint-90: #{$rpi-orange-tint-90};
+
+  --rpi-yellow: #{$rpi-yellow};
+  --rpi-yellow-shade-20: #{$rpi-yellow-shade-20};
+  --rpi-yellow-tint-25: #{$rpi-yellow-tint-25};
+  --rpi-yellow-tint-50: #{$rpi-yellow-tint-50};
+  --rpi-yellow-tint-75: #{$rpi-yellow-tint-75};
+  --rpi-yellow-tint-90: #{$rpi-yellow-tint-90};
+
+  --rpi-purple: #{$rpi-purple};
+  --rpi-purple-shade-20: #{$rpi-purple-shade-20};
+  --rpi-purple-tint-25: #{$rpi-purple-tint-25};
+  --rpi-purple-tint-50: #{$rpi-purple-tint-50};
+  --rpi-purple-tint-75: #{$rpi-purple-tint-75};
+  --rpi-purple-tint-90: #{$rpi-purple-tint-90};
+
+  --rpi-green: #{$rpi-green};
+  --rpi-green-shade-20: #{$rpi-green-shade-20};
+  --rpi-green-tint-25: #{$rpi-green-tint-25};
+  --rpi-green-tint-50: #{$rpi-green-tint-50};
+  --rpi-green-tint-75: #{$rpi-green-tint-75};
+  --rpi-green-tint-90: #{$rpi-green-tint-90};
+
+  --rpi-teal: #{$rpi-teal};
+  --rpi-teal-shade-20: #{$rpi-teal-shade-20};
+  --rpi-teal-tint-25: #{$rpi-teal-tint-25};
+  --rpi-teal-tint-50: #{$rpi-teal-tint-50};
+  --rpi-teal-tint-75: #{$rpi-teal-tint-75};
+  --rpi-teal-tint-90: #{$rpi-teal-tint-90};
+
+  --rpi-black: #{$black};
+  --rpi-white: #{$white};
+  --rpi-grey-5: #{$rpi-grey-5};
+  --rpi-grey-15: #{$rpi-grey-15};
+  --rpi-grey-40: #{$rpi-grey-40};
+  --rpi-grey-70: #{$rpi-grey-70};
+  --rpi-off-white: #{$rpi-off-white};
+  --rpi-text: #{$rpi-text};
+
+  --rpi-brand-raspberry: #{$rpi-brand-raspberry};
+  --rpi-brand-leaf: #{$rpi-brand-leaf};
+  --rpi-brand-black: #{$rpi-brand-black};
+}
+
+// Webpack exports
+/* stylelint-disable selector-pseudo-class-no-unknown, order/properties-alphabetical-order */
+:export {
+  red: {
+    rpi-red: $rpi-red;
+    rpi-red-shade-20: $rpi-red-shade-20;
+    rpi-red-tint-25: $rpi-red-tint-25;
+    rpi-red-tint-50: $rpi-red-tint-50;
+    rpi-red-tint-75: $rpi-red-tint-75;
+    rpi-red-tint-90: $rpi-red-tint-90;
+  }
+
+  blue: {
+    rpi-blue: $rpi-blue;
+    rpi-blue-shade-20: $rpi-blue-shade-20;
+    rpi-blue-tint-25: $rpi-blue-tint-25;
+    rpi-blue-tint-50: $rpi-blue-tint-50;
+    rpi-blue-tint-75: $rpi-blue-tint-75;
+    rpi-blue-tint-90: $rpi-blue-tint-90;
+  }
+
+  navy: {
+    rpi-navy: $rpi-navy;
+    rpi-navy-shade-20: $rpi-navy-shade-20;
+    rpi-navy-tint-25: $rpi-navy-tint-25;
+    rpi-navy-tint-50: $rpi-navy-tint-50;
+    rpi-navy-tint-75: $rpi-navy-tint-75;
+    rpi-navy-tint-90: $rpi-navy-tint-90;
+  }
+
+  orange: {
+    rpi-orange: $rpi-orange;
+    rpi-orange-shade-20: $rpi-orange-shade-20;
+    rpi-orange-tint-25: $rpi-orange-tint-25;
+    rpi-orange-tint-50: $rpi-orange-tint-50;
+    rpi-orange-tint-75: $rpi-orange-tint-75;
+    rpi-orange-tint-90: $rpi-orange-tint-90;
+  }
+
+  yellow: {
+    rpi-yellow: $rpi-yellow;
+    rpi-yellow-shade-20: $rpi-yellow-shade-20;
+    rpi-yellow-tint-25: $rpi-yellow-tint-25;
+    rpi-yellow-tint-50: $rpi-yellow-tint-50;
+    rpi-yellow-tint-75: $rpi-yellow-tint-75;
+    rpi-yellow-tint-90: $rpi-yellow-tint-90;
+  }
+
+  purple: {
+    rpi-purple: $rpi-purple;
+    rpi-purple-shade-20: $rpi-purple-shade-20;
+    rpi-purple-tint-25: $rpi-purple-tint-25;
+    rpi-purple-tint-50: $rpi-purple-tint-50;
+    rpi-purple-tint-75: $rpi-purple-tint-75;
+    rpi-purple-tint-90: $rpi-purple-tint-90;
+  }
+
+  green: {
+    rpi-green: $rpi-green;
+    rpi-green-shade-20: $rpi-green-shade-20;
+    rpi-green-tint-25: $rpi-green-tint-25;
+    rpi-green-tint-50: $rpi-green-tint-50;
+    rpi-green-tint-75: $rpi-green-tint-75;
+    rpi-green-tint-90: $rpi-green-tint-90;
+  }
+
+  teal: {
+    rpi-teal: $rpi-teal;
+    rpi-teal-shade-20: $rpi-teal-shade-20;
+    rpi-teal-tint-25: $rpi-teal-tint-25;
+    rpi-teal-tint-50: $rpi-teal-tint-50;
+    rpi-teal-tint-75: $rpi-teal-tint-75;
+    rpi-teal-tint-90: $rpi-teal-tint-90;
+  }
+
+  // stylelint is still messing with the order of these properties when --fix is used
+  // even though we disable it for the block
+  grey: {
+    rpi-black: $black;
+    rpi-grey-15: $rpi-grey-15;
+    rpi-grey-40: $rpi-grey-40;
+    rpi-grey-5: $rpi-grey-5;
+    rpi-grey-70: $rpi-grey-70;
+    rpi-off-white: $rpi-off-white;
+    rpi-text: $rpi-text;
+    rpi-white: $white;
+  }
+
+  brand: {
+    rpi-brand-black: $rpi-brand-black;
+    rpi-brand-leaf: $rpi-brand-leaf;
+    rpi-brand-raspberry: $rpi-brand-raspberry;
+  }
+}
+/* stylelint-enable selector-pseudo-class-no-unknown, order/properties-alphabetical-order */
+
