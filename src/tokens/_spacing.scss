@@ -1,82 +1,82 @@
 $ant: (
   clamp: (
-    min: 0.8rem,
+    min: 0.5rem,
     target: 1vw,
-    max: 1.2rem,
+    max: 0.75rem,
   ),
-  fixed: 1rem,
+  fixed: 0.625rem,
 );
 
 $bee: (
   clamp: (
-    min: 1.6rem,
+    min: 1rem,
     target: 2vw,
-    max: 2.4rem,
+    max: 1.5rem,
   ),
-  fixed: 2rem,
+  fixed: 1.25rem,
 );
 
 $chaffinch: (
   clamp: (
-    min: 2.4rem,
+    min: 1.5rem,
     target: 3vw,
-    max: 3.6rem,
+    max: 2.25rem,
   ),
-  fixed: 3rem,
+  fixed: 1.875rem,
 );
 
 $dog: (
   clamp: (
-    min: 3.2rem,
+    min: 2rem,
     target: 4vw,
-    max: 4.8rem,
+    max: 3rem,
   ),
-  fixed: 4rem,
+  fixed: 2.5rem,
 );
 
 $eagle: (
   clamp: (
-    min: 4rem,
+    min: 2.5rem,
     target: 5vw,
+    max: 3.75rem,
+  ),
+  fixed: 3.125rem,
+);
+
+$flamingo: (
+  clamp: (
+    min: 3rem,
+    target: 6vw,
+    max: 4.5rem,
+  ),
+  fixed: 3.75rem,
+);
+
+$grizzly: (
+  clamp: (
+    min: 3.5rem,
+    target: 7vw,
+    max: 5.25rem,
+  ),
+  fixed: 4.375rem,
+);
+
+$hippo: (
+  clamp: (
+    min: 4rem,
+    target: 8vw,
     max: 6rem,
   ),
   fixed: 5rem,
 );
 
-$flamingo: (
-  clamp: (
-    min: 4.8rem,
-    target: 6vw,
-    max: 7.2rem,
-  ),
-  fixed: 6rem,
-);
-
-$grizzly: (
-  clamp: (
-    min: 5.6rem,
-    target: 7vw,
-    max: 8.4rem,
-  ),
-  fixed: 7rem,
-);
-
-$hippo: (
-  clamp: (
-    min: 6.4rem,
-    target: 8vw,
-    max: 9.6rem,
-  ),
-  fixed: 8rem,
-);
-
 $iguanadon: (
   clamp: (
-    min: 7.2rem,
+    min: 4.5rem,
     target: 9vw,
-    max: 12rem,
+    max: 7.5rem,
   ),
-  fixed: 9rem,
+  fixed: 5.625rem,
 );
 
 $map: (

@@ -3,9 +3,9 @@
 @use 'lib/validation';
 
 $base-sizes: (
-  null: 1.6rem,
-  800px: 2rem,
-  1200px: 2.4rem,
+  null: 1rem,
+  800px: 1.25rem,
+  1200px: 1.5rem,
 );
 
 $scale: (

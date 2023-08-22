@@ -7,7 +7,7 @@
 }
 
 @mixin container {
-  @include size.max-width(130rem);
+  @include size.max-width(81.25rem);
   margin: 0 auto;
 }
 

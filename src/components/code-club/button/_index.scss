@@ -3,10 +3,10 @@
 @use 'src/mixins/padding';
 
 .sc-cc-button {
-  @include border.width(0.3rem);
+  @include border.width(0.1875rem);
   @include border.style(solid);
-  @include radius.tl(1rem);
-  @include radius.br(1rem);
+  @include radius.tl(0.625rem);
+  @include radius.br(0.625rem);
   @include padding.block('ant');
   @include padding.inline('dog');
 }

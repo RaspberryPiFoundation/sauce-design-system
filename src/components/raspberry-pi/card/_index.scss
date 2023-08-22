@@ -23,7 +23,7 @@
 
   &:hover,
   &:focus-within {
-    box-shadow: 0 0 2rem 0 rgba(color-palette.$navy, 0.2);
+    box-shadow: 0 0.125rem 0 rgba(color-palette.$navy, 0.2);
     transform: scale(1.05);
   }
 }
